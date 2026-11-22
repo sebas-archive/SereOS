@@ -1,0 +1,17 @@
+Hola profe, ¿como vas?
+
+Adjuntamos los entregables correspondientes al proyecto final de Sistemas Operativos:
+
+1. Código fuente: archivo ZIP que contiene el código actualizado y los recursos del sistema operativo SereOS y del videojuego PAC-MAN SereOS.
+2. Imagen ISO: versión actualizada de SereOS, preparada para su arranque y demostración.
+3. Documentación técnica: documento final en PDF con la descripción, arquitectura, implementación, desarrollo y validación del proyecto.
+4. Presentación: archivo PowerPoint con la exposición de los principales componentes, características y resultados del proyecto.
+
+Adicionalmente, realizamos un video de presentación como material complementario, en el que mostramos el proyecto y sus principales funcionalidades:
+
+Video de presentación: https://youtu.be/g7JM1tLCqa4
+
+Agradecemos su tiempo y atención.
+
+Cordialmente,
+Equipo del proyecto.
