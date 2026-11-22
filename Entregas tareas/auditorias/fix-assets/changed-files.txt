@@ -1,0 +1,23 @@
+== ficheros que cambian (sha256 antes vs despues) ==
+  3c3
+  < d49a470977f1ce390c81727916da27ee2d6cdc485852a5a76124d84ff45a9c57  assets/LICENSE_RES.md
+  ---
+  > 7dff8b66d3d8df2cd2d0f9a5d81f6ba7b0168d3bd0a5b59915848ecbdf98b43b  assets/LICENSE_RES.md
+  16a17
+  > 49863198b068a61191173b2a32a23b4a10aa02da29caf625a92b31149e2aae4c  assets/res_original/intermission.wav
+  18c19
+  < d49a470977f1ce390c81727916da27ee2d6cdc485852a5a76124d84ff45a9c57  assets/res_original/LICENSE_RES.md
+  ---
+  > 7dff8b66d3d8df2cd2d0f9a5d81f6ba7b0168d3bd0a5b59915848ecbdf98b43b  assets/res_original/LICENSE_RES.md
+  25,26c26,27
+  < f307edfdec3b32022db7cab94cf0b99e12c86a5f36ce28d22116734f824b7307  assets/sfx_res.c
+  < 9dd9fd9f822f499d874b9272ee5342d9e5138f223980e0e125f8a1b9fa24cf0b  assets/sfx_res.h
+  ---
+  > e89cb6844093a91c4ec4426db12e61bf8161c66ec3c136bdfc32180063d24a85  assets/sfx_res.c
+  > 5a2e478557945ea5c0a32a7e9905df8bfcf9dd285d68116e03e82a5235932893  assets/sfx_res.h
+  31,32c32,33
+  < 1be778434d9017dbece26b2471a31d0a44d9676dd960b88451023fc8ebd06108  docs/GAME.md
+  < 047ab5fc01ca55ce8df4f54ffebc7735b7c36dfbeee8c6706f573678ac7d18ce  tools/gen_pacman_res_assets.py
+  ---
+  > 5ea80dd407a7c55b784a755c0deb99e9bc8d58af215e5f9a0a1d7d8d1c5020a4  docs/GAME.md
+  > cf39448ac7d2e9cac12682959b87282552cc0d1b8e2301eb81d7bb5b27ff38f4  tools/gen_pacman_res_assets.py

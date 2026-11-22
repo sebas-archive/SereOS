@@ -1,0 +1,161 @@
+{
+  "agent": "wav-integrity",
+  "task": "task-1",
+  "phase": "AUDITORIA (solo lectura)",
+  "date": "2026-11-20",
+  "scope": {
+    "source_dir": "/home/t1an/Descargas/Res",
+    "project": "/home/t1an/Descargas/sereos02/Pac-man SereOS",
+    "reference": "/home/t1an/Descargas/Paku-Paku",
+    "note": "No se modifico el proyecto ni los WAV originales. No se escucho audio ni se ejecuto el juego."
+  },
+  "inventory": {
+    "expected_count": 11,
+    "found_count": 11,
+    "missing": [],
+    "extra_wav": [],
+    "res_subdirs": [],
+    "ffmpeg_decode_ok": "11/11",
+    "files": [
+      {"file": "game start.wav", "bytes": 420408, "md5": "07914ee70de9f5f1166ed3e9b35fc9db", "sha256": "8f12aa7cf731390cd12c0e803ca56cbf522a4db18bf14f6220b0e23fcced3709", "format": "pcm_u8", "rate": 48000, "channels": 2, "bits": 8, "frames": 210165, "duration_s": 4.378438},
+      {"file": "waka1.wav", "bytes": 16320, "md5": "9e3c8eb9b4d7af04971b12c9af3e5bb4", "sha256": "c48cbd0230ec7cc036f73413239f1f149cc55464843962e71ae5115ad513c315", "format": "pcm_s16le", "rate": 48000, "channels": 2, "bits": 16, "frames": 4059, "duration_s": 0.084562},
+      {"file": "waka2.wav", "bytes": 16256, "md5": "0452cd64893e3fbd3503190e9ff318c7", "sha256": "96a948f80681cb0d1b1bc3a1c64ba5bea9822ffdb5df7f9f13772a8f1fe47176", "format": "pcm_s16le", "rate": 48000, "channels": 2, "bits": 16, "frames": 4043, "duration_s": 0.084229},
+      {"file": "eat ghost.wav", "bytes": 6408, "md5": "61d4ded9e6249e64b735982f6ced3ec5", "sha256": "888696fafb55e06ff383707eccbba7e8b822412857078d52b4e4cbbc3ce5665f", "format": "pcm_u8", "rate": 11025, "channels": 1, "bits": 8, "frames": 6324, "duration_s": 0.573605},
+      {"file": "eat fruit.wav", "bytes": 5120, "md5": "514eeeeb192e8ca45ca92aa308f61f63", "sha256": "82c96a997ac2e837de4e418f29f4f4fa6142dd2a0c38f764b6d989d8bd98605d", "format": "pcm_u8", "rate": 11025, "channels": 1, "bits": 8, "frames": 4845, "duration_s": 0.439456},
+      {"file": "extra life.wav", "bytes": 21248, "md5": "27991f5575aec8695f0f9a68925b9df8", "sha256": "767db1552130e676398c121ec605f90f20c89bbbab272305bc781adc8e91d1cd", "format": "pcm_u8", "rate": 11025, "channels": 1, "bits": 8, "frames": 20940, "duration_s": 1.89932},
+      {"file": "ghost respawn.wav", "bytes": 52390, "md5": "43fae1a4447f5026f8f23a9d9dd02b95", "sha256": "82b46c4ddbb0e9e8d2430e49123549e456b599c95333ad4adb1f2dc9f0c81b94", "format": "pcm_u8", "rate": 48000, "channels": 2, "bits": 8, "frames": 26153, "duration_s": 0.544854},
+      {"file": "hunted siren.wav", "bytes": 113494, "md5": "8d5759b619045b5f6879ec83175d67a9", "sha256": "7580824f43dc6f670a6841c68330e6d3f120d35695cc3d139ca1c7a40aa7df21", "format": "pcm_u8", "rate": 48000, "channels": 2, "bits": 8, "frames": 56705, "duration_s": 1.181354},
+      {"file": "hunter siren.wav", "bytes": 230902, "md5": "d35ceeea5823f2ea9c1a3d2107826b92", "sha256": "3d03beaa387fd5bb169cac9cef2a556010f42b53a1ef4a9488965c30de7c60d2", "format": "pcm_u8", "rate": 48000, "channels": 2, "bits": 8, "frames": 115409, "duration_s": 2.404354},
+      {"file": "pacman death.wav", "bytes": 17008, "md5": "b5cacf9a37e6a4fd396f6fd914168780", "sha256": "1c3e91df8e19041ea5783185c5a8a9f2321993b43481c215d8caf3df590290de", "format": "pcm_u8", "rate": 11025, "channels": 1, "bits": 8, "frames": 16916, "duration_s": 1.534331},
+      {"file": "intermission.wav", "bytes": 57600, "md5": "566c0f2299b8a7ebef6372010fa6866e", "sha256": "49863198b068a61191173b2a32a23b4a10aa02da29caf625a92b31149e2aae4c", "format": "pcm_u8", "rate": 11025, "channels": 1, "bits": 8, "frames": 57377, "duration_s": 5.204263}
+    ]
+  },
+  "wav_metrics": {
+    "game start.wav": {"rate": 48000, "channels": 2, "bits": 8, "frames": 210165, "duration_s": 4.378438, "data_bytes": 420330, "file_bitrate_bps": 768143, "peak_dbfs": -4.1917, "rms_dbfs": -15.3666, "dc_offset": -0.034297, "dc_offset_fmt_lsb": -4.39, "clipping_samples": 0, "silence_lead_s": 0.132708, "silence_trail_s": 0.016521, "active_duration_s": 4.229208, "last_sample_dbfs": -240.0, "tail50_peak_dbfs": -26.5812, "tail_verdict": "fade-out ~35 ms hasta 0; sin corte abrupto ni click", "dual_mono": true, "energy_below_5k5_pct": 99.649, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["LIST"], "verdict": "OK con reservas: 9.007x sobredimensionado (48k dual-mono)"},
+    "waka1.wav": {"rate": 48000, "channels": 2, "bits": 16, "frames": 4059, "duration_s": 0.084562, "data_bytes": 16236, "file_bitrate_bps": 1543947, "peak_dbfs": -12.0763, "rms_dbfs": -16.2618, "dc_offset": -0.030209, "dc_offset_fmt_lsb": -989.897, "clipping_samples": 0, "silence_lead_s": 0.001063, "silence_trail_s": 0.001125, "last_sample_dbfs": -240.0, "tail50_peak_dbfs": -12.0763, "tail_verdict": "corte seco a 0 tras 1.1 ms de cola; sin click", "dual_mono": true, "energy_below_5k5_pct": 97.4, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["SAUR"], "verdict": "OK (nivel bajo -12 dBFS, 16 bits)"},
+    "waka2.wav": {"rate": 48000, "channels": 2, "bits": 16, "frames": 4043, "duration_s": 0.084229, "data_bytes": 16172, "file_bitrate_bps": 1543978, "peak_dbfs": -12.0763, "rms_dbfs": -16.2329, "dc_offset": -0.031613, "dc_offset_fmt_lsb": -1035.896, "clipping_samples": 0, "silence_lead_s": 0.000917, "silence_trail_s": 0.000833, "last_sample_dbfs": -240.0, "tail50_peak_dbfs": -12.0763, "tail_verdict": "corte seco a 0; sin click", "dual_mono": true, "energy_below_5k5_pct": 97.75, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["SAUR"], "verdict": "OK"},
+    "eat ghost.wav": {"rate": 11025, "channels": 1, "bits": 8, "frames": 6324, "duration_s": 0.573605, "data_bytes": 6324, "file_bitrate_bps": 89372, "peak_dbfs": -0.206, "rms_dbfs": -7.8216, "dc_offset": 0.003274, "dc_offset_fmt_lsb": 0.419, "clipping_samples": 0, "silence_lead_s": 0.000091, "silence_trail_s": 0.001451, "last_sample_dbfs": -240.0, "tail50_peak_dbfs": -19.8653, "tail_verdict": "termina en silencio", "dual_mono": null, "energy_below_5k5_pct": 100.0, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["SAUR"], "verdict": "OK"},
+    "eat fruit.wav": {"rate": 11025, "channels": 1, "bits": 8, "frames": 4845, "duration_s": 0.439456, "data_bytes": 4845, "file_bitrate_bps": 93206, "peak_dbfs": -0.2758, "rms_dbfs": -7.6873, "dc_offset": -0.001354, "dc_offset_fmt_lsb": -0.173, "clipping_samples": 0, "silence_lead_s": 0.0, "silence_trail_s": 0.000363, "last_sample_dbfs": -240.0, "tail50_peak_dbfs": -21.3163, "tail_verdict": "termina en silencio", "dual_mono": null, "energy_below_5k5_pct": 99.999, "riff_ok": false, "trailing_pad_after_riff": 186, "extra_chunks": ["LIST", "fact"], "verdict": "OK; RIFF size no cubre 186 B de padding cero"},
+    "extra life.wav": {"rate": 11025, "channels": 1, "bits": 8, "frames": 20940, "duration_s": 1.89932, "data_bytes": 20940, "file_bitrate_bps": 89497, "peak_dbfs": -0.5606, "rms_dbfs": -9.9087, "dc_offset": -0.005141, "dc_offset_fmt_lsb": -0.658, "clipping_samples": 0, "silence_lead_s": 0.0, "silence_trail_s": 0.0, "last_sample_dbfs": -42.14, "tail50_peak_dbfs": -8.5194, "tail_verdict": "decae a ~0 en ~1 ms; sin fade-out pero sin click", "dual_mono": null, "energy_below_5k5_pct": 99.999, "riff_ok": false, "trailing_pad_after_riff": 220, "extra_chunks": ["fact", "LIST"], "verdict": "OK; 220 B padding cero tras RIFF"},
+    "pacman death.wav": {"rate": 11025, "channels": 1, "bits": 8, "frames": 16916, "duration_s": 1.534331, "data_bytes": 16916, "file_bitrate_bps": 88680, "peak_dbfs": -0.6333, "rms_dbfs": -10.5026, "dc_offset": -0.00276, "dc_offset_fmt_lsb": -0.353, "clipping_samples": 0, "silence_lead_s": 0.000181, "silence_trail_s": 0.0, "last_sample_dbfs": -42.14, "tail50_peak_dbfs": -9.2751, "tail_verdict": "decae a ~0; sin click", "dual_mono": null, "energy_below_5k5_pct": 99.999, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["LIST"], "verdict": "OK"},
+    "intermission.wav": {"rate": 11025, "channels": 1, "bits": 8, "frames": 57377, "duration_s": 5.204263, "data_bytes": 57377, "file_bitrate_bps": 88543, "peak_dbfs": -0.206, "rms_dbfs": -9.7709, "dc_offset": -0.003092, "dc_offset_fmt_lsb": -0.396, "clipping_samples": 0, "silence_lead_s": 0.000091, "silence_trail_s": 0.0, "last_sample_dbfs": -42.14, "tail50_peak_dbfs": -6.0206, "tail_verdict": "decae a ~0; sin click", "dual_mono": null, "energy_below_5k5_pct": 99.999, "riff_ok": false, "trailing_pad_after_riff": 134, "extra_chunks": ["LIST", "fact"], "verdict": "OK tecnico; NO copiado a res_original ni embebido"},
+    "ghost respawn.wav": {"rate": 48000, "channels": 2, "bits": 8, "frames": 26153, "duration_s": 0.544854, "data_bytes": 52306, "file_bitrate_bps": 769233, "peak_dbfs": -13.8447, "rms_dbfs": -18.0098, "dc_offset": -0.024775, "dc_offset_fmt_lsb": -3.171, "clipping_samples": 0, "silence_lead_s": 0.0, "silence_trail_s": 0.0, "last_sample_dbfs": -14.19, "tail50_peak_dbfs": -13.8447, "tail_verdict": "bucle; periodo natural 0.266292 s", "dual_mono": true, "energy_below_5k5_pct": 99.794, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["SAUR"], "loop": {"period_raw_s": 0.266292, "period_embedded_frames": 2935, "seam_lsb": 1}, "verdict": "OK (loop)"},
+    "hunted siren.wav": {"rate": 48000, "channels": 2, "bits": 8, "frames": 56705, "duration_s": 1.181354, "data_bytes": 113410, "file_bitrate_bps": 768569, "peak_dbfs": -18.0618, "rms_dbfs": -23.2598, "dc_offset": -0.007438, "dc_offset_fmt_lsb": -0.952, "clipping_samples": 0, "silence_lead_s": 0.0, "silence_trail_s": 0.0, "last_sample_dbfs": -30.1, "tail50_peak_dbfs": -18.6224, "tail_verdict": "bucle; periodo natural 0.400146 s", "dual_mono": true, "energy_below_5k5_pct": 99.855, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["SAUR"], "loop": {"period_raw_s": 0.400146, "period_embedded_frames": 4412, "seam_lsb": 24}, "verdict": "OK (loop); seam 24 LSB mejorable; pitch no wireado"},
+    "hunter siren.wav": {"rate": 48000, "channels": 2, "bits": 8, "frames": 115409, "duration_s": 2.404354, "data_bytes": 230818, "file_bitrate_bps": 768279, "peak_dbfs": -12.6018, "rms_dbfs": -21.8847, "dc_offset": -0.012415, "dc_offset_fmt_lsb": -1.589, "clipping_samples": 0, "silence_lead_s": 0.000354, "silence_trail_s": 0.0, "last_sample_dbfs": -32.6, "tail50_peak_dbfs": -12.8962, "tail_verdict": "bucle; periodo natural 0.133313 s", "dual_mono": true, "energy_below_5k5_pct": 93.429, "riff_ok": true, "trailing_pad_after_riff": 0, "extra_chunks": ["SAUR"], "loop": {"period_raw_s": 0.133313, "period_embedded_frames": 1470, "seam_lsb": 12}, "verdict": "OK tecnico; asignacion semantica erronea (deberia ser modo asustado)"}
+  },
+  "res_vs_original": {
+    "res_original_wav_count": 10,
+    "identical_md5_and_sha256": 10,
+    "missing_in_res_original": ["intermission.wav"],
+    "license_res_md_excluded": ["intermission.wav"],
+    "verdict": "PARCIAL (10/11; intermission.wav no copiado)"
+  },
+  "embedded_pcm": {
+    "file": "Pac-man SereOS/assets/sfx_res.c",
+    "header": "Pac-man SereOS/assets/sfx_res.h",
+    "rate": 11025,
+    "total_bytes": 127034,
+    "total_breakdown": {"main_slots": 106379, "siren_variants": 20655},
+    "slots_with_data": [2, 3, 4, 6, 7, 8, 9, 12, 13, 15],
+    "slots_without_data": [0, 1, 5, 10, 11, 14],
+    "reproducible": {"regenerated_in": "/tmp/regen", "sfx_res_c_md5_project": "f00b14fbed4413daded2310db3988485", "sfx_res_h_md5_project": "479ebca8c61fd9809fb642229e4ee8e5", "identical": true, "runtime_s": 4.9},
+    "slots": [
+      {"slot": 2, "symbol": "START", "wav": "game start.wav", "pcm_frames": 46676, "duration_s": 4.233651, "chunks": [32768, 13908], "chunk_sum": 46676, "loop": false, "gain_applied_db": 3.47, "pcm_peak_lsb": 117, "quant_snr_db": 41.8, "source_snr_db": 23.17, "embedded_dc_lsb": -6.883, "bytes_identical_to_generator": true},
+      {"slot": 3, "symbol": "WAKA1", "wav": "waka1.wav", "pcm_frames": 932, "duration_s": 0.084535, "chunks": [932], "chunk_sum": 932, "loop": false, "gain_applied_db": 11.35, "pcm_peak_lsb": 117, "quant_snr_db": 47.73, "source_snr_db": 15.71, "embedded_dc_lsb": -13.844, "bytes_identical_to_generator": true},
+      {"slot": 4, "symbol": "WAKA2", "wav": "waka2.wav", "pcm_frames": 929, "duration_s": 0.084263, "chunks": [929], "chunk_sum": 929, "loop": false, "gain_applied_db": 11.35, "pcm_peak_lsb": 117, "quant_snr_db": 46.74, "source_snr_db": 16.02, "embedded_dc_lsb": -12.995, "bytes_identical_to_generator": true},
+      {"slot": 6, "symbol": "EAT_GHOST", "wav": "eat ghost.wav", "pcm_frames": 6324, "duration_s": 0.573605, "chunks": [6324], "chunk_sum": 6324, "loop": false, "gain_applied_db": -0.52, "pcm_peak_lsb": 117, "quant_snr_db": 44.56, "source_snr_db": 44.71, "embedded_dc_lsb": 0.408, "bytes_identical_to_generator": true},
+      {"slot": 7, "symbol": "EAT_FRUIT", "wav": "eat fruit.wav", "pcm_frames": 4845, "duration_s": 0.439456, "chunks": [4845], "chunk_sum": 4845, "loop": false, "gain_applied_db": -0.45, "pcm_peak_lsb": 117, "quant_snr_db": 44.69, "source_snr_db": 44.69, "embedded_dc_lsb": -0.167, "bytes_identical_to_generator": true},
+      {"slot": 8, "symbol": "DEATH", "wav": "pacman death.wav", "pcm_frames": 16916, "duration_s": 1.534331, "chunks": [16916], "chunk_sum": 16916, "loop": false, "gain_applied_db": -0.09, "pcm_peak_lsb": 117, "quant_snr_db": 42.04, "source_snr_db": 42.07, "embedded_dc_lsb": -0.368, "bytes_identical_to_generator": true},
+      {"slot": 9, "symbol": "EXTRA_LIFE", "wav": "extra life.wav", "pcm_frames": 20940, "duration_s": 1.89932, "chunks": [20940], "chunk_sum": 20940, "loop": false, "gain_applied_db": -0.16, "pcm_peak_lsb": 117, "quant_snr_db": 42.34, "source_snr_db": 42.37, "embedded_dc_lsb": -0.638, "bytes_identical_to_generator": true},
+      {"slot": 12, "symbol": "SIREN_CHASE", "wav": "hunter siren.wav", "pcm_frames": 1470, "duration_s": 0.133333, "chunks": [1470], "chunk_sum": 1470, "loop": true, "gain_applied_db": 11.88, "pcm_peak_lsb": 115, "quant_snr_db": 42.68, "source_snr_db": 11.65, "embedded_dc_lsb": -6.571, "loop_seam_lsb": 12, "bytes_identical_to_generator": true},
+      {"slot": 13, "symbol": "SIREN_HUNT", "wav": "hunted siren.wav", "pcm_frames": 4412, "duration_s": 0.400181, "chunks": [4412], "chunk_sum": 4412, "loop": true, "gain_applied_db": 17.34, "pcm_peak_lsb": 117, "quant_snr_db": 47.26, "source_snr_db": 27.98, "embedded_dc_lsb": -7.181, "loop_seam_lsb": 24, "bytes_identical_to_generator": true},
+      {"slot": 15, "symbol": "GHOST_RESPAWN", "wav": "ghost respawn.wav", "pcm_frames": 2935, "duration_s": 0.266213, "chunks": [2935], "chunk_sum": 2935, "loop": true, "gain_applied_db": 13.12, "pcm_peak_lsb": 117, "quant_snr_db": 47.81, "source_snr_db": 24.65, "embedded_dc_lsb": -14.208, "loop_seam_lsb": 1, "bytes_identical_to_generator": true}
+    ],
+    "start_chunk_split": {"chunk0": 32768, "chunk1": 13908, "table_len": 46676, "sum_ok": true, "each_le_32768": true, "concat_equals_full_pcm": true, "boundary_jump_lsb": 8, "p99_sample_diff_lsb": 37.0, "click_at_boundary": false},
+    "siren_variants": {
+      "total_bytes": 20655,
+      "siren_hunt": [{"pct": 0, "frames": 4412}, {"pct": 10, "frames": 4011}, {"pct": 20, "frames": 3676}, {"pct": 30, "frames": 3394}],
+      "siren_chase": [{"pct": 0, "frames": 1470}, {"pct": 10, "frames": 1336}, {"pct": 20, "frames": 1225}, {"pct": 30, "frames": 1131}],
+      "all_byte_identical_to_generator": true,
+      "referenced_in_src": false
+    },
+    "normalization": {"peak_lsb": 117, "peak_dbfs": -0.71, "clipped_samples_in_10_slots": 0}
+  },
+  "siren_assignment": {
+    "paku_paku_evidence": [
+      "cGame.cls:582 power pill -> gAmbientSound=\"HunterSiren\" (modo asustado)",
+      "cGame.cls:279 y 333 fin de power pill / inicio nivel -> gAmbientSound=\"HuntedSiren\" (modo normal)",
+      "modSoundFX.bas:126-131 reproduce hunter siren si gAmbientSound=\"HunterSiren\", si no hunted siren",
+      "modSoundFX.bas:88-101 SetSirenFrequency modula SOLO hunted siren +0/10/20/30% segun dots restantes"
+    ],
+    "project_mapping_evidence": [
+      "src/core/game.c:435-440: fright_ms>0 -> SIREN_FRIGHT; dots_left+power_left<=50 -> SIREN_CHASE; else SIREN_HUNT",
+      "src/core/game_audio.c:42-67 y src/platform/linux/platform_linux.c:366-400: play PCM si disponible, si no sintesis",
+      "src/platform/sereos/platform_sereos.c:478-505: idem via SB16"
+    ],
+    "hunted_siren_SIREN_HUNT": {"state": "PARCIAL", "reason": "nombre y uso como sirena normal correctos; falta modulacion de pitch; seam 24 LSB"},
+    "hunter_siren_SIREN_CHASE": {"state": "ERROR", "reason": "en Paku-Paku hunter siren es la sirena del modo asustado, no una sirena de persecucion normal; el proyecto la usa en el tramo final y deja SIREN_FRIGHT sin PCM"},
+    "siren_fright": {"state": "AUSENTE", "reason": "slot 14 data=NULL/len=0; fallback sintetizado; no usa hunter siren"},
+    "pitch_modulation": {"state": "AUSENTE (comportamiento)", "reason": "20.655 B de variantes presentes en sfx_res.c pero 0 referencias en src/include/tests"}
+  },
+  "audit_doc_claims": [
+    {"claim": "11 WAV y MD5 del doc", "result": "correcto"},
+    {"claim": "10 WAV usados; intermission no usado por Paku-Paku", "result": "correcto"},
+    {"claim": "game start 2ch 8b 48k 4.378 s 420408 B", "result": "correcto"},
+    {"claim": "slots 1/5/10/11/14 sin datos", "result": "correcto"},
+    {"claim": "START troceado <=32768 y total 127034 B", "result": "correcto"},
+    {"claim": "intermission 57377 > 32768 requiere trozos", "result": "obsoleto: no esta embebido"},
+    {"claim": "pico normalizado 234/255 (~-0.7 dBFS)", "result": "impreciso: valor real 245 (=117 LSB, -0.71 dBFS)"},
+    {"claim": "SNR 29-44 dB vs referencia 4.8 kHz", "result": "no reproducible: cuantizacion 41.8-47.8 dB; total vs fuente 11.7-28.0 dB (48k) y 42-45 dB (11k)"},
+    {"claim": "waka 16->8 dB SNR 38.4 dB", "result": "no reproducible: 46.7-47.7 dB cuantizacion"},
+    {"claim": "seams hunted 4.0 LSB / hunter 27 LSB", "result": "no coincide: entregado 24 LSB / 12 LSB"},
+    {"claim": "game start 48.272 frames", "result": "pre-trim; entregado 46.676"},
+    {"claim": "sin clipping, pico -0.7 dBFS", "result": "correcto"},
+    {"claim": "generador determinista", "result": "correcto (re-ejecutado)"},
+    {"claim": "usar intermission para level-clear", "result": "NO implementado (excluido)"}
+  ],
+  "requirement_states": [
+    {"requirement": "11 WAV originales en Res", "state": "COMPLETO", "evidence": "11/11 MD5+SHA256; ffmpeg OK"},
+    {"requirement": "copias res_original", "state": "PARCIAL", "evidence": "10/11 byte-identicas; falta intermission.wav"},
+    {"requirement": "game start PCM + troceado SB16", "state": "COMPLETO", "evidence": "46676 frames; 32768+13908; concatenacion exacta; salto 8 LSB"},
+    {"requirement": "waka1/waka2", "state": "COMPLETO", "evidence": "932/929 frames; 16->8 bits sin clipping"},
+    {"requirement": "eat ghost", "state": "COMPLETO", "evidence": "6324 frames"},
+    {"requirement": "eat fruit", "state": "COMPLETO", "evidence": "4845 frames"},
+    {"requirement": "extra life", "state": "COMPLETO", "evidence": "20940 frames"},
+    {"requirement": "pacman death", "state": "COMPLETO", "evidence": "16916 frames"},
+    {"requirement": "ghost respawn loop", "state": "COMPLETO", "evidence": "2935 frames; seam 1 LSB"},
+    {"requirement": "hunted siren loop", "state": "PARCIAL", "evidence": "4412 frames; seam 24 LSB; pitch no wireado"},
+    {"requirement": "hunter siren loop", "state": "ERROR", "evidence": "1470 frames; asignacion semantica invertida vs Paku-Paku"},
+    {"requirement": "SIREN_FRIGHT", "state": "AUSENTE", "evidence": "slot 14 data=0; fallback sintetizado"},
+    {"requirement": "MENU", "state": "AUSENTE", "evidence": "slot 1 data=0; sin fuente en Res"},
+    {"requirement": "POWER", "state": "AUSENTE", "evidence": "slot 5 data=0; fallback sintetizado (game.c:289,610)"},
+    {"requirement": "LEVEL_CLEAR", "state": "PARCIAL", "evidence": "slot 10 data=0; intermission.wav valido existe en Res pero excluido"},
+    {"requirement": "GAME_OVER", "state": "AUSENTE", "evidence": "slot 11 data=0; fallback sintetizado"},
+    {"requirement": "modulacion de sirena por dots", "state": "AUSENTE", "evidence": "variantes presentes, 0 referencias en src"},
+    {"requirement": "normalizacion/anti-clipping", "state": "COMPLETO", "evidence": "pico 117 LSB -0.71 dBFS; 0 clipping"},
+    {"requirement": "fidelidad PCM vs original", "state": "PARCIAL", "evidence": "11k: 42-48 dB; 48k: 11.7-28.0 dB por perdida de banda >5 kHz"},
+    {"requirement": "DC offset", "state": "PARCIAL", "evidence": "-0.2 a -14.2 LSB; amplificado por normalizacion"},
+    {"requirement": "generador reproducible", "state": "COMPLETO", "evidence": "regeneracion -> MD5 identicos"},
+    {"requirement": "docs/AUDIT_RESOURCES exacto", "state": "PARCIAL", "evidence": "imprecisiones SNR/pico/seams/pre-trim"},
+    {"requirement": "hardware SB16 real", "state": "NO VERIFICADO", "evidence": "sin hardware; solo analisis estatico/codigo"},
+    {"requirement": "calidad percibida/clics audibles", "state": "NO VERIFICADO", "evidence": "no se reprodujo/escucho audio"}
+  ],
+  "findings": [
+    {"rank": 1, "severity": "alta", "title": "SIREN_FRIGHT sin PCM y hunter siren mal asignada", "evidence": "slot 14 data=NULL/len=0; game.c:435 usa FRIGHT en modo asustado; Paku-Paku usa hunter siren (cGame.cls:582, modSoundFX.bas:126-131); game.c:439 usa hunter siren (SIREN_CHASE) como sirena normal de fin de nivel"},
+    {"rank": 2, "severity": "alta", "title": "Modulacion de pitch de sirenas ausente", "evidence": "20655 B de variantes en sfx_res.c; 0 referencias a pacasset_siren_*_res en src/include/tests; Paku-Paku modula +0/10/20/30% (modSoundFX.bas:88-101)"},
+    {"rank": 3, "severity": "media-alta", "title": "intermission.wav valido pero excluido; LEVEL_CLEAR sin recurso", "evidence": "57377 frames/5.204 s valido en Res; ausente de res_original y sfx_res.c; slot 10 data=0; doc recomendaba usarlo (seccion 3.5)"},
+    {"rank": 4, "severity": "media", "title": "game start.wav 9.007x sobredimensionado", "evidence": "420408 B = 210165 frames x2ch x48000Hz u8 dual-mono; 99.65% energia <5.5 kHz; PCM util 46676 B; sin clipping; final con fade-out correcto"},
+    {"rank": 5, "severity": "media", "title": "Bucles y DC mejorables", "evidence": "seams 24 LSB (hunted) y 12 LSB (hunter) vs 1 LSB (respawn); DC embebido -6.6 a -14.2 LSB; normalizacion +11.35 a +17.34 dB"},
+    {"rank": 6, "severity": "baja", "title": "Imprecisiones del informe previo", "evidence": "pico 234/255 vs 245; SNR 29-44 no reproducible; seams 4/27 vs 24/12; game start 48272 es pre-trim"}
+  ],
+  "limitations": [
+    "No se escucho audio: audibilidad de seams/clics NO VERIFICADA",
+    "No hay hardware SB16: reproduccion real por chunks NO VERIFICADA",
+    "SNR vs fuente de clips 48k medido con el mismo resampler del generador (fc ~4.96 kHz), no con resampler de referencia independiente"
+  ],
+  "evidence": [
+    "/home/t1an/Descargas/sereos02/audit/wav-integrity/REPORT.md",
+    "/home/t1an/Descargas/sereos02/audit/wav-integrity/summary.json",
+    "/home/t1an/Descargas/sereos02/audit/wav-integrity/audit_wav.py"
+  ]
+}

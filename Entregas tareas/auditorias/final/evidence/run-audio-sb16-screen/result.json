@@ -1,0 +1,11 @@
+{
+  "name": "audio-sb16-screen",
+  "steps": [],
+  "ok": true,
+  "serial_audio": [
+    "AUDIO_TEST:sb16",
+    "AUDIO_DETAIL:SB16 0x220 IRQ5 DMA1",
+    "AUDIO_TEST_DONE tones=4 irq=4 pit_hz=100 pit_ticks=80"
+  ],
+  "fatals": []
+}

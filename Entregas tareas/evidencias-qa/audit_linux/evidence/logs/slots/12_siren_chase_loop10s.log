@@ -1,0 +1,103 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/12_siren_chase_pcm_loop10s.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=12 loop=1 cap_ms=10000 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=pcm dev=3 available=1 res_available=1
+t= 102 queued=1909 active=1 loop=1 playing=0
+t= 203 queued=757 active=1 loop=1 playing=0
+t= 305 queued=947 active=1 loop=1 playing=0
+t= 406 queued=1265 active=1 loop=1 playing=0
+t= 508 queued=1583 active=1 loop=1 playing=0
+t= 611 queued=1901 active=1 loop=1 playing=0
+t= 714 queued=749 active=1 loop=1 playing=0
+t= 817 queued=939 active=1 loop=1 playing=0
+t= 918 queued=1257 active=1 loop=1 playing=0
+t=1020 queued=1575 active=1 loop=1 playing=0
+t=1122 queued=1893 active=1 loop=1 playing=0
+t=1223 queued=741 active=1 loop=1 playing=0
+t=1325 queued=1059 active=1 loop=1 playing=0
+t=1427 queued=1249 active=1 loop=1 playing=0
+t=1529 queued=1567 active=1 loop=1 playing=0
+t=1631 queued=1885 active=1 loop=1 playing=0
+t=1733 queued=2203 active=1 loop=1 playing=0
+t=1834 queued=1051 active=1 loop=1 playing=0
+t=1936 queued=1369 active=1 loop=1 playing=0
+t=2038 queued=1687 active=1 loop=1 playing=0
+t=2140 queued=1877 active=1 loop=1 playing=0
+t=2241 queued=2195 active=1 loop=1 playing=0
+t=2343 queued=1043 active=1 loop=1 playing=0
+t=2445 queued=1361 active=1 loop=1 playing=0
+t=2546 queued=1679 active=1 loop=1 playing=0
+t=2648 queued=1997 active=1 loop=1 playing=0
+t=2750 queued=2187 active=1 loop=1 playing=0
+t=2852 queued=1035 active=1 loop=1 playing=0
+t=2953 queued=1353 active=1 loop=1 playing=0
+t=3055 queued=1671 active=1 loop=1 playing=0
+t=3157 queued=1989 active=1 loop=1 playing=0
+t=3259 queued=837 active=1 loop=1 playing=0
+t=3361 queued=1155 active=1 loop=1 playing=0
+t=3463 queued=1345 active=1 loop=1 playing=0
+t=3564 queued=1663 active=1 loop=1 playing=0
+t=3666 queued=1981 active=1 loop=1 playing=0
+t=3768 queued=829 active=1 loop=1 playing=0
+t=3869 queued=1147 active=1 loop=1 playing=0
+t=3971 queued=1465 active=1 loop=1 playing=0
+t=4072 queued=1783 active=1 loop=1 playing=0
+t=4174 queued=1973 active=1 loop=1 playing=0
+t=4277 queued=821 active=1 loop=1 playing=0
+t=4379 queued=1139 active=1 loop=1 playing=0
+t=4480 queued=1457 active=1 loop=1 playing=0
+t=4582 queued=1775 active=1 loop=1 playing=0
+t=4683 queued=2093 active=1 loop=1 playing=0
+t=4785 queued=813 active=1 loop=1 playing=0
+t=4887 queued=1131 active=1 loop=1 playing=0
+t=4989 queued=1449 active=1 loop=1 playing=0
+t=5091 queued=1767 active=1 loop=1 playing=0
+t=5193 queued=2085 active=1 loop=1 playing=0
+t=5295 queued=933 active=1 loop=1 playing=0
+t=5397 queued=1123 active=1 loop=1 playing=0
+t=5500 queued=1441 active=1 loop=1 playing=0
+t=5602 queued=1759 active=1 loop=1 playing=0
+t=5704 queued=2077 active=1 loop=1 playing=0
+t=5806 queued=797 active=1 loop=1 playing=0
+t=5908 queued=1115 active=1 loop=1 playing=0
+t=6010 queued=1433 active=1 loop=1 playing=0
+t=6113 queued=1751 active=1 loop=1 playing=0
+t=6215 queued=2069 active=1 loop=1 playing=0
+t=6317 queued=917 active=1 loop=1 playing=0
+t=6419 queued=1107 active=1 loop=1 playing=0
+t=6521 queued=1425 active=1 loop=1 playing=0
+t=6622 queued=1743 active=1 loop=1 playing=0
+t=6724 queued=2061 active=1 loop=1 playing=0
+t=6826 queued=909 active=1 loop=1 playing=0
+t=6927 queued=1227 active=1 loop=1 playing=0
+t=7029 queued=1417 active=1 loop=1 playing=0
+t=7131 queued=1735 active=1 loop=1 playing=0
+t=7233 queued=2053 active=1 loop=1 playing=0
+t=7334 queued=901 active=1 loop=1 playing=0
+t=7436 queued=1219 active=1 loop=1 playing=0
+t=7538 queued=1537 active=1 loop=1 playing=0
+t=7640 queued=1855 active=1 loop=1 playing=0
+t=7742 queued=2045 active=1 loop=1 playing=0
+t=7844 queued=893 active=1 loop=1 playing=0
+t=7945 queued=1211 active=1 loop=1 playing=0
+t=8047 queued=1529 active=1 loop=1 playing=0
+t=8149 queued=1847 active=1 loop=1 playing=0
+t=8251 queued=2165 active=1 loop=1 playing=0
+t=8352 queued=1013 active=1 loop=1 playing=0
+t=8454 queued=1203 active=1 loop=1 playing=0
+t=8556 queued=1521 active=1 loop=1 playing=0
+t=8658 queued=1839 active=1 loop=1 playing=0
+t=8760 queued=2157 active=1 loop=1 playing=0
+t=8861 queued=1005 active=1 loop=1 playing=0
+t=8963 queued=1323 active=1 loop=1 playing=0
+t=9065 queued=1641 active=1 loop=1 playing=0
+t=9167 queued=1831 active=1 loop=1 playing=0
+t=9268 queued=2149 active=1 loop=1 playing=0
+t=9370 queued=997 active=1 loop=1 playing=0
+t=9471 queued=1315 active=1 loop=1 playing=0
+t=9573 queued=1633 active=1 loop=1 playing=0
+t=9675 queued=1951 active=1 loop=1 playing=0
+t=9776 queued=799 active=1 loop=1 playing=0
+t=9878 queued=989 active=1 loop=1 playing=0
+t=9980 queued=1307 active=1 loop=1 playing=0
+END t=10000 queued=1051 pcm_active=1 audio_playing=0

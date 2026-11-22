@@ -1,0 +1,16 @@
+capture-b4.raw: 37.52 s @ 44100 Hz mono, rms 11565, max 31199
+audible runs (0.1 s bins):
+   12.20 -  16.50 s ( 4.30 s) peak 11688
+   16.70 -  30.40 s (13.70 s) peak 17116
+   33.10 -  37.50 s ( 4.40 s) peak 17186
+
+clip match (best 100 ms local corr in time window):
+  START chunk0   best100ms=+0.992 at t=12.30 s
+  START chunk1   best100ms=-0.946 at t=13.09 s
+  SIREN_HUNT     best100ms=-0.906 at t=21.75 s
+  WAKA1          best100ms=-0.218 at t=21.88 s
+  WAKA2          best100ms=+0.866 at t=17.13 s
+
+START inferido: chunk0 t=12.30 s (2.972 s) -> fin 15.27 s
+RMS en ventana chunk1 (15.27..16.53 s): 9037
+chunk1 corr=-0.874 (en esa ventana)

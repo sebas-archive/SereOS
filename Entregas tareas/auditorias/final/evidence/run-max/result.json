@@ -1,0 +1,233 @@
+{
+  "steps": [
+    {
+      "step": "GUI_READY",
+      "ok": true
+    },
+    {
+      "step": "normal",
+      "ok": true,
+      "row_y": 84.0,
+      "window_x0": 41
+    },
+    {
+      "step": "maximizar_doble_clic",
+      "ok": true,
+      "row_y": 48.0,
+      "window": [
+        0,
+        1024
+      ]
+    },
+    {
+      "step": "restaurar_doble_clic",
+      "ok": true,
+      "row_y": 84,
+      "window": [
+        41,
+        919
+      ]
+    },
+    {
+      "step": "maximizar_boton",
+      "ok": true,
+      "row_y": 48,
+      "window": [
+        0,
+        1024
+      ]
+    },
+    {
+      "step": "restaurar_boton",
+      "ok": true,
+      "row_y": 84,
+      "window": [
+        41,
+        919
+      ]
+    },
+    {
+      "step": "APP_CLOSE:game",
+      "ok": true
+    },
+    {
+      "step": "sin_panic",
+      "ok": true,
+      "fatals": []
+    }
+  ],
+  "checks": {
+    "normal": {
+      "window_x0": 41,
+      "window_x1": 919,
+      "right_margin_px": 13.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-max/01_game_normal.png",
+      "found": true,
+      "row_y": 84,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.0,
+        18.0
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "max_dblclick": {
+      "window_x0": 0,
+      "window_x1": 1024,
+      "right_margin_px": 14.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-max/02_game_max_dblclick.png",
+      "found": true,
+      "row_y": 48,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        974.0,
+        992.2,
+        1010.0
+      ],
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.2,
+        17.8
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "restored_dblclick": {
+      "window_x0": 41,
+      "window_x1": 919,
+      "right_margin_px": 13.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-max/03_game_restored_dblclick.png",
+      "found": true,
+      "row_y": 84,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.0,
+        18.0
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "max_button": {
+      "window_x0": 0,
+      "window_x1": 1024,
+      "right_margin_px": 14.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-max/04_game_max_button.png",
+      "found": true,
+      "row_y": 48,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        974.0,
+        992.2,
+        1010.0
+      ],
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.2,
+        17.8
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "restored_button": {
+      "window_x0": 41,
+      "window_x1": 919,
+      "right_margin_px": 13.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-max/05_game_restored_button.png",
+      "found": true,
+      "row_y": 84,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.0,
+        18.0
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    }
+  },
+  "ok": true,
+  "fatals": []
+}

@@ -1,0 +1,2 @@
+SDL 2.32.74
+audio drivers (7): pipewire pulseaudio alsa sndio jack disk dummy

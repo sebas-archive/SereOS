@@ -1,0 +1,4 @@
+PCSPK fallback capture 37.5 s, active windows 173, peak rms 24481
+tonos dominantes (Hz:cuenta): {290: 81, 370: 62, 520: 11, 390: 10, 950: 4, 180: 4, 300: 1}
+coincidencias tabla pcspk: [(950, 4, 'START'), (390, 10, 'WAKA2'), (520, 11, 'WAKA1'), (370, 62, 'siren hunt'), (180, 4, 'DEATH')]
+primeros runs activos: [(12.2, 12.6), (16.8, 29.3), (33.1, 37.5)]

@@ -1,0 +1,274 @@
+{
+  "suite": "SereOS v1.0 QEMU verification",
+  "timestamp": "2026-11-20T05:57:27",
+  "run_id": "20261120-055725",
+  "iso": {
+    "path": "sereos.iso",
+    "size": 36835328,
+    "mtime": 1795172058.633411
+  },
+  "qemu": "QEMU emulator version 11.1.3",
+  "kvm_mode": "off",
+  "kvm_used": false,
+  "mouse_worked": false,
+  "raw_artifacts": "eliminados en la entrega (solo PNG finales)",
+  "cases": [
+    {
+      "key": "boot",
+      "title": "Arranque, splash y escritorio",
+      "result": "fail",
+      "duration_s": 0.25,
+      "skip_reason": null,
+      "error": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/gfx/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/gfx/monitor.sock' is too long\nPath must be less than 108 bytes\n",
+      "method": "",
+      "steps": [
+        {
+          "text": "excepcion en la prueba",
+          "ok": false,
+          "detail": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/gfx/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/gfx/monitor.sock' is too long\nPath must be less than 108 bytes\n"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "terminal",
+      "title": "Terminal grafica (F2) y comandos",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "files",
+      "title": "Gestor de archivos (F1)",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "monitor",
+      "title": "Monitor del sistema (F3)",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "about",
+      "title": "Acerca de SereOS (F5)",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "maximize",
+      "title": "Maximizacion full-bleed y WM (restaurar/minimizar/resize)",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "corners",
+      "title": "Esquinas redondeadas: clipping, solape y resize",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "dock",
+      "title": "Dock flotante inferior (sin maximizada)",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "topnav",
+      "title": "Navegacion adaptativa: dock oculto + 5 accesos topbar",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "game",
+      "title": "PAC-MAN SereOS (F4)",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "audio",
+      "title": "Audio del juego: captura WAV (SB16)",
+      "result": "fail",
+      "duration_s": 0.25,
+      "skip_reason": null,
+      "error": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/audio_capture/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/audio_capture/monitor.sock' is too long\nPath must be less than 108 bytes\n",
+      "method": "",
+      "steps": [
+        {
+          "text": "excepcion en la prueba",
+          "ok": false,
+          "detail": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/audio_capture/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/audio_capture/monitor.sock' is too long\nPath must be less than 108 bytes\n"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "window_close",
+      "title": "Cierre de ventanas",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "window_focus",
+      "title": "Enfoque F6 y minimizar F7",
+      "result": "skip",
+      "duration_s": 0.0,
+      "skip_reason": "el escritorio grafico no llego a arrancar",
+      "error": null,
+      "method": "",
+      "steps": [],
+      "screenshots": []
+    },
+    {
+      "key": "text_fallback",
+      "title": "Fallback de modo texto (GRUB 2a entrada)",
+      "result": "fail",
+      "duration_s": 0.25,
+      "skip_reason": null,
+      "error": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/text1/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/text1/monitor.sock' is too long\nPath must be less than 108 bytes\n",
+      "method": "",
+      "steps": [
+        {
+          "text": "excepcion en la prueba",
+          "ok": false,
+          "detail": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/text1/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/text1/monitor.sock' is too long\nPath must be less than 108 bytes\n"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "panic",
+      "title": "Panico controlado (div0 real desde la terminal)",
+      "result": "fail",
+      "duration_s": 0.25,
+      "skip_reason": null,
+      "error": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/panic/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/panic/monitor.sock' is too long\nPath must be less than 108 bytes\n",
+      "method": "",
+      "steps": [
+        {
+          "text": "excepcion en la prueba",
+          "ok": false,
+          "detail": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/panic/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/panic/monitor.sock' is too long\nPath must be less than 108 bytes\n"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "resolution_1280",
+      "title": "Resolucion 1280x1024 (ISO temporal en /tmp)",
+      "result": "fail",
+      "duration_s": 0.57,
+      "skip_reason": null,
+      "error": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res1280/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res1280/monitor.sock' is too long\nPath must be less than 108 bytes\n",
+      "method": "",
+      "steps": [
+        {
+          "text": "ISO temporal 1280x1024 generada en /tmp",
+          "ok": true,
+          "detail": "/tmp/sereos_1280x1024_rv2g6gko/sereos-1280x1024.iso"
+        },
+        {
+          "text": "excepcion en la prueba",
+          "ok": false,
+          "detail": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res1280/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res1280/monitor.sock' is too long\nPath must be less than 108 bytes\n"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "resolution_800",
+      "title": "Resolucion 800x600 (ISO temporal en /tmp)",
+      "result": "fail",
+      "duration_s": 0.55,
+      "skip_reason": null,
+      "error": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res800/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res800/monitor.sock' is too long\nPath must be less than 108 bytes\n",
+      "method": "",
+      "steps": [
+        {
+          "text": "ISO temporal 800x600 generada en /tmp",
+          "ok": true,
+          "detail": "/tmp/sereos_800x600_qvfrlp19/sereos-800x600.iso"
+        },
+        {
+          "text": "excepcion en la prueba",
+          "ok": false,
+          "detail": "QemuError: QEMU termino al arrancar (rc=1); stderr:\nqemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res800/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res800/monitor.sock' is too long\nPath must be less than 108 bytes\n"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "no_fatal",
+      "title": "Sin excepciones ni panicos inesperados",
+      "result": "pass",
+      "duration_s": 0.0,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ningun SEREOS_EXCEPTION/SEREOS_PANIC inesperado en los logs",
+          "ok": true,
+          "detail": "6 logs limpios"
+        }
+      ],
+      "screenshots": []
+    }
+  ],
+  "screenshots": [],
+  "summary": {
+    "total": 18,
+    "passed": 1,
+    "failed": 6,
+    "skipped": 11
+  }
+}

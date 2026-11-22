@@ -1,0 +1,31 @@
+PASS B2: hold waka 100 ms
+PASS B2: gracia anti-stutter 300 ms tras dot
+PASS B2: waka queda como one-shot activo
+PASS B2: hold POWER 320 ms
+PASS B2: hold EAT_GHOST 590 ms (clip 574)
+PASS B2: hold EAT_FRUIT 460 ms (clip 440)
+PASS B2: hold LEVEL_CLEAR 5300 ms (intermission 5204)
+PASS B2: hold MENU 260 ms
+PASS B2: EXTRA_LIFE se pide al cruzar 10000
+PASS B2: el WAKA del mismo tick NO pisa EXTRA_LIFE (P0)
+PASS B2: hold EXTRA_LIFE 1920 ms, no el del waka
+PASS B2: el ultimo one-shot sigue siendo EXTRA_LIFE
+PASS B2: audio_oneshot/hold se limpian al terminar el clip
+PASS B2: GHOST_RESPAWN suena como loop mientras hay ojos (P0)
+PASS B2: al volver los ojos retoma HUNT (slot 13)
+PASS B2: frightened usa CHASE/hunter (slot 12) (P0)
+PASS B2: fuera de frightened vuelve HUNT (slot 13)
+PASS B2: power pill activa frightened
+PASS B2: FRIGHT no arranca durante el hold de POWER (P0/P1)
+PASS B2: al agotarse el hold de POWER si arranca FRIGHT
+PASS B2: MENU suena al navegar el menu (P0)
+PASS B2: MENU suena en attract -> menu (P0)
+PASS B2: sirena HUNT activa antes del toggle
+PASS B2: OFF para la sirena
+PASS B2: ON reactiva el audio
+PASS B2: OFF->ON rearma la sirena (P1)
+PASS B2: sin foco se para el loop de sirena (P1)
+PASS B2: al recuperar el foco se rearma la sirena (P1)
+PASS B2: LEVEL_CLEAR se pide una vez
+PASS B2: hold LEVEL_CLEAR 5300 ms
+PASS B2: el estado nivel cubre intermission (5204 ms)

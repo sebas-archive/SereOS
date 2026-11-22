@@ -1,0 +1,6 @@
+GAME_MENU
+LEVEL_START 1
+PAC_STATS dots=240 power=4 score=0 level=1 lives=3
+GAME_START
+PAC_DEATH
+GAME_EXIT

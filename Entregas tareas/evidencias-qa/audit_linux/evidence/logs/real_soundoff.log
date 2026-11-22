@@ -1,0 +1,7 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/real_soundoff.raw], format=S16LE channels=2 freq=44100.
+GAME_MENU
+LEVEL_START 1
+PAC_STATS dots=240 power=4 score=0 level=1 lives=3
+GAME_START
+GAME_EXIT

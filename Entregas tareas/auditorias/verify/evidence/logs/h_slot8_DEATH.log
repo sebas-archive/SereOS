@@ -1,0 +1,27 @@
+available=1 slot=8 mode=play ms=2600
+t= 103 avail=1
+t= 205 avail=1
+t= 307 avail=1
+t= 409 avail=1
+t= 511 avail=1
+t= 613 avail=1
+t= 715 avail=1
+t= 818 avail=1
+t= 920 avail=1
+t=1022 avail=1
+t=1125 avail=1
+t=1227 avail=1
+t=1329 avail=1
+t=1431 avail=1
+t=1533 avail=1
+t=1635 avail=1
+t=1738 avail=1
+t=1840 avail=1
+t=1942 avail=1
+t=2045 avail=1
+t=2147 avail=1
+t=2249 avail=1
+t=2352 avail=1
+t=2454 avail=1
+t=2557 avail=1
+END t=2603

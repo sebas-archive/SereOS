@@ -1,0 +1,33 @@
+== originales ==
+copiados/verificados 20 originales en /home/t1an/Descargas/sereos02/audit/verify/evidence/tmp/regen/assets/res_original
+licencias -> assets/LICENSE_RES.md, assets/fonts/LICENSE_ARCADE.md
+== sprites ==
+preview sprites -> /tmp/res_gen/sprites_res_sheet.png
+preview 32 (opcional, no entregado) -> /tmp/res_gen/sprites_res_32_preview.png
+sprites -> assets/sprites_res.c/h
+== fuente arcade ==
+preview fuente -> /tmp/res_gen/font_arcade_preview.png
+glifos ausentes (fallback '?'): U+007F, U+0080, U+0081, U+0082, U+0083, U+0084, U+0085, U+0086, U+0087, U+0088, U+0089, U+008A, U+008B, U+008C, U+008D, U+008E, U+008F, U+0090, U+0091, U+0092, U+0093, U+0094, U+0095, U+0096, U+0097, U+0098, U+0099, U+009A, U+009B, U+009C, U+009D, U+009E, U+009F, U+00A7, U+00A8, U+00AA, U+00AC, U+00AD, U+00AF, U+00B1, U+00B4, U+00B5, U+00B6, U+00B8, U+00BA, U+00BC, U+00BD, U+00BE
+fuente -> assets/font_arcade.c/h (atlas 28672 bytes)
+== audio ==
+sfx START           46676 fr 4.234s one-shot (2 chunks)
+sfx WAKA1             932 fr 0.085s one-shot
+sfx WAKA2             929 fr 0.084s one-shot
+sfx EAT_GHOST        6324 fr 0.574s one-shot
+sfx EAT_FRUIT        4845 fr 0.439s one-shot
+sfx EXTRA_LIFE      20940 fr 1.899s one-shot
+sfx DEATH           16916 fr 1.534s one-shot
+sfx LEVEL_CLEAR     57377 fr 5.204s one-shot (2 chunks)
+sfx GHOST_RESPAWN    2935 fr 0.266s loop
+sfx SIREN_HUNT       4412 fr 0.400s loop
+sfx SIREN_CHASE      1470 fr 0.133s loop
+preview waveforms -> /tmp/res_gen/sfx_waveforms.png
+audio -> assets/sfx_res.c/h (184411 bytes PCM, 16 slots)
+
+OK. Assets generados en /home/t1an/Descargas/sereos02/audit/verify/evidence/tmp/regen:
+  assets/sprites_res.c/h
+  assets/font_arcade.c/h
+  assets/sfx_res.c/h
+  assets/res_original/ (+ LICENSE_RES.md)
+  assets/LICENSE_RES.md, assets/fonts/LICENSE_ARCADE.md
+Previews/metricas en /tmp/res_gen

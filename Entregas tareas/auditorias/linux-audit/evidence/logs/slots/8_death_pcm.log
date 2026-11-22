@@ -1,0 +1,28 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/8_death_pcm.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=8 loop=0 cap_ms=2400 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=pcm dev=3 available=1 res_available=1
+t= 102 queued=15885 active=1 loop=0 playing=0
+t= 203 queued=14733 active=1 loop=0 playing=0
+t= 305 queued=13453 active=1 loop=0 playing=0
+t= 406 queued=12301 active=1 loop=0 playing=0
+t= 508 queued=11149 active=1 loop=0 playing=0
+t= 610 queued=9997 active=1 loop=0 playing=0
+t= 711 queued=8845 active=1 loop=0 playing=0
+t= 813 queued=7693 active=1 loop=0 playing=0
+t= 914 queued=6541 active=1 loop=0 playing=0
+t=1016 queued=5261 active=1 loop=0 playing=0
+t=1117 queued=4109 active=1 loop=0 playing=0
+t=1219 queued=2957 active=1 loop=0 playing=0
+t=1320 queued=1805 active=1 loop=0 playing=0
+t=1422 queued=653 active=1 loop=0 playing=0
+t=1523 queued=0 active=0 loop=0 playing=0
+t=1625 queued=0 active=0 loop=0 playing=0
+t=1726 queued=0 active=0 loop=0 playing=0
+t=1828 queued=0 active=0 loop=0 playing=0
+t=1929 queued=0 active=0 loop=0 playing=0
+t=2031 queued=0 active=0 loop=0 playing=0
+t=2133 queued=0 active=0 loop=0 playing=0
+t=2234 queued=0 active=0 loop=0 playing=0
+t=2336 queued=0 active=0 loop=0 playing=0
+END t=2402 queued=0 pcm_active=0 audio_playing=0

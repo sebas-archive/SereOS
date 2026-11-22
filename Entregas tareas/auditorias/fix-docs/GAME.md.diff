@@ -1,0 +1,27 @@
+--- audit/fix-docs/before/GAME.md	2026-11-20 05:33:53.277677838 -0500
++++ "Pac-man SereOS/docs/GAME.md"	2026-11-20 05:35:19.188493473 -0500
+@@ -89,10 +89,13 @@
+   sesion, F11 pantalla completa.
+ - Audio definitivo: PCM u8 mono 11025 de los 11 WAV de Res en Linux (SDL,
+   one-shots y loops) y SereOS (SB16 con trozos <=32 KiB y cola en
+-  `pac_audio_update`); slots sin WAV usan la sintesis existente. Slots
+-  nuevos: `PAC_SFX_LEVEL_CLEAR` (10, `intermission.wav`, one-shot en 2 trozos)
+-  y `PAC_SFX_GHOST_RESPAWN` (15; PCM con periodo de bucle, flag loop=0 por
+-  defecto: el bucle se pide con `pac_audio_loop`).
++  `pac_audio_update`). Slots con WAV: 2,3,4,6,7,8,9,10,12,13,15.
++  `PAC_SFX_LEVEL_CLEAR` (10) reproduce `intermission.wav` (5,204 s, one-shot
++  en 2 trozos) y `PAC_SFX_GHOST_RESPAWN` (15) lleva PCM con periodo de bucle,
++  flag loop=0 por defecto (el bucle se pide con `pac_audio_loop`). Slots sin
++  clip en Res (1 MENU, 5 POWER, 11 GAME_OVER) usan la sintesis; SIREN_FRIGHT
++  (14) se reproduce con la sirena 12 (hunter, modo power pill) y la 13
++  (hunted) es la normal.
+ - Diferencias documentadas: no hay replay `.pmg`, demo automatica de
+   AttractMode.pmg, modo testing ni overlay de IA; el estilo clasico/moderno
+   de la referencia no se aplica (settings solo sonido/fullscreen).
+@@ -130,5 +133,4 @@
+ Escenas: `attract`, `menu`, `settings`, `play`, `pause`, `gameover` (deja
+ record 1500 para probar persistencia), `victory` (nivel completado),
+ `frightened`. Capturas de referencia en `docs/captures/` y checks del core en
+-`tests/core_tests.c` (131 casos). `intermission.wav` no se usa (Paku no lo
+-usa).
++`tests/core_tests.c` (209 casos).

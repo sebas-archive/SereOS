@@ -1,0 +1,31 @@
+[OK] Arranque Multiboot verificado (GRUB 2)
+[OK] GDT propia: 5 segmentos (kernel y usuario)
+[OK] IDT: 32 excepciones + 16 IRQ (PIC remapeado a 32-47)
+[OK] Temporizador PIT a 100 Hz (IRQ 0)
+[OK] Teclado PS/2 con eventos (IRQ 1)
+[OK] Raton PS/2 con eventos (IRQ 12)
+[OK] Reloj CMOS RTC
+[OK] Framebuffer grafico 1024x768x32 validado
+[OK] Allocator de marcos fisicos inicializado
+[OK] Heap del kernel (kmalloc/kfree) inicializado
+[OK] Paginacion activada (identidad, PSE 4 MiB)
+[OK] RAMFS montado en /
+[OK] Planificador cooperativo round-robin listo
+[OK] Interrupciones habilitadas
+[OK] Motor grafico nativo inicializado
+[OK] Aplicaciones del escritorio registradas
+DESKTOP_INIT
+DESKTOP_READY
+SEREOS_BOOT_OK mem=255MiB
+SPLASH_DONE
+GUI_READY
+GUI_LOOP
+GAME_MENU
+APP_OPEN:game
+GAME_MENU
+LEVEL_START 1
+PAC_STATS dots=240 power=4 score=0 level=1 lives=3
+GAME_START
+PAC_DEATH
+LIFE_START 2
+PAC_STATS dots=233 power=4 score=70 level=1 lives=2

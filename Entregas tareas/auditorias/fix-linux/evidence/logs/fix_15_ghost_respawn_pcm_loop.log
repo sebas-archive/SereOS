@@ -1,0 +1,15 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/audit/fix-linux/evidence/raw/fix_15_ghost_respawn_pcm_loop.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=15 loop=1 cap_ms=1000 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3 stream=0 target=512 res_available=1
+capturing_on=pcm dev=3 available=1
+t= 102 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 204 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 305 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 407 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 508 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 610 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 711 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 813 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 914 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+END t=1001 queued=505 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+AFTER_STOP queued=0

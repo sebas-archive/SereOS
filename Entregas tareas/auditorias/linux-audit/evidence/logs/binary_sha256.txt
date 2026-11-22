@@ -1,0 +1,1 @@
+23ea9d03eb310ad2925f4efe64dd3df84751587d62f459538b98c204ecd90e3e  build/pacman-sereos

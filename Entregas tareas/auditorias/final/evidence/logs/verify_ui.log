@@ -1,0 +1,5 @@
+[OK ] GUI_READY {'seconds': 5.08}
+[OK ] game_buttones_3_colores {'info': {'window_x0': 41, 'window_x1': 919, 'right_margin_px': 13.0, 'in_right_third': True, 'path': '/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/11_game.png', 'found': True, 'row_y': 84, 'order_left_to_right': ['amber', 'green', 'red'], 'centers_x': [870.0, 888.0, 906.0], 'centers_y': [83.0, 83.0, 83.0], 'aligned_y': True, 'spacing_px': [18.0, 18.0], 'colors': {'red': 1, 'amber': 1, 'green': 1}}}
+[OK ] game_maximizado {'centers_y': [47.0, 47.2, 47.0], 'order': ['amber', 'green', 'red']}
+[OK ] game_restaurado {'centers_y': [47.0, 47.2, 47.0]}
+[OK ] sin_panic_exception {'fatals': []}

@@ -1,0 +1,77 @@
+NOTA: se anade la prueba 'boot' porque las pruebas seleccionadas necesitan el escritorio grafico.
+==========================================================================
+ SereOS v1.0 - suite de verificacion automatizada en QEMU
+==========================================================================
+ISO          : sereos.iso (36835328 bytes)
+QEMU         : QEMU emulator version 11.1.3
+KVM          : off (disponible=no)
+Artefactos   : /home/t1an/Descargas/sereos02/audit/final/rt-retry/raw/20261120-060509
+Capturas PNG : /home/t1an/Descargas/sereos02/audit/final/rt-retry/
+
+--- [boot] Arranque, splash y escritorio ---
+  [PASS] boot (13.7s)
+         ok    QEMU arrancado  [KVM=no, serial=/home/t1an/Descargas/sereos02/audit/final/rt-retry/raw/20261120-060509/gfx/serial.log]
+         ok    captura 00_grub_menu  [720x400, 2 colores, 2.99% no negro, menu GRUB (informativa)]
+         ok    marcador SEREOS_BOOT_OK  [linea 20: SEREOS_BOOT_OK mem=255MiB]
+         ok    captura 01_splash  [1024x768, 549 colores, 100.00% no negro, pantalla de arranque con logo oficial]
+         ok    logo oficial en el splash (azul de marca + proporcion)  [bbox=88x88, aspecto=1.00 (oficial 1.07)]
+         ok    marcador SPLASH_DONE  [linea 21: SPLASH_DONE]
+         ok    marcador GUI_READY  [linea 22: GUI_READY]
+         ok    marcador DESKTOP_READY  [linea 19: DESKTOP_READY]
+         ok    captura 02_desktop  [1024x768, 875 colores, 98.34% no negro, escritorio SereOS]
+         ok    captura 02b_topbar_dock  [1024x200, 806 colores, zoom barra superior + dock]
+         ok    captura 02c_dock_tooltip  [1024x768, 1003 colores, 98.34% no negro, tooltip del dock: PAC-MAN SereOS]
+         ok    marca ribbon ~9x10 alineada con el wordmark (PNG sin fondo azul)  [glifo bbox=9x10, gap=9px, centro glifo_y=13 vs wordmark_y=14 (desvio 1px), azul_topbar=0px]
+         ok    topbar mantiene 30 px de alto (UI bajo la barra en y=30)  [TOPBAR_HEIGHT_THEME=30]
+         ok    captura 22_menu_logo  [1024x768, 1407 colores, 99.00% no negro, menu principal con logo oficial]
+         ok    el menu principal se abre desde la topbar  [diferencia = 8.705%]
+         ok    sin referencias al logo antiguo (logo_badge/logo_s/logo_mono)  [fuentes y binario limpios]
+         ok    el logo se genera desde assets/logo/official_logo.png  [tools/gen_logo.py]
+         ok    sin excepcion/panico durante el arranque  [log limpio]
+
+--- [game] PAC-MAN SereOS (F4) ---
+  [FAIL] game (42.2s)
+         ok    F4 abre PAC-MAN SereOS (APP_OPEN:game)
+         ok    marcador GAME_MENU (pantalla de titulo)  [GAME_MENU]
+         ok    captura 07_pacman_titulo  [1024x768, 1875 colores, 98.53% no negro, attract/titulo PAC-MAN SereOS (PRESS START)]
+         ok    captura 07b_pacman_menu  [1024x768, 1358 colores, 98.53% no negro, menu principal arcade PAC-MAN SereOS]
+         ok    Enter inicia la partida (GAME_START)  [GAME_START]
+         ok    captura 08_pacman_ready  [1024x768, 1466 colores, 97.79% no negro, READY!: laberinto, Pacman, 4 fantasmas y HUD]
+         ok    captura 08b_pacman_partida  [1024x768, 1520 colores, 98.53% no negro, partida en marcha con dots]
+         ok    la partida cambia la pantalla respecto al titulo  [diferencia = 54.9712%]
+         ok    el laberinto muestra dots  [1848 px de color de dot en (254, 124, 452, 476)]
+         ok    los 4 fantasmas son visibles  [{'blinky_rojo': 122, 'pinky_rosa': 218, 'inky_cian': 126, 'clyde_naranja': 203}]
+         ok    power pills visibles en el laberinto  [308 px de power pill]
+         info  verificacion interna (eat1)  [1024x768, 1513 colores, 98.53% no negro, comiendo dots al inicio del pasillo]
+         ok    captura 09_pacman_comiendo  [1024x768, 1616 colores, 98.53% no negro, comiendo dots (puntuacion > 0)]
+         ok    captura 10_pacman_frightened  [1024x768, 1654 colores, 98.53% no negro, power pill: fantasmas asustados (azules)]
+         FALLO power pill comido: fantasmas azules (frightened)  [cuerpo asustado=19 px, cuerpos normales rojo+cian=176 px]
+         ok    Pacman come dots (dos capturas distintas)  [diferencia = 0.3682%]
+         ok    hay menos dots en la segunda captura  [pixeles de dot: 1848 -> 1776]
+         ok    Esc pausa la partida (GAME_PAUSE)  [GAME_PAUSE]
+         ok    captura 11_pacman_pausa  [1024x768, 1682 colores, 98.53% no negro, partida en pausa]
+         ok    la pausa cambia la pantalla  [diferencia = 63.2959%]
+         ok    la partida se reanuda tras la pausa  [diferencia = 63.296%]
+         ok    captura 12_pacman_gameover  [1024x768, 1733 colores, 98.53% no negro, fin de partida (vidas agotadas)]
+         ok    se alcanzo GAME_OVER dejando que los fantasmas atrapen
+         ok    Q/Esc vuelve al escritorio (GAME_EXIT)
+         info  verificacion interna (desktop_after_game)  [1024x768, 881 colores, 98.34% no negro, escritorio tras salir del juego]
+         ok    la escena del juego desaparece del escritorio  [diferencia = 70.889%]
+
+--- [window_close] Cierre de ventanas ---
+  [PASS] window_close (9.5s)
+         metodo: keyboard_ctrl_w
+         ok    captura 13_multiventana  [1024x768, 2080 colores, 98.28% no negro, 4 ventanas abiertas: terminal, files, monitor, about]
+         info  ventanas abiertas antes de cerrar  [terminal, files, monitor, about]
+         ok    ventanas cerradas (4): monitor, files, terminal, about  [metodo: atajo de teclado F6 + Ctrl+W; quedan abiertas: ninguna]
+         info  verificacion interna (desktop_windows_closed)  [1024x768, 864 colores, 98.34% no negro, escritorio tras cerrar ventanas]
+         ok    todas las ventanas cerradas
+         ok    sin excepcion/panico al cerrar ventanas  [log limpio]
+
+==========================================================================
+ RESULTADO: 2/3 PASS, 1 FAIL, 0 SKIP
+ Pruebas fallidas:
+   - game: ver pasos FALLO
+ Capturas: 15 PNG en /home/t1an/Descargas/sereos02/audit/final/rt-retry/
+ Resumen JSON: /home/t1an/Descargas/sereos02/audit/final/rt-retry/test-results.json
+==========================================================================

@@ -1,0 +1,2 @@
+qemu-system-i386: -monitor unix:/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res1280/monitor.sock,server,nowait: UNIX socket path '/home/t1an/Descargas/sereos02/audit/final/evidence/run-tests-final/shots/raw/20261120-055725/res1280/monitor.sock' is too long
+Path must be less than 108 bytes

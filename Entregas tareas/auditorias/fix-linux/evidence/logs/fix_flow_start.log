@@ -1,0 +1,328 @@
+[     3] SDL_OpenAudioDevice id=2 want{freq=22050 fmt=0x8010 ch=1 samples=512} -> have{freq=22050 fmt=0x8010 ch=1}
+[     3] SDL_OpenAudioDevice id=3 want{freq=11025 fmt=0x8 ch=1 samples=1024} -> have{freq=11025 fmt=0x8 ch=1}
+[     3] SOURCE pac_sound_stop() state=ATTRACT
+[     3] pac_audio_stop()
+[     3]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+GAME_MENU
+[     3] ===== escenario start =====
+[     3] STATE inicio       state=ATTRACT siren=0 hold=0 ready=0 death=0 fright=0 dots_left=240 pcm_queued=0
+[    20] SOURCE pac_sound_play(slot=1) state=ATTRACT hold=0 siren=0 audio_ok=1
+[    20] pac_audio_stop_loop()  pcm_queued=0
+[    20]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[    20] pac_audio_play(1)  pcm_queued=0
+[    20]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[    20]   => hold=260 siren=0
+GAME_MENU
+[    84] STATE tras-menu    state=MENU siren=0 hold=196 ready=0 death=0 fright=0 dots_left=240 pcm_queued=0
+[   100] SOURCE pac_sound_play(slot=1) state=MENU hold=180 siren=0 audio_ok=1
+[   100] pac_audio_stop_loop()  pcm_queued=0
+[   100]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[   100] pac_audio_play(1)  pcm_queued=0
+[   100]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[   100]   => hold=260 siren=0
+[   100] SOURCE pac_sound_stop() state=MENU
+[   100] pac_audio_stop()
+[   100]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+LEVEL_START 1
+PAC_STATS dots=240 power=4 score=0 level=1 lives=3
+GAME_START
+[   100] SOURCE pac_sound_play(slot=2) state=PLAYING hold=0 siren=0 audio_ok=1
+[   100] pac_audio_stop_loop()  pcm_queued=0
+[   100]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[   100] pac_audio_play(2)  pcm_queued=0
+[   100]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[   100]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[   100]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   100]   => hold=4500 siren=0
+[   115]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   148]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   164]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   167] STATE tras-start   state=PLAYING siren=0 hold=4436 ready=4436 death=0 fright=0 dots_left=240 pcm_queued=761
+[   179]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   212]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   227]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   260]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   277]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   291]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   324]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   339]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   372]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   387]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   403]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   437]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   451]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   468]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   499]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   515]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   549]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   563]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   580]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   611]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   627]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   660]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   667] STATE t+           state=PLAYING siren=0 hold=3940 ready=3940 death=0 fright=0 dots_left=240 pcm_queued=505
+[   675]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   691]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   723]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   739]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   756]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   787]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   803]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   837]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   851]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   868]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   899]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   916]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   947]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[   963]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   980]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1011]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1028]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1044]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1075]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1092]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1123]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1140]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1156]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1168] STATE t+           state=PLAYING siren=0 hold=3444 ready=3444 death=0 fright=0 dots_left=240 pcm_queued=633
+[  1187]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1204]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1235]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1251]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1268]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1299]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1316]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1347]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1363]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1380]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1411]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1428]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1444]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1475]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1492]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1523]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1539]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1556]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1587]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1604]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1635]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1651]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1668]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1668] STATE t+           state=PLAYING siren=0 hold=2932 ready=2932 death=0 fright=0 dots_left=240 pcm_queued=761
+[  1699]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1716]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1732]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1763]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1780]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1811]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1828]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1844]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1876]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1892]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1923]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  1940]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1956]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  1987]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2004]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2020]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2051]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2068]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2099]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2115]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2132]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2163]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2169] STATE t+           state=PLAYING siren=0 hold=2436 ready=2436 death=0 fright=0 dots_left=240 pcm_queued=633
+[  2180]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2211]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2227]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2244]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2275]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2292]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2308]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2339]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2356]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2387]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2404]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2420]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2451]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2468]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2499]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2516]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2532]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2563]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2580]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2611]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2627]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2644]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2669] STATE t+           state=PLAYING siren=0 hold=1940 ready=1940 death=0 fright=0 dots_left=240 pcm_queued=505
+[  2675]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2692]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2708]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2739]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2756]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2787]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2804]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2820]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2851]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2868]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2899]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  2916]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2933]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2964]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  2980]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3012]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3028]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3043]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3076]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3092]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3123]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3140]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3155]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3169] STATE t+           state=PLAYING siren=0 hold=1444 ready=1444 death=0 fright=0 dots_left=240 pcm_queued=633
+[  3188]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3204]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3236]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3252]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3267]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3300]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3316]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3331]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3364]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3379]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3412]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3428]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3443]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3476]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3492]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3523]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3540]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3555]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3588]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3604]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3635]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3652]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3668]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3670] STATE t+           state=PLAYING siren=0 hold=932 ready=932 death=0 fright=0 dots_left=240 pcm_queued=761
+[  3699]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3716]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3733]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3763]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3780]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3797]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3828]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3844]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3876]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3892]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3923]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  3940]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3956]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  3988]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  4004]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  4019]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  4052]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  4067]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  4100]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  4171] STATE t+           state=PLAYING siren=0 hold=436 ready=436 death=0 fright=0 dots_left=240 pcm_queued=0
+[  4612] pac_audio_loop(13)  pcm_queued=0
+[  4612]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  4612]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  4612] SOURCE pac_sound_set_siren(0->13) state=PLAYING hold=0 fright=0
+[  4627]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4643]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4672] STATE t+           state=PLAYING siren=13 hold=0 ready=0 death=0 fright=0 dots_left=240 pcm_queued=384
+[  4677]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  4691]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4708]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4739]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4756]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4787]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  4803]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4820]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  4820] SOURCE pac_sound_play(slot=4) state=PLAYING hold=0 siren=13 audio_ok=1
+[  4820] pac_audio_stop_loop()  pcm_queued=640
+[  4820]   SDL_ClearQueuedAudio dev=3 queued_before=640  <== PCM
+[  4820] pac_audio_play(4)  pcm_queued=0
+[  4820]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  4820]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[  4820]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  4820]   => hold=100 siren=0
+[  4851]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  4948] SOURCE pac_sound_play(slot=3) state=PLAYING hold=0 siren=0 audio_ok=1
+[  4948] pac_audio_stop_loop()  pcm_queued=0
+[  4948]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[  4948] pac_audio_play(3)  pcm_queued=0
+[  4948]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  4949]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[  4949]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  4949]   => hold=100 siren=0
+[  4963]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5092] SOURCE pac_sound_play(slot=4) state=PLAYING hold=0 siren=0 audio_ok=1
+[  5092] pac_audio_stop_loop()  pcm_queued=0
+[  5092]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[  5092] pac_audio_play(4)  pcm_queued=0
+[  5092]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  5092]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[  5092]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5092]   => hold=100 siren=0
+[  5108]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5173] STATE t+           state=PLAYING siren=0 hold=20 ready=0 death=0 fright=0 dots_left=237 pcm_queued=0
+[  5220] SOURCE pac_sound_play(slot=3) state=PLAYING hold=0 siren=0 audio_ok=1
+[  5220] pac_audio_stop_loop()  pcm_queued=0
+[  5220]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[  5221] pac_audio_play(3)  pcm_queued=0
+[  5221]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  5221]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[  5221]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5221]   => hold=100 siren=0
+[  5252]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  5348] SOURCE pac_sound_play(slot=4) state=PLAYING hold=0 siren=0 audio_ok=1
+[  5348] pac_audio_stop_loop()  pcm_queued=0
+[  5348]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[  5348] pac_audio_play(4)  pcm_queued=0
+[  5348]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  5348]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[  5348]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5348]   => hold=100 siren=0
+[  5364]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5491] SOURCE pac_sound_play(slot=3) state=PLAYING hold=0 siren=0 audio_ok=1
+[  5491] pac_audio_stop_loop()  pcm_queued=0
+[  5491]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[  5491] pac_audio_play(3)  pcm_queued=0
+[  5491]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  5491]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[  5491]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5491]   => hold=100 siren=0
+[  5507]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5619] SOURCE pac_sound_play(slot=4) state=PLAYING hold=0 siren=0 audio_ok=1
+[  5619] pac_audio_stop_loop()  pcm_queued=0
+[  5619]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[  5619] pac_audio_play(4)  pcm_queued=0
+[  5619]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  5619]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[  5619]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[  5619]   => hold=100 siren=0
+[  5653]   SDL_QueueAudio dev=3 len=256 queued_before=377 queued_after=633  <== PCM
+[  5673] STATE t+           state=PLAYING siren=0 hold=52 ready=0 death=0 fright=0 dots_left=233 pcm_queued=377
+[  5924] pac_audio_loop(13)  pcm_queued=0
+[  5924]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[  5924]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  5924] SOURCE pac_sound_set_siren(0->13) state=PLAYING hold=0 fright=0
+[  5939]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  5956]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  5972]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  6003]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  6020]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  6051]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  6068]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  6084]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  6115]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  6132]   SDL_QueueAudio dev=3 len=256 queued_before=384 queued_after=640  <== PCM
+[  6163]   SDL_QueueAudio dev=3 len=256 queued_before=256 queued_after=512  <== PCM
+[  6174] STATE t+           state=PLAYING siren=13 hold=0 ready=0 death=0 fright=0 dots_left=233 pcm_queued=384
+[  6174] SUMMARY start_plays=1 loop_hunt=2 loop_chase=0 loop_fright=0
+[  6174] SOURCE pac_sound_stop() state=PLAYING
+[  6174] pac_audio_stop()
+[  6174]   SDL_ClearQueuedAudio dev=3 queued_before=384  <== PCM
+GAME_EXIT
+[  6174]   SDL_CloseAudioDevice dev=2
+[  6174]   SDL_CloseAudioDevice dev=3

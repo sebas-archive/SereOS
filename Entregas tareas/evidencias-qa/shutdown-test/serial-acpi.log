@@ -1,0 +1,6 @@
+SHUTDOWN_TEST_START
+STUB:audio_stop
+SEREOS_POWEROFF
+[VGA] Apagando...[VGA] 
+[VGA] SereOS esta cerrando el sistema[VGA] 
+SEREOS_SHUTDOWN:acpi pm1a=0x0604 pm1b=0x0000 slp_typ=0/0 s5=1

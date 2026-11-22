@@ -1,0 +1,2 @@
+[pacman] SereOS OK -> build/sereos/libpacman.a
+[pacman] integrar con: apps/apps.c (app_game) y enlazar antes de -lgcc

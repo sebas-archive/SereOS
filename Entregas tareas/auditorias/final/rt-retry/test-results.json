@@ -1,0 +1,569 @@
+{
+  "suite": "SereOS v1.0 QEMU verification",
+  "timestamp": "2026-11-20T06:06:15",
+  "run_id": "20261120-060509",
+  "iso": {
+    "path": "sereos.iso",
+    "size": 36835328,
+    "mtime": 1795172058.633411
+  },
+  "qemu": "QEMU emulator version 11.1.3",
+  "kvm_mode": "off",
+  "kvm_used": false,
+  "mouse_worked": false,
+  "raw_artifacts": "eliminados en la entrega (solo PNG finales)",
+  "cases": [
+    {
+      "key": "boot",
+      "title": "Arranque, splash y escritorio",
+      "result": "pass",
+      "duration_s": 13.74,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "QEMU arrancado",
+          "ok": true,
+          "detail": "KVM=no, serial=/home/t1an/Descargas/sereos02/audit/final/rt-retry/raw/20261120-060509/gfx/serial.log"
+        },
+        {
+          "text": "captura 00_grub_menu",
+          "ok": true,
+          "detail": "720x400, 2 colores, 2.99% no negro, menu GRUB (informativa)"
+        },
+        {
+          "text": "marcador SEREOS_BOOT_OK",
+          "ok": true,
+          "detail": "linea 20: SEREOS_BOOT_OK mem=255MiB"
+        },
+        {
+          "text": "captura 01_splash",
+          "ok": true,
+          "detail": "1024x768, 549 colores, 100.00% no negro, pantalla de arranque con logo oficial"
+        },
+        {
+          "text": "logo oficial en el splash (azul de marca + proporcion)",
+          "ok": true,
+          "detail": "bbox=88x88, aspecto=1.00 (oficial 1.07)"
+        },
+        {
+          "text": "marcador SPLASH_DONE",
+          "ok": true,
+          "detail": "linea 21: SPLASH_DONE"
+        },
+        {
+          "text": "marcador GUI_READY",
+          "ok": true,
+          "detail": "linea 22: GUI_READY"
+        },
+        {
+          "text": "marcador DESKTOP_READY",
+          "ok": true,
+          "detail": "linea 19: DESKTOP_READY"
+        },
+        {
+          "text": "captura 02_desktop",
+          "ok": true,
+          "detail": "1024x768, 875 colores, 98.34% no negro, escritorio SereOS"
+        },
+        {
+          "text": "captura 02b_topbar_dock",
+          "ok": true,
+          "detail": "1024x200, 806 colores, zoom barra superior + dock"
+        },
+        {
+          "text": "captura 02c_dock_tooltip",
+          "ok": true,
+          "detail": "1024x768, 1003 colores, 98.34% no negro, tooltip del dock: PAC-MAN SereOS"
+        },
+        {
+          "text": "marca ribbon ~9x10 alineada con el wordmark (PNG sin fondo azul)",
+          "ok": true,
+          "detail": "glifo bbox=9x10, gap=9px, centro glifo_y=13 vs wordmark_y=14 (desvio 1px), azul_topbar=0px"
+        },
+        {
+          "text": "topbar mantiene 30 px de alto (UI bajo la barra en y=30)",
+          "ok": true,
+          "detail": "TOPBAR_HEIGHT_THEME=30"
+        },
+        {
+          "text": "captura 22_menu_logo",
+          "ok": true,
+          "detail": "1024x768, 1407 colores, 99.00% no negro, menu principal con logo oficial"
+        },
+        {
+          "text": "el menu principal se abre desde la topbar",
+          "ok": true,
+          "detail": "diferencia = 8.705%"
+        },
+        {
+          "text": "sin referencias al logo antiguo (logo_badge/logo_s/logo_mono)",
+          "ok": true,
+          "detail": "fuentes y binario limpios"
+        },
+        {
+          "text": "el logo se genera desde assets/logo/official_logo.png",
+          "ok": true,
+          "detail": "tools/gen_logo.py"
+        },
+        {
+          "text": "sin excepcion/panico durante el arranque",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "00_grub_menu",
+        "01_splash",
+        "02_desktop",
+        "02b_topbar_dock",
+        "02c_dock_tooltip",
+        "22_menu_logo"
+      ]
+    },
+    {
+      "key": "game",
+      "title": "PAC-MAN SereOS (F4)",
+      "result": "fail",
+      "duration_s": 42.21,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F4 abre PAC-MAN SereOS (APP_OPEN:game)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "marcador GAME_MENU (pantalla de titulo)",
+          "ok": true,
+          "detail": "GAME_MENU"
+        },
+        {
+          "text": "captura 07_pacman_titulo",
+          "ok": true,
+          "detail": "1024x768, 1875 colores, 98.53% no negro, attract/titulo PAC-MAN SereOS (PRESS START)"
+        },
+        {
+          "text": "captura 07b_pacman_menu",
+          "ok": true,
+          "detail": "1024x768, 1358 colores, 98.53% no negro, menu principal arcade PAC-MAN SereOS"
+        },
+        {
+          "text": "Enter inicia la partida (GAME_START)",
+          "ok": true,
+          "detail": "GAME_START"
+        },
+        {
+          "text": "captura 08_pacman_ready",
+          "ok": true,
+          "detail": "1024x768, 1466 colores, 97.79% no negro, READY!: laberinto, Pacman, 4 fantasmas y HUD"
+        },
+        {
+          "text": "captura 08b_pacman_partida",
+          "ok": true,
+          "detail": "1024x768, 1520 colores, 98.53% no negro, partida en marcha con dots"
+        },
+        {
+          "text": "la partida cambia la pantalla respecto al titulo",
+          "ok": true,
+          "detail": "diferencia = 54.9712%"
+        },
+        {
+          "text": "el laberinto muestra dots",
+          "ok": true,
+          "detail": "1848 px de color de dot en (254, 124, 452, 476)"
+        },
+        {
+          "text": "los 4 fantasmas son visibles",
+          "ok": true,
+          "detail": "{'blinky_rojo': 122, 'pinky_rosa': 218, 'inky_cian': 126, 'clyde_naranja': 203}"
+        },
+        {
+          "text": "power pills visibles en el laberinto",
+          "ok": true,
+          "detail": "308 px de power pill"
+        },
+        {
+          "text": "verificacion interna (eat1)",
+          "ok": null,
+          "detail": "1024x768, 1513 colores, 98.53% no negro, comiendo dots al inicio del pasillo"
+        },
+        {
+          "text": "captura 09_pacman_comiendo",
+          "ok": true,
+          "detail": "1024x768, 1616 colores, 98.53% no negro, comiendo dots (puntuacion > 0)"
+        },
+        {
+          "text": "captura 10_pacman_frightened",
+          "ok": true,
+          "detail": "1024x768, 1654 colores, 98.53% no negro, power pill: fantasmas asustados (azules)"
+        },
+        {
+          "text": "power pill comido: fantasmas azules (frightened)",
+          "ok": false,
+          "detail": "cuerpo asustado=19 px, cuerpos normales rojo+cian=176 px"
+        },
+        {
+          "text": "Pacman come dots (dos capturas distintas)",
+          "ok": true,
+          "detail": "diferencia = 0.3682%"
+        },
+        {
+          "text": "hay menos dots en la segunda captura",
+          "ok": true,
+          "detail": "pixeles de dot: 1848 -> 1776"
+        },
+        {
+          "text": "Esc pausa la partida (GAME_PAUSE)",
+          "ok": true,
+          "detail": "GAME_PAUSE"
+        },
+        {
+          "text": "captura 11_pacman_pausa",
+          "ok": true,
+          "detail": "1024x768, 1682 colores, 98.53% no negro, partida en pausa"
+        },
+        {
+          "text": "la pausa cambia la pantalla",
+          "ok": true,
+          "detail": "diferencia = 63.2959%"
+        },
+        {
+          "text": "la partida se reanuda tras la pausa",
+          "ok": true,
+          "detail": "diferencia = 63.296%"
+        },
+        {
+          "text": "captura 12_pacman_gameover",
+          "ok": true,
+          "detail": "1024x768, 1733 colores, 98.53% no negro, fin de partida (vidas agotadas)"
+        },
+        {
+          "text": "se alcanzo GAME_OVER dejando que los fantasmas atrapen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "Q/Esc vuelve al escritorio (GAME_EXIT)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "verificacion interna (desktop_after_game)",
+          "ok": null,
+          "detail": "1024x768, 881 colores, 98.34% no negro, escritorio tras salir del juego"
+        },
+        {
+          "text": "la escena del juego desaparece del escritorio",
+          "ok": true,
+          "detail": "diferencia = 70.889%"
+        }
+      ],
+      "screenshots": [
+        "07_pacman_titulo",
+        "07b_pacman_menu",
+        "08_pacman_ready",
+        "08b_pacman_partida",
+        "09_pacman_comiendo",
+        "10_pacman_frightened",
+        "11_pacman_pausa",
+        "12_pacman_gameover"
+      ]
+    },
+    {
+      "key": "window_close",
+      "title": "Cierre de ventanas",
+      "result": "pass",
+      "duration_s": 9.46,
+      "skip_reason": null,
+      "error": null,
+      "method": "keyboard_ctrl_w",
+      "steps": [
+        {
+          "text": "captura 13_multiventana",
+          "ok": true,
+          "detail": "1024x768, 2080 colores, 98.28% no negro, 4 ventanas abiertas: terminal, files, monitor, about"
+        },
+        {
+          "text": "ventanas abiertas antes de cerrar",
+          "ok": null,
+          "detail": "terminal, files, monitor, about"
+        },
+        {
+          "text": "ventanas cerradas (4): monitor, files, terminal, about",
+          "ok": true,
+          "detail": "metodo: atajo de teclado F6 + Ctrl+W; quedan abiertas: ninguna"
+        },
+        {
+          "text": "verificacion interna (desktop_windows_closed)",
+          "ok": null,
+          "detail": "1024x768, 864 colores, 98.34% no negro, escritorio tras cerrar ventanas"
+        },
+        {
+          "text": "todas las ventanas cerradas",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "sin excepcion/panico al cerrar ventanas",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "13_multiventana"
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "00_grub_menu",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/00_grub_menu.png",
+      "blackish": false,
+      "width": 720,
+      "height": 400,
+      "distinct_colors": 2,
+      "non_black_ratio": 0.029858,
+      "mean_luma": 5.016,
+      "mean_rgb": [
+        5.02,
+        5.02,
+        5.02
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "01_splash",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/01_splash.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 549,
+      "non_black_ratio": 1.0,
+      "mean_luma": 14.169,
+      "mean_rgb": [
+        11.74,
+        14.26,
+        20.4
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02_desktop",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/02_desktop.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 875,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 18.386,
+      "mean_rgb": [
+        13.43,
+        18.79,
+        29.01
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02b_topbar_dock",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/02b_topbar_dock.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 200,
+      "distinct_colors": 806,
+      "non_black_ratio": 0.956841,
+      "mean_luma": 21.232,
+      "mean_rgb": [
+        16.05,
+        21.74,
+        31.45
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02c_dock_tooltip",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/02c_dock_tooltip.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1003,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 18.529,
+      "mean_rgb": [
+        13.56,
+        18.93,
+        29.19
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "22_menu_logo",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/22_menu_logo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1407,
+      "non_black_ratio": 0.990046,
+      "mean_luma": 20.376,
+      "mean_rgb": [
+        15.28,
+        20.79,
+        31.23
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "07_pacman_titulo",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/07_pacman_titulo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1875,
+      "non_black_ratio": 0.985346,
+      "mean_luma": 23.328,
+      "mean_rgb": [
+        19.63,
+        23.59,
+        31.59
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "07b_pacman_menu",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/07b_pacman_menu.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1358,
+      "non_black_ratio": 0.985346,
+      "mean_luma": 23.93,
+      "mean_rgb": [
+        19.61,
+        24.28,
+        33.21
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "08_pacman_ready",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/08_pacman_ready.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1466,
+      "non_black_ratio": 0.977873,
+      "mean_luma": 31.649,
+      "mean_rgb": [
+        22.63,
+        32.52,
+        49.57
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "08b_pacman_partida",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/08b_pacman_partida.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1520,
+      "non_black_ratio": 0.985346,
+      "mean_luma": 31.626,
+      "mean_rgb": [
+        22.49,
+        32.49,
+        49.93
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "09_pacman_comiendo",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/09_pacman_comiendo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1616,
+      "non_black_ratio": 0.985346,
+      "mean_luma": 31.608,
+      "mean_rgb": [
+        22.49,
+        32.47,
+        49.91
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "10_pacman_frightened",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/10_pacman_frightened.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1654,
+      "non_black_ratio": 0.985346,
+      "mean_luma": 31.586,
+      "mean_rgb": [
+        22.45,
+        32.45,
+        49.91
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "11_pacman_pausa",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/11_pacman_pausa.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1682,
+      "non_black_ratio": 0.985346,
+      "mean_luma": 22.921,
+      "mean_rgb": [
+        18.22,
+        23.3,
+        33.05
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "12_pacman_gameover",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/12_pacman_gameover.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1733,
+      "non_black_ratio": 0.985346,
+      "mean_luma": 22.846,
+      "mean_rgb": [
+        18.28,
+        23.24,
+        32.38
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "13_multiventana",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-retry/13_multiventana.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 2080,
+      "non_black_ratio": 0.982831,
+      "mean_luma": 26.023,
+      "mean_rgb": [
+        21.99,
+        26.33,
+        34.86
+      ],
+      "black_level": 16
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "passed": 2,
+    "failed": 1,
+    "skipped": 0
+  }
+}

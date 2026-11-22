@@ -1,0 +1,60 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/2_start_pcm.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=2 loop=0 cap_ms=5600 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=pcm dev=3 available=1 res_available=1
+t= 101 queued=45645 active=1 loop=0 playing=0
+t= 203 queued=44493 active=1 loop=0 playing=0
+t= 304 queued=43341 active=1 loop=0 playing=0
+t= 406 queued=42061 active=1 loop=0 playing=0
+t= 507 queued=40909 active=1 loop=0 playing=0
+t= 609 queued=39757 active=1 loop=0 playing=0
+t= 710 queued=38605 active=1 loop=0 playing=0
+t= 812 queued=37453 active=1 loop=0 playing=0
+t= 914 queued=36301 active=1 loop=0 playing=0
+t=1016 queued=35021 active=1 loop=0 playing=0
+t=1118 queued=33869 active=1 loop=0 playing=0
+t=1219 queued=32717 active=1 loop=0 playing=0
+t=1321 queued=31565 active=1 loop=0 playing=0
+t=1422 queued=30413 active=1 loop=0 playing=0
+t=1524 queued=29261 active=1 loop=0 playing=0
+t=1625 queued=28109 active=1 loop=0 playing=0
+t=1727 queued=26829 active=1 loop=0 playing=0
+t=1828 queued=25677 active=1 loop=0 playing=0
+t=1930 queued=24525 active=1 loop=0 playing=0
+t=2031 queued=23373 active=1 loop=0 playing=0
+t=2133 queued=22221 active=1 loop=0 playing=0
+t=2234 queued=21069 active=1 loop=0 playing=0
+t=2336 queued=19789 active=1 loop=0 playing=0
+t=2437 queued=18637 active=1 loop=0 playing=0
+t=2539 queued=17485 active=1 loop=0 playing=0
+t=2641 queued=16333 active=1 loop=0 playing=0
+t=2742 queued=15181 active=1 loop=0 playing=0
+t=2844 queued=14029 active=1 loop=0 playing=0
+t=2945 queued=12877 active=1 loop=0 playing=0
+t=3047 queued=11597 active=1 loop=0 playing=0
+t=3148 queued=10445 active=1 loop=0 playing=0
+t=3250 queued=9293 active=1 loop=0 playing=0
+t=3351 queued=8141 active=1 loop=0 playing=0
+t=3453 queued=6989 active=1 loop=0 playing=0
+t=3554 queued=5837 active=1 loop=0 playing=0
+t=3656 queued=4557 active=1 loop=0 playing=0
+t=3757 queued=3405 active=1 loop=0 playing=0
+t=3859 queued=2253 active=1 loop=0 playing=0
+t=3960 queued=1101 active=1 loop=0 playing=0
+t=4062 queued=0 active=0 loop=0 playing=0
+t=4163 queued=0 active=0 loop=0 playing=0
+t=4265 queued=0 active=0 loop=0 playing=0
+t=4366 queued=0 active=0 loop=0 playing=0
+t=4468 queued=0 active=0 loop=0 playing=0
+t=4569 queued=0 active=0 loop=0 playing=0
+t=4671 queued=0 active=0 loop=0 playing=0
+t=4772 queued=0 active=0 loop=0 playing=0
+t=4874 queued=0 active=0 loop=0 playing=0
+t=4975 queued=0 active=0 loop=0 playing=0
+t=5077 queued=0 active=0 loop=0 playing=0
+t=5178 queued=0 active=0 loop=0 playing=0
+t=5280 queued=0 active=0 loop=0 playing=0
+t=5381 queued=0 active=0 loop=0 playing=0
+t=5483 queued=0 active=0 loop=0 playing=0
+t=5584 queued=0 active=0 loop=0 playing=0
+END t=5600 queued=0 pcm_active=0 audio_playing=0

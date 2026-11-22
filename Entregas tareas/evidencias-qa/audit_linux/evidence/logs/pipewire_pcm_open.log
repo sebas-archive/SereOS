@@ -1,0 +1,5 @@
+mode=pcm slot=3 loop=0 cap_ms=300 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=pcm dev=3 available=1 res_available=1
+t= 102 queued=0 active=0 loop=0 playing=0
+t= 203 queued=0 active=0 loop=0 playing=0
+END t=300 queued=0 pcm_active=0 audio_playing=0

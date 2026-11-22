@@ -1,0 +1,11 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [audit/verify/evidence/disk/mix6.raw], format=S16LE channels=2 freq=44100.
+mode=mix6 slot=0 play=play ms=2500 g_audio_on=1 g_pcm_on=1
+pcm_dev=3 available=1
+t=0 play slot 6
+t=56 play slot 7
+t=110 play slot 9
+t=220 play slot 3
+t=270 play slot 4
+t=301 play slot 6
+END t=2501

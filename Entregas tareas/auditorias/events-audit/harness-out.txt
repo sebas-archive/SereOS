@@ -1,0 +1,143 @@
+=== ARNES DE AUDITORIA EVENTOS->AUDIO (nucleo real, plataforma mock) ===
+
+--- A) navegacion attract/menu/instrucciones (eventos=2) ---
+  t=  210ms STOP_LOOP NONE(0)
+  t=  210ms PLAY START(2)
+  [OK]   A: PAC_SFX_MENU NUNCA se reproduce
+  [OK]   A: ninguna sirena en menu
+
+B) tras confirmar Jugar: ready_ms=4436 audio_hold_ms=4436 audio_ok=1
+
+--- B) inicio de partida (eventos=2) ---
+  t=  420ms STOP_LOOP NONE(0)
+  t=  420ms PLAY START(2)
+  [OK]   B: START exactamente 1 vez
+  [OK]   B: hold inicial ~4500 ms (resta el tiempo ya consumido)
+
+--- B2) tras READY 4,5 s (eventos=3) ---
+  t=  420ms STOP_LOOP NONE(0)
+  t=  420ms PLAY START(2)
+  t= 4930ms LOOP SIREN_HUNT(13)
+  [OK]   B: sirena HUNT arranca al acabar READY
+
+--- C) 3 dots seguidos (eventos=9) ---
+  t= 5140ms STOP_LOOP NONE(0)
+  t= 5140ms PLAY WAKA1(3)
+  t= 5220ms LOOP SIREN_HUNT(13)
+  t= 5260ms STOP_LOOP NONE(0)
+  t= 5260ms PLAY WAKA2(4)
+  t= 5330ms LOOP SIREN_HUNT(13)
+  t= 5380ms STOP_LOOP NONE(0)
+  t= 5380ms PLAY WAKA1(3)
+  t= 5460ms LOOP SIREN_HUNT(13)
+  [OK]   C: waka alterna 1/2 sin duplicarse
+  [OK]   C: la sirena se REINICIA (LOOP) en cada dot: 3 reinicios
+  [OK]   C: cada dot para el loop de sirena
+
+D) tras dot que cruza 10.000: hold=70 lives=4 score=10000
+
+--- D) dot que da vida extra (eventos=4) ---
+  t= 5720ms STOP_LOOP NONE(0)
+  t= 5720ms PLAY EXTRA_LIFE(9)
+  t= 5720ms STOP_LOOP NONE(0)
+  t= 5720ms PLAY WAKA1(3)
+  [OK]   D: EXTRA_LIFE se pide 1 vez
+  [OK]   D: WAKA se pide justo despues
+  [OK]   D: el hold de EXTRA_LIFE(900) queda pisado por el de WAKA(70)
+
+--- E) superpunto (eventos=2) ---
+  t= 5940ms PLAY POWER(5)
+  t= 5950ms LOOP SIREN_FRIGHT(14)
+  [OK]   E: POWER se pide 1 vez
+  [OK]   E: FRIGHT arranca en el mismo tick (sustituye al POWER)
+  [OK]   E: SIREN_FRIGHT (slot 14) NO tiene WAV en sfx_res
+
+--- F) PAC_GAME_EVENT_GHOST_RESPAWN (eventos=0) ---
+  [OK]   F: GHOST_RESPAWN tiene WAV(15) pero NUNCA se reproduce
+  [OK]   F: ...aunque el slot 15 si tiene WAV (2935 muestras, loop=1)
+
+G) dots_eaten=70 fruit_visible_ms=9888
+
+--- G) aparicion de fruta (eventos=4) ---
+  t= 6550ms STOP_LOOP NONE(0)
+  t= 6550ms PLAY WAKA1(3)
+  t= 6550ms PLAY POWER(5)
+  t= 6630ms LOOP SIREN_HUNT(13)
+  [OK]   G: al APARECER la fruta se pide POWER (no asociado al evento)
+  [OK]   H: Esc pausa
+  [OK]   H: la sirena se para al pausar
+
+--- H) reanudacion tras pausa (eventos=1) ---
+  t= 6950ms LOOP SIREN_HUNT(13)
+  [OK]   H: la sirena se reanuda
+  [OK]   I: sirena HUNT activa antes del ajuste
+
+I) tras OFF->ON: audio_ok=1 g->siren=SIREN_HUNT hold=0
+
+--- I) reencendido del sonido (eventos=0) ---
+  [OK]   I: audio_ok vuelve a 1
+  [OK]   I: la sirena NO se reanuda (g->siren obsoleto, set_siren retorna)
+
+J) muerte: death_ms=2800 hold=2000
+
+--- J) muerte -> game over (eventos=4) ---
+  t= 7850ms STOP_LOOP NONE(0)
+  t= 7850ms PLAY DEATH(8)
+  t=10640ms STOP_LOOP NONE(0)
+  t=10640ms PLAY GAME_OVER(11)
+  [OK]   J: DEATH 1 vez
+  [OK]   J: llega a GAMEOVER
+  [OK]   J: GAME_OVER se pide 1 vez
+  [OK]   J: GAME_OVER no tiene WAV (solo sintetizado)
+
+--- K) nivel completado (eventos=3) ---
+  t=11080ms STOP_LOOP NONE(0)
+  t=11080ms STOP_LOOP NONE(0)
+  t=11080ms PLAY LEVEL_CLEAR(10)
+  [OK]   K: estado LEVEL_CLEAR
+  [OK]   K: LEVEL_CLEAR se pide 1 vez
+  [OK]   K: LEVEL_CLEAR sin WAV; intermission.wav no integrado
+
+--- K2) transicion al siguiente nivel (eventos=0) ---
+  [OK]   K: pasa a nivel 2
+  [OK]   K: no re-suena START entre niveles
+
+--- L) ventana sin foco 400 ms (eventos=0) ---
+  [OK]   L: al perder el foco el loop de sirena NO se detiene
+
+--- L2) 400 ms tras recuperar el foco (eventos=0) ---
+  [OK]   L2: al recuperar el foco la sirena NO se rearma (g->siren sigue HUNT)
+  [OK]   L2: g->siren sigue diciendo HUNT aunque el backend ya no reproduce nada
+
+M) tras muerte+READY: state=5 lives=2 ready=0
+
+--- M) muerte con vidas restantes (eventos=15) ---
+  t=14370ms STOP_LOOP NONE(0)
+  t=14370ms PLAY DEATH(8)
+  t=18670ms LOOP SIREN_HUNT(13)
+  t=18870ms STOP_LOOP NONE(0)
+  t=18870ms PLAY WAKA2(4)
+  t=18950ms LOOP SIREN_HUNT(13)
+  t=19000ms STOP_LOOP NONE(0)
+  t=19000ms PLAY WAKA1(3)
+  t=19080ms LOOP SIREN_HUNT(13)
+  t=19150ms STOP_LOOP NONE(0)
+  t=19150ms PLAY WAKA2(4)
+  t=19230ms LOOP SIREN_HUNT(13)
+  t=19270ms STOP_LOOP NONE(0)
+  t=19270ms PLAY WAKA1(3)
+  t=19350ms LOOP SIREN_HUNT(13)
+  [OK]   M: DEATH una vez
+  [OK]   M: la sirena se reanuda tras el READY
+
+N) PAC_LEVEL_CLEAR_MS=1400 ms ; intermission.wav=57377 muestras @11025 = ~5204 ms
+  [OK]   N: el estado LEVEL_CLEAR (1400 ms) es mas corto que intermission (5204 ms)
+
+--- O) fantasma comido y ojos volviendo (eventos=3) ---
+  t=19590ms STOP_LOOP NONE(0)
+  t=19590ms PLAY EAT_GHOST(6)
+  t=19890ms LOOP SIREN_FRIGHT(14)
+  [OK]   O: EAT_GHOST se pide 1 vez
+  [OK]   O: el regreso de ojos NO reproduce GHOST_RESPAWN en ningun momento
+
+=== RESULTADO: 0 comprobacion(es) FAIL ===

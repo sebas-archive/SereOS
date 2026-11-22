@@ -1,0 +1,126 @@
+== independent core->audio sequence harness ==
+PASS  start: START played exactly once                     plays=2 count
+PASS  start: normal siren resumes after hold               SIREN_HUNT loop after ~4.5s
+PASS  start: no frightened siren in normal play            
+---- audio sequence [start] (23 events) ----
+  t=  310ms stop_loop ?(-1)
+  t=  310ms play      MENU(1)
+  t=  610ms stop_loop ?(-1)
+  t=  610ms play      MENU(1)
+  t=  610ms stop      ?(-1)
+  t=  610ms stop_loop ?(-1)
+  t=  610ms play      START(2)
+  t= 5120ms loop      SIREN_HUNT(13)
+  t= 5330ms stop_loop ?(-1)
+  t= 5330ms play      WAKA2(4)
+  t= 5460ms stop_loop ?(-1)
+  t= 5460ms play      WAKA1(3)
+  t= 5600ms stop_loop ?(-1)
+  t= 5600ms play      WAKA2(4)
+  t= 5730ms stop_loop ?(-1)
+  t= 5730ms play      WAKA1(3)
+  t= 5860ms stop_loop ?(-1)
+  t= 5860ms play      WAKA2(4)
+  t= 6000ms stop_loop ?(-1)
+  t= 6000ms play      WAKA1(3)
+  t= 6130ms stop_loop ?(-1)
+  t= 6130ms play      WAKA2(4)
+  t= 6440ms loop      SIREN_HUNT(13)
+PASS  start: still exactly 1 START after 9.5s              
+---- audio sequence [startonce] (23 events) ----
+  t= 8510ms stop_loop ?(-1)
+  t= 8510ms play      MENU(1)
+  t= 8810ms stop_loop ?(-1)
+  t= 8810ms play      MENU(1)
+  t= 8810ms stop      ?(-1)
+  t= 8810ms stop_loop ?(-1)
+  t= 8810ms play      START(2)
+  t=13320ms loop      SIREN_HUNT(13)
+  t=13530ms stop_loop ?(-1)
+  t=13530ms play      WAKA2(4)
+  t=13660ms stop_loop ?(-1)
+  t=13660ms play      WAKA1(3)
+  t=13800ms stop_loop ?(-1)
+  t=13800ms play      WAKA2(4)
+  t=13930ms stop_loop ?(-1)
+  t=13930ms play      WAKA1(3)
+  t=14060ms stop_loop ?(-1)
+  t=14060ms play      WAKA2(4)
+  t=14200ms stop_loop ?(-1)
+  t=14200ms play      WAKA1(3)
+  t=14330ms stop_loop ?(-1)
+  t=14330ms play      WAKA2(4)
+  t=14640ms loop      SIREN_HUNT(13)
+PASS  power: POWER requested on power pellet               
+PASS  power: fright siren does not cut the POWER beep immediately 
+PASS  power: fright siren starts after the POWER hold      
+---- audio sequence [power] (3 events) ----
+  t=28600ms stop_loop ?(-1)
+  t=28600ms play      POWER(5)
+  t=28920ms loop      SIREN_CHASE(12)
+PASS  dots: exactly 3 waka plays for 3 dots                waka1+waka2=3
+PASS  dots: waka1/waka2 alternate                          
+---- audio sequence [dots] (6 events) ----
+  t=37460ms stop_loop ?(-1)
+  t=37460ms play      WAKA2(4)
+  t=37580ms stop_loop ?(-1)
+  t=37580ms play      WAKA1(3)
+  t=37700ms stop_loop ?(-1)
+  t=37700ms play      WAKA2(4)
+PASS  extra life: EXTRA_LIFE is requested                  
+PASS  extra life: same-tick waka does NOT overwrite EXTRA_LIFE 
+---- audio sequence [extralife] (2 events) ----
+  t=46020ms stop_loop ?(-1)
+  t=46020ms play      EXTRA_LIFE(9)
+PASS  respawn: loop slot 15 while eyes are EATEN           SIREN/LOOP = GHOST_RESPAWN
+PASS  respawn: normal siren restored after respawn ends    loop back to HUNT/CHASE
+PASS  respawn: GHOST_RESPAWN loop does not stick           
+---- audio sequence [respawn] (2 events) ----
+  t=54630ms loop      GHOST_RESPAWN(15)
+  t=54760ms loop      SIREN_HUNT(13)
+PASS  fright: frightened uses slot 12 (hunter siren)       loop = SIREN_CHASE(12)
+PASS  fright: normal play returns to slot 13 (hunted)      loop = SIREN_HUNT(13)
+---- audio sequence [fright] (2 events) ----
+  t=63070ms loop      SIREN_CHASE(12)
+  t=63860ms loop      SIREN_HUNT(13)
+PASS  menu: MENU blip requested on navigation              
+---- audio sequence [menu] (2 events) ----
+  t=64990ms stop_loop ?(-1)
+  t=64990ms play      MENU(1)
+PASS  level clear: LEVEL_CLEAR(intermission) requested     slot 10
+PASS  level clear: state lasts >= intermission duration (5.2s) 
+---- audio sequence [levelclear] (5 events) ----
+  t=65160ms stop      ?(-1)
+  t=65160ms stop_loop ?(-1)
+  t=65160ms play      START(2)
+  t=65160ms stop_loop ?(-1)
+  t=65160ms play      LEVEL_CLEAR(10)
+PASS  game over: GAME_OVER requested                       slot 11
+---- audio sequence [gameover] (5 events) ----
+  t=70860ms stop      ?(-1)
+  t=70860ms stop_loop ?(-1)
+  t=70860ms play      START(2)
+  t=70860ms stop_loop ?(-1)
+  t=70860ms play      GAME_OVER(11)
+PASS  pause: siren was looping before pause (info)         
+PASS  pause: loop stopped on pause                         
+PASS  pause: siren resumes after unpause                   
+---- audio sequence [pause] (1 events) ----
+  t=79430ms loop      SIREN_HUNT(13)
+PASS  focus: loop stopped on focus loss                    
+PASS  focus: loop re-armed when focus returns              
+---- audio sequence [focus] (1 events) ----
+  t=88100ms loop      SIREN_HUNT(13)
+PASS  toggle: sound OFF disables audio (audio_ok=0)        
+PASS  toggle: sound ON re-enables audio                    
+PASS  toggle: siren comes back after OFF->ON               
+---- audio sequence [toggle] (2 events) ----
+  t=96680ms stop      ?(-1)
+  t=96690ms loop      SIREN_HUNT(13)
+PASS  oneshot: EAT_GHOST requested                         
+PASS  oneshot: waka does not truncate EAT_GHOST            higher priority wins
+---- audio sequence [oneshot] (2 events) ----
+  t=105180ms stop_loop ?(-1)
+  t=105180ms play      EAT_GHOST(6)
+
+== RESULT: 30 PASS / 0 FAIL ==

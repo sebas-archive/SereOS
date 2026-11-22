@@ -1,0 +1,11 @@
+{
+  "name": "audio-pcspk-screen",
+  "steps": [],
+  "ok": true,
+  "serial_audio": [
+    "AUDIO_TEST:pcspk",
+    "AUDIO_DETAIL:solo PC speaker",
+    "AUDIO_TEST_DONE tones=4 irq=0 pit_hz=100 pit_ticks=81"
+  ],
+  "fatals": []
+}

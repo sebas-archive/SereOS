@@ -1,0 +1,243 @@
+[pacman] Linux OK -> build/pacman-sereos
+== harness de core ==
+PASS open reserva estado
+PASS estado inicial MENU
+PASS high score cargado de RAMFS
+PASS serial GAME_MENU al abrir
+PASS sin GAME_START antes de jugar
+[frame] 01_menu
+PASS flecha abajo navega el menu (salta Continuar)
+PASS menu llega a Instrucciones
+PASS abre instrucciones
+[frame] 02_instrucciones
+PASS vuelve al menu
+PASS clic de raton abre RECORD
+[frame] 03_record
+PASS vuelve al menu tras record
+PASS selector vuelve a JUGAR
+PASS JUGAR inicia partida
+PASS serial GAME_START
+PASS 3 vidas y nivel 1
+PASS estado READY! al empezar
+PASS 240 dots en el laberinto
+PASS 4 power pills en el laberinto
+PASS contadores iniciales correctos
+[frame] 04_ready
+PASS READY! termina solo
+[frame] 05_play
+PASS BFS: todos los dots/power son alcanzables
+PASS Pac-Man nunca queda dentro de una pared
+PASS Pac-Man se mueve al pedir direccion
+PASS Pinky/Inky/Clyde salen de la casa
+PASS los 4 fantasmas patrullan el laberinto
+PASS fantasmas nunca dentro de paredes
+PASS fantasmas en movimiento (no atascados)
+PASS objetivo Blinky = tile de Pac-Man
+PASS objetivo Pinky = 4 delante
+PASS Pinky arriba aplica el bug (-4,-4)
+PASS objetivo Inky = 2*(pivote-Blinky)
+PASS Clyde persigue si esta lejos
+PASS Clyde va a su esquina si esta cerca
+PASS scatter Blinky a la esquina superior derecha
+PASS power pill consumida
+PASS power pill activa FRIGHTENED
+PASS fantasmas fuera de casa quedan asustados
+PASS audio POWER al comer power pill
+[frame] 06_frightened
+PASS colision con fantasma asustado lo come
+PASS comer fantasma suma 200
+PASS fantasma comido -> ojos
+PASS ojos calculan ruta BFS a la casa
+PASS ojos llegan a la casa y se regeneran
+PASS fantasma regenerado vuelve a patrullar
+PASS colision normal inicia muerte
+PASS colision normal inicia muerte
+PASS colision normal inicia muerte
+PASS se pierden las 3 vidas
+PASS sin vidas -> GAME OVER
+PASS serial GAME_OVER
+PASS high score persistido en RAMFS
+[frame] 07_gameover
+PASS todos los dots comidos
+PASS nivel completado -> LEVEL CLEAR
+PASS serial GAME_WIN al completar nivel
+[frame] 08_levelclear
+PASS pasa al siguiente nivel
+PASS siguiente nivel en juego
+PASS dots restaurados en el nuevo nivel
+PASS contadores de fruta a cero al iniciar partida
+PASS dot 70 comido
+PASS fruta aparece a los 70 dots
+PASS nivel 2: fruta indice 1 (FRESA) vale 300
+[frame] 09_fruit
+PASS fruta comida (total 1)
+PASS fruta comida suma al contador de su tipo
+PASS fruta de nivel 2 vale 300
+[frame] 09b_fruit_eaten
+PASS dot 170 comido
+PASS nivel 4: aparece MANZANA (indice 3)
+PASS contadores por tipo acumulan frutas distintas
+PASS total de frutas comidas = 2
+PASS MANZANA vale 700
+PASS fruta por nivel cicla (nivel-1)%5 con valores 100..1000
+PASS nivel 1: CEREZA 100
+PASS nivel 3: NARANJA 500
+PASS nivel 5: UVAS 1000
+PASS nivel 21: vuelve a CEREZA 100
+PASS vida extra al superar 10000
+PASS audio extra life
+PASS Esc pausa la partida
+PASS serial GAME_PAUSE
+[frame] 10_pause
+PASS Enter reanuda
+PASS Q en pausa vuelve al titulo
+PASS Esc en el titulo pide cerrar
+PASS serial GAME_EXIT al cerrar
+PASS close libera el estado
+PASS reabrir en el titulo
+PASS high score persistido al reabrir
+[frame] 11_menu_reopen
+PASS reabrir 2a vez: base tiene 240 dots
+PASS reabrir 2a vez: dots/power cargados en la partida
+PASS reabrir 2a vez: JUGAR arranca
+PASS reabrir 2a vez: el nivel NO se completa solo al empezar
+[frame] 19_reopen_play
+PASS reabrir 3a vez: menu
+PASS reabrir 3a vez: base tiene 240 dots
+PASS reabrir 3a vez: dots/power cargados
+[frame] 20_menu_third_open
+PASS M1: nombre visible exacto PAC-MAN SereOS
+PASS M1: tiempos READY/fruta/muerte/level-clear de referencia
+PASS M1: spawns C14 (Pac/Blinky/Pinky)
+PASS M1: nivel 1 sale Clyde a 90 dots (no 60)
+PASS M1: nivel 2 Clyde a 50 dots
+PASS M1: nivel 5+ todos salen al empezar
+PASS M1: frightened 47,5 % (nivel 1)
+PASS M1: frightened 52,5 % (nivel 2)
+PASS M1: frightened 57,5 % (nivel 5)
+PASS M1: frightened invierte fuera del pen
+PASS M1: frightened NO invierte dentro del pen
+PASS M1: nivel sin frightened solo invierte direccion
+PASS M1: timer libera 1 fantasma a los 4 s (nivel 1)
+PASS M1: timer libera 1 fantasma a los 3 s (nivel 5)
+PASS M1: fases scatter/chase persisten tras morir
+PASS M1: READY inicial 4,5 s con audio
+PASS M1: buffer de direccion aplica el giro en el siguiente centro
+PASS M3: Enter en attract abre menu
+PASS M3: settings alterna sonido
+PASS M3: Esc vuelve del settings al menu
+PASS M3: Esc abre pausa
+PASS M3: pausa -> menu guarda Continuar
+PASS M3: Continuar restaura la partida
+PASS M2: contrato sprites 16x16/0xF81F
+PASS M2: nombres de fruta CEREZA/FRESA/NARANJA/MANZANA/UVAS
+PASS M2: 5 sprites de fruta Res (5x16x16)
+PASS M2: 5 nombres de fruta Res
+PASS M2: fantasma Res tiene pixeles opacos
+PASS M2: fuente arcade con Latin-1 (A/é)
+PASS M2: PCM Res en slots START/WAKA/GHOST_RESPAWN y fallback POWER
+PASS M3: Game Start usa chunks validos
+PASS M3: chunk Game Start no nulo y <=32768
+PASS M3: chunk Game Start no nulo y <=32768
+PASS M3: chunks Game Start suman la longitud total
+PASS M3: Game Start no es loop
+PASS M3: Game Start suena exactamente una vez
+PASS M3: colision come fantasma
+PASS M3: primer fantasma 200
+PASS M3: colision come fantasma
+PASS M3: segundo fantasma 400
+PASS M3: colision come fantasma
+PASS M3: tercer fantasma 800
+PASS M3: colision come fantasma
+PASS M3: cuarto fantasma 1600
+PASS M3: cuarto fantasma termina frightened
+PASS M3: los 4 fantasmas pasan por REVIVING
+PASS M3: los 4 fantasmas reaparecen y vuelven a NORMAL/LEAVING
+PASS M3: seriales GHOST_EATEN/RETURNED/REVIVED presentes
+PASS M3: segundo power pill vuelve a capturar (200)
+PASS M3: muerte por fantasma normal
+PASS M3: muerte NO resetea dots/power
+PASS M3: muerte conserva score y nivel
+PASS M3: seriales PAC_DEATH/LIFE_START/PAC_STATS presentes
+PASS M3: siguiente nivel si resetea dots/power
+[frame] 12_menu_1024
+[frame] 13_instrucciones_1024
+[frame] 14_play_1024
+[frame] 15_menu_800x600
+[frame] 16_instrucciones_800x600
+[frame] 17_play_800x600
+[frame] 18_play_300
+PASS T1: Pac-Man nunca sale de [0,448] al cruzar el tunel izq->der
+PASS T2: Pac-Man cruza el borde izquierdo del laberinto
+PASS T3: tras el wrap izq->der reaparece en la mitad derecha
+PASS T4: el wrap izq->der conserva la fila del tunel (14)
+PASS T5: Pac-Man nunca sale de [0,448] al cruzar el tunel der->izq
+PASS T6: Pac-Man cruza el borde derecho del laberinto
+PASS T7: tras el wrap der->izq reaparece en la mitad izquierda
+PASS T8: el wrap der->izq conserva la fila del tunel (14)
+PASS T9: ningun fantasma sale de [0,448] durante el wrap del tunel
+PASS T10: un fantasma normal cruza el borde izquierdo
+PASS T11: el fantasma reaparece en la mitad derecha
+PASS T12: el clip impide pintar personajes fuera del laberinto
+PASS T13: el personaje desplazado si se dibuja dentro del laberinto
+PASS T14: el clip impide pintar a x=452 px fuera del laberinto
+PASS T15: el caso del borde derecho cambia pixeles dentro del laberinto
+PASS T16: el clip exterior se restaura tras dibujar el campo
+PASS T17: se restaura un clip exterior distinto del viewport
+PASS B2: hold waka 100 ms
+PASS B2: gracia anti-stutter 300 ms tras dot
+PASS B2: waka queda como one-shot activo
+PASS B2: hold POWER 320 ms
+PASS B2: hold EAT_GHOST 590 ms (clip 574)
+PASS B2: hold EAT_FRUIT 460 ms (clip 440)
+PASS B2: hold LEVEL_CLEAR 5300 ms (intermission 5204)
+PASS B2: hold MENU 260 ms
+PASS B2: EXTRA_LIFE se pide al cruzar 10000
+PASS B2: el WAKA del mismo tick NO pisa EXTRA_LIFE (P0)
+PASS B2: hold EXTRA_LIFE 1920 ms, no el del waka
+PASS B2: el ultimo one-shot sigue siendo EXTRA_LIFE
+PASS B2: audio_oneshot/hold se limpian al terminar el clip
+PASS B2: GHOST_RESPAWN suena como loop mientras hay ojos (P0)
+PASS B2: al volver los ojos retoma HUNT (slot 13)
+PASS B2: frightened usa CHASE/hunter (slot 12) (P0)
+PASS B2: fuera de frightened vuelve HUNT (slot 13)
+PASS B2: power pill activa frightened
+PASS B2: FRIGHT no arranca durante el hold de POWER (P0/P1)
+PASS B2: al agotarse el hold de POWER si arranca FRIGHT
+PASS B2: MENU suena al navegar el menu (P0)
+PASS B2: MENU suena en attract -> menu (P0)
+PASS B2: sirena HUNT activa antes del toggle
+PASS B2: OFF para la sirena
+PASS B2: ON reactiva el audio
+PASS B2: OFF->ON rearma la sirena (P1)
+PASS B2: sin foco se para el loop de sirena (P1)
+PASS B2: al recuperar el foco se rearma la sirena (P1)
+PASS B2: LEVEL_CLEAR se pide una vez
+PASS B2: hold LEVEL_CLEAR 5300 ms
+PASS B2: el estado nivel cubre intermission (5204 ms)
+PASS B5: one-shot en curso antes de pausar
+PASS B5: Esc pausa la partida
+PASS B5: la pausa resetea hold/oneshot/gracia/sirena
+PASS B5: la pausa pide pac_audio_stop() (P1)
+PASS B5: la pausa no deja reintentos del one-shot
+PASS B5: Enter reanuda
+PASS B5: al reanudar update_siren rearma la sirena
+PASS B5: el one-shot pausado NO se reintenta tras reanudar
+PASS B5: perder foco resetea el one-shot en curso (P1)
+PASS B5: perder foco pide pac_audio_stop()
+PASS B5: perder foco no reintenta el one-shot
+PASS B5: al recuperar el foco rearma la sirena
+PASS B5: minimizar resetea el one-shot en curso
+PASS B5: minimizar pide pac_audio_stop()
+PASS B5: al restaurar la ventana rearma la sirena
+checks=209 failures=0
+[OK] harness de core
+== smoke Linux (SDL dummy: menu/play/pause/gameover/victory) ==
+[OK] smoke attract (build/smoke/attract.ppm)
+[OK] smoke menu (build/smoke/menu.ppm)
+[OK] smoke settings (build/smoke/settings.ppm)
+[OK] smoke play (build/smoke/play.ppm)
+[OK] smoke pause (build/smoke/pause.ppm)
+[OK] smoke gameover (build/smoke/gameover.ppm)
+[OK] smoke victory (build/smoke/victory.ppm)
+TODAS LAS PRUEBAS OK

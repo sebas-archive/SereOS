@@ -1,0 +1,18 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/audit/fix-linux/evidence/raw/fix_6_eat_ghost_pcm.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=6 loop=0 cap_ms=1300 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3 stream=0 target=512 res_available=1
+capturing_on=pcm dev=3 available=1
+t= 102 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 204 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 305 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 407 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 508 queued=505 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t= 610 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t= 711 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t= 812 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t= 914 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=1015 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=1117 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=1218 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+END t=1305 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+AFTER_STOP queued=0

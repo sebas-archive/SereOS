@@ -1,0 +1,85 @@
+{
+  "AUDIO_TEST:": "AUDIO_TEST:sb16",
+  "AUDIO_DETAIL:": "AUDIO_DETAIL:SB16 0x220 IRQ5 DMA1",
+  "AUDIO_TEST_DONE": "AUDIO_TEST_DONE tones=4 irq=1 pit_hz=100 pit_ticks=105",
+  "screenshot": "/home/t1an/Descargas/sereos02/build/vbox_audio/vbox_terminal_audiotest_alsa.png",
+  "screenshot_audio": "/home/t1an/Descargas/sereos02/build/vbox_audio/vbox_terminal_audio_alsa.png",
+  "wav_analysis": {
+    "file": "/home/t1an/Descargas/sereos02/build/vbox_audio/vbox_audiotest_alsa.wav",
+    "rate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "frames": 669696,
+    "seconds_captured": 13.952,
+    "peak_sample": 2603,
+    "peak_dbfs": -22.0,
+    "rms_sample": 637.3,
+    "rms_dbfs": -34.22,
+    "active_regions": [
+      {
+        "start_s": 4.11,
+        "end_s": 4.25
+      },
+      {
+        "start_s": 4.41,
+        "end_s": 4.47
+      }
+    ],
+    "active_seconds": 0.2,
+    "noise_floor_rms_sample": 99.3,
+    "tones": [
+      {
+        "want_hz": 440,
+        "measured_hz": 440.0,
+        "freq_error_pct": 0.0,
+        "peak_mag": 155051.6,
+        "mean_mag": 153465.8,
+        "noise_mag": 12749.0,
+        "snr_db": 21.7,
+        "tone_start_s": 3.475,
+        "ok": true
+      },
+      {
+        "want_hz": 660,
+        "measured_hz": 660.0,
+        "freq_error_pct": 0.0,
+        "peak_mag": 472028.3,
+        "mean_mag": 471940.2,
+        "noise_mag": 9607.4,
+        "snr_db": 33.8,
+        "tone_start_s": 3.825,
+        "ok": true
+      },
+      {
+        "want_hz": 880,
+        "measured_hz": 880.0,
+        "freq_error_pct": 0.0,
+        "peak_mag": 865785.1,
+        "mean_mag": 860074.5,
+        "noise_mag": 7750.2,
+        "snr_db": 41.0,
+        "tone_start_s": 4.125,
+        "ok": true
+      },
+      {
+        "want_hz": 1320,
+        "measured_hz": 1320.0,
+        "freq_error_pct": 0.0,
+        "peak_mag": 507052.1,
+        "mean_mag": 497612.3,
+        "noise_mag": 6152.5,
+        "snr_db": 38.3,
+        "tone_start_s": 4.4,
+        "ok": true
+      }
+    ],
+    "all_expected_found": true,
+    "peak_above_minus40": true,
+    "non_silent": true,
+    "tone_block": {
+      "first_s": 3.475,
+      "last_s": 4.6,
+      "duration_s": 1.125
+    }
+  }
+}

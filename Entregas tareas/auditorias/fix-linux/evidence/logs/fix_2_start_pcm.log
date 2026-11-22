@@ -1,0 +1,61 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/audit/fix-linux/evidence/raw/fix_2_start_pcm.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=2 loop=0 cap_ms=5600 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3 stream=0 target=512 res_available=1
+capturing_on=pcm dev=3 available=1
+t= 101 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 203 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 304 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 406 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 507 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 609 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 711 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 813 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t= 914 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1016 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1118 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1219 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1321 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1422 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1524 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1626 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1727 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1829 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=1930 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2032 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2133 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2235 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2336 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2438 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2539 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2641 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2742 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2844 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=2946 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3048 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3151 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3254 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3356 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3459 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3560 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3662 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3764 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3865 queued=761 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=3966 queued=633 qmax=761 loop=0 voices=1 synth_loop=0 synth_os=0
+t=4068 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4169 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4271 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4373 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4474 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4576 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4677 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4779 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4881 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=4982 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=5084 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=5186 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=5287 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=5389 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=5491 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+t=5593 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+END t=5603 queued=0 qmax=761 loop=0 voices=0 synth_loop=0 synth_os=0
+AFTER_STOP queued=0

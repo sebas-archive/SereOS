@@ -1,0 +1,13 @@
+[OK ] GUI_READY {}
+[OK ] files_botones_derecha {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': -0.5}
+[OK ] APP_CLOSE:files {}
+[OK ] terminal_botones_derecha {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': 0.0}
+[OK ] APP_CLOSE:terminal {}
+[OK ] monitor_botones_derecha {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': -0.5}
+[OK ] APP_CLOSE:monitor {}
+[OK ] about_botones_derecha {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': 0.0}
+[OK ] APP_CLOSE:about {}
+[OK ] game_botones_derecha {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': -0.5}
+[OK ] APP_CLOSE:game {}
+[OK ] f7_minimiza {}
+[OK ] sin_panic {'fatals': []}

@@ -1,0 +1,5 @@
+RESTART_TEST_START
+STUB:audio_stop
+SEREOS_RESTART
+[VGA] Reiniciando...[VGA] 
+[VGA] SereOS esta reiniciando el sistema[VGA] 

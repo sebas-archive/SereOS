@@ -1,0 +1,62 @@
+--- audit/fix-docs/before/README.md	2026-11-20 05:33:53.279677837 -0500
++++ README.md	2026-11-20 05:35:19.191680645 -0500
+@@ -121,12 +121,15 @@
+   principal de 6 opciones (incluye Continuar), pausa de 5, game over de 3,
+   ajustes (sonido/pantalla completa/controles) y **F11** pantalla completa.
+ - **Recursos Res** (privados, uso académico): **10 PNG usados** (frutas y
+-  cuerpos de fantasmas recoloreados), **10 WAV usados** convertidos a PCM u8
+-  mono 11.025 Hz, y la fuente arcade **Press Start K**. Quedan **5 PNG no
+-  usados** (retroghost1/2, Clydeeghost, dead, Key-icon), **1 WAV no usado**
+-  (`intermission.wav`) y **1 TTF no usado** (`atari full.ttf`).
++  cuerpos de fantasmas recoloreados), **11 WAV usados** convertidos a PCM u8
++  mono 11.025 Hz (incluido `intermission.wav`, slot LEVEL_CLEAR) y la fuente
++  arcade **Press Start K**. Quedan **5 PNG no usados** (retroghost1/2,
++  Clydeeghost, dead, Key-icon) y **1 TTF no usado** (`atari full.ttf`).
+ - **Audio**: PCM real en Linux (SDL2) y **SB16 por DMA en SereOS** con cola de
+-  trozos ≤32 KiB y fallback a la capa sintetizada propia.
++  trozos ≤32 KiB (LEVEL_CLEAR = `intermission.wav`, 5,204 s en 2 trozos) y
++  fallback sintetizado para MENU/POWER/GAME_OVER (no existen clips en Res);
++  sirena normal 13 (hunted), frightened 12 (hunter) y respawn de ojos como
++  loop vía `pac_audio_loop` (slot 15).
+ - **Nombre visible exacto «PAC-MAN SereOS»** en toda la UI.
+ 
+ ### Linux (objetivo por defecto)
+@@ -136,7 +139,7 @@
+ make linux          # -> build/pacman-sereos
+ ./run.sh            # comprueba SDL2, compila si falta y ejecuta
+ ./build/pacman-sereos
+-make test           # 131 checks de core + 7/7 smoke
++make test           # 209 checks de core + 7/7 smoke
+ ```
+ 
+ Dependencias: `gcc`, `make`, `pkg-config` y `SDL2` (CachyOS/Arch:
+@@ -160,7 +163,7 @@
+ | Bug reportado | Corrección real | Evidencia QA |
+ |---|---|---|
+ | Game Start distorsionado/cortado | cola PCM chunk a chunk (no `len` total), Start una sola vez, sirena/loops no lo cortan | WAV Linux vs `game start.wav`: **correlación 0.9972**, 0 clipping, energía continua; SB16 OS activo sin clipping ni huecos (hueco máx. 66 ms) |
+-| Fantasma comido desaparece | snap al centro del tile + BFS de regreso; ciclo **EATEN→RETURNED→REVIVING→LEAVING→NORMAL** y recapturas | 131 tests: **200/400/800/1600**, 4 fantasmas pasan por REVIVING, reaparecen y la segunda power pill vuelve a permitir 200; capturas de ojos/retorno/reaparición |
++| Fantasma comido desaparece | snap al centro del tile + BFS de regreso; ciclo **EATEN→RETURNED→REVIVING→LEAVING→NORMAL** y recapturas | 209 tests: **200/400/800/1600**, 4 fantasmas pasan por REVIVING, reaparecen y la segunda power pill vuelve a permitir 200; capturas de ojos/retorno/reaparición |
+ | Muerte reinicia el laberinto | `pac_start_level` solo al iniciar/nuevo nivel; muerte solo pierde vida y reinicia posiciones | `PAC_STATS` antes/después: dots 240→230, power 4→4, score 0→100, level 1; tras morir dots=230, score=100, lives=2; reset solo al subir nivel |
+ 
+ Capturas reales de esta ronda: `ghost_eyes`, `ghost_return`, `ghost_reappear`,
+@@ -187,10 +190,10 @@
+ | Comprobación | Resultado |
+ |---|---|
+ | Linux `make clean && make linux` | **0 warnings**, binario 753.808 B |
+-| Linux `make test` | **131/131 checks**, 0 fallos, **7/7 smoke** (attract/menu/settings/play/pause/gameover/victory) |
++| Linux `make test` | **209/209 checks**, 0 fallos, **7/7 smoke** (attract/menu/settings/play/pause/gameover/victory) |
+ | Linux independencia OS | `src/core`/`src/render` sin SDL ni headers del OS; build con `OS_DIR` inexistente |
+ | Récord persistente | `record.txt` = 1500; menú posterior muestra HIGH SCORE 1500 |
+-| Assets Res | **21 originales** verificados md5 contra `LICENSE_RES.md`; licencias y exclusiones OK |
++| Assets Res | **22 originales** verificados md5 contra `LICENSE_RES.md`; licencias y exclusiones OK |
+ | Audio Linux | PCM real inicializado con **PipeWire** |
+ | `make sereos` | 0 warnings; lib 280.906 B, 32-bit, exporta `app_game`, **0 símbolos SDL** |
+ | OS build | **0 warnings**, 1 `app_game` |
+@@ -224,6 +227,7 @@
+ | **1.6** | Integración de Pac-man SereOS como componente externo (`libpacman.a`), `apps/game` eliminado |
+ | **1.7** | **PAC-MAN SereOS definitivo**: M2/M3/M4, auditoría Paku-Paku/Res, 10 PNG/10 WAV, fuente arcade, menús arcade, PCM Linux + SB16, 107 checks/7 smoke, nombre exacto |
+ | **1.8** | **Integración final v3**: Game Start sin corte, respawn de fantasmas, muerte conserva laberinto/puntuación/nivel; 131 checks/7 smoke |
++| **1.9** | **Correcciones de audio B1-B4**: 11 WAV integrados con `intermission` como LEVEL_CLEAR (5,204 s, 2 trozos), slots sintetizados 1/5/11, sirena normal 13 / frightened 12 (14 remapeado), respawn de ojos con `pac_audio_loop`, volumen/pitch y cola PCM corregidos; **209 checks/7 smoke** |
+ 
+ ## 5. Limitaciones honestas
+ 

@@ -1,0 +1,8 @@
+[OK ] GUI_READY {}
+[OK ] normal {'row_y': 84.0, 'window_x0': 41}
+[OK ] maximizar_doble_clic {'row_y': 48.0, 'window': [0, 1024]}
+[OK ] restaurar_doble_clic {'row_y': 84, 'window': [41, 919]}
+[OK ] maximizar_boton {'row_y': 48, 'window': [0, 1024]}
+[OK ] restaurar_boton {'row_y': 84, 'window': [41, 919]}
+[OK ] APP_CLOSE:game {}
+[OK ] sin_panic {'fatals': []}

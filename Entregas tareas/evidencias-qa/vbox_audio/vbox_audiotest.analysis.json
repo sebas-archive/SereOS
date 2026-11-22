@@ -1,0 +1,77 @@
+{
+  "file": "build/vbox_audio/vbox_audiotest.wav",
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "frames": 669696,
+  "seconds_captured": 13.952,
+  "peak_sample": 7868,
+  "peak_dbfs": -12.39,
+  "rms_sample": 874.2,
+  "rms_dbfs": -31.48,
+  "active_regions": [
+    {
+      "start_s": 3.79,
+      "end_s": 4.18
+    },
+    {
+      "start_s": 9.48,
+      "end_s": 9.55
+    }
+  ],
+  "active_seconds": 0.46,
+  "noise_floor_rms_sample": 78.5,
+  "tones": [
+    {
+      "want_hz": 440,
+      "measured_hz": 440.0,
+      "freq_error_pct": 0.0,
+      "peak_mag": 139271.5,
+      "mean_mag": 138002.8,
+      "noise_mag": 12337.3,
+      "snr_db": 21.1,
+      "tone_start_s": 3.625,
+      "ok": true
+    },
+    {
+      "want_hz": 660,
+      "measured_hz": 660.0,
+      "freq_error_pct": 0.0,
+      "peak_mag": 451583.8,
+      "mean_mag": 448039.7,
+      "noise_mag": 10608.5,
+      "snr_db": 32.6,
+      "tone_start_s": 3.775,
+      "ok": true
+    },
+    {
+      "want_hz": 880,
+      "measured_hz": 880.0,
+      "freq_error_pct": 0.0,
+      "peak_mag": 823267.7,
+      "mean_mag": 693633.6,
+      "noise_mag": 7602.7,
+      "snr_db": 40.7,
+      "tone_start_s": 3.875,
+      "ok": true
+    },
+    {
+      "want_hz": 1320,
+      "measured_hz": 1320.0,
+      "freq_error_pct": 0.0,
+      "peak_mag": 479578.4,
+      "mean_mag": 473607.6,
+      "noise_mag": 5541.0,
+      "snr_db": 38.7,
+      "tone_start_s": 4.0,
+      "ok": true
+    }
+  ],
+  "all_expected_found": true,
+  "peak_above_minus40": true,
+  "non_silent": true,
+  "tone_block": {
+    "first_s": 3.79,
+    "last_s": 9.55
+  }
+}

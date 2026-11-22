@@ -1,0 +1,9 @@
+gcc -m32 -m32 -T linker.ld -ffreestanding -nostdlib -no-pie -Wl,--build-id=none -o sereos.bin build/apps/about/about.o build/apps/apps.o build/apps/filemanager/filemanager.o build/apps/sysmonitor/sysmonitor.o build/apps/terminal/terminal_app.o build/audio/audio.o build/audio/sfx_data.o build/drivers/input.o build/drivers/keyboard.o build/drivers/mouse.o build/drivers/rtc.o build/drivers/sb16.o build/drivers/serial.o build/drivers/speaker.o build/drivers/terminal.o build/drivers/timer.o build/filesystem/fs.o build/graphics/font.o build/graphics/font_data.o build/graphics/framebuffer.o build/graphics/graphics.o build/graphics/text.o build/graphics/text_data.o build/gui/app.o build/gui/cursor.o build/gui/desktop.o build/gui/gui.o build/gui/icons.o build/gui/icons_data.o build/gui/logo.o build/gui/logo_data.o build/gui/logo_ribbon_data.o build/gui/splash.o build/gui/theme.o build/gui/ui.o build/gui/window.o build/kernel/gdt.o build/kernel/idt.o build/kernel/kernel.o build/kernel/log.o build/kernel/panic.o build/libc/string.o build/memory/kmalloc.o build/memory/page.o build/process/scheduler.o build/process/task.o build/shell/shell.o build/boot/boot.o build/boot/isr.o "../Pac-man SereOS/build/sereos/libpacman.a" -lgcc
+make[1]: Entering directory '/home/t1an/Descargas/sereos02/Pac-man SereOS'
+[pacman] SereOS OK -> build/sereos/libpacman.a
+[OK] kernel multiboot valido
+[pacman] integrar con: apps/apps.c (app_game) y enlazar antes de -lgcc
+make[1]: Leaving directory '/home/t1an/Descargas/sereos02/Pac-man SereOS'
+multiboot text: flags 0x7 -> 0x3 en offset 4096
+[OK] kernel multiboot modo texto valido
+[OK] sereos.iso generada

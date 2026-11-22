@@ -1,0 +1,57 @@
+--- audit/fix-docs/before/PROJECT_README.md	2026-11-20 05:35:37.360690345 -0500
++++ "Pac-man SereOS/README.md"	2026-11-20 05:35:42.618693704 -0500
+@@ -10,13 +10,14 @@
+ > Estado (2026-11-20): **version definitiva COMPLETA** (Fases 2/3/4). Backend
+ > Linux SDL2 (`build/pacman-sereos`) y libreria SereOS freestanding
+ > (`build/sereos/libpacman.a`, exporta `app_t *app_game(void)`). Incluye:
+-> assets privados de `Res` (16x16, fuente arcade Press Start K y PCM u8
+-> 11025), audio PCM real en Linux y por SB16 en SereOS (fallback sintetizado;
+-> validacion en QEMU pendiente de la integracion del OS), F11/fullscreen,
++> assets privados de `Res` (16x16, fuente arcade Press Start K y 11 WAV -> PCM
++> u8 11025, con `intermission` como LEVEL_CLEAR), audio PCM real en Linux y por
++> SB16 en SereOS (fallback sintetizado para MENU/POWER/GAME_OVER; validado en
++> QEMU), F11/fullscreen,
+ > menus arcade (attract, principal, pausa, game over, configuracion,
+ > continuar) y nombre visible exacto **PAC-MAN SereOS** en app_t, ventanas,
+ > menu, HUD y docs. `make linux`, `make sereos` y `make test` pasan sin
+-> warnings (131 checks de core + 7/7 pantallas smoke); la integracion final en
++> warnings (209 checks de core + 7/7 pantallas smoke); la integracion final en
+ > la ISO la hace kernel-sys.
+ >
+ > Limitaciones honestas: no se implementan el replay `.pmg`/demo automática
+@@ -54,7 +55,7 @@
+ make                # compila build/pacman-sereos
+ ./run.sh            # comprueba SDL2, construye si hace falta y ejecuta
+ ./build/pacman-sereos
+-make test           # 131 checks de core + 7/7 smoke (attract/menu/settings/play/pause/gameover/victory)
++make test           # 209 checks de core + 7/7 smoke (attract/menu/settings/play/pause/gameover/victory)
+ ```
+ 
+ Ventana de 1024x768 con escalado entero. Los controles, estados y record son
+@@ -172,9 +173,12 @@
+   [`assets/fonts/LICENSE_ARCADE.md`](assets/fonts/LICENSE_ARCADE.md). Inter/
+   JetBrains Mono siguen disponibles para texto no cubierto
+   ([`assets/fonts/LICENSE.md`](assets/fonts/LICENSE.md)).
+-- Audio: 10 WAV de `Res` convertidos a PCM u8 mono 11025 en
+-  `assets/sfx_res.c` (intermission excluido); fallback sintetizado para slots
+-  sin WAV.
++- Audio: **11 WAV** de `Res` convertidos a PCM u8 mono 11025 en
++  `assets/sfx_res.c`: `intermission.wav` incluido como **LEVEL_CLEAR (slot 10,
++  5,204 s, 2 trozos de <=32 KiB)**; sirenas 13 (hunted, normal) y 12 (hunter,
++  frightened; el slot 14 se remapea al 12); `GHOST_RESPAWN` (15) buclea via
++  `pac_audio_loop`. Slots sin clip en Res (1 MENU, 5 POWER, 11 GAME_OVER) usan
++  el fallback sintetizado.
+ 
+ ## Documentacion
+ 
+@@ -189,7 +193,8 @@
+ 
+ - La implementacion del componente aun no esta copiada: depende de que
+   kernel-sys confirme `sistema operativo/` estable.
+-- El audio Linux es sintesis simple (sin musica): misma semantica de eventos
+-  que SereOS.
++- El audio usa PCM u8 mono 11025 de los 11 WAV de Res (sin musica de fondo):
++  misma semantica de eventos en Linux (SDL2) y SereOS (SB16); los slots sin
++  clip en Res usan sintesis simple.
+ - El render usa un lienzo fijo de 1024x768 en Linux (escalado entero); en
+   SereOS es el area de contenido de la ventana (880x560 nominales).

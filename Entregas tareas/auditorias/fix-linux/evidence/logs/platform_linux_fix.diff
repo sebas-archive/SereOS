@@ -1,0 +1,637 @@
+--- backup/platform_linux.c.orig	2026-11-20 04:52:05.290621375 -0500
++++ "/home/t1an/Descargas/sereos02/Pac-man SereOS/src/platform/linux/platform_linux.c"	2026-11-20 04:57:57.227406442 -0500
+@@ -40,24 +40,52 @@
+ 
+ /* audio */
+ #define PAC_AUDIO_RATE 22050
+-static SDL_AudioDeviceID g_audio_dev;
+-static SDL_AudioDeviceID g_pcm_dev;
++#define PAC_PCM_RATE PACASSET_RES_SFX_RATE   /* 11025 Hz del PCM de sfx_res */
++#define PAC_PCM_VOICES 6                     /* voces one-shot simultaneas */
++#define PAC_PCM_MIX_CHUNK 256                /* muestras mezcladas por bloque */
++#define PAC_PCM_TARGET 512                   /* bytes objetivo en la cola PCM */
++#define PAC_SYNTH_AMP 10000                  /* amplitud de la onda cuadrada */
++#define PAC_SYNTH_FADE 44                    /* ~2 ms a 22050 Hz (anti-click) */
++
++static SDL_AudioDeviceID g_audio_dev;   /* sintesis: S16 mono 22050 callback */
++static SDL_AudioDeviceID g_pcm_dev;     /* PCM de sfx_res: u8 mono 11025 cola */
+ static int g_audio_on;
+ static int g_pcm_on;
++static int g_sdl_audio;                 /* subsistema SDL de audio inicializado */
++static int g_audio_attempted;           /* ya se intento abrir el audio */
++
++/* sintesis: bucle de sirena (independiente del one-shot) */
++static int g_synth_loop;
++static int g_synth_loop_freq;
++static uint32_t g_synth_loop_freq2;
++static uint32_t g_synth_loop_phase;
++static uint32_t g_synth_loop_samples;
++/* sintesis: efecto one-shot */
++static int g_synth_os;
++static int g_synth_os_freq;
++static uint32_t g_synth_os_start_ms;
++static uint32_t g_synth_os_duration_ms;
++static uint32_t g_synth_os_phase;
++static uint32_t g_synth_os_samples;
++
++/* mezclador PCM: bucle de sirena + voces one-shot (sin borrar la cola) */
++typedef struct {
++	int active;
++	int slot;
++	int chunk;
++	uint32_t off;
++	uint32_t remaining;
++} pac_pcm_voice_t;
++
++static pac_pcm_voice_t g_pcm_voices[PAC_PCM_VOICES];
+ static int g_pcm_loop;
+-static int g_pcm_active;
+-static uint32_t g_pcm_len;
+-static int g_pcm_slot = -1;
+-static int g_pcm_chunk;
+-static uint32_t g_pcm_total;
+-static int g_audio_playing;
+-static int g_audio_loop;
+-static int g_audio_freq;
+-static uint32_t g_audio_freq2;
+-static uint32_t g_audio_start_ms;
+-static uint32_t g_audio_duration_ms;
+-static uint32_t g_audio_phase;
+-static uint32_t g_audio_samples;
++static int g_pcm_loop_slot;
++static int g_pcm_loop_chunk;
++static uint32_t g_pcm_loop_off;
++static uint8_t g_pcm_mix[PAC_PCM_MIX_CHUNK];
++static uint8_t g_pcm_out[8192];          /* conversion opcional de formato/rate */
++static SDL_AudioStream *g_pcm_stream;    /* solo si el device no da u8/11025 exacto */
++static uint32_t g_pcm_target_bytes = PAC_PCM_TARGET;
+ 
+ /* frecuencias/durations por efecto (Hz, ms; 0 = loop hasta stop) */
+ static const int g_sfx_freq[PAC_SFX_COUNT] = {
+@@ -249,76 +277,288 @@
+ /* ------------------------------------------------------------------ */
+ /* audio sintetizado                                                   */
+ /* ------------------------------------------------------------------ */
+-static int pcm_queue_chunk(int slot, int chunk)
++/* ---- mezclador PCM de sfx_res (u8 mono 11025) ---------------------- */
++static void pcm_queue_bytes(const uint8_t *buf, int len)
+ {
+-	const uint8_t *data = pacasset_sfx_res_chunks[slot][chunk];
+-	uint32_t len = pacasset_sfx_res_chunk_len[slot][chunk];
+-
+-	if (!data || len == 0u)
+-		return 0;
+-	return SDL_QueueAudio(g_pcm_dev, data, len) == 0 ? (int)len : 0;
++	if (!g_pcm_dev || !g_pcm_on || len <= 0)
++		return;
++	if (g_pcm_stream) {
++		int got;
++		if (SDL_AudioStreamPut(g_pcm_stream, buf, len) != 0)
++			return;
++		while ((got = SDL_AudioStreamGet(g_pcm_stream, g_pcm_out,
++		                                 (int)sizeof(g_pcm_out))) > 0)
++			(void)SDL_QueueAudio(g_pcm_dev, g_pcm_out, (Uint32)got);
++	} else {
++		(void)SDL_QueueAudio(g_pcm_dev, buf, (Uint32)len);
++	}
+ }
+ 
+-static int pcm_queue_all(int slot)
++static int pcm_has_voices(void)
+ {
+-	int i, n;
+-	uint32_t total = 0;
+-	n = pacasset_sfx_res_chunk_count[slot];
+-	for (i = 0; i < n; i++)
+-		total += (uint32_t)pcm_queue_chunk(slot, i);
+-	return (int)total;
++	int i;
++	for (i = 0; i < PAC_PCM_VOICES; i++)
++		if (g_pcm_voices[i].active)
++			return 1;
++	return 0;
+ }
+ 
+-static int pcm_start(int sfx, int loop)
++static int pcm_loop_next(uint8_t *out)
+ {
+-	if (!g_pcm_dev || sfx <= PAC_SFX_NONE || sfx >= PACASSET_RES_SFX_SLOTS)
++	const uint8_t *data;
++	uint32_t len;
++
++	if (!g_pcm_loop)
+ 		return 0;
+-	if (!pacasset_sfx_res_available(sfx))
++	data = pacasset_sfx_res_chunks[g_pcm_loop_slot][g_pcm_loop_chunk];
++	len = pacasset_sfx_res_chunk_len[g_pcm_loop_slot][g_pcm_loop_chunk];
++	if (!data || len == 0u) {
++		g_pcm_loop = 0;
+ 		return 0;
+-	SDL_ClearQueuedAudio(g_pcm_dev);
+-	g_pcm_slot = sfx;
+-	g_pcm_chunk = 0;
+-	g_pcm_total = pacasset_sfx_res[sfx].len;
+-	g_pcm_len = g_pcm_total;
+-	if (pcm_queue_all(sfx) <= 0)
++	}
++	*out = data[g_pcm_loop_off++];
++	if (g_pcm_loop_off >= len) {
++		g_pcm_loop_chunk++;
++		g_pcm_loop_off = 0;
++		if (g_pcm_loop_chunk >=
++		    (int)pacasset_sfx_res_chunk_count[g_pcm_loop_slot])
++			g_pcm_loop_chunk = 0;
++	}
++	return 1;
++}
++
++static int pcm_voice_next(pac_pcm_voice_t *v, uint8_t *out)
++{
++	const uint8_t *data;
++	uint32_t len;
++
++	if (!v->active)
++		return 0;
++	data = pacasset_sfx_res_chunks[v->slot][v->chunk];
++	len = pacasset_sfx_res_chunk_len[v->slot][v->chunk];
++	if (!data || len == 0u) {
++		v->active = 0;
+ 		return 0;
+-	g_pcm_active = 1;
+-	g_pcm_loop = loop;
++	}
++	*out = data[v->off++];
++	if (v->remaining > 0)
++		v->remaining--;
++	if (v->off >= len) {
++		v->chunk++;
++		v->off = 0;
++		if (v->chunk >= (int)pacasset_sfx_res_chunk_count[v->slot])
++			v->active = 0;
++	}
+ 	return 1;
+ }
+ 
++/* Arranca una voz one-shot. No borra la cola: los efectos se mezclan
++ * (p.ej. waka sobre la sirena). Si las 6 voces estan ocupadas se roba la
++ * que menos muestras le quedan (la menos audible); la prioridad real la
++ * decide el core. */
++static void pcm_voice_start(int slot)
++{
++	pac_pcm_voice_t *v = NULL;
++	uint32_t min_rem = 0xFFFFFFFFu;
++	int i, steal = -1;
++
++	for (i = 0; i < PAC_PCM_VOICES; i++) {
++		if (!g_pcm_voices[i].active) {
++			v = &g_pcm_voices[i];
++			break;
++		}
++		if (g_pcm_voices[i].remaining < min_rem) {
++			min_rem = g_pcm_voices[i].remaining;
++			steal = i;
++		}
++	}
++	if (!v)
++		v = &g_pcm_voices[steal];
++	v->active = 1;
++	v->slot = slot;
++	v->chunk = 0;
++	v->off = 0;
++	v->remaining = pacasset_sfx_res[slot].len;
++}
++
++static void pcm_loop_start(int slot)
++{
++	g_pcm_loop = 1;
++	g_pcm_loop_slot = slot;
++	g_pcm_loop_chunk = 0;
++	g_pcm_loop_off = 0;
++}
++
++/* Detiene el bucle PCM. Si no hay one-shots en curso limpia la cola para
++ * que el corte sea inmediato; si los hay, los deja terminar. */
++static void pcm_loop_stop(void)
++{
++	g_pcm_loop = 0;
++	if (!pcm_has_voices()) {
++		if (g_pcm_dev)
++			SDL_ClearQueuedAudio(g_pcm_dev);
++		if (g_pcm_stream)
++			SDL_AudioStreamClear(g_pcm_stream);
++	}
++}
++
+ static void pcm_stop(void)
+ {
++	int i;
++
++	g_pcm_loop = 0;
++	for (i = 0; i < PAC_PCM_VOICES; i++)
++		g_pcm_voices[i].active = 0;
+ 	if (g_pcm_dev)
+ 		SDL_ClearQueuedAudio(g_pcm_dev);
+-	g_pcm_active = 0;
+-	g_pcm_loop = 0;
++	if (g_pcm_stream)
++		SDL_AudioStreamClear(g_pcm_stream);
++}
++
++/* Rellena la cola del dispositivo PCM con bloques mezclados. La cola se
++ * mantiene acotada (<= objetivo + bloque) y sin huecos: se rellena cuando
++ * baja del objetivo en cada pac_audio_update() y al arrancar un sonido. */
++static void mixer_feed(void)
++{
++	int guard = 0;
++
++	if (!g_pcm_dev || !g_pcm_on)
++		return;
++	while (SDL_GetQueuedAudioSize(g_pcm_dev) < g_pcm_target_bytes &&
++	       guard++ < 32) {
++		int i, v, any = 0, sources = g_pcm_loop ? 1 : 0;
++
++		for (v = 0; v < PAC_PCM_VOICES; v++)
++			if (g_pcm_voices[v].active)
++				sources++;
++		if (sources < 1)
++			sources = 1;
++		for (i = 0; i < PAC_PCM_MIX_CHUNK; i++) {
++			int sum = 0;
++			uint8_t b;
++			int acc;
++
++			if (pcm_loop_next(&b)) {
++				sum += (int)b - 128;
++				any = 1;
++			}
++			for (v = 0; v < PAC_PCM_VOICES; v++) {
++				if (pcm_voice_next(&g_pcm_voices[v], &b)) {
++					sum += (int)b - 128;
++					any = 1;
++				}
++			}
++			/* reparto de ganancia 1/fuentes: con 1 fuente el nivel
++			 * es identico al clip original; con varias no satura
++			 * el u8 (evita clipping al mezclar). */
++			acc = 128 + sum / sources;
++			if (acc < 0)
++				acc = 0;
++			if (acc > 255)
++				acc = 255;
++			g_pcm_mix[i] = (uint8_t)acc;
++		}
++		if (!any)
++			break;              /* silencio: el device ya emite ceros */
++		pcm_queue_bytes(g_pcm_mix, PAC_PCM_MIX_CHUNK);
++	}
++}
++
++/* ---- sintesis (S16 mono 22050, callback con mezcla bucle+one-shot) -- */
++static uint32_t synth_phase_inc(int freq)
++{
++	/* salida = rate * inc / 65536  =>  inc = freq * 65536 / rate */
++	if (freq <= 0)
++		return 0;
++	return (uint32_t)(((uint64_t)(uint32_t)freq << 16) / PAC_AUDIO_RATE);
++}
++
++static void synth_loop_start(int sfx)
++{
++	g_synth_loop = 1;
++	g_synth_loop_freq = g_sfx_freq[sfx] ? g_sfx_freq[sfx] : 440;
++	g_synth_loop_freq2 = (uint32_t)(g_synth_loop_freq +
++	                               (sfx == PAC_SFX_SIREN_FRIGHT ? 220 : 120));
++	g_synth_loop_phase = 0;
++	g_synth_loop_samples = 0;
++}
++
++static void synth_loop_stop(void)
++{
++	g_synth_loop = 0;
++}
++
++static void synth_play_one_shot(int sfx)
++{
++	g_synth_os = 1;
++	g_synth_os_freq = g_sfx_freq[sfx] ? g_sfx_freq[sfx] : 440;
++	g_synth_os_duration_ms = (uint32_t)g_sfx_ms[sfx];
++	g_synth_os_start_ms = SDL_GetTicks();
++	g_synth_os_phase = 0;
++	g_synth_os_samples = 0;
++}
++
++static void synth_stop_all(void)
++{
++	g_synth_loop = 0;
++	g_synth_os = 0;
++}
++
++static int16_t synth_square(uint32_t *phase, uint32_t inc)
++{
++	*phase += inc;
++	return ((*phase & 0x8000u) != 0) ? PAC_SYNTH_AMP : -PAC_SYNTH_AMP;
++}
++
++/* Envolvente corta para que el one-shot sintetizado no chasquee al
++ * empezar/terminar (misma amplitud, sin tocar el tono). */
++static int synth_fade_gain(uint32_t sample, uint32_t total)
++{
++	if (sample < PAC_SYNTH_FADE)
++		return (int)(sample * 256u / PAC_SYNTH_FADE);
++	if (total > 0u && sample + PAC_SYNTH_FADE >= total) {
++		uint32_t left = total - sample;
++		if (left > PAC_SYNTH_FADE)
++			left = PAC_SYNTH_FADE;
++		return (int)(left * 256u / PAC_SYNTH_FADE);
++	}
++	return 256;
+ }
+ 
+ static void audio_callback(void *userdata, Uint8 *stream, int len)
+ {
+ 	int16_t *out = (int16_t *)stream;
+ 	int samples = len / (int)sizeof(int16_t);
++	uint32_t os_total = 0;
+ 	int i;
+ 
+ 	(void)userdata;
+-	if (!g_audio_playing) {
+-		memset(stream, 0, (size_t)len);
+-		return;
+-	}
++	if (g_synth_os && g_synth_os_duration_ms)
++		os_total = (uint32_t)(((uint64_t)g_synth_os_duration_ms *
++		                       PAC_AUDIO_RATE) / 1000u);
+ 	for (i = 0; i < samples; i++) {
+-		int freq = g_audio_freq;
+-		int16_t v;
++		int acc = 0;
+ 
+-		if (g_audio_loop && g_audio_freq2) {
+-			/* sirena con vaiven suave */
+-			if (((g_audio_samples >> 12) & 1) != 0)
+-				freq = (int)g_audio_freq2;
++		if (g_synth_loop) {
++			int freq = g_synth_loop_freq;
++			if (g_synth_loop_freq2 &&
++			    ((g_synth_loop_samples >> 12) & 1) != 0)
++				freq = (int)g_synth_loop_freq2;
++			acc += synth_square(&g_synth_loop_phase,
++			                    synth_phase_inc(freq));
++			g_synth_loop_samples++;
++		}
++		if (g_synth_os) {
++			acc += synth_square(&g_synth_os_phase,
++			                    synth_phase_inc(g_synth_os_freq)) *
++			       synth_fade_gain(g_synth_os_samples, os_total) / 256;
++			g_synth_os_samples++;
+ 		}
+-		g_audio_phase += (uint32_t)freq;
+-		v = ((g_audio_phase & 0x8000u) != 0) ? 2200 : -2200;
+-		out[i] = v;
+-		g_audio_samples++;
++		if (acc > 32767)
++			acc = 32767;
++		if (acc < -32768)
++			acc = -32768;
++		out[i] = (int16_t)acc;
+ 	}
+ }
+ 
+@@ -326,8 +566,21 @@
+ {
+ 	SDL_AudioSpec want, have;
+ 
+-	if (g_audio_dev != 0)
++	if (g_audio_dev != 0 || g_pcm_dev != 0 || g_audio_attempted)
+ 		return;
++	g_audio_attempted = 1;
++	if (!g_sdl_audio) {
++		if ((SDL_WasInit(SDL_INIT_AUDIO) & SDL_INIT_AUDIO) == 0) {
++			if (SDL_InitSubSystem(SDL_INIT_AUDIO) != 0) {
++				fprintf(stderr, "audio no disponible: %s\n",
++				        SDL_GetError());
++				return;
++			}
++		}
++		g_sdl_audio = 1;
++	}
++
++	/* dispositivo de sintesis: S16 mono 22050 con callback */
+ 	memset(&want, 0, sizeof(want));
+ 	want.freq = PAC_AUDIO_RATE;
+ 	want.format = AUDIO_S16SYS;
+@@ -339,24 +592,62 @@
+ 		SDL_PauseAudioDevice(g_audio_dev, 0);
+ 		g_audio_on = 1;
+ 	}
+-	/* segundo dispositivo en cola para PCM u8 mono (WAV de Res) */
++
++	/* dispositivo PCM (WAV de sfx_res): intento exacto u8/mono/11025 */
+ 	memset(&want, 0, sizeof(want));
+-	want.freq = PACASSET_RES_SFX_RATE;
++	want.freq = PAC_PCM_RATE;
+ 	want.format = AUDIO_U8;
+ 	want.channels = 1;
+ 	want.samples = 1024;
+-	g_pcm_dev = SDL_OpenAudioDevice(NULL, 0, &want, &have,
+-	                                SDL_AUDIO_ALLOW_FREQUENCY_CHANGE);
++	g_pcm_dev = SDL_OpenAudioDevice(NULL, 0, &want, &have, 0);
+ 	if (g_pcm_dev != 0 && have.format == AUDIO_U8 && have.channels == 1 &&
+-	    have.freq == PACASSET_RES_SFX_RATE) {
+-		SDL_PauseAudioDevice(g_pcm_dev, 0);
++	    have.freq == PAC_PCM_RATE) {
+ 		g_pcm_on = 1;
+ 	} else if (g_pcm_dev != 0) {
+ 		SDL_CloseAudioDevice(g_pcm_dev);
+ 		g_pcm_dev = 0;
+ 	}
++	/* fallback: el host no concede u8/mono/11025 exacto -> convertir en
++	 * un SDL_AudioStream en vez de perder los 10 WAV (antes se cerraba
++	 * el dispositivo y todo caia al beep sintetizado). */
++	if (!g_pcm_on && g_sdl_audio) {
++		memset(&want, 0, sizeof(want));
++		want.freq = PAC_PCM_RATE;
++		want.format = AUDIO_U8;
++		want.channels = 1;
++		want.samples = 1024;
++		g_pcm_dev = SDL_OpenAudioDevice(NULL, 0, &want, &have,
++		        SDL_AUDIO_ALLOW_FREQUENCY_CHANGE |
++		        SDL_AUDIO_ALLOW_FORMAT_CHANGE |
++		        SDL_AUDIO_ALLOW_CHANNELS_CHANGE);
++		if (g_pcm_dev != 0) {
++			g_pcm_stream = SDL_NewAudioStream(
++			        AUDIO_U8, 1, PAC_PCM_RATE,
++			        have.format, have.channels, have.freq);
++			if (g_pcm_stream) {
++				uint32_t bps = (uint32_t)SDL_AUDIO_BITSIZE(
++				        have.format) / 8u;
++				if (bps == 0u)
++					bps = 1u;
++				g_pcm_target_bytes = PAC_PCM_TARGET;
++				if (have.freq != PAC_PCM_RATE)
++					g_pcm_target_bytes = (uint32_t)(
++					        (uint64_t)PAC_PCM_TARGET *
++					        (uint32_t)have.freq / PAC_PCM_RATE);
++				g_pcm_target_bytes *=
++				        (uint32_t)have.channels * bps;
++				g_pcm_on = 1;
++			} else {
++				SDL_CloseAudioDevice(g_pcm_dev);
++				g_pcm_dev = 0;
++			}
++		}
++	}
++	if (g_pcm_on)
++		SDL_PauseAudioDevice(g_pcm_dev, 0);
+ 	if (!g_audio_on && !g_pcm_on)
+-		g_audio_on = 0;
++		fprintf(stderr, "audio: sin dispositivos; el juego seguira en "
++		        "silencio\n");
+ }
+ 
+ int pac_audio_available(void) { return (g_audio_on || g_pcm_on) ? 1 : 0; }
+@@ -366,19 +657,14 @@
+ 	if (sfx <= PAC_SFX_NONE || sfx >= PAC_SFX_COUNT)
+ 		return;
+ 	if (g_pcm_on && pacasset_sfx_res_available(sfx)) {
+-		g_audio_playing = 0;
+-		g_audio_loop = 0;
+-		(void)pcm_start(sfx, 0);
++		/* WAV: se mezcla sobre el bucle (waka sobre sirena, etc.) */
++		pcm_voice_start(sfx);
++		mixer_feed();
+ 		return;
+ 	}
+-	g_audio_playing = 1;
+-	g_audio_loop = 0;
+-	g_audio_freq = g_sfx_freq[sfx] ? g_sfx_freq[sfx] : 440;
+-	g_audio_freq2 = 0;
+-	g_audio_duration_ms = (uint32_t)g_sfx_ms[sfx];
+-	g_audio_start_ms = SDL_GetTicks();
+-	g_audio_phase = 0;
+-	g_audio_samples = 0;
++	/* rama sintetizada: parar el bucle PCM para no solapar ambos sonidos */
++	pcm_loop_stop();
++	synth_play_one_shot(sfx);
+ }
+ 
+ void pac_audio_loop(int sfx)
+@@ -388,52 +674,34 @@
+ 		return;
+ 	}
+ 	if (g_pcm_on && pacasset_sfx_res_available(sfx)) {
+-		g_audio_playing = 0;
+-		g_audio_loop = 0;
+-		(void)pcm_start(sfx, 1);
++		pcm_loop_start(sfx);
++		synth_loop_stop();
++		mixer_feed();
+ 		return;
+ 	}
+-	g_audio_playing = 1;
+-	g_audio_loop = 1;
+-	g_audio_freq = g_sfx_freq[sfx] ? g_sfx_freq[sfx] : 440;
+-	g_audio_freq2 = (uint32_t)(g_audio_freq + (sfx == PAC_SFX_SIREN_FRIGHT ? 220 : 120));
+-	g_audio_duration_ms = 0;
+-	g_audio_start_ms = SDL_GetTicks();
+-	g_audio_phase = 0;
+-	g_audio_samples = 0;
++	/* sin WAV (p.ej. FRIGHT): parar el bucle PCM antes de sintetizar */
++	pcm_loop_stop();
++	synth_loop_start(sfx);
+ }
+ 
+ void pac_audio_stop_loop(void)
+ {
+-	g_audio_loop = 0;
+-	g_audio_playing = 0;
+-	pcm_stop();
++	pcm_loop_stop();
++	synth_loop_stop();
+ }
+ 
+ void pac_audio_stop(void)
+ {
+-	g_audio_playing = 0;
+-	g_audio_loop = 0;
+ 	pcm_stop();
++	synth_stop_all();
+ }
+ 
+ void pac_audio_update(void)
+ {
+-	if (g_pcm_dev && g_pcm_active) {
+-		Uint32 queued = SDL_GetQueuedAudioSize(g_pcm_dev);
+-		if (g_pcm_loop) {
+-			if (queued < g_pcm_total / 2u && g_pcm_slot >= 0) {
+-				/* reencola la secuencia completa de chunks */
+-				(void)pcm_queue_all(g_pcm_slot);
+-			}
+-		} else if (queued == 0) {
+-			g_pcm_active = 0;
+-		}
+-	}
+-	if (!g_audio_playing || g_audio_loop || g_audio_duration_ms == 0)
+-		return;
+-	if (SDL_GetTicks() - g_audio_start_ms >= g_audio_duration_ms)
+-		g_audio_playing = 0;
++	mixer_feed();
++	if (g_synth_os && g_synth_os_duration_ms &&
++	    SDL_GetTicks() - g_synth_os_start_ms >= g_synth_os_duration_ms)
++		g_synth_os = 0;
+ }
+ 
+ /* ------------------------------------------------------------------ */
+@@ -442,12 +710,22 @@
+ int pac_platform_init(void)
+ {
+ 	Uint32 flags;
+-	SDL_AudioSpec want;
+ 
+-	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_EVENTS) != 0) {
++	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) != 0) {
+ 		fprintf(stderr, "SDL_Init: %s\n", SDL_GetError());
+ 		return 0;
+ 	}
++	/* el audio es opcional: si el subsistema falla (sin servidor de
++	 * sonido, driver roto...) el juego debe arrancar en silencio, no
++	 * abortar. Antes SDL_Init(VIDEO|AUDIO|EVENTS) devolvia 0 y el juego
++	 * terminaba con exit 1. */
++	if (SDL_InitSubSystem(SDL_INIT_AUDIO) != 0) {
++		fprintf(stderr, "audio no disponible; el juego seguira en "
++		        "silencio: %s\n", SDL_GetError());
++		g_sdl_audio = 0;
++	} else {
++		g_sdl_audio = 1;
++	}
+ 	flags = SDL_WINDOW_RESIZABLE;
+ 	if (g_smoke_frames > 0 || getenv("SDL_VIDEODRIVER"))
+ 		flags |= SDL_WINDOW_HIDDEN;
+@@ -485,8 +763,6 @@
+ 	g_clip_w = g_w;
+ 	g_clip_h = g_h;
+ 
+-	memset(&want, 0, sizeof(want));
+-	(void)want;
+ 	pac_audio_init();
+ 	pac_linux_text_init();
+ 	g_quit = 0;
+@@ -505,7 +781,16 @@
+ 		SDL_CloseAudioDevice(g_pcm_dev);
+ 		g_pcm_dev = 0;
+ 		g_pcm_on = 0;
+-		g_pcm_active = 0;
++		g_pcm_loop = 0;
++		{
++			int i;
++			for (i = 0; i < PAC_PCM_VOICES; i++)
++				g_pcm_voices[i].active = 0;
++		}
++	}
++	if (g_pcm_stream) {
++		SDL_FreeAudioStream(g_pcm_stream);
++		g_pcm_stream = NULL;
+ 	}
+ 	if (g_tex) {
+ 		SDL_DestroyTexture(g_tex);

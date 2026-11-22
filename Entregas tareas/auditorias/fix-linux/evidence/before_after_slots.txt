@@ -1,0 +1,16 @@
+slot sonido             ANTES (audit)                                DESPUES (fix)                               
+   1 menu               0.255s 221Hz rms-23.5 pk-21.6 clip0          0.255s 659Hz rms-10.4 pk-8.1 clip0          
+   2 start              4.229s 201Hz rms-11.6 pk-0.8 clip0           4.229s 201Hz rms-11.6 pk-0.8 clip0          
+   3 waka1              0.083s 851Hz rms-5.3 pk-0.8 clip0            0.083s 851Hz rms-5.3 pk-0.8 clip0           
+   4 waka2              0.083s 603Hz rms-6.2 pk-0.8 clip0            0.083s 603Hz rms-6.2 pk-0.8 clip0           
+   5 power              0.186s 404Hz rms-23.5 pk-21.3 clip0          0.186s 1200Hz rms-10.4 pk-8.4 clip0         
+   6 eat_ghost          0.569s 855Hz rms-8.4 pk-0.6 clip0            0.569s 855Hz rms-8.4 pk-0.6 clip0           
+   7 eat_fruit          0.435s 209Hz rms-8.2 pk-0.7 clip0            0.435s 209Hz rms-8.2 pk-0.7 clip0           
+   8 death              1.534s 536Hz rms-10.7 pk-0.5 clip0           1.534s 536Hz rms-10.7 pk-0.5 clip0          
+   9 extra_life         1.899s 374Hz rms-10.1 pk-0.5 clip0           1.899s 374Hz rms-10.1 pk-0.5 clip0          
+  10 level_clear        0.488s 592Hz rms-23.5 pk-21.6 clip0          5.200s 181Hz rms-10.4 pk-0.8 clip0          
+  11 game_over          0.650s 55Hz rms-23.5 pk-21.6 clip0           0.650s 166Hz rms-10.3 pk-8.4 clip0          
+  12 siren_chase        2.078s 1650Hz rms-10.4 pk-0.8 clip0          10.461s 1650Hz rms-10.4 pk-0.8 clip0        
+  13 siren_hunt         2.090s 532Hz rms-5.7 pk-0.8 clip0            2.090s 532Hz rms-5.7 pk-0.8 clip0           
+  14 siren_fright       2.090s 223Hz rms-23.5 pk-21.6 clip0          2.090s 660Hz rms-10.3 pk-8.4 clip0          
+  15 ghost_respawn      0.266s 2180Hz rms-5.1 pk-0.7 clip0           1.045s 2322Hz rms-5.1 pk-0.7 clip0          

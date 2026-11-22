@@ -1,0 +1,13 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/15_ghost_respawn_pcm_loop.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=15 loop=1 cap_ms=900 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=pcm dev=3 available=1 res_available=1
+t= 102 queued=1904 active=1 loop=1 playing=0
+t= 204 queued=3687 active=1 loop=1 playing=0
+t= 306 queued=2535 active=1 loop=1 playing=0
+t= 408 queued=4318 active=1 loop=1 playing=0
+t= 510 queued=3166 active=1 loop=1 playing=0
+t= 611 queued=2014 active=1 loop=1 playing=0
+t= 713 queued=3669 active=1 loop=1 playing=0
+t= 815 queued=2517 active=1 loop=1 playing=0
+END t=901 queued=1493 pcm_active=1 audio_playing=0

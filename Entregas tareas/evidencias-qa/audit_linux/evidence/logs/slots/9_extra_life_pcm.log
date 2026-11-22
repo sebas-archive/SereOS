@@ -1,0 +1,34 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/9_extra_life_pcm.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=9 loop=0 cap_ms=3000 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=pcm dev=3 available=1 res_available=1
+t= 101 queued=19909 active=1 loop=0 playing=0
+t= 203 queued=18629 active=1 loop=0 playing=0
+t= 305 queued=17477 active=1 loop=0 playing=0
+t= 407 queued=16325 active=1 loop=0 playing=0
+t= 508 queued=15173 active=1 loop=0 playing=0
+t= 610 queued=14021 active=1 loop=0 playing=0
+t= 711 queued=12869 active=1 loop=0 playing=0
+t= 813 queued=11717 active=1 loop=0 playing=0
+t= 914 queued=10437 active=1 loop=0 playing=0
+t=1016 queued=9285 active=1 loop=0 playing=0
+t=1117 queued=8133 active=1 loop=0 playing=0
+t=1219 queued=6981 active=1 loop=0 playing=0
+t=1320 queued=5829 active=1 loop=0 playing=0
+t=1422 queued=4677 active=1 loop=0 playing=0
+t=1523 queued=3397 active=1 loop=0 playing=0
+t=1625 queued=2245 active=1 loop=0 playing=0
+t=1726 queued=1093 active=1 loop=0 playing=0
+t=1828 queued=0 active=0 loop=0 playing=0
+t=1929 queued=0 active=0 loop=0 playing=0
+t=2031 queued=0 active=0 loop=0 playing=0
+t=2133 queued=0 active=0 loop=0 playing=0
+t=2234 queued=0 active=0 loop=0 playing=0
+t=2336 queued=0 active=0 loop=0 playing=0
+t=2437 queued=0 active=0 loop=0 playing=0
+t=2539 queued=0 active=0 loop=0 playing=0
+t=2640 queued=0 active=0 loop=0 playing=0
+t=2742 queued=0 active=0 loop=0 playing=0
+t=2843 queued=0 active=0 loop=0 playing=0
+t=2945 queued=0 active=0 loop=0 playing=0
+END t=3000 queued=0 pcm_active=0 audio_playing=0

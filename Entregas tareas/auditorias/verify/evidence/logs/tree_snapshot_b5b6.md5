@@ -1,0 +1,7 @@
+a143e73119207ec04991e64089b2197a  Pac-man SereOS/src/core/game.c
+e737fd7fce83157b70d94ec094b2379c  Pac-man SereOS/src/core/game_audio.c
+2c01e02f41f4ab1845af7056b5d2647a  Pac-man SereOS/src/core/pac_game.h
+7cd57ab2b4927f368de73439b3b338ed  Pac-man SereOS/tests/core_tests.c
+28382c4121fc7d58d3e76d689119ebb3  Pac-man SereOS/tests/mock_platform.c
+b38c8d9116fbf20814cfa03e422aedcd  Pac-man SereOS/docs/GAME.md
+2919e3368c611ee267f265af1ff7d049  Pac-man SereOS/README.md

@@ -1,0 +1,24 @@
+=== serial markers ===
+SEREOS_BOOT_OK mem=255MiB
+GUI_READY
+GAME_MENU
+APP_OPEN:game
+GAME_MENU
+LEVEL_START 1
+PAC_STATS dots=240 power=4 score=0 level=1 lives=3
+GAME_START
+PAC_DEATH
+PAC_STATS dots=233 power=4 score=70 level=1 lives=2
+PAC_DEATH
+PAC_STATS dots=233 power=4 score=70 level=1 lives=1
+PAC_DEATH
+GAME_OVER
+=== capture ===
+-rw-r--r-- 1 t1an t1an 4961840 Nov 20 05:31 /home/t1an/Descargas/sereos02/audit/verify/evidence/logs/sereos_final.wav
+=== probe ===
+SYM g_pcm_slot 0x35a14c
+SYM g_pcm_chunk 0x15acf98
+SYM g_pcm_active 0x15acf90
+SYM g_pcm_loop 0x15acf94
+SYM total_plays 0x37a148
+done: /home/t1an/Descargas/sereos02/audit/verify/evidence/logs

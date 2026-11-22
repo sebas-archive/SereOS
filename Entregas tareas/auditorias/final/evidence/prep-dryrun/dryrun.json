@@ -1,0 +1,92 @@
+{
+  "steps": [
+    {
+      "step": "GUI_READY",
+      "seconds": 3.76
+    },
+    {
+      "step": "shot_desktop",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/00_desktop.png"
+    },
+    {
+      "step": "shot_menu_click",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/01_menu.png",
+      "cursor": [
+        97,
+        18
+      ]
+    },
+    {
+      "step": "shot_menu_closed",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/02_menu_closed.png"
+    },
+    {
+      "step": "APP_OPEN:about",
+      "found": true
+    },
+    {
+      "step": "shot_about",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/03_about.png"
+    },
+    {
+      "step": "APP_CLOSE:about",
+      "found": true
+    },
+    {
+      "step": "shot_after_close",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/04_after_close.png"
+    },
+    {
+      "step": "fatal_markers",
+      "fatals": []
+    }
+  ],
+  "ok": true,
+  "shots": [
+    {
+      "name": "00_desktop",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/00_desktop.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/00_desktop.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1048,
+      "non_black_ratio": 0.9834
+    },
+    {
+      "name": "01_menu",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/01_menu.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/01_menu.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1425,
+      "non_black_ratio": 0.9901
+    },
+    {
+      "name": "02_menu_closed",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/02_menu_closed.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/02_menu_closed.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 954,
+      "non_black_ratio": 0.9834
+    },
+    {
+      "name": "03_about",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/03_about.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/03_about.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1867,
+      "non_black_ratio": 0.9832
+    },
+    {
+      "name": "04_after_close",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/04_after_close.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-prep-dryrun/04_after_close.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 982,
+      "non_black_ratio": 0.9834
+    }
+  ]
+}

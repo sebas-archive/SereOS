@@ -1,0 +1,85 @@
+NOTA: se anade la prueba 'boot' porque las pruebas seleccionadas necesitan el escritorio grafico.
+==========================================================================
+ SereOS v1.0 - suite de verificacion automatizada en QEMU
+==========================================================================
+ISO          : /home/t1an/Descargas/sereos02/audit/final/evidence/prep/pre-fix.iso (36806656 bytes)
+QEMU         : QEMU emulator version 11.1.3
+KVM          : off (disponible=no)
+Artefactos   : /home/t1an/Descargas/sereos02/audit/final/rt-control/raw/20261120-060509
+Capturas PNG : /home/t1an/Descargas/sereos02/audit/final/rt-control/
+
+--- [boot] Arranque, splash y escritorio ---
+  [PASS] boot (12.3s)
+         ok    QEMU arrancado  [KVM=no, serial=/home/t1an/Descargas/sereos02/audit/final/rt-control/raw/20261120-060509/gfx/serial.log]
+         ok    captura 00_grub_menu  [720x400, 2 colores, 2.99% no negro, menu GRUB (informativa)]
+         ok    marcador SEREOS_BOOT_OK  [linea 19: SEREOS_BOOT_OK mem=255MiB]
+         ok    captura 01_splash  [1024x768, 549 colores, 100.00% no negro, pantalla de arranque con logo oficial]
+         ok    logo oficial en el splash (azul de marca + proporcion)  [bbox=88x88, aspecto=1.00 (oficial 1.07)]
+         ok    marcador SPLASH_DONE  [linea 20: SPLASH_DONE]
+         ok    marcador GUI_READY  [linea 21: GUI_READY]
+         ok    marcador DESKTOP_READY  [linea 18: DESKTOP_READY]
+         ok    captura 02_desktop  [1024x768, 1031 colores, 98.34% no negro, escritorio SereOS]
+         ok    captura 02b_topbar_dock  [1024x200, 960 colores, zoom barra superior + dock]
+         ok    captura 02c_dock_tooltip  [1024x768, 1196 colores, 98.34% no negro, tooltip del dock: PAC-MAN SereOS]
+         ok    marca ribbon ~9x10 alineada con el wordmark (PNG sin fondo azul)  [glifo bbox=9x10, gap=9px, centro glifo_y=13 vs wordmark_y=14 (desvio 1px), azul_topbar=0px]
+         ok    topbar mantiene 30 px de alto (UI bajo la barra en y=30)  [TOPBAR_HEIGHT_THEME=30]
+         ok    captura 22_menu_logo  [1024x768, 1512 colores, 99.00% no negro, menu principal con logo oficial]
+         ok    el menu principal se abre desde la topbar  [diferencia = 7.691%]
+         ok    sin referencias al logo antiguo (logo_badge/logo_s/logo_mono)  [fuentes y binario limpios]
+         ok    el logo se genera desde assets/logo/official_logo.png  [tools/gen_logo.py]
+         ok    sin excepcion/panico durante el arranque  [log limpio]
+
+--- [maximize] Maximizacion full-bleed y WM (restaurar/minimizar/resize) ---
+  [PASS] maximize (58.3s)
+         info  verificacion interna (max_baseline)  [1024x768, 1130 colores, 98.34% no negro, escritorio de referencia sin ventanas]
+         info  verificacion interna (max_normal)  [1024x768, 1932 colores, 98.58% no negro, Archivos normal antes de maximizar]
+         ok    ventana normal detectada  [titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, APP_OPEN:files=1]
+         ok    captura 25_maximized_fullbleed  [1024x768, 1385 colores, 100.00% no negro, Archivos maximizado full-bleed]
+         ok    full-bleed: cubre x=0..w-1, y=30..sh-1 (full-height) sin wallpaper  [wallpaper_ratio=0.0, corners={'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, rect=(0, 30, 1024, 738)]
+         ok    esquina (0,30) no es fondo del escritorio  [ventana=(26, 30, 38), fondo=(8, 9, 13)]
+         ok    una sola topbar global y sin dock/taskbar duplicados (marca ribbon sin azul)  [logos_azules top=0, barra=0, contenido=0, ribbon=True]
+         ok    sin dock/taskbar inferior: app full-height y nav en topbar  [dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}, nav=True]
+         ok    captura 26_restore_exact  [1024x768, 1988 colores, 98.60% no negro, restaurada al rect previo]
+         ok    restaurar recupera EXACTAMENTE el rect previo  [antes={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, despues={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}]
+         ok    restaurar no crea una instancia nueva (APP_OPEN no se repite)  [APP_OPEN:files 1 -> 1]
+         ok    tras restaurar ya no es full-bleed  [{'full_bleed': False, 'wallpaper_ratio': 0.2954, 'corners': {'tl': 1.0, 'tr': 1.0, 'bl': 1.0, 'br': 1.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'rect': (0, 30, 1024, 738)}]
+         ok    captura 27_doubleclick  [1024x768, 1375 colores, 100.00% no negro, maximizada con doble clic en titlebar]
+         ok    doble clic en titlebar maximiza (full-bleed)  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         info  verificacion interna (max_dbl_back)  [1024x768, 1874 colores, 98.58% no negro, doble clic de nuevo: restaurada]
+         ok    doble clic de nuevo restaura  [titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}]
+         ok    minimizar una maximizada devuelve el dock  [dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}, nav=False]
+         ok    captura 28_minimize_restore  [1024x768, 1373 colores, 100.00% no negro, restaurada desde el dock: maximizada]
+         ok    restaurar desde el dock vuelve MAXIMIZADA full-bleed  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    restaurar desde el dock no crea instancia nueva  [APP_OPEN:files=1]
+         ok    captura 29_max_terminal  [1024x768, 987 colores]
+         ok    terminal maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0001, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    terminal maximizado sin instancia nueva  [APP_OPEN:terminal=1]
+         ok    monitor maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    monitor maximizado sin instancia nueva  [APP_OPEN:monitor=1]
+         ok    about maximizado: una sola topbar, sin barra inferior  [logos_azules top=0, ribbon=True]
+         ok    about maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    about maximizado sin instancia nueva  [APP_OPEN:about=1]
+         ok    game maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    game maximizado sin instancia nueva  [APP_OPEN:game=1]
+         ok    captura 30_resize  [1024x768, 1918 colores]
+         ok    resize por el borde derecho agranda la ventana  [ancho 898 -> 946 (delta=48), origen igual=True]
+         ok    resize respeta el minimo de 300 px de ancho  [ancho final=298 (+2 bordes)]
+         ok    sin excepcion/panico en maximizar/restaurar/resize  [log limpio]
+
+--- [corners] Esquinas redondeadas: clipping, solape y resize ---
+  [PASS] corners (11.8s)
+         ok    ventana normal detectada (rect con borde)  [{'x': 78, 'y': 106, 'w': 900, 'h': 560, 'right': 977, 'bottom': 665}]
+         ok    BR: dentro del arco se conserva la barra de estado (surface_2 26,30,38) y no el cuerpo (20,23,30)  [interior=(26, 30, 38), cuerpo=(20, 23, 30)]
+         ok    BR: fuera del arco no hay parche de 14x14 del color del cuerpo (se restaura fondo/sombra)  [fuera=(10, 13, 24), px_cuerpo_fuera=0, colores_fuera=7]
+         ok    las 4 esquinas limpias (interior status, sin parches fuera)  [px_cuerpo_fuera_total=0, interiores={'tl': (26, 30, 38), 'tr': (26, 30, 38), 'bl': (26, 30, 38), 'br': (26, 30, 38)}, mal=[]]
+         ok    captura 33_window_corners_clean  [804x804, 136 colores, mosaico 4 esquinas de Archivos a 10x]
+         ok    mosaico de esquinas generado a 10x  [804x804]
+         ok    solape: BR de la ventana superior conserva la barra de estado por dentro y fondo por fuera (sin parche)  [rect={'x': 78, 'y': 171, 'w': 900, 'h': 495, 'right': 977, 'bottom': 665}, interior=(26, 30, 38), fuera=(10, 13, 24), px_cuerpo_fuera=0]
+         ok    resize: esquina BR sigue limpia (status dentro, fondo fuera)  [ancho 900->940 (delta=40), interior=(26, 30, 38), px_cuerpo_fuera=0]
+         ok    sin excepcion/panico durante la revision de esquinas  [log limpio]
+
+==========================================================================
+ RESULTADO: 3/3 PASS, 0 FAIL, 0 SKIP
+ Capturas: 13 PNG en /home/t1an/Descargas/sereos02/audit/final/rt-control/
+ Resumen JSON: /home/t1an/Descargas/sereos02/audit/final/rt-control/test-results.json
+==========================================================================

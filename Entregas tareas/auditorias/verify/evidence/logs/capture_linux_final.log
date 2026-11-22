@@ -1,0 +1,53 @@
+[capture] real_start
+  rc=0 bytes=1966080
+[capture] real_play
+  rc=0 bytes=1966080
+[capture] real_frightened
+  rc=0 bytes=1966080
+[capture] real_ghostcapture
+  rc=0 bytes=1966080
+[capture] real_death
+  rc=0 bytes=1966080
+[capture] real_victory
+  rc=0 bytes=2686976
+[capture] real_gameover
+  rc=0 bytes=1572864
+[capture] real_menu
+  rc=0 bytes=1572864
+[capture] real_pause
+  rc=0 bytes=1572864
+[capture] real_soundoff
+  rc=0 bytes=1572864
+[capture] h_slot2_START
+  rc=0 bytes=1572864
+[capture] h_slot3_WAKA1
+  rc=0 bytes=196608
+[capture] h_slot4_WAKA2
+  rc=0 bytes=196608
+[capture] h_slot6_EAT_GHOST
+  rc=0 bytes=393216
+[capture] h_slot7_EAT_FRUIT
+  rc=0 bytes=393216
+[capture] h_slot8_DEATH
+  rc=0 bytes=589824
+[capture] h_slot9_EXTRA_LIFE
+  rc=0 bytes=589824
+[capture] h_slot10_LEVEL_CLEAR
+  rc=0 bytes=1376256
+[capture] h_slot15_GHOST_RESPAWN
+  rc=0 bytes=196608
+[capture] h_slot12_SIREN_CHASE
+  rc=0 bytes=786432
+[capture] h_slot13_SIREN_HUNT
+  rc=0 bytes=786432
+[capture] h_slot1_MENU_synth
+  rc=0 bytes=393216
+[capture] h_slot5_POWER_synth
+  rc=0 bytes=393216
+[capture] h_slot11_GAME_OVER_synth
+  rc=0 bytes=393216
+[capture] h_slot14_FRIGHT_synth
+  rc=0 bytes=589824
+[capture] h_oneshot_ghost_then_waka
+  rc=0 bytes=786432
+done: /home/t1an/Descargas/sereos02/audit/verify/evidence/linux

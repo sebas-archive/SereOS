@@ -1,0 +1,303 @@
+{
+  "checks": {
+    "about_icon": {
+      "diff_vs_baseline_logo_S": 0.0
+    },
+    "about_buttons": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          452,
+          508
+        ],
+        "center": 480.0,
+        "window_center": 480.0,
+        "offset": 0.0
+      }
+    },
+    "files": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        904.0,
+        922.0,
+        940.0
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          479,
+          528
+        ],
+        "center": 503.5,
+        "window_center": 504.0,
+        "offset": -0.5
+      }
+    },
+    "terminal": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        838.0,
+        856.0,
+        874.0
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          504,
+          552
+        ],
+        "center": 528.0,
+        "window_center": 528.0,
+        "offset": 0.0
+      }
+    },
+    "monitor": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        932.0,
+        950.0,
+        968.0
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          531,
+          572
+        ],
+        "center": 551.5,
+        "window_center": 552.0,
+        "offset": -0.5
+      }
+    },
+    "game": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          427,
+          532
+        ],
+        "center": 479.5,
+        "window_center": 480.0,
+        "offset": -0.5
+      }
+    },
+    "game_max": {
+      "window_x0": 0,
+      "window_x1": 1024,
+      "right_margin_px": 14.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-final-ui/07_game_maximized.png",
+      "found": true,
+      "row_y": 48,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        974.0,
+        992.2,
+        1010.0
+      ],
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.2,
+        17.8
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "game_restored": {
+      "window_x0": 41,
+      "window_x1": 919,
+      "right_margin_px": 13.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-final-ui/08_game_restored.png",
+      "found": true,
+      "row_y": 84,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.0,
+        18.0
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": "GUI_READY",
+      "ok": true
+    },
+    {
+      "step": "captura_topbar_dock",
+      "ok": true
+    },
+    {
+      "step": "about_contenido_logo_S",
+      "ok": true,
+      "diff_vs_baseline": 0.0
+    },
+    {
+      "step": "about_botones_derecha",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "title_offset": 0.0
+    },
+    {
+      "step": "APP_CLOSE:about",
+      "ok": true
+    },
+    {
+      "step": "files_botones_derecha_y_titulo_centrado",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": -0.5
+    },
+    {
+      "step": "APP_CLOSE:files",
+      "ok": true
+    },
+    {
+      "step": "terminal_botones_derecha_y_titulo_centrado",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": 0.0
+    },
+    {
+      "step": "APP_CLOSE:terminal",
+      "ok": true
+    },
+    {
+      "step": "monitor_botones_derecha_y_titulo_centrado",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": -0.5
+    },
+    {
+      "step": "APP_CLOSE:monitor",
+      "ok": true
+    },
+    {
+      "step": "game_botones_derecha_y_titulo_centrado",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": -0.5
+    },
+    {
+      "step": "game_maximizado",
+      "ok": true,
+      "row_y": 48,
+      "window": [
+        0,
+        1024
+      ]
+    },
+    {
+      "step": "game_restaurado",
+      "ok": true,
+      "row_y": 84,
+      "window": [
+        41,
+        919
+      ]
+    },
+    {
+      "step": "APP_CLOSE:game",
+      "ok": true
+    },
+    {
+      "step": "f1_f7_abren_y_minimizan",
+      "ok": true
+    },
+    {
+      "step": "sin_panic_exception",
+      "ok": true,
+      "fatals": []
+    }
+  ],
+  "ok": true,
+  "fatals": []
+}

@@ -1,0 +1,433 @@
+{
+  "steps": [
+    {
+      "step": "GUI_READY",
+      "ok": true,
+      "seconds": 5.08
+    },
+    {
+      "step": "game_buttones_3_colores",
+      "ok": true,
+      "info": {
+        "window_x0": 41,
+        "window_x1": 919,
+        "right_margin_px": 13.0,
+        "in_right_third": true,
+        "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/11_game.png",
+        "found": true,
+        "row_y": 84,
+        "order_left_to_right": [
+          "amber",
+          "green",
+          "red"
+        ],
+        "centers_x": [
+          870.0,
+          888.0,
+          906.0
+        ],
+        "centers_y": [
+          83.0,
+          83.0,
+          83.0
+        ],
+        "aligned_y": true,
+        "spacing_px": [
+          18.0,
+          18.0
+        ],
+        "colors": {
+          "red": 1,
+          "amber": 1,
+          "green": 1
+        }
+      }
+    },
+    {
+      "step": "game_maximizado",
+      "ok": true,
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ],
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ]
+    },
+    {
+      "step": "game_restaurado",
+      "ok": true,
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ]
+    },
+    {
+      "step": "sin_panic_exception",
+      "ok": true,
+      "fatals": []
+    }
+  ],
+  "ok": true,
+  "checks": {
+    "game_buttons_normal": {
+      "window_x0": 41,
+      "window_x1": 919,
+      "right_margin_px": 13.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/11_game.png",
+      "found": true,
+      "row_y": 84,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.0,
+        18.0
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "game_buttons_maximized": {
+      "window_x0": 0,
+      "window_x1": 1024,
+      "right_margin_px": 14.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/12_game_maximized.png",
+      "found": true,
+      "row_y": 48,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        974.0,
+        992.2,
+        1010.0
+      ],
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.2,
+        17.8
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "game_buttons_restored": {
+      "window_x0": 0,
+      "window_x1": 1024,
+      "right_margin_px": 14.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/13_game_restored.png",
+      "found": true,
+      "row_y": 48,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        974.0,
+        992.2,
+        1010.0
+      ],
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.2,
+        17.8
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    },
+    "game_buttons_max_button": {
+      "window_x0": 0,
+      "window_x1": 1024,
+      "right_margin_px": 14.0,
+      "in_right_third": true,
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/14_game_max_button.png",
+      "found": true,
+      "row_y": 48,
+      "order_left_to_right": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        974.0,
+        992.2,
+        1010.0
+      ],
+      "centers_y": [
+        47.0,
+        47.2,
+        47.0
+      ],
+      "aligned_y": true,
+      "spacing_px": [
+        18.2,
+        17.8
+      ],
+      "colors": {
+        "red": 1,
+        "amber": 1,
+        "green": 1
+      }
+    }
+  },
+  "serial_lines": [
+    "[OK] Arranque Multiboot verificado (GRUB 2)",
+    "[OK] GDT propia: 5 segmentos (kernel y usuario)",
+    "[OK] IDT: 32 excepciones + 16 IRQ (PIC remapeado a 32-47)",
+    "[OK] Temporizador PIT a 100 Hz (IRQ 0)",
+    "[OK] Teclado PS/2 con eventos (IRQ 1)",
+    "[OK] Raton PS/2 con eventos (IRQ 12)",
+    "[OK] Reloj CMOS RTC",
+    "[OK] Framebuffer grafico 1024x768x32 validado",
+    "[OK] Allocator de marcos fisicos inicializado",
+    "[OK] Heap del kernel (kmalloc/kfree) inicializado",
+    "[OK] Paginacion activada (identidad, PSE 4 MiB)",
+    "[OK] RAMFS montado en /",
+    "[OK] Planificador cooperativo round-robin listo",
+    "[OK] Interrupciones habilitadas",
+    "[OK] Audio: solo PC speaker",
+    "[OK] Motor grafico nativo inicializado",
+    "[OK] Aplicaciones del escritorio registradas",
+    "DESKTOP_INIT",
+    "DESKTOP_READY",
+    "SEREOS_BOOT_OK mem=255MiB",
+    "SPLASH_DONE",
+    "GUI_READY",
+    "GUI_LOOP",
+    "APP_OPEN:about",
+    "APP_CLOSE:about",
+    "APP_OPEN:files",
+    "TERM_READY",
+    "APP_OPEN:terminal",
+    "APP_OPEN:monitor",
+    "GAME_MENU",
+    "APP_OPEN:game",
+    "GAME_EXIT",
+    "APP_CLOSE:game",
+    "APP_CLOSE:monitor",
+    "APP_CLOSE:terminal"
+  ],
+  "shots": [
+    {
+      "name": "01_desktop",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/01_desktop.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/01_desktop.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 887,
+      "non_black_ratio": 0.9834
+    },
+    {
+      "name": "02_menu",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/02_menu.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/02_menu.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1418,
+      "non_black_ratio": 0.9901
+    },
+    {
+      "name": "03_menu_closed",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/03_menu_closed.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/03_menu_closed.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 889,
+      "non_black_ratio": 0.9834
+    },
+    {
+      "name": "04_about",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/04_about.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/04_about.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1551,
+      "non_black_ratio": 0.9832
+    },
+    {
+      "name": "05_files",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/05_files.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/05_files.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1762,
+      "non_black_ratio": 0.9831
+    },
+    {
+      "name": "06_terminal",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/06_terminal.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/06_terminal.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1885,
+      "non_black_ratio": 0.9831
+    },
+    {
+      "name": "07_terminal_help",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/07_terminal_help.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/07_terminal_help.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1820,
+      "non_black_ratio": 0.9831
+    },
+    {
+      "name": "08_terminal_dmesg",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/08_terminal_dmesg.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/08_terminal_dmesg.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1914,
+      "non_black_ratio": 0.9831
+    },
+    {
+      "name": "09_terminal_audio",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/09_terminal_audio.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/09_terminal_audio.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1969,
+      "non_black_ratio": 0.9831
+    },
+    {
+      "name": "10_monitor",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/10_monitor.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/10_monitor.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1838,
+      "non_black_ratio": 0.9831
+    },
+    {
+      "name": "11_game",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/11_game.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/11_game.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 2310,
+      "non_black_ratio": 0.9854
+    },
+    {
+      "name": "12_game_maximized",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/12_game_maximized.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/12_game_maximized.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1504,
+      "non_black_ratio": 1.0
+    },
+    {
+      "name": "13_game_restored",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/13_game_restored.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/13_game_restored.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1495,
+      "non_black_ratio": 1.0
+    },
+    {
+      "name": "14_game_max_button",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/14_game_max_button.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/14_game_max_button.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1502,
+      "non_black_ratio": 1.0
+    },
+    {
+      "name": "15_game_restore_button",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/15_game_restore_button.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/15_game_restore_button.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1508,
+      "non_black_ratio": 1.0
+    },
+    {
+      "name": "16_desktop_after_game",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/16_desktop_after_game.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/16_desktop_after_game.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1842,
+      "non_black_ratio": 0.983
+    },
+    {
+      "name": "17_two_windows",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/17_two_windows.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/17_two_windows.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1867,
+      "non_black_ratio": 0.983
+    },
+    {
+      "name": "18_f6_focus",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/18_f6_focus.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/18_f6_focus.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1825,
+      "non_black_ratio": 0.983
+    },
+    {
+      "name": "19_f7_minimize",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/19_f7_minimize.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/19_f7_minimize.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1697,
+      "non_black_ratio": 0.9833
+    },
+    {
+      "name": "20_final_desktop",
+      "ppm": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/20_final_desktop.ppm",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-ui/20_final_desktop.png",
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 906,
+      "non_black_ratio": 0.9834
+    }
+  ]
+}

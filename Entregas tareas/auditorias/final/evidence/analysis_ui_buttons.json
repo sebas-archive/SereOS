@@ -1,0 +1,182 @@
+{
+  "04_about": {
+    "buttons": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        770.0,
+        788.0,
+        806.0
+      ],
+      "centers_y": [
+        113.0,
+        113.0,
+        113.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        141,
+        819
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true
+    },
+    "title_bbox": [
+      452,
+      508
+    ],
+    "title_center": 480.0,
+    "window_center": 480.0,
+    "title_offset_from_center": 0.0
+  },
+  "05_files": {
+    "buttons": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        904.0,
+        922.0,
+        940.0
+      ],
+      "centers_y": [
+        103.0,
+        103.0,
+        103.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        55,
+        953
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true
+    },
+    "title_bbox": [
+      479,
+      528
+    ],
+    "title_center": 503.5,
+    "window_center": 504.0,
+    "title_offset_from_center": -0.5
+  },
+  "06_terminal": {
+    "buttons": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        838.0,
+        856.0,
+        874.0
+      ],
+      "centers_y": [
+        168.0,
+        168.0,
+        168.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        55,
+        887
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true
+    },
+    "title_bbox": [
+      96,
+      552
+    ],
+    "title_center": 324.0,
+    "window_center": 471.0,
+    "title_offset_from_center": -147.0
+  },
+  "10_monitor": {
+    "buttons": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        932.0,
+        950.0,
+        968.0
+      ],
+      "centers_y": [
+        143.0,
+        143.0,
+        143.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        55,
+        981
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true
+    },
+    "title_bbox": [
+      531,
+      572
+    ],
+    "title_center": 551.5,
+    "window_center": 518.0,
+    "title_offset_from_center": 33.5
+  },
+  "11_game": {
+    "buttons": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        41,
+        919
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true
+    },
+    "title_bbox": [
+      427,
+      532
+    ],
+    "title_center": 479.5,
+    "window_center": 480.0,
+    "title_offset_from_center": -0.5
+  }
+}

@@ -1,0 +1,14 @@
+slot ch symbol                           addr     len     low16+len   verdict
+ 2 0 pacasset_pcm_game_start_0        0x3335a0  32768 0x35a0+32768  OK
+ 2 1 pacasset_pcm_game_start_1        0x32ff40  13908 0xff40+13908  FAIL cross64K=True <16M=True
+ 3 0 pacasset_pcm_waka1               0x32fb80    932 0xfb80+932    OK
+ 4 0 pacasset_pcm_waka2               0x32f7c0    929 0xf7c0+929    OK
+ 6 0 pacasset_pcm_eat_ghost           0x32df00   6324 0xdf00+6324   OK
+ 7 0 pacasset_pcm_eat_fruit           0x32cc00   4845 0xcc00+4845   OK
+ 8 0 pacasset_pcm_pacman_death        0x323800  16916 0x3800+16916  OK
+ 9 0 pacasset_pcm_extra_life          0x327a20  20940 0x7a20+20940  OK
+12 0 pacasset_pcm_siren_chase         0x321580   1470 0x1580+1470   OK
+13 0 pacasset_pcm_siren_hunt          0x321b40   4412 0x1b40+4412   OK
+15 0 pacasset_pcm_ghost_respawn       0x322c80   2935 0x2c80+2935   OK
+
+bad: [(2, 1, 'pacasset_pcm_game_start_1', 13908, 3342144)]

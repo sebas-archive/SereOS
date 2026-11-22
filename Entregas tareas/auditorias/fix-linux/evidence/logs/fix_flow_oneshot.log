@@ -1,0 +1,45 @@
+[     3] SDL_OpenAudioDevice id=2 want{freq=22050 fmt=0x8010 ch=1 samples=512} -> have{freq=22050 fmt=0x8010 ch=1}
+[     3] SDL_OpenAudioDevice id=3 want{freq=11025 fmt=0x8 ch=1 samples=1024} -> have{freq=11025 fmt=0x8 ch=1}
+[     3] SOURCE pac_sound_stop() state=ATTRACT
+[     3] pac_audio_stop()
+[     3]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+GAME_MENU
+[     3] ===== escenario oneshot =====
+[     3] STATE inicio       state=ATTRACT siren=0 hold=0 ready=0 death=0 fright=0 dots_left=240 pcm_queued=0
+[    20] pac_audio_loop(13)  pcm_queued=0
+[    20]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[    20]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[    20]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[    20] SOURCE pac_sound_set_siren(0->13) state=PLAYING hold=0 fright=0
+[    36]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[    67]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[    84]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   104] SOURCE pac_sound_play(slot=6) state=PLAYING hold=0 siren=13 audio_ok=1
+[   104] pac_audio_stop_loop()  pcm_queued=505
+[   104]   SDL_ClearQueuedAudio dev=3 queued_before=505  <== PCM
+[   104] pac_audio_play(6)  pcm_queued=0
+[   105]   SDL_QueueAudio dev=3 len=256 queued_before=0 queued_after=256  <== PCM
+[   105]   SDL_QueueAudio dev=3 len=256 queued_before=249 queued_after=505  <== PCM
+[   105]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   105]   => hold=590 siren=0
+[   131]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   136] SOURCE pac_sound_play(slot=7) state=PLAYING hold=558 siren=0 audio_ok=1
+[   136]   => hold=558 siren=0
+[   148]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   167] SOURCE pac_sound_play(slot=6) state=PLAYING hold=526 siren=0 audio_ok=1
+[   167] pac_audio_stop_loop()  pcm_queued=633
+[   167] pac_audio_play(6)  pcm_queued=633
+[   167]   => hold=590 siren=0
+[   179]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   196]   SDL_QueueAudio dev=3 len=256 queued_before=505 queued_after=761  <== PCM
+[   198] SOURCE pac_sound_play(slot=6) state=PLAYING hold=558 siren=0 audio_ok=1
+[   198] pac_audio_stop_loop()  pcm_queued=761
+[   198] pac_audio_play(6)  pcm_queued=761
+[   198]   => hold=590 siren=0
+[   198] SUMMARY plays: ghost=3 fruit=0
+[   198] SOURCE pac_sound_stop() state=PLAYING
+[   198] pac_audio_stop()
+[   198]   SDL_ClearQueuedAudio dev=3 queued_before=761  <== PCM
+GAME_EXIT
+[   199]   SDL_CloseAudioDevice dev=2
+[   199]   SDL_CloseAudioDevice dev=3

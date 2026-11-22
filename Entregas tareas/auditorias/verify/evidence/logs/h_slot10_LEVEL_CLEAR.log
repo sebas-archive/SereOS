@@ -1,0 +1,62 @@
+available=1 slot=10 mode=play ms=6200
+t= 102 avail=1
+t= 204 avail=1
+t= 306 avail=1
+t= 408 avail=1
+t= 511 avail=1
+t= 614 avail=1
+t= 716 avail=1
+t= 818 avail=1
+t= 921 avail=1
+t=1023 avail=1
+t=1125 avail=1
+t=1229 avail=1
+t=1331 avail=1
+t=1433 avail=1
+t=1535 avail=1
+t=1637 avail=1
+t=1739 avail=1
+t=1842 avail=1
+t=1944 avail=1
+t=2046 avail=1
+t=2148 avail=1
+t=2250 avail=1
+t=2352 avail=1
+t=2454 avail=1
+t=2556 avail=1
+t=2658 avail=1
+t=2760 avail=1
+t=2863 avail=1
+t=2965 avail=1
+t=3067 avail=1
+t=3169 avail=1
+t=3271 avail=1
+t=3373 avail=1
+t=3475 avail=1
+t=3577 avail=1
+t=3680 avail=1
+t=3782 avail=1
+t=3885 avail=1
+t=3987 avail=1
+t=4089 avail=1
+t=4191 avail=1
+t=4293 avail=1
+t=4395 avail=1
+t=4497 avail=1
+t=4600 avail=1
+t=4702 avail=1
+t=4804 avail=1
+t=4906 avail=1
+t=5008 avail=1
+t=5111 avail=1
+t=5213 avail=1
+t=5316 avail=1
+t=5419 avail=1
+t=5521 avail=1
+t=5623 avail=1
+t=5725 avail=1
+t=5828 avail=1
+t=5931 avail=1
+t=6034 avail=1
+t=6137 avail=1
+END t=6204

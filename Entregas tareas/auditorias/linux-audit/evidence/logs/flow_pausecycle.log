@@ -1,0 +1,34 @@
+[     3] SDL_OpenAudioDevice id=2 want{freq=22050 fmt=0x8010 ch=1 samples=512} -> have{freq=22050 fmt=0x8010 ch=1}
+[     3] SDL_OpenAudioDevice id=3 want{freq=11025 fmt=0x8 ch=1 samples=1024} -> have{freq=11025 fmt=0x8 ch=1}
+GAME_MENU
+[     3] ===== escenario pausecycle =====
+[     3] STATE inicio       state=ATTRACT siren=0 hold=0 ready=0 death=0 fright=0 dots_left=240 pcm_queued=0
+GAME_MENU
+LEVEL_START 1
+PAC_STATS dots=240 power=4 score=0 level=1 lives=3
+GAME_START
+[   100] SOURCE pac_sound_play(slot=2) state=PLAYING hold=0 siren=0 audio_ok=1
+[   100] pac_audio_stop_loop()  pcm_queued=0
+[   100]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[   100] pac_audio_play(2)  pcm_queued=0
+[   100]   SDL_ClearQueuedAudio dev=3 queued_before=0  <== PCM
+[   100]   SDL_QueueAudio dev=3 len=32768 queued_before=0 queued_after=32768  <== PCM
+[   100]   SDL_QueueAudio dev=3 len=13908 queued_before=32761 queued_after=46669  <== PCM
+[   100]   => hold=4500 siren=0
+[   165] STATE start        state=PLAYING siren=0 hold=4436 ready=4436 death=0 fright=0 dots_left=240 pcm_queued=45901
+GAME_PAUSE
+[   247] STATE pausa        state=PAUSED siren=0 hold=4356 ready=4436 death=0 fright=0 dots_left=240 pcm_queued=44877
+[   529] STATE reanuda      state=PLAYING siren=0 hold=4084 ready=4372 death=0 fright=0 dots_left=240 pcm_queued=41677
+GAME_PAUSE
+[   813] STATE pausa        state=PAUSED siren=0 hold=3796 ready=4164 death=0 fright=0 dots_left=240 pcm_queued=38349
+[  1095] STATE reanuda      state=PLAYING siren=0 hold=3508 ready=4100 death=0 fright=0 dots_left=240 pcm_queued=35149
+GAME_PAUSE
+[  1379] STATE pausa        state=PAUSED siren=0 hold=3236 ready=3908 death=0 fright=0 dots_left=240 pcm_queued=31949
+[  1660] STATE reanuda      state=PLAYING siren=0 hold=2948 ready=3844 death=0 fright=0 dots_left=240 pcm_queued=28621
+[  1861] SUMMARY start_plays=1 (esperado 1)
+[  1861] SOURCE pac_sound_stop() state=PLAYING
+[  1861] pac_audio_stop()
+[  1861]   SDL_ClearQueuedAudio dev=3 queued_before=26317  <== PCM
+GAME_EXIT
+[  1861]   SDL_CloseAudioDevice dev=2
+[  1861]   SDL_CloseAudioDevice dev=3

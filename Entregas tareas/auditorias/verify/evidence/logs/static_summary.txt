@@ -1,0 +1,208 @@
+===== 1. clean builds =====
+PASS  make linux (clean build)
+INFO  make linux warnings: 0
+PASS  make sereos (libpacman.a)
+PASS  make -C 'sistema operativo' (ISO)
+INFO  sereos.iso 36806656 bytes
+PASS  make test
+[OK] smoke play (build/smoke/play.ppm)
+[OK] smoke pause (build/smoke/pause.ppm)
+[OK] smoke gameover (build/smoke/gameover.ppm)
+[OK] smoke victory (build/smoke/victory.ppm)
+TODAS LAS PRUEBAS OK
+===== 2. asset integrity =====
+PASS  assets check
+{
+  "checks": [
+    {
+      "name": "Res MD5 unchanged: game start.wav",
+      "ok": true,
+      "detail": "07914ee70de9f5f1166ed3e9b35fc9db"
+    },
+    {
+      "name": "Res MD5 unchanged: waka1.wav",
+      "ok": true,
+      "detail": "9e3c8eb9b4d7af04971b12c9af3e5bb4"
+    },
+    {
+      "name": "Res MD5 unchanged: waka2.wav",
+      "ok": true,
+      "detail": "0452cd64893e3fbd3503190e9ff318c7"
+    },
+    {
+      "name": "Res MD5 unchanged: eat ghost.wav",
+      "ok": true,
+      "detail": "61d4ded9e6249e64b735982f6ced3ec5"
+    },
+    {
+      "name": "Res MD5 unchanged: eat fruit.wav",
+      "ok": true,
+      "detail": "514eeeeb192e8ca45ca92aa308f61f63"
+    },
+    {
+      "name": "Res MD5 unchanged: extra life.wav",
+      "ok": true,
+      "detail": "27991f5575aec8695f0f9a68925b9df8"
+    },
+    {
+      "name": "Res MD5 unchanged: ghost respawn.wav",
+      "ok": true,
+      "detail": "43fae1a4447f5026f8f23a9d9dd02b95"
+    },
+    {
+      "name": "Res MD5 unchanged: hunted siren.wav",
+      "ok": true,
+      "detail": "8d5759b619045b5f6879ec83175d67a9"
+    },
+    {
+      "name": "Res MD5 unchanged: hunter siren.wav",
+      "ok": true,
+      "detail": "d35ceeea5823f2ea9c1a3d2107826b92"
+    },
+    {
+      "name": "Res MD5 unchanged: pacman death.wav",
+      "ok": true,
+      "detail": "b5cacf9a37e6a4fd396f6fd914168780"
+    },
+    {
+      "name": "Res MD5 unchanged: intermission.wav",
+      "ok": true,
+      "detail": "566c0f2299b8a7ebef6372010fa6866e"
+    },
+    {
+      "name": "Res has exactly 11 WAV",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "res_original has 11 WAV",
+      "ok": true,
+      "detail": "11"
+    },
+    {
+      "name": "res_original byte-identical: game start.wav",
+      "ok": true,
+      "detail": "07914ee70de9f5f1166ed3e9b35fc9db"
+    },
+    {
+      "name": "res_original byte-identical: waka1.wav",
+      "ok": true,
+      "detail": "9e3c8eb9b4d7af04971b12c9af3e5bb4"
+    },
+    {
+      "name": "res_original byte-identical: waka2.wav",
+      "ok": true,
+      "detail": "0452cd64893e3fbd3503190e9ff318c7"
+    },
+    {
+      "name": "res_original byte-identical: eat ghost.wav",
+      "ok": true,
+      "detail": "61d4ded9e6249e64b735982f6ced3ec5"
+    },
+    {
+      "name": "res_original byte-identical: eat fruit.wav",
+      "ok": true,
+      "detail": "514eeeeb192e8ca45ca92aa308f61f63"
+    },
+    {
+      "name": "res_original byte-identical: extra life.wav",
+      "ok": true,
+      "detail": "27991f5575aec8695f0f9a68925b9df8"
+    },
+    {
+      "name": "res_original byte-identical: ghost respawn.wav",
+      "ok": true,
+      "detail": "43fae1a4447f5026f8f23a9d9dd02b95"
+    },
+    {
+      "name": "res_original byte-identical: hunted siren.wav",
+      "ok": true,
+      "detail": "8d5759b619045b5f6879ec83175d67a9"
+    },
+    {
+      "name": "res_original byte-identical: hunter siren.wav",
+      "ok": true,
+      "detail": "d35ceeea5823f2ea9c1a3d2107826b92"
+    },
+    {
+      "name": "res_original byte-identical: pacman death.wav",
+      "ok": true,
+      "detail": "b5cacf9a37e6a4fd396f6fd914168780"
+    },
+    {
+      "name": "res_original byte-identical: intermission.wav",
+      "ok": true,
+      "detail": "566c0f2299b8a7ebef6372010fa6866e"
+    },
+    {
+      "name": "sfx_res PCM slots",
+      "ok": true,
+      "detail": "[2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 15]"
+    },
+    {
+      "name": "sfx_res total PCM bytes",
+      "ok": true,
+      "detail": "184411 (expected 184411)"
+    },
+    {
+      "name": "sfx_res rate",
+      "ok": true,
+      "detail": "11025"
+    },
+    {
+      "name": "START len 46676",
+      "ok": true,
+      "detail": "46676"
+    },
+    {
+      "name": "START chunks 32768+13908",
+      "ok": true,
+      "detail": "[32768, 13908]"
+    },
+    {
+      "name": "LEVEL_CLEAR = intermission 57377 samples",
+      "ok": true,
+      "detail": "57377"
+    },
+    {
+      "name": "LEVEL_CLEAR chunks 32768+24609",
+      "ok": true,
+      "detail": "[32768, 24609]"
+    },
+    {
+      "name": "loop flags 12/13 = 1",
+      "ok": true,
+      "detail": "{12: 1, 13: 1}"
+    },
+    {
+      "name": "loop flag 15 = 0 (one-shot; loop only via pac_audio_loop)",
+      "ok": true,
+      "detail": "0"
+    },
+    {
+      "name": "no clipped samples in embedded PCM",
+      "ok": true,
+      "detail": "0"
+    }
+  ],
+  "durations_ms": {
+    "2": 4233.651,
+    "3": 84.535,
+    "4": 84.263,
+    "6": 573.605,
+    "7": 439.456,
+    "8": 1534.331,
+    "9": 1899.32,
+    "10": 5204.263,
+    "12": 133.333,
+    "13": 400.181,
+    "15": 266.213
+  },
+  "fails": [],
+  "ok": true
+}
+===== 3. generator determinism =====
+PASS  generator deterministic (sfx_res.c/h byte-identical)
+===== 4. no scratch binaries in sources =====
+PASS  no scratch binaries inside sources
+===== RESULT: 0 failures =====

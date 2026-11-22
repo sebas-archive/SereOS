@@ -1,0 +1,31 @@
+==============================================================================
+SB16 SCENARIO CAPTURE  (capture-sb16scen.raw, 42.72 s @ 44100 Hz mono)
+==============================================================================
+audible windows (0.1 s bins, rms>300), contiguous runs:
+     8.00 -  11.00 s  (3.00 s)  peak rms 11599
+    12.50 -  20.90 s  (8.40 s)  peak rms 17175
+    23.50 -  29.10 s  (5.60 s)  peak rms 17073
+    31.80 -  36.20 s  (4.40 s)  peak rms 16919
+    37.40 -  39.00 s  (1.60 s)  peak rms 14575
+
+clip match (best global corr / best 100 ms local corr / t_start):
+   START chunk0 (PCM)               corr=+0.202  local100ms=+0.719  t= 10.999 s  MATCH
+   START chunk1 (PCM, rejected)     corr=-0.025  local100ms=+0.117  t= 24.821 s  no
+   WAKA1 (PCM)                      corr=+0.072  local100ms=+0.071  t= 18.708 s  no
+   WAKA2 (PCM)                      corr=+0.065  local100ms=-0.048  t= 24.163 s  no
+   DEATH (PCM)                      corr=+0.168  local100ms=-0.132  t= 36.205 s  no
+   SIREN_HUNT (PCM loop)            corr=+0.154  local100ms=+0.993  t= 15.631 s  MATCH
+   EAT_GHOST (PCM)                  corr=+0.055  local100ms=+0.111  t= 26.267 s  no
+   GHOST_RESPAWN (PCM, unused)      corr=-0.018  local100ms=-0.021  t= 16.472 s  no
+   GAME_OVER (OS synth fallback)    corr=+0.260  local100ms=-0.033  t= 38.993 s  no
+   POWER (OS synth fallback)        corr=-0.032  local100ms=+0.123  t= 24.904 s  no
+
+START: chunk0 found at t=11.00 s, asset duration 2.972 s -> audible run ends ~13.97 s; chunk1 (1.261 s) expected at t=13.97..15.23
+capture RMS in the missing chunk1 window: 16744.3 (silence < 300)
+
+==============================================================================
+PC SPEAKER FALLBACK CAPTURE (capture-pcspkscen.raw, 42.72 s)
+==============================================================================
+active 0.1 s windows: 162 of 427; peak rms 24501
+dominant tones detected (Hz: count) -> {290: 62, 370: 46, 180: 15, 520: 13, 390: 11, 140: 6, 300: 4, 950: 3, 10: 1, 150: 1}
+tones matching pcspk_map/pcspk_siren table: [(950, 3, 'START'), (370, 46, 'siren hunt'), (390, 11, 'WAKA2'), (520, 13, 'WAKA1'), (180, 15, 'DEATH'), (140, 6, 'GAME_OVER')]

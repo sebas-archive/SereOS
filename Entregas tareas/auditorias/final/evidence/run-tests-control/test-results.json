@@ -1,0 +1,590 @@
+{
+  "suite": "SereOS v1.0 QEMU verification",
+  "timestamp": "2026-11-20T06:06:32",
+  "run_id": "20261120-060509",
+  "iso": {
+    "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/prep/pre-fix.iso",
+    "size": 36806656,
+    "mtime": 1795169928.5960574
+  },
+  "qemu": "QEMU emulator version 11.1.3",
+  "kvm_mode": "off",
+  "kvm_used": false,
+  "mouse_worked": false,
+  "raw_artifacts": "eliminados en la entrega (solo PNG finales)",
+  "cases": [
+    {
+      "key": "boot",
+      "title": "Arranque, splash y escritorio",
+      "result": "pass",
+      "duration_s": 12.33,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "QEMU arrancado",
+          "ok": true,
+          "detail": "KVM=no, serial=/home/t1an/Descargas/sereos02/audit/final/rt-control/raw/20261120-060509/gfx/serial.log"
+        },
+        {
+          "text": "captura 00_grub_menu",
+          "ok": true,
+          "detail": "720x400, 2 colores, 2.99% no negro, menu GRUB (informativa)"
+        },
+        {
+          "text": "marcador SEREOS_BOOT_OK",
+          "ok": true,
+          "detail": "linea 19: SEREOS_BOOT_OK mem=255MiB"
+        },
+        {
+          "text": "captura 01_splash",
+          "ok": true,
+          "detail": "1024x768, 549 colores, 100.00% no negro, pantalla de arranque con logo oficial"
+        },
+        {
+          "text": "logo oficial en el splash (azul de marca + proporcion)",
+          "ok": true,
+          "detail": "bbox=88x88, aspecto=1.00 (oficial 1.07)"
+        },
+        {
+          "text": "marcador SPLASH_DONE",
+          "ok": true,
+          "detail": "linea 20: SPLASH_DONE"
+        },
+        {
+          "text": "marcador GUI_READY",
+          "ok": true,
+          "detail": "linea 21: GUI_READY"
+        },
+        {
+          "text": "marcador DESKTOP_READY",
+          "ok": true,
+          "detail": "linea 18: DESKTOP_READY"
+        },
+        {
+          "text": "captura 02_desktop",
+          "ok": true,
+          "detail": "1024x768, 1031 colores, 98.34% no negro, escritorio SereOS"
+        },
+        {
+          "text": "captura 02b_topbar_dock",
+          "ok": true,
+          "detail": "1024x200, 960 colores, zoom barra superior + dock"
+        },
+        {
+          "text": "captura 02c_dock_tooltip",
+          "ok": true,
+          "detail": "1024x768, 1196 colores, 98.34% no negro, tooltip del dock: PAC-MAN SereOS"
+        },
+        {
+          "text": "marca ribbon ~9x10 alineada con el wordmark (PNG sin fondo azul)",
+          "ok": true,
+          "detail": "glifo bbox=9x10, gap=9px, centro glifo_y=13 vs wordmark_y=14 (desvio 1px), azul_topbar=0px"
+        },
+        {
+          "text": "topbar mantiene 30 px de alto (UI bajo la barra en y=30)",
+          "ok": true,
+          "detail": "TOPBAR_HEIGHT_THEME=30"
+        },
+        {
+          "text": "captura 22_menu_logo",
+          "ok": true,
+          "detail": "1024x768, 1512 colores, 99.00% no negro, menu principal con logo oficial"
+        },
+        {
+          "text": "el menu principal se abre desde la topbar",
+          "ok": true,
+          "detail": "diferencia = 7.691%"
+        },
+        {
+          "text": "sin referencias al logo antiguo (logo_badge/logo_s/logo_mono)",
+          "ok": true,
+          "detail": "fuentes y binario limpios"
+        },
+        {
+          "text": "el logo se genera desde assets/logo/official_logo.png",
+          "ok": true,
+          "detail": "tools/gen_logo.py"
+        },
+        {
+          "text": "sin excepcion/panico durante el arranque",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "00_grub_menu",
+        "01_splash",
+        "02_desktop",
+        "02b_topbar_dock",
+        "02c_dock_tooltip",
+        "22_menu_logo"
+      ]
+    },
+    {
+      "key": "maximize",
+      "title": "Maximizacion full-bleed y WM (restaurar/minimizar/resize)",
+      "result": "pass",
+      "duration_s": 58.34,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "verificacion interna (max_baseline)",
+          "ok": null,
+          "detail": "1024x768, 1130 colores, 98.34% no negro, escritorio de referencia sin ventanas"
+        },
+        {
+          "text": "verificacion interna (max_normal)",
+          "ok": null,
+          "detail": "1024x768, 1932 colores, 98.58% no negro, Archivos normal antes de maximizar"
+        },
+        {
+          "text": "ventana normal detectada",
+          "ok": true,
+          "detail": "titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, APP_OPEN:files=1"
+        },
+        {
+          "text": "captura 25_maximized_fullbleed",
+          "ok": true,
+          "detail": "1024x768, 1385 colores, 100.00% no negro, Archivos maximizado full-bleed"
+        },
+        {
+          "text": "full-bleed: cubre x=0..w-1, y=30..sh-1 (full-height) sin wallpaper",
+          "ok": true,
+          "detail": "wallpaper_ratio=0.0, corners={'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, rect=(0, 30, 1024, 738)"
+        },
+        {
+          "text": "esquina (0,30) no es fondo del escritorio",
+          "ok": true,
+          "detail": "ventana=(26, 30, 38), fondo=(8, 9, 13)"
+        },
+        {
+          "text": "una sola topbar global y sin dock/taskbar duplicados (marca ribbon sin azul)",
+          "ok": true,
+          "detail": "logos_azules top=0, barra=0, contenido=0, ribbon=True"
+        },
+        {
+          "text": "sin dock/taskbar inferior: app full-height y nav en topbar",
+          "ok": true,
+          "detail": "dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}, nav=True"
+        },
+        {
+          "text": "captura 26_restore_exact",
+          "ok": true,
+          "detail": "1024x768, 1988 colores, 98.60% no negro, restaurada al rect previo"
+        },
+        {
+          "text": "restaurar recupera EXACTAMENTE el rect previo",
+          "ok": true,
+          "detail": "antes={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, despues={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}"
+        },
+        {
+          "text": "restaurar no crea una instancia nueva (APP_OPEN no se repite)",
+          "ok": true,
+          "detail": "APP_OPEN:files 1 -> 1"
+        },
+        {
+          "text": "tras restaurar ya no es full-bleed",
+          "ok": true,
+          "detail": "{'full_bleed': False, 'wallpaper_ratio': 0.2954, 'corners': {'tl': 1.0, 'tr': 1.0, 'bl': 1.0, 'br': 1.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "captura 27_doubleclick",
+          "ok": true,
+          "detail": "1024x768, 1375 colores, 100.00% no negro, maximizada con doble clic en titlebar"
+        },
+        {
+          "text": "doble clic en titlebar maximiza (full-bleed)",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "verificacion interna (max_dbl_back)",
+          "ok": null,
+          "detail": "1024x768, 1874 colores, 98.58% no negro, doble clic de nuevo: restaurada"
+        },
+        {
+          "text": "doble clic de nuevo restaura",
+          "ok": true,
+          "detail": "titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}"
+        },
+        {
+          "text": "minimizar una maximizada devuelve el dock",
+          "ok": true,
+          "detail": "dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}, nav=False"
+        },
+        {
+          "text": "captura 28_minimize_restore",
+          "ok": true,
+          "detail": "1024x768, 1373 colores, 100.00% no negro, restaurada desde el dock: maximizada"
+        },
+        {
+          "text": "restaurar desde el dock vuelve MAXIMIZADA full-bleed",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "restaurar desde el dock no crea instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:files=1"
+        },
+        {
+          "text": "captura 29_max_terminal",
+          "ok": true,
+          "detail": "1024x768, 987 colores"
+        },
+        {
+          "text": "terminal maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0001, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "terminal maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:terminal=1"
+        },
+        {
+          "text": "monitor maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "monitor maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:monitor=1"
+        },
+        {
+          "text": "about maximizado: una sola topbar, sin barra inferior",
+          "ok": true,
+          "detail": "logos_azules top=0, ribbon=True"
+        },
+        {
+          "text": "about maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "about maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:about=1"
+        },
+        {
+          "text": "game maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "game maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:game=1"
+        },
+        {
+          "text": "captura 30_resize",
+          "ok": true,
+          "detail": "1024x768, 1918 colores"
+        },
+        {
+          "text": "resize por el borde derecho agranda la ventana",
+          "ok": true,
+          "detail": "ancho 898 -> 946 (delta=48), origen igual=True"
+        },
+        {
+          "text": "resize respeta el minimo de 300 px de ancho",
+          "ok": true,
+          "detail": "ancho final=298 (+2 bordes)"
+        },
+        {
+          "text": "sin excepcion/panico en maximizar/restaurar/resize",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "25_maximized_fullbleed",
+        "26_restore_exact",
+        "27_doubleclick",
+        "28_minimize_restore",
+        "29_max_terminal",
+        "30_resize"
+      ]
+    },
+    {
+      "key": "corners",
+      "title": "Esquinas redondeadas: clipping, solape y resize",
+      "result": "pass",
+      "duration_s": 11.76,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ventana normal detectada (rect con borde)",
+          "ok": true,
+          "detail": "{'x': 78, 'y': 106, 'w': 900, 'h': 560, 'right': 977, 'bottom': 665}"
+        },
+        {
+          "text": "BR: dentro del arco se conserva la barra de estado (surface_2 26,30,38) y no el cuerpo (20,23,30)",
+          "ok": true,
+          "detail": "interior=(26, 30, 38), cuerpo=(20, 23, 30)"
+        },
+        {
+          "text": "BR: fuera del arco no hay parche de 14x14 del color del cuerpo (se restaura fondo/sombra)",
+          "ok": true,
+          "detail": "fuera=(10, 13, 24), px_cuerpo_fuera=0, colores_fuera=7"
+        },
+        {
+          "text": "las 4 esquinas limpias (interior status, sin parches fuera)",
+          "ok": true,
+          "detail": "px_cuerpo_fuera_total=0, interiores={'tl': (26, 30, 38), 'tr': (26, 30, 38), 'bl': (26, 30, 38), 'br': (26, 30, 38)}, mal=[]"
+        },
+        {
+          "text": "captura 33_window_corners_clean",
+          "ok": true,
+          "detail": "804x804, 136 colores, mosaico 4 esquinas de Archivos a 10x"
+        },
+        {
+          "text": "mosaico de esquinas generado a 10x",
+          "ok": true,
+          "detail": "804x804"
+        },
+        {
+          "text": "solape: BR de la ventana superior conserva la barra de estado por dentro y fondo por fuera (sin parche)",
+          "ok": true,
+          "detail": "rect={'x': 78, 'y': 171, 'w': 900, 'h': 495, 'right': 977, 'bottom': 665}, interior=(26, 30, 38), fuera=(10, 13, 24), px_cuerpo_fuera=0"
+        },
+        {
+          "text": "resize: esquina BR sigue limpia (status dentro, fondo fuera)",
+          "ok": true,
+          "detail": "ancho 900->940 (delta=40), interior=(26, 30, 38), px_cuerpo_fuera=0"
+        },
+        {
+          "text": "sin excepcion/panico durante la revision de esquinas",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "33_window_corners_clean"
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "00_grub_menu",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/00_grub_menu.png",
+      "blackish": false,
+      "width": 720,
+      "height": 400,
+      "distinct_colors": 2,
+      "non_black_ratio": 0.029858,
+      "mean_luma": 5.016,
+      "mean_rgb": [
+        5.02,
+        5.02,
+        5.02
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "01_splash",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/01_splash.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 549,
+      "non_black_ratio": 1.0,
+      "mean_luma": 14.157,
+      "mean_rgb": [
+        11.74,
+        14.25,
+        20.37
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02_desktop",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/02_desktop.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1031,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 18.493,
+      "mean_rgb": [
+        13.47,
+        18.89,
+        29.35
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02b_topbar_dock",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/02b_topbar_dock.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 200,
+      "distinct_colors": 960,
+      "non_black_ratio": 0.956841,
+      "mean_luma": 21.643,
+      "mean_rgb": [
+        16.19,
+        22.14,
+        32.77
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02c_dock_tooltip",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/02c_dock_tooltip.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1196,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 18.638,
+      "mean_rgb": [
+        13.6,
+        19.04,
+        29.53
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "22_menu_logo",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/22_menu_logo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1512,
+      "non_black_ratio": 0.990046,
+      "mean_luma": 20.336,
+      "mean_rgb": [
+        15.17,
+        20.75,
+        31.47
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "25_maximized_fullbleed",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/25_maximized_fullbleed.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1385,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 27.523,
+      "mean_rgb": [
+        23.78,
+        27.76,
+        36.16
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "26_restore_exact",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/26_restore_exact.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1988,
+      "non_black_ratio": 0.985966,
+      "mean_luma": 25.53,
+      "mean_rgb": [
+        21.09,
+        25.87,
+        35.27
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "27_doubleclick",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/27_doubleclick.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1375,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 27.522,
+      "mean_rgb": [
+        23.78,
+        27.76,
+        36.16
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "28_minimize_restore",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/28_minimize_restore.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1373,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 27.524,
+      "mean_rgb": [
+        23.78,
+        27.76,
+        36.16
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "29_max_terminal",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/29_max_terminal.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 987,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 14.78,
+      "mean_rgb": [
+        12.71,
+        14.86,
+        20.11
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "30_resize",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/30_resize.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1918,
+      "non_black_ratio": 0.983012,
+      "mean_luma": 25.687,
+      "mean_rgb": [
+        21.33,
+        26.02,
+        35.24
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "33_window_corners_clean",
+      "png": "/home/t1an/Descargas/sereos02/audit/final/rt-control/33_window_corners_clean.png",
+      "blackish": false,
+      "width": 804,
+      "height": 804,
+      "distinct_colors": 136,
+      "non_black_ratio": 0.980044,
+      "mean_luma": 29.086,
+      "mean_rgb": [
+        26.51,
+        29.0,
+        37.51
+      ],
+      "black_level": 16
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  }
+}

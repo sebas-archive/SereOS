@@ -1,0 +1,13 @@
+available=1 slot=5 mode=play ms=1200
+t= 102 avail=1
+t= 205 avail=1
+t= 307 avail=1
+t= 409 avail=1
+t= 512 avail=1
+t= 614 avail=1
+t= 716 avail=1
+t= 818 avail=1
+t= 920 avail=1
+t=1022 avail=1
+t=1124 avail=1
+END t=1202

@@ -1,0 +1,33 @@
+== VERIFICACION DOCS B6+ (2026-11-20T10:35:48Z) ==
+
+-- 1) grep global 2 README + GAME.md; patrones obsoletos (excluye historico 1.7/1.8) --
+README.md:204:| Audio VM v1.9 (`audiotest`) | SB16 0x220 IRQ5 DMA1 DSP 4.5, `tones=4 irq=4`, WAV 0,788 s peak -3,0 dBFS y tonos 441,7/658,3/883,3/1316,7 Hz; sin SB16: `solo PC speaker` + PIT 100 Hz; SB16 en 0x240 y con IRQ 7 también correctos |
+
+-- 2) estado actual en docs --
+136:`tests/core_tests.c` (209 casos).
+README.md:142:make test           # 209 checks de core + 7/7 smoke
+README.md:193:| Linux `make test` | **209/209 checks**, 0 fallos, **7/7 smoke** (attract/menu/settings/play/pause/gameover/victory) |
+README.md:230:| **1.9** | **Correcciones de audio B1-B4**: 11 WAV integrados con `intermission` como LEVEL_CLEAR (5,204 s, 2 trozos), slots sintetizados 1/5/11, sirena normal 13 / frightened 12 (14 remapeado), respawn de ojos con `pac_audio_loop`, volumen/pitch y cola PCM corregidos; **209 checks/7 smoke** |
+Pac-man SereOS/README.md:20:> warnings (209 checks de core + 7/7 pantallas smoke); la integracion final en
+Pac-man SereOS/README.md:58:make test           # 209 checks de core + 7/7 smoke (attract/menu/settings/play/pause/gameover/victory)
+13:> assets privados de `Res` (16x16, fuente arcade Press Start K y 11 WAV -> PCM
+176:- Audio: **11 WAV** de `Res` convertidos a PCM u8 mono 11025 en
+196:- El audio usa PCM u8 mono 11025 de los 11 WAV de Res (sin musica de fondo):
+
+-- 3) realidad medida --
+checks reales: checks=209 failures=0
+sfx_res: pacasset_sfx_res_total_bytes = 184411u; Slots con WAV: 2,3,4,6,7,8,9,10,12,13,15
+res_original: 11 WAV
+
+-- 4) hashes docs antes/despues --
+2919e3368c611ee267f265af1ff7d049  audit/fix-docs/before/PROJECT_README.md
+622ff3559a565f97b605cd8948992aa3  Pac-man SereOS/README.md
+5bbdc45f58b7a88c2c7ad69bcfeae365  audit/fix-docs/before/GAME.md
+e3c1229d89a9afb679a2ab26b1d32aaf  Pac-man SereOS/docs/GAME.md
+63afb72fe227cee1db5dd0e263336065  audit/fix-docs/before/README.md
+9b7a6592479876ef30f050bfe826bde5  README.md
+
+-- 5) codigo/assets intactos --
+8fa2edc5c0eb4da7d4ac0497fe6759c9  Pac-man SereOS/assets/sfx_res.c
+5650ddfc656e42638a7bdf63b5626790  Pac-man SereOS/assets/sfx_res.h
+12ca7dc0920d7f42083d8af30405d1da  Pac-man SereOS/tools/gen_pacman_res_assets.py

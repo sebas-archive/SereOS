@@ -1,0 +1,1886 @@
+{
+  "h_oneshot_ghost_then_waka": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_oneshot_ghost_then_waka.raw",
+    "slot": 6,
+    "metrics": {
+      "samples": 196608,
+      "duration_s": 4.096,
+      "active_s": 0.6604,
+      "segments": [
+        [
+          1.045,
+          1.618
+        ],
+        [
+          2.24,
+          2.328
+        ]
+      ],
+      "peak_dbfs": -0.684,
+      "rms_dbfs": -15.819,
+      "clipped_samples": 0,
+      "dom_freq_hz": 475.0,
+      "dc": -0.00179
+    },
+    "ref": {
+      "slot": 6,
+      "name": "EAT_GHOST",
+      "duration_s": 0.5736,
+      "global_corr": 0.8735,
+      "global_lag_s": 1.0453,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.8265,
+          "corr_signed": 0.8265,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0366,
+          "corr_signed": 0.0366,
+          "lag_s": 1.0603,
+          "polarity": 1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0353,
+          "corr_signed": 0.0353,
+          "lag_s": 1.0653,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0414,
+          "corr_signed": -0.0414,
+          "lag_s": 1.0853,
+          "polarity": -1
+        }
+      ]
+    }
+  },
+  "h_slot10_LEVEL_CLEAR": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot10_LEVEL_CLEAR.raw",
+    "slot": 10,
+    "metrics": {
+      "samples": 344064,
+      "duration_s": 7.168,
+      "active_s": 5.2057,
+      "segments": [
+        [
+          1.044,
+          6.25
+        ]
+      ],
+      "peak_dbfs": -0.776,
+      "rms_dbfs": -11.75,
+      "clipped_samples": 0,
+      "dom_freq_hz": 180.0,
+      "dc": -0.00209
+    },
+    "ref": {
+      "slot": 10,
+      "name": "LEVEL_CLEAR",
+      "duration_s": 5.2043,
+      "global_corr": 0.9942,
+      "global_lag_s": 1.0453,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.9673,
+          "corr_signed": 0.9673,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.3769,
+          "corr_signed": 0.3769,
+          "lag_s": 1.0303,
+          "polarity": 1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.4107,
+          "corr_signed": 0.4107,
+          "lag_s": 0.9953,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0579,
+          "corr_signed": -0.0579,
+          "lag_s": 1.0303,
+          "polarity": -1
+        }
+      ]
+    }
+  },
+  "h_slot11_GAME_OVER_synth": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot11_GAME_OVER_synth.raw",
+    "slot": 11,
+    "metrics": {
+      "samples": 98304,
+      "duration_s": 2.048,
+      "active_s": 0.6082,
+      "segments": [
+        [
+          1.043,
+          1.652
+        ]
+      ],
+      "peak_dbfs": -8.342,
+      "rms_dbfs": -15.639,
+      "clipped_samples": 0,
+      "dom_freq_hz": 165.0,
+      "dc": -0.00045
+    },
+    "ref": {
+      "slot": 11,
+      "name": "GAME_OVER",
+      "duration_s": 0.0,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "h_slot12_SIREN_CHASE": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot12_SIREN_CHASE.raw",
+    "slot": 12,
+    "metrics": {
+      "samples": 196608,
+      "duration_s": 4.096,
+      "active_s": 3.0529,
+      "segments": [
+        [
+          1.043,
+          4.096
+        ]
+      ],
+      "peak_dbfs": -0.779,
+      "rms_dbfs": -11.636,
+      "clipped_samples": 0,
+      "dom_freq_hz": 2235.0,
+      "dc": -0.0382
+    },
+    "ref": {
+      "slot": 12,
+      "name": "SIREN_CHASE",
+      "duration_s": 0.1333,
+      "global_corr": 0.2036,
+      "global_lag_s": 1.4346,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.4221,
+          "corr_signed": 0.4221,
+          "lag_s": 1.4346,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.212,
+          "corr_signed": -0.212,
+          "lag_s": 1.4746,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0779,
+          "corr_signed": 0.0779,
+          "lag_s": 1.4896,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.2405,
+          "corr_signed": -0.2405,
+          "lag_s": 1.4046,
+          "polarity": -1
+        }
+      ]
+    }
+  },
+  "h_slot13_SIREN_HUNT": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot13_SIREN_HUNT.raw",
+    "slot": 13,
+    "metrics": {
+      "samples": 196608,
+      "duration_s": 4.096,
+      "active_s": 3.0531,
+      "segments": [
+        [
+          1.043,
+          4.096
+        ]
+      ],
+      "peak_dbfs": -0.777,
+      "rms_dbfs": -7.002,
+      "clipped_samples": 0,
+      "dom_freq_hz": 395.0,
+      "dc": -0.04178
+    },
+    "ref": {
+      "slot": 13,
+      "name": "SIREN_HUNT",
+      "duration_s": 0.4002,
+      "global_corr": 0.3604,
+      "global_lag_s": 1.8457,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.6699,
+          "corr_signed": 0.6699,
+          "lag_s": 1.8457,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.1174,
+          "corr_signed": -0.1174,
+          "lag_s": 1.8757,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.1128,
+          "corr_signed": -0.1128,
+          "lag_s": 1.8507,
+          "polarity": -1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.1048,
+          "corr_signed": 0.1048,
+          "lag_s": 1.7857,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "h_slot14_FRIGHT_synth": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot14_FRIGHT_synth.raw",
+    "slot": 14,
+    "metrics": {
+      "samples": 147456,
+      "duration_s": 3.072,
+      "active_s": 2.0291,
+      "segments": [
+        [
+          1.043,
+          3.072
+        ]
+      ],
+      "peak_dbfs": -8.342,
+      "rms_dbfs": -12.133,
+      "clipped_samples": 0,
+      "dom_freq_hz": 440.0,
+      "dc": -0.00012
+    },
+    "ref": {
+      "slot": 14,
+      "name": "SIREN_FRIGHT",
+      "duration_s": 0.0,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "h_slot15_GHOST_RESPAWN": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot15_GHOST_RESPAWN.raw",
+    "slot": 15,
+    "metrics": {
+      "samples": 49152,
+      "duration_s": 1.024,
+      "active_s": 0,
+      "segments": [],
+      "peak_dbfs": -180.0,
+      "rms_dbfs": -180.0,
+      "clipped_samples": 0,
+      "dom_freq_hz": 0.0,
+      "dc": 0.0
+    },
+    "ref": {
+      "slot": 15,
+      "name": "GHOST_RESPAWN",
+      "duration_s": 0.2662,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "h_slot1_MENU_synth": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot1_MENU_synth.raw",
+    "slot": 1,
+    "metrics": {
+      "samples": 98304,
+      "duration_s": 2.048,
+      "active_s": 0.2599,
+      "segments": [
+        [
+          1.043,
+          1.303
+        ]
+      ],
+      "peak_dbfs": -8.005,
+      "rms_dbfs": -19.418,
+      "clipped_samples": 0,
+      "dom_freq_hz": 660.0,
+      "dc": -1e-05
+    },
+    "ref": {
+      "slot": 1,
+      "name": "MENU",
+      "duration_s": 0.0,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "h_slot2_START": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot2_START.raw",
+    "slot": 2,
+    "metrics": {
+      "samples": 393216,
+      "duration_s": 8.192,
+      "active_s": 3.7846,
+      "segments": [
+        [
+          1.045,
+          1.283
+        ],
+        [
+          1.312,
+          1.383
+        ],
+        [
+          1.445,
+          1.815
+        ],
+        [
+          1.844,
+          2.348
+        ],
+        [
+          2.377,
+          2.448
+        ],
+        [
+          2.51,
+          2.881
+        ],
+        [
+          2.91,
+          3.413
+        ],
+        [
+          3.442,
+          3.514
+        ],
+        [
+          3.576,
+          3.946
+        ],
+        [
+          3.975,
+          4.479
+        ],
+        [
+          4.508,
+          4.746
+        ],
+        [
+          4.775,
+          5.012
+        ],
+        [
+          5.041,
+          5.278
+        ]
+      ],
+      "peak_dbfs": -0.783,
+      "rms_dbfs": -14.516,
+      "clipped_samples": 0,
+      "dom_freq_hz": 755.0,
+      "dc": -0.02779
+    },
+    "ref": {
+      "slot": 2,
+      "name": "START",
+      "duration_s": 4.2336,
+      "global_corr": 0.9844,
+      "global_lag_s": 1.0453,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.929,
+          "corr_signed": 0.929,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.06,
+          "corr_signed": 0.06,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.3023,
+          "corr_signed": 0.3023,
+          "lag_s": 1.0003,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0939,
+          "corr_signed": 0.0939,
+          "lag_s": 1.0903,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "h_slot3_WAKA1": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot3_WAKA1.raw",
+    "slot": 3,
+    "metrics": {
+      "samples": 49152,
+      "duration_s": 1.024,
+      "active_s": 0,
+      "segments": [],
+      "peak_dbfs": -180.0,
+      "rms_dbfs": -180.0,
+      "clipped_samples": 0,
+      "dom_freq_hz": 0.0,
+      "dc": 0.0
+    },
+    "ref": {
+      "slot": 3,
+      "name": "WAKA1",
+      "duration_s": 0.0845,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "h_slot4_WAKA2": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot4_WAKA2.raw",
+    "slot": 4,
+    "metrics": {
+      "samples": 49152,
+      "duration_s": 1.024,
+      "active_s": 0,
+      "segments": [],
+      "peak_dbfs": -180.0,
+      "rms_dbfs": -180.0,
+      "clipped_samples": 0,
+      "dom_freq_hz": 0.0,
+      "dc": 0.0
+    },
+    "ref": {
+      "slot": 4,
+      "name": "WAKA2",
+      "duration_s": 0.0843,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "h_slot5_POWER_synth": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot5_POWER_synth.raw",
+    "slot": 5,
+    "metrics": {
+      "samples": 98304,
+      "duration_s": 2.048,
+      "active_s": 0.167,
+      "segments": [
+        [
+          1.043,
+          1.21
+        ]
+      ],
+      "peak_dbfs": -8.134,
+      "rms_dbfs": -21.426,
+      "clipped_samples": 0,
+      "dom_freq_hz": 1200.0,
+      "dc": -0.0
+    },
+    "ref": {
+      "slot": 5,
+      "name": "POWER",
+      "duration_s": 0.0,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "h_slot6_EAT_GHOST": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot6_EAT_GHOST.raw",
+    "slot": 6,
+    "metrics": {
+      "samples": 98304,
+      "duration_s": 2.048,
+      "active_s": 0.5731,
+      "segments": [
+        [
+          1.045,
+          1.618
+        ]
+      ],
+      "peak_dbfs": -0.684,
+      "rms_dbfs": -13.941,
+      "clipped_samples": 0,
+      "dom_freq_hz": 475.0,
+      "dc": 0.00089
+    },
+    "ref": {
+      "slot": 6,
+      "name": "EAT_GHOST",
+      "duration_s": 0.5736,
+      "global_corr": 0.9951,
+      "global_lag_s": 1.0453,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.8265,
+          "corr_signed": 0.8265,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0366,
+          "corr_signed": 0.0366,
+          "lag_s": 1.0603,
+          "polarity": 1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0353,
+          "corr_signed": 0.0353,
+          "lag_s": 1.0653,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0414,
+          "corr_signed": -0.0414,
+          "lag_s": 1.0853,
+          "polarity": -1
+        }
+      ]
+    }
+  },
+  "h_slot7_EAT_FRUIT": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot7_EAT_FRUIT.raw",
+    "slot": 7,
+    "metrics": {
+      "samples": 98304,
+      "duration_s": 2.048,
+      "active_s": 0.4406,
+      "segments": [
+        [
+          1.044,
+          1.485
+        ]
+      ],
+      "peak_dbfs": -0.726,
+      "rms_dbfs": -14.889,
+      "clipped_samples": 0,
+      "dom_freq_hz": 125.0,
+      "dc": -0.00028
+    },
+    "ref": {
+      "slot": 7,
+      "name": "EAT_FRUIT",
+      "duration_s": 0.4395,
+      "global_corr": 0.9981,
+      "global_lag_s": 1.0453,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.8003,
+          "corr_signed": 0.8003,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.1185,
+          "corr_signed": -0.1185,
+          "lag_s": 1.0953,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.1299,
+          "corr_signed": 0.1299,
+          "lag_s": 1.0053,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.1446,
+          "corr_signed": 0.1446,
+          "lag_s": 1.0403,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "h_slot8_DEATH": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot8_DEATH.raw",
+    "slot": 8,
+    "metrics": {
+      "samples": 147456,
+      "duration_s": 3.072,
+      "active_s": 1.5378,
+      "segments": [
+        [
+          1.043,
+          2.581
+        ]
+      ],
+      "peak_dbfs": -0.514,
+      "rms_dbfs": -13.685,
+      "clipped_samples": 0,
+      "dom_freq_hz": 750.0,
+      "dc": -0.00143
+    },
+    "ref": {
+      "slot": 8,
+      "name": "DEATH",
+      "duration_s": 1.5343,
+      "global_corr": 0.9852,
+      "global_lag_s": 1.0453,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.9252,
+          "corr_signed": 0.9252,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.068,
+          "corr_signed": -0.068,
+          "lag_s": 1.0903,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0242,
+          "corr_signed": -0.0242,
+          "lag_s": 1.0853,
+          "polarity": -1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0435,
+          "corr_signed": 0.0435,
+          "lag_s": 1.0003,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "h_slot9_EXTRA_LIFE": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/h_slot9_EXTRA_LIFE.raw",
+    "slot": 9,
+    "metrics": {
+      "samples": 147456,
+      "duration_s": 3.072,
+      "active_s": 1.9034,
+      "segments": [
+        [
+          1.043,
+          2.947
+        ]
+      ],
+      "peak_dbfs": -0.451,
+      "rms_dbfs": -12.235,
+      "clipped_samples": 0,
+      "dom_freq_hz": 375.0,
+      "dc": -0.00308
+    },
+    "ref": {
+      "slot": 9,
+      "name": "EXTRA_LIFE",
+      "duration_s": 1.8993,
+      "global_corr": 0.987,
+      "global_lag_s": 1.0453,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.9506,
+          "corr_signed": 0.9506,
+          "lag_s": 1.0453,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.5921,
+          "corr_signed": 0.5921,
+          "lag_s": 1.1003,
+          "polarity": 1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.6129,
+          "corr_signed": 0.6129,
+          "lag_s": 1.0803,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.6086,
+          "corr_signed": 0.6086,
+          "lag_s": 0.9903,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "real_death": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_death.raw",
+    "slot": 8,
+    "metrics": {
+      "samples": 491520,
+      "duration_s": 10.24,
+      "active_s": 8.4055,
+      "segments": [
+        [
+          1.046,
+          2.881
+        ],
+        [
+          2.91,
+          3.414
+        ],
+        [
+          3.443,
+          3.515
+        ],
+        [
+          3.576,
+          3.946
+        ],
+        [
+          3.976,
+          4.48
+        ],
+        [
+          4.509,
+          4.746
+        ],
+        [
+          4.775,
+          5.012
+        ],
+        [
+          5.042,
+          5.279
+        ],
+        [
+          5.338,
+          5.639
+        ],
+        [
+          5.68,
+          5.767
+        ],
+        [
+          5.818,
+          5.906
+        ],
+        [
+          5.952,
+          6.039
+        ],
+        [
+          6.08,
+          6.167
+        ],
+        [
+          6.219,
+          6.306
+        ],
+        [
+          6.352,
+          6.439
+        ],
+        [
+          6.655,
+          10.24
+        ]
+      ],
+      "peak_dbfs": -0.227,
+      "rms_dbfs": -8.581,
+      "clipped_samples": 0,
+      "dom_freq_hz": 395.0,
+      "dc": -0.0456
+    },
+    "ref": {
+      "slot": 8,
+      "name": "DEATH",
+      "duration_s": 1.5343,
+      "global_corr": 0.1505,
+      "global_lag_s": 1.1156,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.6175,
+          "corr_signed": 0.6175,
+          "lag_s": 1.1156,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0482,
+          "corr_signed": -0.0482,
+          "lag_s": 1.1556,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.058,
+          "corr_signed": -0.058,
+          "lag_s": 1.0806,
+          "polarity": -1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0507,
+          "corr_signed": 0.0507,
+          "lag_s": 1.0706,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "real_frightened": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_frightened.raw",
+    "slot": 12,
+    "metrics": {
+      "samples": 491520,
+      "duration_s": 10.24,
+      "active_s": 8.4784,
+      "segments": [
+        [
+          1.051,
+          1.289
+        ],
+        [
+          1.318,
+          1.389
+        ],
+        [
+          1.451,
+          1.821
+        ],
+        [
+          1.85,
+          2.354
+        ],
+        [
+          2.383,
+          2.454
+        ],
+        [
+          2.516,
+          2.887
+        ],
+        [
+          2.916,
+          3.419
+        ],
+        [
+          3.448,
+          3.52
+        ],
+        [
+          3.582,
+          3.952
+        ],
+        [
+          3.981,
+          4.485
+        ],
+        [
+          4.514,
+          4.752
+        ],
+        [
+          4.781,
+          5.018
+        ],
+        [
+          5.047,
+          5.284
+        ],
+        [
+          5.546,
+          10.24
+        ]
+      ],
+      "peak_dbfs": -0.777,
+      "rms_dbfs": -9.056,
+      "clipped_samples": 0,
+      "dom_freq_hz": 395.0,
+      "dc": -0.04726
+    },
+    "ref": {
+      "slot": 12,
+      "name": "SIREN_CHASE",
+      "duration_s": 0.1333,
+      "global_corr": 0.0955,
+      "global_lag_s": 5.6819,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.4206,
+          "corr_signed": 0.4206,
+          "lag_s": 5.6819,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.2115,
+          "corr_signed": -0.2115,
+          "lag_s": 5.7219,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0772,
+          "corr_signed": 0.0772,
+          "lag_s": 5.7369,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.2403,
+          "corr_signed": -0.2403,
+          "lag_s": 5.6519,
+          "polarity": -1
+        }
+      ]
+    }
+  },
+  "real_gameover": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_gameover.raw",
+    "slot": 11,
+    "metrics": {
+      "samples": 393216,
+      "duration_s": 8.192,
+      "active_s": 3.8774,
+      "segments": [
+        [
+          1.039,
+          1.81
+        ],
+        [
+          1.84,
+          2.343
+        ],
+        [
+          2.372,
+          2.444
+        ],
+        [
+          2.505,
+          2.876
+        ],
+        [
+          2.905,
+          3.408
+        ],
+        [
+          3.438,
+          3.51
+        ],
+        [
+          3.571,
+          3.941
+        ],
+        [
+          3.971,
+          4.474
+        ],
+        [
+          4.504,
+          4.741
+        ],
+        [
+          4.77,
+          5.007
+        ],
+        [
+          5.037,
+          5.273
+        ]
+      ],
+      "peak_dbfs": 0.0,
+      "rms_dbfs": -13.76,
+      "clipped_samples": 238,
+      "dom_freq_hz": 165.0,
+      "dc": -0.02786
+    },
+    "ref": {
+      "slot": 11,
+      "name": "GAME_OVER",
+      "duration_s": 0.0,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "real_ghostcapture": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_ghostcapture.raw",
+    "slot": 15,
+    "metrics": {
+      "samples": 491520,
+      "duration_s": 10.24,
+      "active_s": 8.4731,
+      "segments": [
+        [
+          1.046,
+          1.283
+        ],
+        [
+          1.312,
+          1.384
+        ],
+        [
+          1.445,
+          1.815
+        ],
+        [
+          1.845,
+          2.349
+        ],
+        [
+          2.378,
+          2.449
+        ],
+        [
+          2.511,
+          2.881
+        ],
+        [
+          2.91,
+          3.414
+        ],
+        [
+          3.443,
+          3.515
+        ],
+        [
+          3.576,
+          3.946
+        ],
+        [
+          3.976,
+          4.48
+        ],
+        [
+          4.509,
+          4.746
+        ],
+        [
+          4.775,
+          5.012
+        ],
+        [
+          5.042,
+          5.279
+        ],
+        [
+          5.552,
+          10.24
+        ]
+      ],
+      "peak_dbfs": -0.777,
+      "rms_dbfs": -9.061,
+      "clipped_samples": 0,
+      "dom_freq_hz": 395.0,
+      "dc": -0.04723
+    },
+    "ref": {
+      "slot": 15,
+      "name": "GHOST_RESPAWN",
+      "duration_s": 0.2662,
+      "global_corr": 0.0197,
+      "global_lag_s": 8.5578,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.1249,
+          "corr_signed": -0.1249,
+          "lag_s": 8.5278,
+          "polarity": -1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0814,
+          "corr_signed": -0.0814,
+          "lag_s": 8.6028,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.024,
+          "corr_signed": -0.024,
+          "lag_s": 8.5178,
+          "polarity": -1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0053,
+          "corr_signed": -0.0053,
+          "lag_s": 8.6028,
+          "polarity": -1
+        }
+      ]
+    }
+  },
+  "real_menu": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_menu.raw",
+    "slot": 1,
+    "metrics": {
+      "samples": 393216,
+      "duration_s": 8.192,
+      "active_s": 0,
+      "segments": [],
+      "peak_dbfs": -180.0,
+      "rms_dbfs": -180.0,
+      "clipped_samples": 0,
+      "dom_freq_hz": 0.0,
+      "dc": 0.0
+    },
+    "ref": {
+      "slot": 1,
+      "name": "MENU",
+      "duration_s": 0.0,
+      "global_corr": 0.0,
+      "global_lag_s": 0.0,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 2,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0,
+          "corr_signed": 0.0,
+          "lag_s": 0.0,
+          "polarity": 0
+        }
+      ]
+    }
+  },
+  "real_pause": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_pause.raw",
+    "slot": 13,
+    "metrics": {
+      "samples": 393216,
+      "duration_s": 8.192,
+      "active_s": 3.7846,
+      "segments": [
+        [
+          1.051,
+          1.289
+        ],
+        [
+          1.318,
+          1.389
+        ],
+        [
+          1.451,
+          1.821
+        ],
+        [
+          1.85,
+          2.354
+        ],
+        [
+          2.383,
+          2.454
+        ],
+        [
+          2.516,
+          2.887
+        ],
+        [
+          2.916,
+          3.419
+        ],
+        [
+          3.448,
+          3.52
+        ],
+        [
+          3.582,
+          3.952
+        ],
+        [
+          3.981,
+          4.485
+        ],
+        [
+          4.514,
+          4.752
+        ],
+        [
+          4.781,
+          5.018
+        ],
+        [
+          5.047,
+          5.284
+        ]
+      ],
+      "peak_dbfs": -0.779,
+      "rms_dbfs": -14.516,
+      "clipped_samples": 0,
+      "dom_freq_hz": 755.0,
+      "dc": -0.02779
+    },
+    "ref": {
+      "slot": 13,
+      "name": "SIREN_HUNT",
+      "duration_s": 0.4002,
+      "global_corr": 0.0459,
+      "global_lag_s": 4.5245,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.2077,
+          "corr_signed": 0.2077,
+          "lag_s": 4.5245,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.1059,
+          "corr_signed": -0.1059,
+          "lag_s": 4.5095,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.1204,
+          "corr_signed": -0.1204,
+          "lag_s": 4.5395,
+          "polarity": -1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0538,
+          "corr_signed": 0.0538,
+          "lag_s": 4.4695,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "real_play": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_play.raw",
+    "slot": 13,
+    "metrics": {
+      "samples": 491520,
+      "duration_s": 10.24,
+      "active_s": 8.4786,
+      "segments": [
+        [
+          1.046,
+          1.283
+        ],
+        [
+          1.312,
+          1.384
+        ],
+        [
+          1.445,
+          1.815
+        ],
+        [
+          1.845,
+          2.349
+        ],
+        [
+          2.378,
+          2.449
+        ],
+        [
+          2.511,
+          2.881
+        ],
+        [
+          2.91,
+          3.414
+        ],
+        [
+          3.443,
+          3.515
+        ],
+        [
+          3.576,
+          3.946
+        ],
+        [
+          3.976,
+          4.48
+        ],
+        [
+          4.509,
+          4.746
+        ],
+        [
+          4.775,
+          5.012
+        ],
+        [
+          5.042,
+          5.279
+        ],
+        [
+          5.546,
+          10.24
+        ]
+      ],
+      "peak_dbfs": -0.777,
+      "rms_dbfs": -8.211,
+      "clipped_samples": 0,
+      "dom_freq_hz": 395.0,
+      "dc": -0.04796
+    },
+    "ref": {
+      "slot": 13,
+      "name": "SIREN_HUNT",
+      "duration_s": 0.4002,
+      "global_corr": 0.2628,
+      "global_lag_s": 9.1502,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.6697,
+          "corr_signed": 0.6697,
+          "lag_s": 9.1502,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.1172,
+          "corr_signed": -0.1172,
+          "lag_s": 9.1802,
+          "polarity": -1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.1128,
+          "corr_signed": -0.1128,
+          "lag_s": 9.1552,
+          "polarity": -1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.1048,
+          "corr_signed": 0.1048,
+          "lag_s": 9.0902,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "real_soundoff": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_soundoff.raw",
+    "slot": null,
+    "metrics": {
+      "samples": 393216,
+      "duration_s": 8.192,
+      "active_s": 0,
+      "segments": [],
+      "peak_dbfs": -180.0,
+      "rms_dbfs": -180.0,
+      "clipped_samples": 0,
+      "dom_freq_hz": 0.0,
+      "dc": 0.0
+    }
+  },
+  "real_start": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_start.raw",
+    "slot": 2,
+    "metrics": {
+      "samples": 491520,
+      "duration_s": 10.24,
+      "active_s": 7.9814,
+      "segments": [
+        [
+          1.046,
+          1.283
+        ],
+        [
+          1.312,
+          1.384
+        ],
+        [
+          1.445,
+          1.815
+        ],
+        [
+          1.845,
+          2.349
+        ],
+        [
+          2.378,
+          2.449
+        ],
+        [
+          2.511,
+          2.881
+        ],
+        [
+          2.91,
+          3.414
+        ],
+        [
+          3.443,
+          3.515
+        ],
+        [
+          3.576,
+          3.946
+        ],
+        [
+          3.976,
+          4.48
+        ],
+        [
+          4.509,
+          4.746
+        ],
+        [
+          4.775,
+          5.012
+        ],
+        [
+          5.042,
+          5.279
+        ],
+        [
+          5.546,
+          5.837
+        ],
+        [
+          5.883,
+          5.97
+        ],
+        [
+          6.026,
+          6.114
+        ],
+        [
+          6.149,
+          6.237
+        ],
+        [
+          6.282,
+          6.37
+        ],
+        [
+          6.432,
+          6.519
+        ],
+        [
+          6.56,
+          6.647
+        ],
+        [
+          6.858,
+          10.24
+        ]
+      ],
+      "peak_dbfs": -0.767,
+      "rms_dbfs": -8.634,
+      "clipped_samples": 0,
+      "dom_freq_hz": 395.0,
+      "dc": -0.04792
+    },
+    "ref": {
+      "slot": 2,
+      "name": "START",
+      "duration_s": 4.2336,
+      "global_corr": 0.4464,
+      "global_lag_s": 1.0459,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.9313,
+          "corr_signed": 0.9313,
+          "lag_s": 1.0459,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.0603,
+          "corr_signed": 0.0603,
+          "lag_s": 1.0459,
+          "polarity": 1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.2993,
+          "corr_signed": 0.2993,
+          "lag_s": 1.0009,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0939,
+          "corr_signed": 0.0939,
+          "lag_s": 1.0909,
+          "polarity": 1
+        }
+      ]
+    }
+  },
+  "real_victory": {
+    "file": "/home/t1an/Descargas/sereos02/audit/verify/evidence/linux/real_victory.raw",
+    "slot": 10,
+    "metrics": {
+      "samples": 671744,
+      "duration_s": 13.9947,
+      "active_s": 5.305,
+      "segments": [
+        [
+          1.051,
+          6.045
+        ],
+        [
+          6.058,
+          6.098
+        ],
+        [
+          6.105,
+          6.119
+        ],
+        [
+          6.122,
+          6.178
+        ],
+        [
+          6.217,
+          6.274
+        ],
+        [
+          6.276,
+          6.337
+        ],
+        [
+          6.351,
+          6.402
+        ],
+        [
+          6.404,
+          6.434
+        ]
+      ],
+      "peak_dbfs": -1.231,
+      "rms_dbfs": -17.128,
+      "clipped_samples": 0,
+      "dom_freq_hz": 360.0,
+      "dc": -0.00894
+    },
+    "ref": {
+      "slot": 10,
+      "name": "LEVEL_CLEAR",
+      "duration_s": 5.2043,
+      "global_corr": 0.7373,
+      "global_lag_s": 1.1209,
+      "chunks": [
+        {
+          "chunk": 0,
+          "corr": 0.7036,
+          "corr_signed": 0.7036,
+          "lag_s": 1.1209,
+          "polarity": 1
+        },
+        {
+          "chunk": 1,
+          "corr": 0.2621,
+          "corr_signed": 0.2621,
+          "lag_s": 1.1059,
+          "polarity": 1
+        },
+        {
+          "chunk": 2,
+          "corr": 0.2987,
+          "corr_signed": 0.2987,
+          "lag_s": 1.0709,
+          "polarity": 1
+        },
+        {
+          "chunk": 3,
+          "corr": 0.0386,
+          "corr_signed": -0.0386,
+          "lag_s": 1.1059,
+          "polarity": -1
+        }
+      ]
+    }
+  }
+}

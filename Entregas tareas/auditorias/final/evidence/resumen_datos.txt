@@ -1,0 +1,31 @@
+== ISO final ==
+8a4b19df2575df6e74fdbb7aee041695  sistema operativo/sereos.iso
+69a561a9d42e2bdf36a1b2e5d450887f  sistema operativo/sereos.bin
+-rwxr-xr-x 1 t1an t1an  1522000 Nov 20 05:34 sistema operativo/sereos.bin
+-rw-r--r-- 1 t1an t1an 36827136 Nov 20 05:34 sistema operativo/sereos.iso
+
+== serial arranque UI ==
+[OK] Audio: solo PC speaker
+SEREOS_BOOT_OK mem=255MiB
+SPLASH_DONE
+GUI_READY
+
+== serial arranque SB16 ==
+[OK] Audio: SB16 0x220 IRQ5 DMA1
+SEREOS_BOOT_OK mem=255MiB
+GUI_READY
+
+== serial arranque pcspk ==
+[OK] Audio: solo PC speaker
+SEREOS_BOOT_OK mem=255MiB
+GUI_READY
+
+== panics ==
+audit/final/evidence/run-ui/serial.log:0
+audit/final/evidence/run-audio-sb16/serial.log:0
+audit/final/evidence/run-audio-pcspk/serial.log:0
+audit/final/evidence/run-shutdown-default/serial.log:0
+
+== WAVs ==
+-rw-r--r-- 1 t1an t1an 140064 Nov 20 05:38 audit/final/evidence/audio_pcspk.wav
+-rw-r--r-- 1 t1an t1an 139068 Nov 20 05:37 audit/final/evidence/audio.wav

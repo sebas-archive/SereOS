@@ -1,0 +1,7 @@
+== independent core->audio sequence harness ==
+PASS  B5: pause stops the in-flight one-shot (pac_audio_stop) stop/stop_loop issued
+PASS  B5: focus loss stops the in-flight one-shot          
+---- audio sequence [pauseoneshot] (1 events) ----
+  t= 8470ms stop      ?(-1)
+
+== RESULT: 2 PASS / 0 FAIL ==

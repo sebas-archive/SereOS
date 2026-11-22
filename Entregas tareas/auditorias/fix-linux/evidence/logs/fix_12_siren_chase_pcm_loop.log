@@ -1,0 +1,104 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/audit/fix-linux/evidence/raw/fix_12_siren_chase_pcm_loop.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=12 loop=1 cap_ms=10000 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3 stream=0 target=512 res_available=1
+capturing_on=pcm dev=3 available=1
+t= 101 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 203 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 306 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 409 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 511 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 613 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 717 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 820 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 922 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1023 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1126 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1229 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1331 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1434 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1535 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1637 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1741 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1843 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1945 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2047 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2148 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2250 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2352 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2453 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2555 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2656 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2758 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2859 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=2961 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3062 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3164 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3265 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3367 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3468 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3569 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3671 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3772 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3874 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=3976 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4077 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4179 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4281 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4383 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4484 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4586 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4688 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4790 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4891 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=4993 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5095 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5197 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5298 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5400 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5502 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5604 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5706 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5807 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=5909 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6010 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6112 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6213 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6315 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6417 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6518 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6620 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6721 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6823 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=6924 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7026 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7128 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7229 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7331 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7433 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7534 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7636 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7737 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7839 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=7940 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8042 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8144 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8246 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8349 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8451 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8553 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8654 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8756 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8857 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=8958 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9060 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9161 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9262 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9364 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9465 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9567 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9668 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9770 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9871 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=9973 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+END t=10003 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+AFTER_STOP queued=0

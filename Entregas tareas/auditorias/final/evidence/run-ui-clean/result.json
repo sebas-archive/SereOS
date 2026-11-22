@@ -1,0 +1,276 @@
+{
+  "checks": {
+    "files": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        880.0,
+        898.0,
+        916.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        31,
+        929
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          455,
+          504
+        ],
+        "center": 479.5,
+        "window_center": 480.0,
+        "offset": -0.5
+      }
+    },
+    "terminal": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        814.0,
+        832.0,
+        850.0
+      ],
+      "centers_y": [
+        148.0,
+        148.0,
+        148.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        145,
+        863
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          480,
+          528
+        ],
+        "center": 504.0,
+        "window_center": 504.0,
+        "offset": 0.0
+      }
+    },
+    "monitor": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        908.0,
+        926.0,
+        944.0
+      ],
+      "centers_y": [
+        123.0,
+        123.0,
+        123.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        99,
+        957
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          507,
+          548
+        ],
+        "center": 527.5,
+        "window_center": 528.0,
+        "offset": -0.5
+      }
+    },
+    "about": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        842.0,
+        860.0,
+        878.0
+      ],
+      "centers_y": [
+        173.0,
+        173.0,
+        173.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        213,
+        891
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          524,
+          580
+        ],
+        "center": 552.0,
+        "window_center": 552.0,
+        "offset": 0.0
+      }
+    },
+    "game": {
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "centers_x": [
+        870.0,
+        888.0,
+        906.0
+      ],
+      "centers_y": [
+        83.0,
+        83.0,
+        83.0
+      ],
+      "spacing": [
+        18.0,
+        18.0
+      ],
+      "window": [
+        41,
+        919
+      ],
+      "right_margin": 13.0,
+      "in_right_third": true,
+      "title": {
+        "bbox": [
+          427,
+          532
+        ],
+        "center": 479.5,
+        "window_center": 480.0,
+        "offset": -0.5
+      }
+    }
+  },
+  "steps": [
+    {
+      "step": "GUI_READY",
+      "ok": true
+    },
+    {
+      "step": "files_botones_derecha",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": -0.5
+    },
+    {
+      "step": "APP_CLOSE:files",
+      "ok": true
+    },
+    {
+      "step": "terminal_botones_derecha",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": 0.0
+    },
+    {
+      "step": "APP_CLOSE:terminal",
+      "ok": true
+    },
+    {
+      "step": "monitor_botones_derecha",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": -0.5
+    },
+    {
+      "step": "APP_CLOSE:monitor",
+      "ok": true
+    },
+    {
+      "step": "about_botones_derecha",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": 0.0
+    },
+    {
+      "step": "APP_CLOSE:about",
+      "ok": true
+    },
+    {
+      "step": "game_botones_derecha",
+      "ok": true,
+      "order": [
+        "amber",
+        "green",
+        "red"
+      ],
+      "right_margin": 13.0,
+      "title_offset": -0.5
+    },
+    {
+      "step": "APP_CLOSE:game",
+      "ok": true
+    },
+    {
+      "step": "f7_minimiza",
+      "ok": true
+    },
+    {
+      "step": "sin_panic",
+      "ok": true,
+      "fatals": []
+    }
+  ],
+  "ok": true,
+  "fatals": []
+}

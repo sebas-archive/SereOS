@@ -1,0 +1,160 @@
+{
+  "apagar": {
+    "name": "power-apagar",
+    "steps": [],
+    "ok": true,
+    "qemu_exited": true,
+    "qemu_returncode": 0,
+    "serial_marker": true,
+    "serial_poweroff": true,
+    "serial_shutdown": true,
+    "serial_acpi": "SEREOS_SHUTDOWN:acpi pm1a=0x0604 pm1b=0x0000 slp_typ=0/0 s5=1",
+    "fatals": [],
+    "serial_tail": [
+      "[OK] Audio: solo PC speaker",
+      "[OK] Motor grafico nativo inicializado",
+      "[OK] Aplicaciones del escritorio registradas",
+      "DESKTOP_INIT",
+      "DESKTOP_READY",
+      "SEREOS_BOOT_OK mem=255MiB",
+      "SPLASH_DONE",
+      "GUI_READY",
+      "GUI_LOOP",
+      "SEREOS_SHUTDOWN",
+      "SEREOS_POWEROFF",
+      "SEREOS_SHUTDOWN:acpi pm1a=0x0604 pm1b=0x0000 slp_typ=0/0 s5=1"
+    ],
+    "layout": {
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-power-apagar/01_apagando_0.png",
+      "size": [
+        1024,
+        768
+      ],
+      "logo": {
+        "n": 3786,
+        "x0": 478,
+        "x1": 545,
+        "y0": 306,
+        "y1": 373,
+        "cx": 511.5,
+        "cy": 339.5
+      },
+      "title": {
+        "n": 1135,
+        "x0": 434,
+        "x1": 588,
+        "y0": 406,
+        "y1": 433,
+        "cx": 511.0,
+        "cy": 419.5
+      },
+      "subtitle": {
+        "n": 340,
+        "x0": 429,
+        "x1": 595,
+        "y0": 451,
+        "y1": 458,
+        "cx": 512.0,
+        "cy": 454.5
+      },
+      "ok": true,
+      "layout": {
+        "logo_center_x": 511.5,
+        "title_center_x": 511.0,
+        "gap_logo_title": 33,
+        "logo_top": 306,
+        "logo_bottom": 373,
+        "title_top": 406,
+        "title_bottom": 433,
+        "subtitle_center_x": 512.0,
+        "gap_title_subtitle": 18,
+        "subtitle_top": 451,
+        "subtitle_bottom": 458,
+        "block_vertical_center": 382.0,
+        "no_overlap": true,
+        "title_text_width": 154,
+        "centered_x": true
+      },
+      "best_png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-power-final/power-apagar/01_apagando_best.png"
+    }
+  },
+  "reiniciar": {
+    "name": "power-reiniciar",
+    "steps": [],
+    "ok": true,
+    "qemu_exited": true,
+    "qemu_returncode": 0,
+    "serial_marker": true,
+    "serial_poweroff": false,
+    "serial_shutdown": false,
+    "serial_acpi": null,
+    "fatals": [],
+    "serial_tail": [
+      "[OK] Planificador cooperativo round-robin listo",
+      "[OK] Interrupciones habilitadas",
+      "[OK] Audio: solo PC speaker",
+      "[OK] Motor grafico nativo inicializado",
+      "[OK] Aplicaciones del escritorio registradas",
+      "DESKTOP_INIT",
+      "DESKTOP_READY",
+      "SEREOS_BOOT_OK mem=255MiB",
+      "SPLASH_DONE",
+      "GUI_READY",
+      "GUI_LOOP",
+      "SEREOS_RESTART"
+    ],
+    "layout": {
+      "path": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-power-reiniciar/01_reiniciando_0.png",
+      "size": [
+        1024,
+        768
+      ],
+      "logo": {
+        "n": 3786,
+        "x0": 478,
+        "x1": 545,
+        "y0": 306,
+        "y1": 373,
+        "cx": 511.5,
+        "cy": 339.5
+      },
+      "title": {
+        "n": 1236,
+        "x0": 426,
+        "x1": 598,
+        "y0": 405,
+        "y1": 427,
+        "cx": 512.0,
+        "cy": 416.0
+      },
+      "subtitle": {
+        "n": 367,
+        "x0": 423,
+        "x1": 601,
+        "y0": 451,
+        "y1": 458,
+        "cx": 512.0,
+        "cy": 454.5
+      },
+      "ok": true,
+      "layout": {
+        "logo_center_x": 511.5,
+        "title_center_x": 512.0,
+        "gap_logo_title": 32,
+        "logo_top": 306,
+        "logo_bottom": 373,
+        "title_top": 405,
+        "title_bottom": 427,
+        "subtitle_center_x": 512.0,
+        "gap_title_subtitle": 24,
+        "subtitle_top": 451,
+        "subtitle_bottom": 458,
+        "block_vertical_center": 382.0,
+        "no_overlap": true,
+        "title_text_width": 172,
+        "centered_x": true
+      },
+      "best_png": "/home/t1an/Descargas/sereos02/audit/final/evidence/run-power-final/power-reiniciar/01_reiniciando_best.png"
+    }
+  }
+}

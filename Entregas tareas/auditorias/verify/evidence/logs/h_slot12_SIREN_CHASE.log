@@ -1,0 +1,33 @@
+available=1 slot=12 mode=loop ms=3200
+t= 102 avail=1
+t= 204 avail=1
+t= 305 avail=1
+t= 408 avail=1
+t= 510 avail=1
+t= 612 avail=1
+t= 714 avail=1
+t= 817 avail=1
+t= 919 avail=1
+t=1021 avail=1
+t=1124 avail=1
+t=1226 avail=1
+t=1328 avail=1
+t=1430 avail=1
+t=1532 avail=1
+t=1634 avail=1
+t=1736 avail=1
+t=1838 avail=1
+t=1940 avail=1
+t=2042 avail=1
+t=2145 avail=1
+t=2247 avail=1
+t=2349 avail=1
+t=2452 avail=1
+t=2554 avail=1
+t=2657 avail=1
+t=2760 avail=1
+t=2862 avail=1
+t=2964 avail=1
+t=3066 avail=1
+t=3168 avail=1
+END t=3204

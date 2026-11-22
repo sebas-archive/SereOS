@@ -1,0 +1,5 @@
+CMD: make -C 'Pac-man SereOS'
+make: Entering directory '/home/t1an/Descargas/sereos02/Pac-man SereOS'
+[pacman] Linux OK -> build/pacman-sereos
+make: Leaving directory '/home/t1an/Descargas/sereos02/Pac-man SereOS'
+EXIT=0

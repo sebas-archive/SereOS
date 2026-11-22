@@ -1,0 +1,5 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/13_siren_hunt_synth_loop.raw], format=S16LE channels=2 freq=44100.
+mode=synth slot=13 loop=1 cap_ms=2000 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=synth dev=2 available=1 res_available=1
+END t=2004 queued=0 pcm_active=0 audio_playing=1

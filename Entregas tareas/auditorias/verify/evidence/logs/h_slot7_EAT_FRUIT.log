@@ -1,0 +1,15 @@
+available=1 slot=7 mode=play ms=1400
+t= 102 avail=1
+t= 204 avail=1
+t= 306 avail=1
+t= 409 avail=1
+t= 511 avail=1
+t= 614 avail=1
+t= 716 avail=1
+t= 818 avail=1
+t= 921 avail=1
+t=1024 avail=1
+t=1127 avail=1
+t=1229 avail=1
+t=1331 avail=1
+END t=1403

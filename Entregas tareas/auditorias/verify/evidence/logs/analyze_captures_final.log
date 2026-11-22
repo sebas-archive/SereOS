@@ -1,0 +1,51 @@
+/usr/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+/usr/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+/usr/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+/usr/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+/usr/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+/usr/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in divide
+  ret = ret.dtype.type(ret / rcount)
+OK h_oneshot_ghost_then_waka active=0.66s peak=-0.7 corr=0.874
+OK h_slot10_LEVEL_CLEAR active=5.21s peak=-0.8 corr=0.994
+OK h_slot11_GAME_OVER_synth active=0.61s peak=-8.3 corr=0.000
+OK h_slot12_SIREN_CHASE active=3.05s peak=-0.8 corr=0.204
+OK h_slot13_SIREN_HUNT active=3.05s peak=-0.8 corr=0.360
+OK h_slot14_FRIGHT_synth active=2.03s peak=-8.3 corr=0.000
+OK h_slot15_GHOST_RESPAWN active=0.00s peak=-180.0 corr=0.000
+OK h_slot1_MENU_synth active=0.26s peak=-8.0 corr=0.000
+OK h_slot2_START active=3.78s peak=-0.8 corr=0.984
+OK h_slot3_WAKA1 active=0.00s peak=-180.0 corr=0.000
+OK h_slot4_WAKA2 active=0.00s peak=-180.0 corr=0.000
+OK h_slot5_POWER_synth active=0.17s peak=-8.1 corr=0.000
+OK h_slot6_EAT_GHOST active=0.57s peak=-0.7 corr=0.995
+OK h_slot7_EAT_FRUIT active=0.44s peak=-0.7 corr=0.998
+OK h_slot8_DEATH active=1.54s peak=-0.5 corr=0.985
+OK h_slot9_EXTRA_LIFE active=1.90s peak=-0.5 corr=0.987
+OK real_death active=8.41s peak=-0.2 corr=0.150
+OK real_frightened active=8.48s peak=-0.8 corr=0.096
+OK real_gameover active=3.88s peak=0.0 corr=0.000
+OK real_ghostcapture active=8.47s peak=-0.8 corr=0.020
+OK real_menu active=0.00s peak=-180.0 corr=0.000
+OK real_pause active=3.78s peak=-0.8 corr=0.046
+OK real_play active=8.48s peak=-0.8 corr=0.263
+OK real_soundoff active=0.00s peak=-180.0 corr=-
+OK real_start active=7.98s peak=-0.8 corr=0.446
+OK real_victory active=5.30s peak=-1.2 corr=0.737
+wrote /home/t1an/Descargas/sereos02/audit/verify/evidence/analysis.json

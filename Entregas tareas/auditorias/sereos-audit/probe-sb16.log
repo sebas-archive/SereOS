@@ -1,0 +1,15 @@
+[   0.00s] qemu started, waiting for GUI_READY
+[   4.00s] GUI_READY=True
+[   4.00s] QMP connected
+[   6.01s] screendump 02-monitor
+[  10.02s] screendump 03-game-attract
+[  11.23s] screendump 04-menu
+[  12.23s] game started (second Enter)
+[  12.23s] screendump 05-playing-start
+[  15.24s] screendump 06-playing-3s
+[  34.89s] screendump 07-playing-moved
+[  37.40s] screendump 08-playing-end
+[  37.40s] capture done, quitting
+[  37.41s] qemu exit code 0
+wav exists: True 3854488
+shots: ['/home/t1an/Descargas/sereos02/audit/sereos-audit/shot-sb16-02-monitor.ppm', '/home/t1an/Descargas/sereos02/audit/sereos-audit/shot-sb16-03-game-attract.ppm', '/home/t1an/Descargas/sereos02/audit/sereos-audit/shot-sb16-04-menu.ppm', '/home/t1an/Descargas/sereos02/audit/sereos-audit/shot-sb16-05-playing-start.ppm', '/home/t1an/Descargas/sereos02/audit/sereos-audit/shot-sb16-06-playing-3s.ppm', '/home/t1an/Descargas/sereos02/audit/sereos-audit/shot-sb16-07-playing-moved.ppm', '/home/t1an/Descargas/sereos02/audit/sereos-audit/shot-sb16-08-playing-end.ppm']

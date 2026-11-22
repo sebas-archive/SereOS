@@ -1,0 +1,57 @@
+{
+  "default": {
+    "name": "shutdown-default",
+    "ok": true,
+    "extra_args": [],
+    "qemu_exited": true,
+    "qemu_returncode": 0,
+    "exit_wait_s": 0.3,
+    "shot_apagando": true,
+    "serial_poweroff": true,
+    "serial_shutdown": true,
+    "serial_acpi_line": "SEREOS_SHUTDOWN:acpi pm1a=0x0604 pm1b=0x0000 slp_typ=0/0 s5=1",
+    "serial_port_line": null,
+    "serial_safe_line": false,
+    "serial_restart_line": false,
+    "fatals": []
+  }
+}
+{
+  "default": {
+    "name": "shutdown-default",
+    "ok": true,
+    "extra_args": [],
+    "qemu_exited": true,
+    "qemu_returncode": 0,
+    "exit_wait_s": 0.3,
+    "shot_apagando": true,
+    "serial_poweroff": true,
+    "serial_shutdown": true,
+    "serial_acpi_line": "SEREOS_SHUTDOWN:acpi pm1a=0x0604 pm1b=0x0000 slp_typ=0/0 s5=1",
+    "serial_port_line": null,
+    "serial_safe_line": false,
+    "serial_restart_line": false,
+    "fatals": []
+  },
+  "isa_debug_exit": {
+    "name": "shutdown-isadebugexit",
+    "ok": true,
+    "extra_args": [
+      "-machine",
+      "pc,acpi=off",
+      "-device",
+      "isa-debug-exit,iobase=0x501,iosize=0x04"
+    ],
+    "qemu_exited": true,
+    "qemu_returncode": 99,
+    "exit_wait_s": 0.4,
+    "shot_apagando": true,
+    "serial_poweroff": true,
+    "serial_shutdown": true,
+    "serial_acpi_line": null,
+    "serial_port_line": "SEREOS_SHUTDOWN:port_0x604",
+    "serial_safe_line": false,
+    "serial_restart_line": false,
+    "fatals": []
+  }
+}

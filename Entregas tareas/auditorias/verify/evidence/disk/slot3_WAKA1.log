@@ -1,0 +1,5 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [audit/verify/evidence/disk/slot3_WAKA1.raw], format=S16LE channels=2 freq=44100.
+mode=single slot=3 play=play ms=1200 g_audio_on=1 g_pcm_on=1
+pcm_dev=3 available=1
+END t=1200

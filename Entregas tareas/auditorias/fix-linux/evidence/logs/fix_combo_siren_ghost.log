@@ -1,0 +1,22 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/audit/fix-linux/evidence/raw/fix_combo_siren_ghost.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=13 loop=1 cap_ms=1600 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3 stream=0 target=512 res_available=1
+capturing_on=pcm dev=3 available=1
+t= 102 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 204 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t= 301 COMBO pac_audio_play(6)
+t= 306 queued=633 qmax=761 loop=1 voices=1 synth_loop=0 synth_os=0
+t= 408 queued=761 qmax=761 loop=1 voices=1 synth_loop=0 synth_os=0
+t= 509 queued=633 qmax=761 loop=1 voices=1 synth_loop=0 synth_os=0
+t= 611 queued=761 qmax=761 loop=1 voices=1 synth_loop=0 synth_os=0
+t= 712 queued=761 qmax=761 loop=1 voices=1 synth_loop=0 synth_os=0
+t= 814 queued=633 qmax=761 loop=1 voices=1 synth_loop=0 synth_os=0
+t= 915 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1017 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1119 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1220 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1322 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1424 queued=761 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+t=1525 queued=633 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+END t=1601 queued=505 qmax=761 loop=1 voices=0 synth_loop=0 synth_os=0
+AFTER_STOP queued=0

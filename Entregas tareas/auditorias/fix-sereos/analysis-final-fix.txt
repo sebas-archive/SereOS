@@ -1,0 +1,19 @@
+capture-b4int.raw (BUILD INTEGRADA B1+B2+B4): 37.52 s, rms 11029, max 29988
+audible runs (0.1 s):
+   11.00 -  11.30 s ( 0.30 s) peak 13961
+   12.20 -  16.50 s ( 4.30 s) peak 11726
+   16.70 -  18.20 s ( 1.50 s) peak 16409
+   18.30 -  30.40 s (12.10 s) peak 16927
+   33.10 -  34.60 s ( 1.50 s) peak 16907
+   34.70 -  37.50 s ( 2.80 s) peak 16894
+
+clip match (best 100 ms local corr):
+  START chunk0             best100ms=+0.992 at t=12.30 s
+  START chunk1             best100ms=-0.946 at t=13.09 s
+  SIREN_HUNT               best100ms=+0.997 at t=21.57 s
+  WAKA1                    best100ms=-0.357 at t=17.78 s
+  WAKA2                    best100ms=-0.301 at t=17.11 s
+
+START: chunk0 corr=0.992 t=12.30 s; asset 4.233 s = 12.30..16.53 s
+RMS ventana chunk1 (15.27..16.53 s): 9017
+chunk1 corr en esa ventana: -0.847

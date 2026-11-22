@@ -1,0 +1,9 @@
+[GUI_READY] {}
+[boot_audio_line] {'line': '[OK] Audio: SB16 0x220 IRQ5 DMA1'}
+[about_sb16_capturado] {}
+[serial_audio_test] {'lines': ['AUDIO_TEST:sb16']}
+[GUI_READY] {}
+[boot_audio_line] {'line': '[OK] Audio: solo PC speaker'}
+[serial_audio_test] {'lines': ['AUDIO_TEST:pcspk']}
+== sb16: ok=True audio_line='[OK] Audio: SB16 0x220 IRQ5 DMA1' serial=['AUDIO_TEST:sb16'] wav=138940 analysis={'duration_s': 0.7874, 'peak_dbfs': np.float64(-2.96), 'rms_dbfs': np.float64(-3.39), 'nonsilent': True}
+== pcspk: ok=True audio_line='[OK] Audio: solo PC speaker' serial=['AUDIO_TEST:pcspk'] wav=139368 analysis={'duration_s': 0.7898, 'peak_dbfs': np.float64(-2.5), 'rms_dbfs': np.float64(-2.65), 'nonsilent': True}

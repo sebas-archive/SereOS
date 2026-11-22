@@ -1,0 +1,15 @@
+PASS B5: one-shot en curso antes de pausar
+PASS B5: Esc pausa la partida
+PASS B5: la pausa resetea hold/oneshot/gracia/sirena
+PASS B5: la pausa pide pac_audio_stop() (P1)
+PASS B5: la pausa no deja reintentos del one-shot
+PASS B5: Enter reanuda
+PASS B5: al reanudar update_siren rearma la sirena
+PASS B5: el one-shot pausado NO se reintenta tras reanudar
+PASS B5: perder foco resetea el one-shot en curso (P1)
+PASS B5: perder foco pide pac_audio_stop()
+PASS B5: perder foco no reintenta el one-shot
+PASS B5: al recuperar el foco rearma la sirena
+PASS B5: minimizar resetea el one-shot en curso
+PASS B5: minimizar pide pac_audio_stop()
+PASS B5: al restaurar la ventana rearma la sirena

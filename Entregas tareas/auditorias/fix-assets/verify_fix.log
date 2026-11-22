@@ -1,0 +1,60 @@
+OK   11 WAV usados -> 11 slots con datos (2,3,4,6,7,8,9,10,12,13,15) :: [2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 15]
+OK   slots sin WAV = 0,1,5,11,14 :: [0, 1, 5, 11, 14]
+OK   rate 11025 :: 11025
+OK   total_bytes = 184411 :: 184411
+OK   suma arrays = 184411 :: 184411
+OK   LEVEL_CLEAR len 57377 :: 57377
+OK   LEVEL_CLEAR 2 chunks :: 2
+OK   LEVEL_CLEAR chunk_len 32768+24609 :: [32768, 24609]
+OK   LEVEL_CLEAR chunk_sum == len
+OK   LEVEL_CLEAR chunks <=32768
+OK   LEVEL_CLEAR loop_flag=0 :: 0
+sfx START           46676 fr 4.234s one-shot (2 chunks)
+sfx WAKA1             932 fr 0.085s one-shot
+sfx WAKA2             929 fr 0.084s one-shot
+sfx EAT_GHOST        6324 fr 0.574s one-shot
+sfx EAT_FRUIT        4845 fr 0.439s one-shot
+sfx EXTRA_LIFE      20940 fr 1.899s one-shot
+sfx DEATH           16916 fr 1.534s one-shot
+sfx LEVEL_CLEAR     57377 fr 5.204s one-shot (2 chunks)
+sfx GHOST_RESPAWN    2935 fr 0.266s loop
+sfx SIREN_HUNT       4412 fr 0.400s loop
+sfx SIREN_CHASE      1470 fr 0.133s loop
+preview waveforms -> /tmp/res_gen/sfx_waveforms.png
+OK   LEVEL_CLEAR array == generador
+OK   loop flags = [0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0] :: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0]
+OK   GHOST_RESPAWN loop_flag=0 :: 0
+sfx START           46676 fr 4.234s one-shot (2 chunks)
+sfx WAKA1             932 fr 0.085s one-shot
+sfx WAKA2             929 fr 0.084s one-shot
+sfx EAT_GHOST        6324 fr 0.574s one-shot
+sfx EAT_FRUIT        4845 fr 0.439s one-shot
+sfx EXTRA_LIFE      20940 fr 1.899s one-shot
+sfx DEATH           16916 fr 1.534s one-shot
+sfx LEVEL_CLEAR     57377 fr 5.204s one-shot (2 chunks)
+sfx GHOST_RESPAWN    2935 fr 0.266s loop
+sfx SIREN_HUNT       4412 fr 0.400s loop
+sfx SIREN_CHASE      1470 fr 0.133s loop
+preview waveforms -> /tmp/res_gen/sfx_waveforms.png
+OK   slot 2 START byte-identico (46676 fr)
+OK   slot 3 WAKA1 byte-identico (932 fr)
+OK   slot 4 WAKA2 byte-identico (929 fr)
+OK   slot 6 EAT_GHOST byte-identico (6324 fr)
+OK   slot 7 EAT_FRUIT byte-identico (4845 fr)
+OK   slot 8 DEATH byte-identico (16916 fr)
+OK   slot 9 EXTRA_LIFE byte-identico (20940 fr)
+OK   slot 10 LEVEL_CLEAR byte-identico (57377 fr)
+OK   slot 12 SIREN_CHASE byte-identico (1470 fr)
+OK   slot 13 SIREN_HUNT byte-identico (4412 fr)
+OK   slot 15 GHOST_RESPAWN byte-identico (2935 fr)
+OK   sirenas variantes p0/p10/p20/p30 intactas :: {'hunt': [{'pct': 0, 'frames': 4412, 'bytes_identical': True}, {'pct': 10, 'frames': 4011, 'bytes_identical': True}, {'pct': 20, 'frames': 3676, 'bytes_identical': True}, {'pct': 30, 'frames': 3394, 'bytes_identical': True}], 'chase': [{'pct': 0, 'frames': 1470, 'bytes_identical': True}, {'pct': 10, 'frames': 1336, 'bytes_identical': True}, {'pct': 20, 'frames': 1225, 'bytes_identical': True}, {'pct': 30, 'frames': 1131, 'bytes_identical': True}]}
+OK   0 muestras con clipping (u8 0/255) :: 0
+OK   pico PCM 117 LSB (-0.71 dBFS) :: 117
+OK   intermission 57377 fr / 5.204263 s :: {'frames': 57377, 'duration_s': 5.204263, 'peak_lsb': 117, 'peak_dbfs': -0.712, 'rms_dbfs': -10.358, 'dc_offset_lsb': -0.368, 'first_u8': 128, 'last_u8': 127, 'source_frames': 57377, 'source_rate': 11025, 'source_duration_s': 5.204263}
+OK   res_original tiene 11 WAV :: ['eat fruit.wav', 'eat ghost.wav', 'extra life.wav', 'game start.wav', 'ghost respawn.wav', 'hunted siren.wav', 'hunter siren.wav', 'intermission.wav', 'pacman death.wav', 'waka1.wav', 'waka2.wav']
+OK   res_original WAV == Res byte a byte (11/11)
+OK   cabecera menciona 11 WAV
+OK   cabecera slots con WAV 2,3,4,6,7,8,9,10,12,13,15
+OK   cabecera LEVEL_CLEAR=intermission
+
+RESULTADO: OK

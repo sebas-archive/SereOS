@@ -1,0 +1,43 @@
+{
+  "cmd": "beep 1000 1000",
+  "sink_inputs_during": "4791\t53\t4742\tPipeWire\tu8 1ch 11025Hz\n",
+  "wav": "/home/t1an/Descargas/sereos02/build/vbox_audio/vbox_beep1000_pulse.wav",
+  "analysis": {
+    "file": "/home/t1an/Descargas/sereos02/build/vbox_audio/vbox_beep1000_pulse.wav",
+    "rate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "frames": 285696,
+    "seconds_captured": 5.952,
+    "peak_dbfs": -20.02,
+    "rms_dbfs": -35.42,
+    "peak_sample": 3269,
+    "rms_sample": 555.4,
+    "windows": 78,
+    "expected": [
+      {
+        "want_hz": 440,
+        "got_hz": 33.3,
+        "ok": false
+      },
+      {
+        "want_hz": 660,
+        "got_hz": 1000.0,
+        "ok": false
+      },
+      {
+        "want_hz": 880,
+        "got_hz": 1000.0,
+        "ok": false
+      },
+      {
+        "want_hz": 1320,
+        "got_hz": 1000.0,
+        "ok": false
+      }
+    ],
+    "all_expected_found": false,
+    "band_400_1400_peak": 8337390.653020077,
+    "non_silent": false
+  }
+}

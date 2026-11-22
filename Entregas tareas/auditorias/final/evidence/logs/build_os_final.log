@@ -1,0 +1,9 @@
+CMD: make -C 'sistema operativo'
+2026-11-20T05:46:24-05:00
+make: Entering directory '/home/t1an/Descargas/sereos02/sistema operativo'
+make[1]: Entering directory '/home/t1an/Descargas/sereos02/Pac-man SereOS'
+[pacman] SereOS OK -> build/sereos/libpacman.a
+[pacman] integrar con: apps/apps.c (app_game) y enlazar antes de -lgcc
+make[1]: Leaving directory '/home/t1an/Descargas/sereos02/Pac-man SereOS'
+make: Leaving directory '/home/t1an/Descargas/sereos02/sistema operativo'
+EXIT=0

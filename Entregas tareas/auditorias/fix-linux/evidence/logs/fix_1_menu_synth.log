@@ -1,0 +1,6 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/audit/fix-linux/evidence/raw/fix_1_menu_synth.raw], format=S16LE channels=2 freq=44100.
+mode=synth slot=1 loop=0 cap_ms=1200 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3 stream=0 target=512 res_available=0
+capturing_on=synth dev=2 available=1
+END t=1201 queued=0 qmax=0 loop=0 voices=0 synth_loop=0 synth_os=0
+AFTER_STOP queued=0

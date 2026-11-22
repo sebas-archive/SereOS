@@ -1,0 +1,38 @@
++ VBoxManage --version
+7.2.22r175245
++ echo ---
+---
++ pactl info
+Server String: /run/user/1000/pulse/native
+Library Protocol Version: 35
+Server Protocol Version: 35
+Is Local: yes
+Client Index: 4871
+Tile Size: 65472
+User Name: t1an
+Host Name: T0poL
+Server Name: PulseAudio (on PipeWire 1.6.11)
+Server Version: 15.0.0
+Default Sample Specification: float32le 2ch 48000Hz
+Default Channel Map: front-left,front-right
+Default Sink: alsa_output.pci-0000_00_1f.3.analog-stereo
+Default Source: alsa_input.pci-0000_00_1f.3.analog-stereo
+Cookie: d4f3:8257
++ echo ---
+---
++ qemu-system-i386 --version
++ head -2
+QEMU emulator version 11.1.3
+Copyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers
++ echo ---
+---
++ python3 -c 'import numpy,sys;print("python",sys.version.split()[0],"numpy",numpy.__version__)'
+python 3.14.9 numpy 2.5.4
++ echo ---
+---
++ uname -a
+Linux T0poL 7.3.3-1-cachyos #1 SMP PREEMPT_DYNAMIC Sat, 07 Nov 2026 13:54:44 +0000 x86_64 GNU/Linux
++ echo ---
+---
++ md5sum 'sistema operativo/sereos.iso'
+1a781295a25c8fae4113ff2837e980c4  sistema operativo/sereos.iso

@@ -1,0 +1,24 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [/home/t1an/Descargas/sereos02/build/audit_linux/evidence/raw/13_siren_hunt_pcm_loop.raw], format=S16LE channels=2 freq=44100.
+mode=pcm slot=13 loop=1 cap_ms=2000 g_audio_on=1 g_pcm_on=1 audio_dev=2 pcm_dev=3
+capturing_on=pcm dev=3 available=1 res_available=1
+t= 101 queued=3381 active=1 loop=1 playing=0
+t= 203 queued=2229 active=1 loop=1 playing=0
+t= 305 queued=5361 active=1 loop=1 playing=0
+t= 406 queued=4209 active=1 loop=1 playing=0
+t= 508 queued=3057 active=1 loop=1 playing=0
+t= 610 queued=6317 active=1 loop=1 playing=0
+t= 711 queued=5165 active=1 loop=1 playing=0
+t= 813 queued=4013 active=1 loop=1 playing=0
+t= 915 queued=2733 active=1 loop=1 playing=0
+t=1016 queued=5993 active=1 loop=1 playing=0
+t=1118 queued=4841 active=1 loop=1 playing=0
+t=1219 queued=3689 active=1 loop=1 playing=0
+t=1321 queued=2537 active=1 loop=1 playing=0
+t=1422 queued=5797 active=1 loop=1 playing=0
+t=1523 queued=4645 active=1 loop=1 playing=0
+t=1625 queued=3365 active=1 loop=1 playing=0
+t=1726 queued=2213 active=1 loop=1 playing=0
+t=1828 queued=5473 active=1 loop=1 playing=0
+t=1931 queued=4321 active=1 loop=1 playing=0
+END t=2003 queued=3425 pcm_active=1 audio_playing=0

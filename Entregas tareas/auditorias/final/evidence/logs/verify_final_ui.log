@@ -1,0 +1,17 @@
+[OK ] GUI_READY {}
+[OK ] captura_topbar_dock {}
+[OK ] about_contenido_logo_S {'diff_vs_baseline': 0.0}
+[OK ] about_botones_derecha {'order': ['amber', 'green', 'red'], 'title_offset': 0.0}
+[OK ] APP_CLOSE:about {}
+[OK ] files_botones_derecha_y_titulo_centrado {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': -0.5}
+[OK ] APP_CLOSE:files {}
+[OK ] terminal_botones_derecha_y_titulo_centrado {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': 0.0}
+[OK ] APP_CLOSE:terminal {}
+[OK ] monitor_botones_derecha_y_titulo_centrado {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': -0.5}
+[OK ] APP_CLOSE:monitor {}
+[OK ] game_botones_derecha_y_titulo_centrado {'order': ['amber', 'green', 'red'], 'right_margin': 13.0, 'title_offset': -0.5}
+[OK ] game_maximizado {'row_y': 48, 'window': [0, 1024]}
+[OK ] game_restaurado {'row_y': 84, 'window': [41, 919]}
+[OK ] APP_CLOSE:game {}
+[OK ] f1_f7_abren_y_minimizan {}
+[OK ] sin_panic_exception {'fatals': []}

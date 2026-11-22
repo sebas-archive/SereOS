@@ -1,0 +1,14 @@
+SHUTDOWN_TEST_START
+STUB:audio_stop
+SEREOS_POWEROFF
+[VGA] Apagando...[VGA] 
+[VGA] SereOS esta cerrando el sistema[VGA] 
+SEREOS_SHUTDOWN:no_pm1a
+SEREOS_SHUTDOWN:port_0x604
+SEREOS_SHUTDOWN:port_0xB004
+SEREOS_SHUTDOWN:port_0x4004
+SEREOS_SHUTDOWN:isa_debug_exit
+SEREOS_POWEROFF_SAFE
+[VGA] Ya puedes apagar el equipo con seguridad[VGA] 
+[VGA] SereOS se ha detenido; ya no hay datos en uso[VGA] 
+[VGA] Ya puedes apagar el equipo con seguridad.

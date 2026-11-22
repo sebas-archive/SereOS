@@ -1,0 +1,5 @@
+CRITICAL: You are using the SDL disk i/o audio driver!
+CRITICAL:  Writing to file [audit/verify/evidence/disk/slot15_GHOST_RESPAWN.raw], format=S16LE channels=2 freq=44100.
+mode=single slot=15 play=play ms=1000 g_audio_on=1 g_pcm_on=1
+pcm_dev=3 available=1
+END t=1000

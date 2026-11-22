@@ -1,0 +1,133 @@
+== sfx_res.c: tablas ==
+const pac_res_sfx_t pacasset_sfx_res[PACASSET_RES_SFX_SLOTS] = {
+	[0] = { 0, 0u },  /* sin WAV: fallback sintetizado */
+	[1] = { 0, 0u },  /* sin WAV: fallback sintetizado */
+	[2] = { pacasset_pcm_game_start_0, 46676u },  /* START */
+	[3] = { pacasset_pcm_waka1, 932u },  /* WAKA1 */
+	[4] = { pacasset_pcm_waka2, 929u },  /* WAKA2 */
+	[5] = { 0, 0u },  /* sin WAV: fallback sintetizado */
+	[6] = { pacasset_pcm_eat_ghost, 6324u },  /* EAT_GHOST */
+	[7] = { pacasset_pcm_eat_fruit, 4845u },  /* EAT_FRUIT */
+	[8] = { pacasset_pcm_pacman_death, 16916u },  /* DEATH */
+	[9] = { pacasset_pcm_extra_life, 20940u },  /* EXTRA_LIFE */
+	[10] = { pacasset_pcm_level_clear_0, 57377u },  /* LEVEL_CLEAR */
+	[11] = { 0, 0u },  /* sin WAV: fallback sintetizado */
+	[12] = { pacasset_pcm_siren_chase, 1470u },  /* SIREN_CHASE */
+	[13] = { pacasset_pcm_siren_hunt, 4412u },  /* SIREN_HUNT */
+	[14] = { 0, 0u },  /* sin WAV: fallback sintetizado */
+	[15] = { pacasset_pcm_ghost_respawn, 2935u },  /* GHOST_RESPAWN */
+};
+
+const uint8_t pacasset_sfx_res_loop[PACASSET_RES_SFX_SLOTS] = {
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+};
+
+const uint8_t pacasset_sfx_res_chunk_count[PACASSET_RES_SFX_SLOTS] = {
+	0, 0, 2, 1, 1, 0, 1, 1, 1, 1, 2, 0, 1, 1, 0, 1,
+};
+
+const uint8_t *const pacasset_sfx_res_chunks[PACASSET_RES_SFX_SLOTS][PACASSET_RES_SFX_MAX_CHUNKS] = {
+	{ 0, 0 },
+	{ 0, 0 },
+	{ pacasset_pcm_game_start_0, pacasset_pcm_game_start_1 },
+	{ pacasset_pcm_waka1, 0 },
+	{ pacasset_pcm_waka2, 0 },
+	{ 0, 0 },
+	{ pacasset_pcm_eat_ghost, 0 },
+	{ pacasset_pcm_eat_fruit, 0 },
+	{ pacasset_pcm_pacman_death, 0 },
+	{ pacasset_pcm_extra_life, 0 },
+	{ pacasset_pcm_level_clear_0, pacasset_pcm_level_clear_1 },
+	{ 0, 0 },
+	{ pacasset_pcm_siren_chase, 0 },
+	{ pacasset_pcm_siren_hunt, 0 },
+	{ 0, 0 },
+	{ pacasset_pcm_ghost_respawn, 0 },
+};
+
+const uint32_t pacasset_sfx_res_chunk_len[PACASSET_RES_SFX_SLOTS][PACASSET_RES_SFX_MAX_CHUNKS] = {
+	{ 0u, 0u },
+	{ 0u, 0u },
+	{ 32768u, 13908u },
+	{ 932u, 0u },
+	{ 929u, 0u },
+	{ 0u, 0u },
+	{ 6324u, 0u },
+	{ 4845u, 0u },
+	{ 16916u, 0u },
+	{ 20940u, 0u },
+	{ 32768u, 24609u },
+	{ 0u, 0u },
+	{ 1470u, 0u },
+	{ 4412u, 0u },
+	{ 0u, 0u },
+	{ 2935u, 0u },
+};
+
+const pac_res_sfx_t pacasset_siren_hunt_res[PACASSET_RES_SIREN_VARIANTS] = {
+	{ pacasset_pcm_siren_hunt_p0, 4412u },  /* +0% */
+	{ pacasset_pcm_siren_hunt_p10, 4011u },  /* +10% */
+	{ pacasset_pcm_siren_hunt_p20, 3676u },  /* +20% */
+	{ pacasset_pcm_siren_hunt_p30, 3394u },  /* +30% */
+};
+
+const pac_res_sfx_t pacasset_siren_chase_res[PACASSET_RES_SIREN_VARIANTS] = {
+	{ pacasset_pcm_siren_chase_p0, 1470u },  /* +0% */
+	{ pacasset_pcm_siren_chase_p10, 1336u },  /* +10% */
+	{ pacasset_pcm_siren_chase_p20, 1225u },  /* +20% */
+	{ pacasset_pcm_siren_chase_p30, 1131u },  /* +30% */
+};
+
+
+const uint8_t pacasset_siren_variant_pct[PACASSET_RES_SIREN_VARIANTS] = { 0, 10, 20, 30 };
+
+const uint16_t pacasset_sfx_res_rate = 11025;
+
+const uint32_t pacasset_sfx_res_total_bytes = 184411u;
+
+== sfx_res.h: cabecera ==
+/* assets/sfx_res.h - SFX PCM definitivos derivados de Res (PAC-MAN SereOS)
+ *
+ * PCM 8 bits SIN SIGNO, mono, 11025 Hz (compatible con el SB16 de SereOS
+ * y con SDL Linux). Generado desde los 11 WAV de Res (incluye intermission).
+ * Recurso de uso privado/academico; ver assets/LICENSE_RES.md.
+ *
+ * Slots: identicos a `pac_audio_sfx_t` (pac_platform.h) con la adicion de
+ * PAC_SFX_GHOST_RESPAWN al final, es decir:
+ *   0 NONE | 1 MENU | 2 START | 3 WAKA1 | 4 WAKA2 | 5 POWER |
+ *   6 EAT_GHOST | 7 EAT_FRUIT | 8 DEATH | 9 EXTRA_LIFE | 10 LEVEL_CLEAR |
+ *   11 GAME_OVER | 12 SIREN_CHASE | 13 SIREN_HUNT | 14 SIREN_FRIGHT |
+ *   15 GHOST_RESPAWN
+ * Slots con WAV: 2,3,4,6,7,8,9,10,12,13,15. Sin WAV (data=0): 1,5,11,14.
+ *   START=game start, WAKA1/2=waka1/2, EAT_GHOST=eat ghost,
+ *   EAT_FRUIT=eat fruit, EXTRA_LIFE=extra life, DEATH=pacman death,
+ *   LEVEL_CLEAR=intermission (one-shot, 2 trozos),
+ *   GHOST_RESPAWN=ghost respawn (periodo de bucle; flag loop=0 por defecto:
+ *   el bucle se pide con pac_audio_loop),
+ *   SIREN_HUNT=hunted siren (loop), SIREN_CHASE=hunter siren (loop).
+ *
+ * Clips largos (START y LEVEL_CLEAR) se entregan troceados en bloques <=32768
+ * (limite SB16):
+ *   pacasset_sfx_res_chunk_count[slot]     numero de trozos (1 o 2)
+ *   pacasset_sfx_res_chunks[slot][i]       puntero al trozo i
+ *   pacasset_sfx_res_chunk_len[slot][i]    muestras del trozo i
+ * `pacasset_sfx_res[slot].data` apunta al primer trozo y `.len` es el total.
+ * Para reproducir en SB16: enviar trozos de uno en uno respetando el limite
+ * de bloque; en Linux se puede reproducir el total de una vez.
+ *
+ * Sirenas: `pacasset_siren_hunt_res[4]` / `pacasset_siren_chase_res[4]` con
+ * pitch +0/+10/+20/+30% ya remuestreado (mismo rate 11025); el slot 13/12
+ * del array principal apunta a la variante +0%.
+ */
+#ifndef PACMAN_SFX_RES_H
+#define PACMAN_SFX_RES_H
+#include <stdint.h>
+
+#define PACASSET_RES_SFX_RATE          11025
+#define PACASSET_RES_SFX_SLOTS         16
+#define PACASSET_RES_SFX_MAX_CHUNKS    2
+#define PACASSET_RES_SIREN_VARIANTS    4
+
+#define PACASSET_RES_SFX_NONE          0
+#define PACASSET_RES_SFX_MENU          1
+#define PACASSET_RES_SFX_START         2

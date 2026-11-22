@@ -1,0 +1,9 @@
+duration=28.120 active=27.662 peak=-0.8 clip=0 segments=[(0.0, 0.231), (0.24, 0.477), (0.506, 0.578), (0.639, 1.009), (1.039, 1.543), (1.572, 1.643)]
+periodicity (s, corr): []
+START chunk0 len 32768 chunk1 len 13908
+chunk0: n=14 min_corr=0.990 max_corr=0.999 mean_corr=0.997 neg=0 lag_span=2.600
+chunk1: n=6 min_corr=0.993 max_corr=0.998 mean_corr=0.996 neg=0 lag_span=1.000
+chunk1 full: signed corr=0.9958 lag=3.212 | inverted corr=-0.9958 lag=3.212
+START audible span (first->last excerpt): 4.172 s (clip 4.234 s)
+longest internal silence in START span: 0.047 s
+wrote sereos_analysis.json

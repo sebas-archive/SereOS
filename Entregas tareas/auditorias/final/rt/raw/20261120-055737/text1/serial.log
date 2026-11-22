@@ -1,0 +1,17 @@
+[OK] Arranque Multiboot verificado (GRUB 2)
+[OK] GDT propia: 5 segmentos (kernel y usuario)
+[OK] IDT: 32 excepciones + 16 IRQ (PIC remapeado a 32-47)
+[OK] Temporizador PIT a 100 Hz (IRQ 0)
+[OK] Teclado PS/2 con eventos (IRQ 1)
+[OK] Raton PS/2 con eventos (IRQ 12)
+[OK] Reloj CMOS RTC
+Framebuffer no disponible: se conserva la terminal VGA
+[OK] Allocator de marcos fisicos inicializado
+[OK] Heap del kernel (kmalloc/kfree) inicializado
+[OK] Paginacion activada (identidad, PSE 4 MiB)
+[OK] RAMFS montado en /
+[OK] Planificador cooperativo round-robin listo
+[OK] Interrupciones habilitadas
+[OK] Audio: solo PC speaker
+Iniciando consola de texto de respaldo
+SEREOS_TEXT_MODE

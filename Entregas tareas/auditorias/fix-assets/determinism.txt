@@ -1,0 +1,9 @@
+== determinismo B1 (segunda generacion completa en /tmp/regen2) ==
+IDENTICAL assets/sfx_res.c 8fa2edc5c0eb4da7d4ac0497fe6759c9
+IDENTICAL assets/sfx_res.h 5650ddfc656e42638a7bdf63b5626790
+IDENTICAL assets/sprites_res.c 5ebbc187274a38338ffbffa491b43492
+IDENTICAL assets/sprites_res.h f4468770ec8d9a12765754e06803ea36
+IDENTICAL assets/font_arcade.c e525288944a6e0d3184543756563cf34
+IDENTICAL assets/font_arcade.h 65d122176eb84d1f94e05accd440c20b
+IDENTICAL assets/LICENSE_RES.md 78170b1eb22e5155a4186fe869a63c14
+IDENTICAL assets/res_original/LICENSE_RES.md 78170b1eb22e5155a4186fe869a63c14
