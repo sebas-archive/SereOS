@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1020" viewBox="0 0 1200 1020">
+<defs><marker id="pt" markerUnits="userSpaceOnUse" viewBox="0 0 16 16" refX="15" refY="8" markerWidth="16" markerHeight="16" orient="auto"><path d="M1,2 L15,8 L1,14 Z" fill="#374151"/></marker></defs>
+<rect width="1200" height="1020" fill="#FFFFFF"/>
+<text x="600.0" y="68" text-anchor="middle" font-family="Inter" font-weight="700" font-size="36" fill="#111827">PAC-MAN SereOS: una lógica, dos plataformas</text>
+<rect x="40" y="120" width="1120" height="100" rx="12" ry="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+<text x="600.0" y="161.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#1E3A8A">src/core  (3 270 líneas)</text>
+<text x="600.0" y="195.3" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">estados, laberinto 28x31, entidades, IA de fantasmas, puntuación y audio</text>
+<rect x="40" y="280" width="1120" height="100" rx="12" ry="12" fill="#CCFBF1" stroke="#0D9488" stroke-width="2"/>
+<text x="600.0" y="321.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#134E4A">src/render  (1 426 líneas)</text>
+<text x="600.0" y="355.3" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">pantallas, HUD, menús arcade y laberinto prerrenderizado</text>
+<rect x="40" y="440" width="1120" height="100" rx="12" ry="12" fill="#FEF3C7" stroke="#D97706" stroke-width="4"/>
+<text x="600.0" y="481.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#78350F">include/pac_platform.h  (contrato, ABI 1)</text>
+<text x="600.0" y="515.3" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">tiempo, memoria, entrada, dibujo, texto, audio, almacenamiento</text>
+<rect x="40" y="620" width="540" height="130" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="310.0" y="661.9" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#4C1D95">platform/sereos  (756 líneas)</text>
+<text x="310.0" y="696.0" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">game_app.c: app_game()</text>
+<text x="310.0" y="724.6" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">platform_sereos.c: kernel</text>
+<rect x="620" y="620" width="540" height="130" rx="12" ry="12" fill="#E5E7EB" stroke="#6B7280" stroke-width="2"/>
+<text x="890.0" y="661.9" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#1F2937">platform/linux  (1 821 líneas)</text>
+<text x="890.0" y="696.0" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">SDL2 y framebuffer por software</text>
+<text x="890.0" y="724.6" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">escenas forzadas para pruebas</text>
+<rect x="40" y="810" width="540" height="100" rx="12" ry="12" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+<text x="310.0" y="851.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#7F1D1D">libpacman.a  →  sereos.bin</text>
+<text x="310.0" y="885.3" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">se enlaza al kernel antes de -lgcc</text>
+<rect x="620" y="810" width="540" height="100" rx="12" ry="12" fill="#E5E7EB" stroke="#6B7280" stroke-width="2"/>
+<text x="890.0" y="851.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="24" fill="#1F2937">build/pacman-sereos</text>
+<text x="890.0" y="885.3" text-anchor="middle" font-family="Inter" font-size="22" fill="#374151">ejecutable nativo en Linux con SDL2</text>
+<path d="M600.0,220.0 L600.0,280.0" fill="none" stroke="#374151" stroke-width="3" marker-end="url(#pt)"/>
+<path d="M600.0,380.0 L600.0,440.0" fill="none" stroke="#374151" stroke-width="3" marker-end="url(#pt)"/>
+<path d="M309.9,540.0 L310.0,620.0" fill="none" stroke="#374151" stroke-width="3" marker-end="url(#pt)"/>
+<path d="M890.1,540.0 L890.0,620.0" fill="none" stroke="#374151" stroke-width="3" marker-end="url(#pt)"/>
+<path d="M310.0,750.0 L310.0,810.0" fill="none" stroke="#374151" stroke-width="3" marker-end="url(#pt)"/>
+<path d="M890.0,750.0 L890.0,810.0" fill="none" stroke="#374151" stroke-width="3" marker-end="url(#pt)"/>
+<rect x="544.9" y="232.5" width="110.2" height="35.0" rx="17.5" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="600.0" y="257.5" text-anchor="middle" font-family="Inter" font-size="21" fill="#111827">lo dibuja</text>
+<rect x="569.8" y="392.5" width="60.4" height="35.0" rx="17.5" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="600.0" y="417.5" text-anchor="middle" font-family="Inter" font-size="21" fill="#111827">usa</text>
+<rect x="238.5" y="562.5" width="143.0" height="35.0" rx="17.5" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="310.0" y="587.5" text-anchor="middle" font-family="Inter" font-size="21" fill="#111827">implementa</text>
+<rect x="818.5" y="562.5" width="143.0" height="35.0" rx="17.5" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="890.0" y="587.5" text-anchor="middle" font-family="Inter" font-size="21" fill="#111827">implementa</text>
+<rect x="249.5" y="762.5" width="121.0" height="35.0" rx="17.5" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="310.0" y="787.5" text-anchor="middle" font-family="Inter" font-size="21" fill="#111827">se enlaza</text>
+<rect x="822.9" y="762.5" width="134.3" height="35.0" rx="17.5" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+<text x="890.0" y="787.5" text-anchor="middle" font-family="Inter" font-size="21" fill="#111827">se compila</text>
+<text x="600.0" y="986" text-anchor="middle" font-family="Inter" font-size="21" fill="#4B5563">Fuente: Pac-man SereOS/ (wc -l sobre los .c y .h de cada carpeta) y Makefiles del juego y del sistema.</text>
+</svg>

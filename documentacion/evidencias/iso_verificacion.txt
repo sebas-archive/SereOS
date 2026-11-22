@@ -1,0 +1,39 @@
+# ISO final
+-rwxr-xr-x 1 t1an t1an  1526240 2026-11-20 09:15:31.794534610 -0500 sereos.bin
+-rw-r--r-- 1 t1an t1an 36835328 2026-11-20 09:15:32.397530982 -0500 sereos.iso
+-rw-r--r-- 1 t1an t1an  1526240 2026-11-20 09:15:31.826800227 -0500 sereos-text.bin
+
+4fe9ea95131e571082a6ea07a471aaf4cb1549aaa2ad702a68ea87599d7c96d9  sereos.iso
+ca9bf32ab10b9894c0b44fd568f65e7f2b42947ef66cb56a541475ad477cc1f4  sereos.bin
+627bcc1fde2bd51ff945bda1c4bde255f213a0f5b4e4bad8cf1261212482ce07  sereos-text.bin
+b20b7f98193fabbc71617ea63b0878e70b50f2559575e092b6a728bb72478301  ../Pac-man SereOS/build/sereos/libpacman.a
+
+# ISO anterior (antes de recompilar): 44d94650f148b62618b036a68cafe504fab269852ed43a5e98edaf8aedd85ba9 (36835328 B)
+
+ISO offers   : Rock_Ridge
+ISO loaded   : Rock_Ridge
+TOC layout   : Idx ,  sbsector ,       Size , Volume Id
+ISO session  :   1 ,         0 ,     17986s , ISOIMAGE
+Media summary: 1 session, 17986 data blocks, 35.1m data,  404g free
+Media nwa    : 18016s
+
+'/boot':
+'grub'
+'sereos-text.bin'
+'sereos.bin'
+
+'/boot/grub':
+'fonts'
+'grub.cfg'
+'i386-efi'
+'i386-pc'
+'locale'
+'roms'
+'themes'
+'x86_64-efi'
+
+# grub.cfg dentro de la ISO
+
+# comparacion binarios ISO vs compilacion
+ca9bf32ab10b9894c0b44fd568f65e7f2b42947ef66cb56a541475ad477cc1f4  /tmp/claude-1000/-home-t1an-Descargas-sereos02/26e41c39-e2c2-4130-931a-cf0e262874c1/scratchpad/iso_sereos.bin
+(debe coincidir con sereos.bin)

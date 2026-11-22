@@ -1,0 +1,11 @@
+video base: 188.43 s
+SRT: /home/t1an/Descargas/sereos02/documentacion/video/Presentacion_Final_SereOS.srt 23 subtítulos
+audio generado 188.433333 s
+[h264 @ 0x5566096a6dc0] Invalid NAL unit size (14868 > 6687).
+[h264 @ 0x5566096a6dc0] missing picture in access unit with size 6691
+[in#0/mov,mp4,m4a,3gp,3g2,mj2 @ 0x55660969a940] stream 0, offset 0x5f306d: partial file
+[h264 @ 0x5566110fa200] Invalid NAL unit size (14868 > 6687).
+[h264 @ 0x5566110fa200] Error splitting the input into NAL units.
+[vist#0:0/h264 @ 0x5566096aa280] [dec:h264 @ 0x5566108e4100] Decoding error: Invalid data found when processing input
+[png @ 0x5566115ede80] chunk too big
+[vist#9:0/png @ 0x5566096b2c40] [dec:png @ 0x55661156e240] Error submitting packet to decoder: Invalid data found when processing input

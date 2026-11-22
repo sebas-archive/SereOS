@@ -1,0 +1,41 @@
+# Entorno y herramientas (obtenido el 2026-11-20T09:34:56-05:00)
+
+Linux 7.3.3-1-cachyos x86_64
+gcc (GCC) 16.2.1 20260810
+NASM version 3.02 compiled on Jun 30 2026
+grub-mkrescue (GRUB) 2:2.16-1.1
+xorriso 1.5.8.pl02 : RockRidge filesystem manipulator, libburnia project.
+QEMU emulator version 11.1.3
+7.2.22r175245
+GNU Make 4.4.1
+Python 3.14.9
+
+# Cabecera Multiboot (grub-file)
+sereos.bin: multiboot valido
+sereos-text.bin: multiboot valido
+
+# readelf -h sereos.bin
+  Class:                             ELF32
+  Type:                              EXEC (Executable file)
+  Machine:                           Intel 80386
+  Entry point address:               0x21fba0
+
+Elf file type is EXEC (Executable file)
+Entry point 0x21fba0
+There are 5 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x001000 0x00200000 0x00200000 0x2b192 0x2b192 R E 0x1000
+  LOAD           0x02d000 0x0022c000 0x0022c000 0x12e5c0 0x12e5c0 R   0x1000
+  LOAD           0x16b000 0x0035b000 0x0035b000 0x00150 0x132c8e0 RW  0x10000
+  GNU_EH_FRAME   0x15b5a4 0x0035a5a4 0x0035a5a4 0x0001c 0x0001c R   0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x10
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text 
+
+# size
+   text	   data	    bss	    dec	    hex	filename
+1414994	    336	20101344	21516674	1485182	sereos.bin

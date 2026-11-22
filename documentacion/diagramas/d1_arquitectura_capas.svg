@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040">
+<defs><marker id="pt" markerUnits="userSpaceOnUse" viewBox="0 0 16 16" refX="15" refY="8" markerWidth="16" markerHeight="16" orient="auto"><path d="M1,2 L15,8 L1,14 Z" fill="#374151"/></marker></defs>
+<rect width="1200" height="1040" fill="#FFFFFF"/>
+<text x="600.0" y="68" text-anchor="middle" font-family="Inter" font-weight="700" font-size="36" fill="#111827">Arquitectura por capas de SereOS 1.0</text>
+<path d="M1140,176.0 L1140,284.0" fill="none" stroke="#6B7280" stroke-width="2.5" marker-end="url(#pt)"/>
+<path d="M1140,296.0 L1140,404.0" fill="none" stroke="#6B7280" stroke-width="2.5" marker-end="url(#pt)"/>
+<path d="M1140,416.0 L1140,524.0" fill="none" stroke="#6B7280" stroke-width="2.5" marker-end="url(#pt)"/>
+<path d="M1140,536.0 L1140,644.0" fill="none" stroke="#6B7280" stroke-width="2.5" marker-end="url(#pt)"/>
+<path d="M1140,656.0 L1140,764.0" fill="none" stroke="#6B7280" stroke-width="2.5" marker-end="url(#pt)"/>
+<path d="M1140,776.0 L1140,884.0" fill="none" stroke="#6B7280" stroke-width="2.5" marker-end="url(#pt)"/>
+<rect x="40" y="120" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="4"/>
+<text x="140.0" y="161.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Aplicaciones</text>
+<text x="140.0" y="193.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">capa 1</text>
+<rect x="260" y="120" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="360.0" y="161.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Terminal</text>
+<text x="360.0" y="193.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">terminal_app</text>
+<rect x="480" y="120" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="580.0" y="161.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Archivos</text>
+<text x="580.0" y="193.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">filemanager</text>
+<rect x="700" y="120" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="800.0" y="161.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Monitor</text>
+<text x="800.0" y="193.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">y Acerca de</text>
+<rect x="920" y="120" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="1020.0" y="161.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">PAC-MAN</text>
+<text x="1020.0" y="193.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">libpacman.a</text>
+<rect x="40" y="240" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="4"/>
+<text x="140.0" y="281.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Escritorio</text>
+<text x="140.0" y="313.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">capa 2</text>
+<rect x="260" y="240" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="360.0" y="281.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Compositor</text>
+<text x="360.0" y="313.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">dock y barra</text>
+<rect x="480" y="240" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="580.0" y="281.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Ventanas</text>
+<text x="580.0" y="313.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">window</text>
+<rect x="700" y="240" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="800.0" y="281.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Cursor</text>
+<text x="800.0" y="313.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">cursor, splash</text>
+<rect x="920" y="240" width="200" height="100" rx="12" ry="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+<text x="1020.0" y="281.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#4C1D95">Tema y UI</text>
+<text x="1020.0" y="313.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">theme, ui</text>
+<rect x="40" y="360" width="200" height="100" rx="12" ry="12" fill="#CCFBF1" stroke="#0D9488" stroke-width="4"/>
+<text x="140.0" y="401.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#134E4A">Gráficos</text>
+<text x="140.0" y="433.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">capa 3</text>
+<rect x="260" y="360" width="200" height="100" rx="12" ry="12" fill="#CCFBF1" stroke="#0D9488" stroke-width="2"/>
+<text x="360.0" y="401.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#134E4A">Framebuffer</text>
+<text x="360.0" y="433.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">LFB 1024x768</text>
+<rect x="480" y="360" width="200" height="100" rx="12" ry="12" fill="#CCFBF1" stroke="#0D9488" stroke-width="2"/>
+<text x="580.0" y="401.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#134E4A">Backbuffer</text>
+<text x="580.0" y="433.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">regiones sucias</text>
+<rect x="700" y="360" width="200" height="100" rx="12" ry="12" fill="#CCFBF1" stroke="#0D9488" stroke-width="2"/>
+<text x="800.0" y="401.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#134E4A">Motor 2D</text>
+<text x="800.0" y="433.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">graphics</text>
+<rect x="920" y="360" width="200" height="100" rx="12" ry="12" fill="#CCFBF1" stroke="#0D9488" stroke-width="2"/>
+<text x="1020.0" y="401.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#134E4A">Tipografía</text>
+<text x="1020.0" y="433.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">text</text>
+<rect x="40" y="480" width="200" height="100" rx="12" ry="12" fill="#DCFCE7" stroke="#16A34A" stroke-width="4"/>
+<text x="140.0" y="521.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#14532D">Subsistemas</text>
+<text x="140.0" y="553.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">capa 4</text>
+<rect x="260" y="480" width="200" height="100" rx="12" ry="12" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+<text x="360.0" y="521.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#14532D">Memoria</text>
+<text x="360.0" y="553.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">page, kmalloc</text>
+<rect x="480" y="480" width="200" height="100" rx="12" ry="12" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+<text x="580.0" y="521.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#14532D">Tareas</text>
+<text x="580.0" y="553.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">task, scheduler</text>
+<rect x="700" y="480" width="200" height="100" rx="12" ry="12" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+<text x="800.0" y="521.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#14532D">RAMFS</text>
+<text x="800.0" y="553.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">fs</text>
+<rect x="920" y="480" width="200" height="100" rx="12" ry="12" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+<text x="1020.0" y="521.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#14532D">Shell</text>
+<text x="1020.0" y="553.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">25 comandos</text>
+<rect x="40" y="600" width="200" height="100" rx="12" ry="12" fill="#FEF3C7" stroke="#D97706" stroke-width="4"/>
+<text x="140.0" y="641.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#78350F">Drivers</text>
+<text x="140.0" y="673.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">capa 5</text>
+<rect x="260" y="600" width="200" height="100" rx="12" ry="12" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+<text x="360.0" y="641.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#78350F">PIT</text>
+<text x="360.0" y="673.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">timer</text>
+<rect x="480" y="600" width="200" height="100" rx="12" ry="12" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+<text x="580.0" y="641.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#78350F">PS/2</text>
+<text x="580.0" y="673.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">teclado y ratón</text>
+<rect x="700" y="600" width="200" height="100" rx="12" ry="12" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+<text x="800.0" y="641.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#78350F">RTC y COM1</text>
+<text x="800.0" y="673.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">rtc, serial</text>
+<rect x="920" y="600" width="200" height="100" rx="12" ry="12" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+<text x="1020.0" y="641.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#78350F">SB16</text>
+<text x="1020.0" y="673.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">audio, sb16</text>
+<rect x="40" y="720" width="200" height="100" rx="12" ry="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="4"/>
+<text x="140.0" y="761.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1E3A8A">Núcleo</text>
+<text x="140.0" y="793.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">capa 6</text>
+<rect x="260" y="720" width="200" height="100" rx="12" ry="12" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+<text x="360.0" y="761.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#7F1D1D">Arranque</text>
+<text x="360.0" y="793.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">boot.s e isr.s</text>
+<rect x="480" y="720" width="200" height="100" rx="12" ry="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+<text x="580.0" y="761.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1E3A8A">GDT e IDT</text>
+<text x="580.0" y="793.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">gdt, idt, PIC</text>
+<rect x="700" y="720" width="200" height="100" rx="12" ry="12" fill="#FEE2E2" stroke="#DC2626" stroke-width="2"/>
+<text x="800.0" y="761.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#7F1D1D">Log y pánico</text>
+<text x="800.0" y="793.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">log, panic</text>
+<rect x="920" y="720" width="200" height="100" rx="12" ry="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+<text x="1020.0" y="761.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1E3A8A">Apagado</text>
+<text x="1020.0" y="793.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">shutdown</text>
+<rect x="40" y="840" width="200" height="100" rx="12" ry="12" fill="#E5E7EB" stroke="#6B7280" stroke-width="4"/>
+<text x="140.0" y="881.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1F2937">Hardware</text>
+<text x="140.0" y="913.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">capa 7</text>
+<rect x="260" y="840" width="200" height="100" rx="12" ry="12" fill="#E5E7EB" stroke="#6B7280" stroke-width="2"/>
+<text x="360.0" y="881.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1F2937">GRUB 2</text>
+<text x="360.0" y="913.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">Multiboot 1</text>
+<rect x="480" y="840" width="200" height="100" rx="12" ry="12" fill="#E5E7EB" stroke="#6B7280" stroke-width="2"/>
+<text x="580.0" y="881.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1F2937">CPU i686</text>
+<text x="580.0" y="913.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">modo protegido</text>
+<rect x="700" y="840" width="200" height="100" rx="12" ry="12" fill="#E5E7EB" stroke="#6B7280" stroke-width="2"/>
+<text x="800.0" y="881.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1F2937">RAM y video</text>
+<text x="800.0" y="913.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">256 MiB, LFB</text>
+<rect x="920" y="840" width="200" height="100" rx="12" ry="12" fill="#E5E7EB" stroke="#6B7280" stroke-width="2"/>
+<text x="1020.0" y="881.2" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#1F2937">Periféricos</text>
+<text x="1020.0" y="913.7" text-anchor="middle" font-family="Inter" font-size="21" fill="#374151">PIC, PIT, PS/2</text>
+<text x="600.0" y="1006" text-anchor="middle" font-family="Inter" font-size="21" fill="#4B5563">Subtítulos: módulos (.c) de cada carpeta. Las flechas del margen derecho indican «usa a».</text>
+</svg>

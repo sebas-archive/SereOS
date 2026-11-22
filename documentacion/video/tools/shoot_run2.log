@@ -1,0 +1,27 @@
+[   0.00s] inicio_qemu
+[   1.32s] grub_menu
+[   4.44s] grub_enter
+[   5.75s] escritorio_listo
+[   8.25s] escritorio_inicio
+[  21.04s] dock_fin
+[  23.84s] lanzador_abierto
+[  35.15s] archivos_abierto
+[  44.12s] archivos_maximizado
+[  46.92s] archivos_restaurado
+[  51.45s] monitor_abierto
+[  55.55s] monitor_maximizado
+[  60.99s] terminal_abierta
+[  66.43s] cmd_help
+[  70.92s] cmd_sysinfo
+[  74.01s] cmd_version
+[  76.85s] cmd_mem
+[  79.51s] cmd_ticks
+[  84.38s] cmd_dmesg
+[  87.17s] cmd_date
+[  89.16s] pacman_abierto
+[  95.78s] pacman_menu
+[  95.91s] pacman_partida
+[ 118.75s] pacman_fin_ruta
+[ 129.65s] acerca_abierto
+[ 131.15s] fin_grabacion
+frames: 3266 duracion: 131.1 s

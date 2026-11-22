@@ -1,0 +1,277 @@
+1
+00:00:00,600 --> 00:00:04,267
+Inventario BT: un sistema para el control
+del inventario
+
+2
+00:00:04,267 --> 00:00:07,595
+físico, desde el teléfono hasta el
+escritorio.
+
+3
+00:00:10,600 --> 00:00:15,680
+Comenzamos con la aplicación móvil, la
+herramienta del operador en bodega.
+
+4
+00:00:15,880 --> 00:00:21,296
+Las lecturas se registran en el teléfono y
+se envían al PC cuando está cerca.
+
+5
+00:00:23,400 --> 00:00:28,886
+Desde el catálogo, el operador busca el
+producto; en este caso, arroz.
+
+6
+00:00:39,558 --> 00:00:45,079
+Registra la cantidad contada, las unidades
+dañadas y una nota.
+
+7
+00:00:55,717 --> 00:00:59,752
+La foto de evidencia se toma desde la
+galería del teléfono.
+
+8
+00:01:11,875 --> 00:01:16,363
+La lectura queda guardada en el teléfono,
+incluso sin conexión.
+
+9
+00:01:28,033 --> 00:01:32,230
+También puede registrar un código que no
+está en el catálogo.
+
+10
+00:01:44,192 --> 00:01:48,180
+Lo contado se revisa y se corrige antes de
+enviarlo.
+
+11
+00:02:02,750 --> 00:02:06,843
+En Pendientes aparecen las lecturas que aún
+no llegan al PC.
+
+12
+00:02:24,250 --> 00:02:29,063
+Desde Sincronizar se elige el PC al que se
+enviarán por Bluetooth.
+
+13
+00:02:45,750 --> 00:02:49,448
+Y en Notificaciones se revisan los avisos
+recibidos.
+
+14
+00:03:09,650 --> 00:03:13,871
+En Mi cuenta, cada operador ve su rol y lo
+que puede hacer.
+
+15
+00:03:33,700 --> 00:03:37,282
+Puede cambiar el tema y el idioma de la
+aplicación.
+
+16
+00:03:57,750 --> 00:04:02,667
+Y poner su foto de perfil, ajustándola con
+el editor de rotación y zoom.
+
+17
+00:04:24,200 --> 00:04:28,990
+Al cerrar sesión, las lecturas guardadas se
+conservan en el teléfono.
+
+18
+00:04:43,200 --> 00:04:48,756
+Desde el teléfono también se crea una cuenta
+nueva, que queda pendiente de aprobación.
+
+19
+00:04:51,700 --> 00:04:56,130
+Estas capturas de las pruebas muestran las
+etapas de la sincronización:
+
+20
+00:04:56,330 --> 00:05:02,606
+buscar el PC, conectar, enviar, y los casos
+de PC ocupado o sin conexión.
+
+21
+00:05:05,700 --> 00:05:08,527
+Pasamos a la aplicación de escritorio, donde
+
+22
+00:05:08,527 --> 00:05:11,732
+se administra y supervisa todo el
+inventario.
+
+23
+00:05:14,000 --> 00:05:19,591
+La pantalla de acceso permite elegir el tema
+y el idioma antes de iniciar sesión.
+
+24
+00:05:39,100 --> 00:05:42,427
+Una persona nueva puede registrarse desde el
+PC.
+
+25
+00:05:51,050 --> 00:05:54,957
+Su cuenta queda pendiente hasta que el
+administrador la revise.
+
+26
+00:06:05,400 --> 00:06:09,237
+La administradora inicia sesión y revisa las
+solicitudes.
+
+27
+00:06:25,575 --> 00:06:30,063
+Puede aprobar la cuenta con su rol, o
+rechazarla indicando el motivo.
+
+28
+00:06:48,150 --> 00:06:52,812
+El Dashboard resume el estado del conteo con
+indicadores y gráficas.
+
+29
+00:07:08,325 --> 00:07:10,827
+Los widgets se pueden personalizar.
+
+30
+00:07:30,900 --> 00:07:35,388
+En Inventario se busca, se filtra y se
+ordena cada producto.
+
+31
+00:07:57,950 --> 00:08:01,497
+El detalle muestra las lecturas que llegaron
+del celular.
+
+32
+00:08:27,400 --> 00:08:30,929
+La foto de evidencia del arroz, tomada desde
+la galería
+
+33
+00:08:30,929 --> 00:08:33,873
+del teléfono, llega junto con la lectura.
+
+34
+00:09:07,950 --> 00:09:11,741
+El inventario se exporta a un archivo CSV.
+
+35
+00:09:44,225 --> 00:09:49,038
+Y se abre directamente en una hoja de
+cálculo para su análisis.
+
+36
+00:10:22,900 --> 00:10:28,374
+Solicitudes reúne las cuentas nuevas que
+esperan aprobación, cada una con su rol.
+
+37
+00:10:52,250 --> 00:10:55,391
+En Empleados se buscan y filtran las
+cuentas.
+
+38
+00:11:13,675 --> 00:11:18,604
+Se puede suspender, reactivar o desvincular
+el teléfono de un empleado.
+
+39
+00:11:37,500 --> 00:11:40,993
+Roles y permisos define, para cada rol y
+módulo,
+
+40
+00:11:40,993 --> 00:11:44,809
+si hay acceso de consulta, de gestión o
+ninguno.
+
+41
+00:12:02,500 --> 00:12:06,187
+La auditoría registra quién hizo qué y
+cuándo.
+
+42
+00:12:26,950 --> 00:12:30,242
+Los filtros permiten encontrar cualquier
+acción.
+
+43
+00:12:53,800 --> 00:12:57,120
+En Configuración se ajusta cada cuánto se
+procesan
+
+44
+00:12:57,120 --> 00:13:00,424
+las lecturas y el tamaño máximo de las
+fotos.
+
+45
+00:13:11,850 --> 00:13:17,023
+La sincronización en vivo recibe las
+lecturas del Huawei P9 lite de Sebastián.
+
+46
+00:13:44,833 --> 00:13:49,890
+Se ven los errores, los códigos nuevos que
+se pueden crear como producto,
+
+47
+00:14:17,817 --> 00:14:20,969
+y el servicio se puede pausar y reanudar.
+
+48
+00:14:53,200 --> 00:14:58,268
+Los respaldos de la base de datos se crean
+al momento, se programan y se restauran.
+
+49
+00:15:51,300 --> 00:15:56,798
+Con Abrir carpeta, el explorador de archivos
+muestra los respaldos guardados.
+
+50
+00:16:35,550 --> 00:16:41,837
+La campana muestra las notificaciones, y el
+listado completo reúne todos los avisos.
+
+51
+00:17:06,200 --> 00:17:11,291
+En el perfil, la administradora Camila
+Restrepo pone su foto con el editor.
+
+52
+00:17:41,250 --> 00:17:43,892
+También elige el tema y el idioma.
+
+53
+00:18:18,700 --> 00:18:24,442
+Por último, un usuario con rol de Inventario
+ve solo los módulos que le corresponden.
+
+54
+00:18:59,933 --> 00:19:06,151
+Entre ellos, el Dashboard, el Inventario,
+las Gráficas y la Sincronización.
+
+55
+00:19:41,167 --> 00:19:45,097
+Así, cada rol trabaja con la información que
+necesita.
+
+56
+00:20:24,500 --> 00:20:30,392
+Inventario BT: una solución integral para la
+gestión y administración del inventario.
+
+57
+00:20:30,592 --> 00:20:32,467
+Gracias por su atención.

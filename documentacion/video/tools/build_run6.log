@@ -1,0 +1,10 @@
+video base: 188.43 s
+SRT: /home/t1an/Descargas/sereos02/documentacion/video/Presentacion_Final_SereOS.srt 23 subtítulos
+audio generado 188.433333 s
+[vost#0:0/libx264 @ 0x55808c2fad80] Error submitting a packet to the muxer: Immediate exit requested
+    Last message repeated 1 times
+[out#0/mp4 @ 0x558084c43480] Error muxing a packet
+[out#0/mp4 @ 0x558084c43480] Task finished with error code: -1414092869 (Immediate exit requested)
+[out#0/mp4 @ 0x558084c43480] Terminating thread with return code -1414092869 (Immediate exit requested)
+[out#0/mp4 @ 0x558084c43480] Error writing trailer: Immediate exit requested
+[out#0/mp4 @ 0x558084c43480] Error closing file: Immediate exit requested

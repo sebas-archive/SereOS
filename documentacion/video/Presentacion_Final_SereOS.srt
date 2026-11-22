@@ -1,0 +1,92 @@
+1
+00:00:12,621 --> 00:00:15,621
+Iniciando SereOS con GRUB 2 (Multiboot).
+
+2
+00:00:16,142 --> 00:00:19,542
+Kernel: GDT, IDT, PIC, PIT y paginación.
+
+3
+00:00:20,100 --> 00:00:23,900
+Escritorio de SereOS: barra superior, dock y cursor.
+
+4
+00:00:26,300 --> 00:00:30,300
+Dock: archivos, terminal, monitor, juego e información.
+
+5
+00:00:35,493 --> 00:00:39,093
+Lanzador ≡: acceso a todas las aplicaciones.
+
+6
+00:00:47,039 --> 00:00:50,839
+Explorador de archivos sobre el sistema RAMFS.
+
+7
+00:00:54,012 --> 00:00:57,412
+Doble clic en la barra de título: maximizar.
+
+8
+00:01:02,946 --> 00:01:06,049
+Monitor del sistema: memoria, heap y tareas en vivo.
+
+9
+00:01:06,249 --> 00:01:09,249
+Ventanas maximizables y restaurables.
+
+10
+00:01:12,767 --> 00:01:16,767
+Seis capas: cada una usa la inferior.
+
+11
+00:01:21,767 --> 00:01:25,767
+Arranque: GRUB, boot.s y kernel_main.
+
+12
+00:01:30,767 --> 00:01:34,967
+Interrupciones: PIC remapeado a 32–47 y PIT a 100 Hz.
+
+13
+00:01:39,767 --> 00:01:43,967
+Memoria PSE hasta 512 MiB y planificador cooperativo.
+
+14
+00:01:48,767 --> 00:01:51,411
+Terminal de SereOS: shell con comandos del kernel.
+
+15
+00:01:51,611 --> 00:01:55,211
+help: lista de comandos disponibles.
+
+16
+00:01:55,700 --> 00:01:59,500
+sysinfo: sistema, kernel y memoria detectada.
+
+17
+00:02:02,427 --> 00:02:05,427
+mem y ticks: memoria física y tiempo del PIT.
+
+18
+00:02:08,562 --> 00:02:12,562
+dmesg: registro del kernel con marcas de tiempo.
+
+19
+00:02:17,200 --> 00:02:21,200
+PAC-MAN SereOS: un videojuego integrado en el sistema.
+
+20
+00:02:23,551 --> 00:02:27,151
+Laberinto, puntos, fantasmas y vidas.
+
+21
+00:02:41,492 --> 00:02:45,292
+Fantasmas asustados: se pueden capturar.
+
+22
+00:02:48,992 --> 00:02:51,992
+Pausa y menú dentro del propio escritorio.
+
+23
+00:02:57,383 --> 00:03:01,183
+Acerca de: 14 de 14 componentes verificados.
+

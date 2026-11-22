@@ -1,0 +1,10 @@
+checks=209 failures=0
+[OK] harness de core
+[OK] smoke attract (build/smoke/attract.ppm)
+[OK] smoke menu (build/smoke/menu.ppm)
+[OK] smoke settings (build/smoke/settings.ppm)
+[OK] smoke play (build/smoke/play.ppm)
+[OK] smoke pause (build/smoke/pause.ppm)
+[OK] smoke gameover (build/smoke/gameover.ppm)
+[OK] smoke victory (build/smoke/victory.ppm)
+TODAS LAS PRUEBAS OK
