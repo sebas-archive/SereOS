@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-labelledby="title">
+  <title id="title">SereOS — sistema operativo bare-metal para i686</title>
+  <defs>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#004EFD"/>
+      <stop offset="1" stop-color="#2E7BFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- marca -->
+  <g>
+    <rect x="56" y="64" width="108" height="108" rx="26" fill="url(#mark)"/>
+    <text x="110" y="146" text-anchor="middle"
+          font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+          font-size="76" font-weight="800" fill="#FFFFFF">S</text>
+  </g>
+
+  <!-- wordmark -->
+  <text x="192" y="126"
+        font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="54" font-weight="800" letter-spacing="-0.5" fill="#1F2328">SereOS</text>
+  <text x="194" y="164"
+        font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="20" fill="#59636E">Bare-metal i686 · C99 + NASM · GRUB 2 / Multiboot 1</text>
+
+  <!-- chips -->
+  <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1F2328">
+    <rect x="56"  y="206" width="146" height="32" rx="16" fill="#F6F8FA" stroke="#D0D7DE"/>
+    <text x="72"  y="227">bare-metal i686</text>
+    <rect x="212" y="206" width="182" height="32" rx="16" fill="#F6F8FA" stroke="#D0D7DE"/>
+    <text x="228" y="227">GRUB 2 + Multiboot 1</text>
+    <rect x="404" y="206" width="158" height="32" rx="16" fill="#F6F8FA" stroke="#D0D7DE"/>
+    <text x="420" y="227">escritorio propio</text>
+    <rect x="572" y="206" width="150" height="32" rx="16" fill="#F6F8FA" stroke="#D0D7DE"/>
+    <text x="588" y="227">PAC-MAN nativo</text>
+  </g>
+
+  <!-- panel de arranque -->
+  <g>
+    <rect x="748" y="60" width="476" height="158" rx="14" fill="#F6F8FA" stroke="#D0D7DE"/>
+    <g font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13">
+      <text x="772" y="100" fill="#1A7F37">[OK]</text>
+      <text x="812" y="100" fill="#59636E">GDT · IDT · PIC · PIT 100 Hz</text>
+      <text x="772" y="128" fill="#1A7F37">[OK]</text>
+      <text x="812" y="128" fill="#59636E">audio: SB16 0x220 IRQ5 DMA1</text>
+      <text x="772" y="156" fill="#1A7F37">[OK]</text>
+      <text x="812" y="156" fill="#59636E">desktop 1024x768x32 · dock</text>
+      <text x="772" y="184" fill="#0969DA">sereos&gt;</text>
+      <rect x="850" y="172" width="9" height="16" fill="#1F2328"/>
+    </g>
+  </g>
+
+  <!-- rastro de pac-dots -->
+  <g>
+    <circle cx="806" cy="278" r="4.5" fill="#C3CAD4"/>
+    <circle cx="842" cy="278" r="4.5" fill="#C3CAD4"/>
+    <circle cx="878" cy="278" r="4.5" fill="#C3CAD4"/>
+    <circle cx="914" cy="278" r="4.5" fill="#C3CAD4"/>
+    <circle cx="950" cy="278" r="4.5" fill="#C3CAD4"/>
+    <circle cx="986" cy="278" r="4.5" fill="#C3CAD4"/>
+    <circle cx="1022" cy="278" r="4.5" fill="#C3CAD4"/>
+    <path d="M1086 278 L1104.4 265.5 A22 22 0 1 0 1104.4 290.5 Z" fill="#0969DA"/>
+  </g>
+</svg>
