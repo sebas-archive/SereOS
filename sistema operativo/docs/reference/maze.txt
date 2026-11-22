@@ -1,0 +1,115 @@
+SereOS - PAC-MAN SereOS: laberinto de referencia (Paku-Paku, VB6)
+==============================================================================
+
+Reconstruido por gen_maze.py a partir de cMazeBuilder.cls::BuildMaze
+(lineas 35-196) respetando el algoritmo original (mismos bits de tile).
+
+Dimensiones jugables: 28 columnas x 31 filas (VB: Col 1..28, Row 1..31).
+gTiles(-1..COLS+1, ROWS) = gTiles(-1..30, 32). SQ_SZ = 8 px logicos/tile.
+Superficie del laberinto dibujada: (COLS+1) x (ROWS+1.5) tiles = 30x33.5.
+
+Leyenda del caracter original de cMazeBuilder.cls:38:
+  O  pared interior gruesa            o  borde exterior/pared fina
+  p  puerta de la casa de fantasmas   P  interior de la casa (pen)
+  .  punto (dot, 10 pts)              +  power pill (50 pts)
+  T  tunel lateral                    (espacio) camino sin punto
+  X  zona externa no jugable (muro de fuera, sin colision de juego)
+
+Coordenadas en este fichero: FILA 0-based (0..30) y COLUMNA 0-based (0..27);
+sumar 1 para obtener la coordenada VB original (Col/Row).
+
+     0         1         2       
+     0123456789012345678901234567
+    +----------------------------+
+  0 |oooooooooooooooooooooooooooo|
+  1 |o............OO............o|
+  2 |o.OOOO.OOOOO.OO.OOOOO.OOOO.o|
+  3 |o+OOOO.OOOOO.OO.OOOOO.OOOO+o|
+  4 |o.OOOO.OOOOO.OO.OOOOO.OOOO.o|
+  5 |o..........................o|
+  6 |o.OOOO.OO.OOOOOOOO.OO.OOOO.o|
+  7 |o.OOOO.OO.OOOOOOOO.OO.OOOO.o|
+  8 |o......OO....OO....OO......o|
+  9 |oooooo.OOOOO OO OOOOO.oooooo|
+ 10 |XXXXXo.OOOOO OO OOOOO.oXXXXX|
+ 11 |XXXXXo.OO          OO.oXXXXX|
+ 12 |XXXXXo.OO oooppooo OO.oXXXXX|
+ 13 |oooooo.OO oPPPPPPo OO.oooooo|
+ 14 |TTTTTT.   oPPPPPPo   .TTTTTT|
+ 15 |oooooo.OO oPPPPPPo OO.oooooo|
+ 16 |XXXXXo.OO oooooooo OO.oXXXXX|
+ 17 |XXXXXo.OO          OO.oXXXXX|
+ 18 |XXXXXo.OO OOOOOOOO OO.oXXXXX|
+ 19 |oooooo.OO OOOOOOOO OO.oooooo|
+ 20 |o............OO............o|
+ 21 |o.OOOO.OOOOO.OO.OOOOO.OOOO.o|
+ 22 |o.OOOO.OOOOO.OO.OOOOO.OOOO.o|
+ 23 |o+..OO.......  .......OO..+o|
+ 24 |oOO.OO.OO.OOOOOOOO.OO.OO.OOo|
+ 25 |oOO.OO.OO.OOOOOOOO.OO.OO.OOo|
+ 26 |o......OO....OO....OO......o|
+ 27 |o.OOOOOOOOOO.OO.OOOOOOOOOO.o|
+ 28 |o.OOOOOOOOOO.OO.OOOOOOOOOO.o|
+ 29 |o..........................o|
+ 30 |oooooooooooooooooooooooooooo|
+    +----------------------------+
+     0         1         2       
+     0123456789012345678901234567
+
+Mapa semantico (misma rejilla, derivado del bitmask que usa el juego):
+  #  pared/void (tile 0)    .  dot    o  power pill
+  =  tunel                  :  camino sin punto    H  casa (pen)
+  0  ############################
+  1  #............##............#
+  2  #.####.#####.##.#####.####.#
+  3  #o####.#####.##.#####.####o#
+  4  #.####.#####.##.#####.####.#
+  5  #..........................#
+  6  #.####.##.########.##.####.#
+  7  #.####.##.########.##.####.#
+  8  #......##....##....##......#
+  9  ######.#####:##:#####.######
+ 10  ######.#####:##:#####.######
+ 11  ######.##::::::::::##.######
+ 12  ######.##:########:##.######
+ 13  ######.##:#HHHHHH#:##.######
+ 14  ======.:::#HHHHHH#:::.======
+ 15  ######.##:#HHHHHH#:##.######
+ 16  ######.##:########:##.######
+ 17  ######.##::::::::::##.######
+ 18  ######.##:########:##.######
+ 19  ######.##:########:##.######
+ 20  #............##............#
+ 21  #.####.#####.##.#####.####.#
+ 22  #.####.#####.##.#####.####.#
+ 23  #o..##.......::.......##..o#
+ 24  ###.##.##.########.##.##.###
+ 25  ###.##.##.########.##.##.###
+ 26  #......##....##....##......#
+ 27  #.##########.##.##########.#
+ 28  #.##########.##.##########.#
+ 29  #..........................#
+ 30  ############################
+
+Metadatos exactos (coordenadas VB 1-based, tal como las usa el codigo):
+  Filas VB usadas: 1..31 (la fila 32 de gTiles queda a 0).
+  Columnas VB usadas: 1..28 (col 29 = sentinela a 0; cols 0/-1/29/30 solo tunel).
+  Casa de fantasmas (pen): cols 12..17, filas 14..16  (eIsPen=128)
+  Puerta del pen: fila 13, cols 14 y 15 (caracter 'p' = pared fina)
+  Tunel (fila 15): tiles de camino en cols 1..6 y 23..28
+    sentinelas jugables: gTiles(0,15)=74, gTiles(-1,15)=72,
+                        gTiles(29,15)=74, gTiles(30,15)=66
+    wrap horizontal: si x > 30*SQ_SZ (=240) -> x = 0; si x < 0 -> x = 240
+    (28*SQ_SZ = 224 es el ancho del laberinto; el tunele usa 30 tiles)
+  Dots: 240   Power pills: 4 en (col 2, fila 4), (col 2, fila 24), (col 27, fila 4), (col 27, fila 24)
+  Inicio de Pac-Man: VB (col 14.5, fila 24) -> x8 = 120, y8 = 196
+    cGame.cls:  Pacman.Init 14.5, 24, eLeft
+  Inicios de fantasmas (cGhosts.cls:46-51), x8 = col*8+4, y8 = fila*8+4:
+    Blinky (SHADOW): VB (14.5, 12) -> x8=120, y8=100, dir eUp
+    Pinky  (SPEEDY): VB (14.5, 15) -> x8=120, y8=124, dir eDown
+    Inky   (BASHFUL): VB (12.5, 15) -> x8=104, y8=124, dir eUp
+    Clyde  (POKEY):  VB (16.5, 15) -> x8=136, y8=124, dir eUp
+  Fruta (cGame.cls DrawBonusFruit/CheckCollisions): centro VB
+    (col 15, fila 18.5) -> x8 = 120, y8 = 148; colision en tile (15,18)
+
+Conteos de validacion: 240 dots (arcade: 240) + 4 power pills = 244 objetos.

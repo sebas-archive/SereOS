@@ -1,0 +1,162 @@
+{
+  "iso": "/home/t1an/Descargas/sereos02/build/qa_audio/shared_iso/sereos.iso",
+  "iso_md5_note": "copia congelada de sistema operativo/sereos.iso",
+  "checks": {
+    "AUDIO_TEST": "AUDIO_TEST:sb16",
+    "AUDIO_DETAIL": "AUDIO_DETAIL:SB16 0x220 IRQ5 DMA1",
+    "AUDIO_TEST_DONE": "AUDIO_TEST_DONE tones=4 irq=4 pit_hz=100 pit_ticks=79",
+    "boot_audio": "[OK] Audio: SB16 0x220 IRQ5 DMA1",
+    "fatal_markers": []
+  },
+  "wav_analysis": {
+    "file": "/home/t1an/Descargas/sereos02/build/qa_audio/evidence/shared_sb16.wav",
+    "rate": 44100,
+    "channels": 2,
+    "bits": 16,
+    "frames": 34742,
+    "seconds_captured": 0.788,
+    "peak": 23296.0,
+    "rms_full": 22190.3,
+    "peak_dbfs": -3.0,
+    "rms_dbfs": -3.4,
+    "active_frames": 33455,
+    "active_seconds": 0.759,
+    "windows": 12,
+    "tones": [
+      {
+        "start_s": 0.0,
+        "dur_s": 0.12,
+        "freq_hz": 441.7,
+        "peak": 23299
+      },
+      {
+        "start_s": 0.06,
+        "dur_s": 0.12,
+        "freq_hz": 441.7,
+        "peak": 23348
+      },
+      {
+        "start_s": 0.12,
+        "dur_s": 0.12,
+        "freq_hz": 441.7,
+        "peak": 23299
+      },
+      {
+        "start_s": 0.18,
+        "dur_s": 0.12,
+        "freq_hz": 658.3,
+        "peak": 23453
+      },
+      {
+        "start_s": 0.24,
+        "dur_s": 0.12,
+        "freq_hz": 658.3,
+        "peak": 23326
+      },
+      {
+        "start_s": 0.3,
+        "dur_s": 0.12,
+        "freq_hz": 658.3,
+        "peak": 23317
+      },
+      {
+        "start_s": 0.36,
+        "dur_s": 0.12,
+        "freq_hz": 883.3,
+        "peak": 23370
+      },
+      {
+        "start_s": 0.42,
+        "dur_s": 0.12,
+        "freq_hz": 883.3,
+        "peak": 23352
+      },
+      {
+        "start_s": 0.48,
+        "dur_s": 0.12,
+        "freq_hz": 883.3,
+        "peak": 23348
+      },
+      {
+        "start_s": 0.54,
+        "dur_s": 0.12,
+        "freq_hz": 883.3,
+        "peak": 23313
+      },
+      {
+        "start_s": 0.6,
+        "dur_s": 0.12,
+        "freq_hz": 1316.7,
+        "peak": 23335
+      },
+      {
+        "start_s": 0.66,
+        "dur_s": 0.12,
+        "freq_hz": 1316.7,
+        "peak": 23317
+      }
+    ],
+    "distinct_freqs": [
+      442,
+      658,
+      883,
+      1317
+    ],
+    "expected": [
+      {
+        "want_hz": 440,
+        "got_hz": 441.7,
+        "ok": true
+      },
+      {
+        "want_hz": 660,
+        "got_hz": 658.3,
+        "ok": true
+      },
+      {
+        "want_hz": 880,
+        "got_hz": 883.3,
+        "ok": true
+      },
+      {
+        "want_hz": 1320,
+        "got_hz": 1316.7,
+        "ok": true
+      }
+    ],
+    "all_expected_found": true,
+    "non_silent": true
+  },
+  "serial_lines": [
+    "[OK] Arranque Multiboot verificado (GRUB 2)",
+    "[OK] GDT propia: 5 segmentos (kernel y usuario)",
+    "[OK] IDT: 32 excepciones + 16 IRQ (PIC remapeado a 32-47)",
+    "[OK] Temporizador PIT a 100 Hz (IRQ 0)",
+    "[OK] Teclado PS/2 con eventos (IRQ 1)",
+    "[OK] Raton PS/2 con eventos (IRQ 12)",
+    "[OK] Reloj CMOS RTC",
+    "[OK] Framebuffer grafico 1024x768x32 validado",
+    "[OK] Allocator de marcos fisicos inicializado",
+    "[OK] Heap del kernel (kmalloc/kfree) inicializado",
+    "[OK] Paginacion activada (identidad, PSE 4 MiB)",
+    "[OK] RAMFS montado en /",
+    "[OK] Planificador cooperativo round-robin listo",
+    "[OK] Interrupciones habilitadas",
+    "[OK] Audio: SB16 0x220 IRQ5 DMA1",
+    "[OK] Motor grafico nativo inicializado",
+    "[OK] Aplicaciones del escritorio registradas",
+    "DESKTOP_INIT",
+    "DESKTOP_READY",
+    "SEREOS_BOOT_OK mem=255MiB",
+    "SPLASH_DONE",
+    "GUI_READY",
+    "GUI_LOOP",
+    "TERM_READY",
+    "APP_OPEN:terminal",
+    "AUDIO_TEST:sb16",
+    "AUDIO_DETAIL:SB16 0x220 IRQ5 DMA1",
+    "AUDIO_TEST_DONE tones=4 irq=4 pit_hz=100 pit_ticks=79",
+    "APP_CLOSE:terminal",
+    "APP_OPEN:about"
+  ]
+}

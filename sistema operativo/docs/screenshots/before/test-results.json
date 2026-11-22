@@ -1,0 +1,1036 @@
+{
+  "suite": "SereOS v1.0 QEMU verification",
+  "timestamp": "2026-11-19T23:39:04",
+  "run_id": "20261119-233701",
+  "iso": {
+    "path": "/tmp/sereos_before/old_design/sereos.iso",
+    "size": 34570240,
+    "mtime": 1795149215.584283
+  },
+  "qemu": "QEMU emulator version 11.1.3",
+  "kvm_mode": "auto",
+  "kvm_used": true,
+  "mouse_worked": false,
+  "raw_artifacts": "eliminados en la entrega (solo PNG finales)",
+  "cases": [
+    {
+      "key": "boot",
+      "title": "Arranque, splash y escritorio",
+      "result": "pass",
+      "duration_s": 5.46,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "QEMU arrancado",
+          "ok": true,
+          "detail": "KVM=si, serial=docs/screenshots/before/raw/20261119-233701/gfx/serial.log"
+        },
+        {
+          "text": "captura 00_grub_menu",
+          "ok": true,
+          "detail": "720x400, 2 colores, 6.69% no negro, menu GRUB (informativa)"
+        },
+        {
+          "text": "marcador SEREOS_BOOT_OK",
+          "ok": true,
+          "detail": "linea 19: SEREOS_BOOT_OK mem=255MiB"
+        },
+        {
+          "text": "captura 01_splash",
+          "ok": true,
+          "detail": "1024x768, 451 colores, 91.02% no negro, pantalla de arranque"
+        },
+        {
+          "text": "marcador SPLASH_DONE",
+          "ok": true,
+          "detail": "linea 20: SPLASH_DONE"
+        },
+        {
+          "text": "marcador GUI_READY",
+          "ok": true,
+          "detail": "linea 21: GUI_READY"
+        },
+        {
+          "text": "marcador DESKTOP_READY",
+          "ok": true,
+          "detail": "linea 18: DESKTOP_READY"
+        },
+        {
+          "text": "captura 02_desktop",
+          "ok": true,
+          "detail": "1024x768, 1628 colores, 99.99% no negro, escritorio SereOS"
+        },
+        {
+          "text": "captura 02b_topbar_dock",
+          "ok": true,
+          "detail": "1024x200, 1045 colores, zoom barra superior + dock"
+        },
+        {
+          "text": "sin excepcion/panico durante el arranque",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "00_grub_menu",
+        "01_splash",
+        "02_desktop",
+        "02b_topbar_dock"
+      ]
+    },
+    {
+      "key": "terminal",
+      "title": "Terminal grafica (F2) y comandos",
+      "result": "pass",
+      "duration_s": 7.43,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F2 abre la terminal (APP_OPEN:terminal)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "verificacion interna (term_open)",
+          "ok": null,
+          "detail": "1024x768, 1573 colores, 99.99% no negro, terminal abierta"
+        },
+        {
+          "text": "verificacion interna (term_help)",
+          "ok": null,
+          "detail": "1024x768, 1569 colores, 99.99% no negro, comando 'help'"
+        },
+        {
+          "text": "el comando 'help' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 3.2813%"
+        },
+        {
+          "text": "verificacion interna (term_ls)",
+          "ok": null,
+          "detail": "1024x768, 1569 colores, 99.99% no negro, comando 'ls'"
+        },
+        {
+          "text": "el comando 'ls' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 2.8816%"
+        },
+        {
+          "text": "verificacion interna (term_date)",
+          "ok": null,
+          "detail": "1024x768, 1569 colores, 99.99% no negro, comando 'date'"
+        },
+        {
+          "text": "el comando 'date' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 2.5842%"
+        },
+        {
+          "text": "verificacion interna (term_free)",
+          "ok": null,
+          "detail": "1024x768, 1569 colores, 99.99% no negro, comando 'free'"
+        },
+        {
+          "text": "el comando 'free' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 2.8193%"
+        },
+        {
+          "text": "verificacion interna (term_dmesg)",
+          "ok": null,
+          "detail": "1024x768, 1569 colores, 99.99% no negro, comando 'dmesg'"
+        },
+        {
+          "text": "el comando 'dmesg' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 3.6219%"
+        },
+        {
+          "text": "captura 03_terminal",
+          "ok": true,
+          "detail": "1024x768, 1569 colores"
+        },
+        {
+          "text": "comandos de terminal sin excepcion/panico",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "03_terminal"
+      ]
+    },
+    {
+      "key": "files",
+      "title": "Gestor de archivos (F1)",
+      "result": "pass",
+      "duration_s": 3.19,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F1 abre el gestor de archivos (APP_OPEN:files)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "captura 04_files",
+          "ok": true,
+          "detail": "1024x768, 1646 colores, 99.99% no negro, explorador del RAMFS en /"
+        },
+        {
+          "text": "captura 04b_files_home",
+          "ok": true,
+          "detail": "1024x768, 1612 colores, 99.99% no negro, explorador en /home"
+        },
+        {
+          "text": "el explorador navega a /home",
+          "ok": true,
+          "detail": "diferencia = 1.5719%"
+        }
+      ],
+      "screenshots": [
+        "04_files",
+        "04b_files_home"
+      ]
+    },
+    {
+      "key": "monitor",
+      "title": "Monitor del sistema (F3)",
+      "result": "pass",
+      "duration_s": 1.9,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F3 abre el monitor del sistema (APP_OPEN:monitor)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "captura 05_monitor",
+          "ok": true,
+          "detail": "1024x768, 1594 colores, 99.96% no negro, monitor del sistema"
+        }
+      ],
+      "screenshots": [
+        "05_monitor"
+      ]
+    },
+    {
+      "key": "about",
+      "title": "Acerca de SereOS (F5)",
+      "result": "pass",
+      "duration_s": 2.12,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F5 abre 'Acerca de' (APP_OPEN:about)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "captura 06_about",
+          "ok": true,
+          "detail": "1024x768, 1713 colores, 99.51% no negro, acerca de SereOS (14/14 + audio)"
+        }
+      ],
+      "screenshots": [
+        "06_about"
+      ]
+    },
+    {
+      "key": "game",
+      "title": "Pacman SereOS (F4)",
+      "result": "pass",
+      "duration_s": 57.9,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F4 abre Pacman SereOS (APP_OPEN:game)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "marcador GAME_MENU (pantalla de titulo)",
+          "ok": true,
+          "detail": "GAME_MENU"
+        },
+        {
+          "text": "captura 07_pacman_titulo",
+          "ok": true,
+          "detail": "1024x768, 1438 colores, 99.99% no negro, pantalla de titulo PACMAN SereOS"
+        },
+        {
+          "text": "Enter inicia la partida (GAME_START)",
+          "ok": true,
+          "detail": "GAME_START"
+        },
+        {
+          "text": "captura 08_pacman_ready",
+          "ok": true,
+          "detail": "1024x768, 1451 colores, 99.94% no negro, READY!: laberinto, Pacman, 4 fantasmas y HUD"
+        },
+        {
+          "text": "captura 08b_pacman_partida",
+          "ok": true,
+          "detail": "1024x768, 1452 colores, 99.99% no negro, partida en marcha con dots"
+        },
+        {
+          "text": "la partida cambia la pantalla respecto al titulo",
+          "ok": true,
+          "detail": "diferencia = 65.0271%"
+        },
+        {
+          "text": "el laberinto muestra dots",
+          "ok": true,
+          "detail": "1872 px de color de dot en (250, 133, 452, 476)"
+        },
+        {
+          "text": "los 4 fantasmas son visibles",
+          "ok": true,
+          "detail": "{'blinky_rojo': 85, 'pinky_rosa': 85, 'inky_cian': 85, 'clyde_naranja': 86}"
+        },
+        {
+          "text": "power pills visibles en el laberinto",
+          "ok": true,
+          "detail": "308 px de power pill"
+        },
+        {
+          "text": "verificacion interna (eat1)",
+          "ok": null,
+          "detail": "1024x768, 1452 colores, 99.99% no negro, comiendo dots al inicio del pasillo"
+        },
+        {
+          "text": "captura 09_pacman_comiendo",
+          "ok": true,
+          "detail": "1024x768, 1452 colores, 99.99% no negro, comiendo dots (puntuacion > 0)"
+        },
+        {
+          "text": "captura 10_pacman_frightened",
+          "ok": true,
+          "detail": "1024x768, 1441 colores, 99.99% no negro, power pill: fantasmas asustados (azules)"
+        },
+        {
+          "text": "power pill comido: fantasmas azules (frightened)",
+          "ok": true,
+          "detail": "cuerpo asustado=418 px, cuerpos normales=0 px"
+        },
+        {
+          "text": "Pacman come dots (dos capturas distintas)",
+          "ok": true,
+          "detail": "diferencia = 0.2650%"
+        },
+        {
+          "text": "hay menos dots en la segunda captura",
+          "ok": true,
+          "detail": "pixeles de dot: 1856 -> 1784"
+        },
+        {
+          "text": "Esc pausa la partida (GAME_PAUSE)",
+          "ok": true,
+          "detail": "GAME_PAUSE"
+        },
+        {
+          "text": "captura 11_pacman_pausa",
+          "ok": true,
+          "detail": "1024x768, 1459 colores, 99.99% no negro, partida en pausa"
+        },
+        {
+          "text": "la pausa cambia la pantalla",
+          "ok": true,
+          "detail": "diferencia = 65.1132%"
+        },
+        {
+          "text": "la partida se reanuda tras la pausa",
+          "ok": true,
+          "detail": "diferencia = 65.113%"
+        },
+        {
+          "text": "captura 12_pacman_gameover",
+          "ok": true,
+          "detail": "1024x768, 1455 colores, 99.99% no negro, fin de partida (vidas agotadas)"
+        },
+        {
+          "text": "se alcanzo GAME_OVER dejando que los fantasmas atrapen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "Q/Esc vuelve al escritorio (GAME_EXIT)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "verificacion interna (desktop_after_game)",
+          "ok": null,
+          "detail": "1024x768, 1712 colores, 99.51% no negro, escritorio tras salir del juego"
+        },
+        {
+          "text": "la escena del juego desaparece del escritorio",
+          "ok": true,
+          "detail": "diferencia = 71.176%"
+        }
+      ],
+      "screenshots": [
+        "07_pacman_titulo",
+        "08_pacman_ready",
+        "08b_pacman_partida",
+        "09_pacman_comiendo",
+        "10_pacman_frightened",
+        "11_pacman_pausa",
+        "12_pacman_gameover"
+      ]
+    },
+    {
+      "key": "audio",
+      "title": "Audio del juego: captura WAV (SB16)",
+      "result": "pass",
+      "duration_s": 15.52,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "QEMU con SB16 + backend WAV arrancado",
+          "ok": true,
+          "detail": "wav=audio-capture.wav"
+        },
+        {
+          "text": "partida iniciada con audio activo",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "movimiento de Pacman durante ~10 s para generar audio",
+          "ok": true,
+          "detail": "17 pulsaciones de direccion"
+        },
+        {
+          "text": "audio-capture.wav existe",
+          "ok": true,
+          "detail": "1589724 bytes"
+        },
+        {
+          "text": "WAV con datos PCM",
+          "ok": true,
+          "detail": "397420 frames a 44100 Hz, 2 canal(es), 2 bytes/muestra"
+        },
+        {
+          "text": "duracion de la captura >= 0.3 s",
+          "ok": true,
+          "detail": "9.01 s"
+        },
+        {
+          "text": "muestras no silenciosas (peak/RMS)",
+          "ok": true,
+          "detail": "peak=23296, rms=18245.99, 2 bytes/muestra"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "window_close",
+      "title": "Cierre de ventanas",
+      "result": "pass",
+      "duration_s": 3.13,
+      "skip_reason": null,
+      "error": null,
+      "method": "keyboard_ctrl_w",
+      "steps": [
+        {
+          "text": "captura 13_multiventana",
+          "ok": true,
+          "detail": "1024x768, 1713 colores, 99.51% no negro, 4 ventanas abiertas: terminal, files, monitor, about"
+        },
+        {
+          "text": "ventanas abiertas antes de cerrar",
+          "ok": null,
+          "detail": "terminal, files, monitor, about"
+        },
+        {
+          "text": "ventanas cerradas (4): monitor, files, terminal, about",
+          "ok": true,
+          "detail": "metodo: atajo de teclado F6 + Ctrl+W; quedan abiertas: ninguna"
+        },
+        {
+          "text": "verificacion interna (desktop_windows_closed)",
+          "ok": null,
+          "detail": "1024x768, 1621 colores, 99.99% no negro, escritorio tras cerrar ventanas"
+        },
+        {
+          "text": "todas las ventanas cerradas",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "sin excepcion/panico al cerrar ventanas",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "13_multiventana"
+      ]
+    },
+    {
+      "key": "window_focus",
+      "title": "Enfoque F6 y minimizar F7",
+      "result": "pass",
+      "duration_s": 2.85,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F2/F1 abren terminal y archivos para la prueba de foco",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "verificacion interna (win_two_open)",
+          "ok": null,
+          "detail": "1024x768, 1658 colores, 99.99% no negro, terminal + archivos"
+        },
+        {
+          "text": "verificacion interna (win_focus)",
+          "ok": null,
+          "detail": "1024x768, 1654 colores, 99.93% no negro, F6 siguiente ventana"
+        },
+        {
+          "text": "F6 cambia la ventana enfocada",
+          "ok": true,
+          "detail": "diferencia = 45.4772%"
+        },
+        {
+          "text": "verificacion interna (win_minimized)",
+          "ok": null,
+          "detail": "1024x768, 1665 colores, 99.99% no negro, F7 minimizar ventana"
+        },
+        {
+          "text": "F7 minimiza la ventana activa",
+          "ok": true,
+          "detail": "diferencia = 45.4772%"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "text_fallback",
+      "title": "Fallback de modo texto (GRUB 2a entrada)",
+      "result": "pass",
+      "duration_s": 2.83,
+      "skip_reason": null,
+      "error": null,
+      "method": "GRUB teclado (down+ret), intento 1",
+      "steps": [
+        {
+          "text": "2a entrada GRUB -> SEREOS_TEXT_MODE",
+          "ok": true,
+          "detail": "SEREOS_TEXT_MODE"
+        },
+        {
+          "text": "captura 14_text_mode",
+          "ok": true,
+          "detail": "720x400, 5 colores, 6.19% no negro, consola VGA de respaldo"
+        },
+        {
+          "text": "verificacion interna (text_mode_help)",
+          "ok": null,
+          "detail": "720x400, 5 colores, 10.70% no negro, shell de texto: help"
+        },
+        {
+          "text": "la shell de texto responde a 'help'",
+          "ok": true,
+          "detail": "diferencia = 7.4896%"
+        },
+        {
+          "text": "sin excepcion/panico en modo texto",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "14_text_mode"
+      ]
+    },
+    {
+      "key": "panic",
+      "title": "Panico controlado (div0 real desde la terminal)",
+      "result": "pass",
+      "duration_s": 8.07,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "verificacion interna (panic_before)",
+          "ok": null,
+          "detail": "1024x768, 1566 colores, 99.99% no negro, terminal antes de div0"
+        },
+        {
+          "text": "div0 provoca SEREOS_EXCEPTION",
+          "ok": true,
+          "detail": "SEREOS_EXCEPTION Excepcion 0: Division por cero"
+        },
+        {
+          "text": "captura 15_panic",
+          "ok": true,
+          "detail": "1024x768, 45 colores, 100.00% no negro, pantalla de panico (division por cero)"
+        },
+        {
+          "text": "la pantalla de panico sustituye a la terminal",
+          "ok": true,
+          "detail": "diferencia = 100.00%"
+        },
+        {
+          "text": "la excepcion fue esperada y controlada",
+          "ok": true,
+          "detail": "div0 es una prueba intencionada de la IDT"
+        }
+      ],
+      "screenshots": [
+        "15_panic"
+      ]
+    },
+    {
+      "key": "resolution_1280",
+      "title": "Resolucion 1280x1024 (ISO temporal en /tmp)",
+      "result": "pass",
+      "duration_s": 6.13,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ISO temporal 1280x1024 generada en /tmp",
+          "ok": true,
+          "detail": "/tmp/sereos_1280x1024_5j3y0wun/sereos-1280x1024.iso"
+        },
+        {
+          "text": "captura 16_resolution_1280x1024",
+          "ok": true,
+          "detail": "1280x1024, 1617 colores, 100.00% no negro, resolucion real 1280x1024"
+        },
+        {
+          "text": "framebuffer a 1280x1024",
+          "ok": true,
+          "detail": "captura = 1280x1024"
+        },
+        {
+          "text": "sin excepcion/panico en la resolucion alternativa",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "16_resolution_1280x1024"
+      ]
+    },
+    {
+      "key": "resolution_800",
+      "title": "Resolucion 800x600 (ISO temporal en /tmp)",
+      "result": "pass",
+      "duration_s": 6.02,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ISO temporal 800x600 generada en /tmp",
+          "ok": true,
+          "detail": "/tmp/sereos_800x600_4dp508ej/sereos-800x600.iso"
+        },
+        {
+          "text": "captura 17_resolution_800x600",
+          "ok": true,
+          "detail": "800x600, 1309 colores, 99.99% no negro, resolucion real 800x600"
+        },
+        {
+          "text": "framebuffer a 800x600",
+          "ok": true,
+          "detail": "captura = 800x600"
+        },
+        {
+          "text": "sin excepcion/panico en la resolucion alternativa",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "17_resolution_800x600"
+      ]
+    },
+    {
+      "key": "no_fatal",
+      "title": "Sin excepciones ni panicos inesperados",
+      "result": "pass",
+      "duration_s": 0.0,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ningun SEREOS_EXCEPTION/SEREOS_PANIC inesperado en los logs",
+          "ok": true,
+          "detail": "5 logs limpios (excepcion esperada de la prueba panic: panic(div0): SEREOS_EXCEPTION Excepcion 0: Division por cero)"
+        }
+      ],
+      "screenshots": []
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "00_grub_menu",
+      "png": "docs/screenshots/before/00_grub_menu.png",
+      "blackish": false,
+      "width": 720,
+      "height": 400,
+      "distinct_colors": 2,
+      "non_black_ratio": 0.066941,
+      "mean_luma": 11.246,
+      "mean_rgb": [
+        11.25,
+        11.25,
+        11.25
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "01_splash",
+      "png": "docs/screenshots/before/01_splash.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 451,
+      "non_black_ratio": 0.910177,
+      "mean_luma": 16.592,
+      "mean_rgb": [
+        11.1,
+        16.88,
+        29.94
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02_desktop",
+      "png": "docs/screenshots/before/02_desktop.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1628,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 25.08,
+      "mean_rgb": [
+        15.73,
+        25.84,
+        45.05
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02b_topbar_dock",
+      "png": "docs/screenshots/before/02b_topbar_dock.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 200,
+      "distinct_colors": 1045,
+      "non_black_ratio": 0.999785,
+      "mean_luma": 28.577,
+      "mean_rgb": [
+        28.02,
+        26.27,
+        53.08
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "03_terminal",
+      "png": "docs/screenshots/before/03_terminal.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1569,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 27.139,
+      "mean_rgb": [
+        19.39,
+        27.72,
+        44.16
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "04_files",
+      "png": "docs/screenshots/before/04_files.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1646,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 28.731,
+      "mean_rgb": [
+        20.04,
+        29.34,
+        48.25
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "04b_files_home",
+      "png": "docs/screenshots/before/04b_files_home.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1612,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 28.511,
+      "mean_rgb": [
+        19.79,
+        29.13,
+        48.03
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "05_monitor",
+      "png": "docs/screenshots/before/05_monitor.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1594,
+      "non_black_ratio": 0.999648,
+      "mean_luma": 32.642,
+      "mean_rgb": [
+        23.21,
+        33.41,
+        52.76
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "06_about",
+      "png": "docs/screenshots/before/06_about.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1713,
+      "non_black_ratio": 0.995083,
+      "mean_luma": 34.883,
+      "mean_rgb": [
+        24.97,
+        35.82,
+        54.79
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "07_pacman_titulo",
+      "png": "docs/screenshots/before/07_pacman_titulo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1438,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 27.817,
+      "mean_rgb": [
+        17.53,
+        28.73,
+        49.07
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "08_pacman_ready",
+      "png": "docs/screenshots/before/08_pacman_ready.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1451,
+      "non_black_ratio": 0.999418,
+      "mean_luma": 35.607,
+      "mean_rgb": [
+        21.84,
+        36.94,
+        62.91
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "08b_pacman_partida",
+      "png": "docs/screenshots/before/08b_pacman_partida.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1452,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 35.511,
+      "mean_rgb": [
+        21.6,
+        36.87,
+        63.03
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "09_pacman_comiendo",
+      "png": "docs/screenshots/before/09_pacman_comiendo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1452,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 35.509,
+      "mean_rgb": [
+        21.6,
+        36.87,
+        63.02
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "10_pacman_frightened",
+      "png": "docs/screenshots/before/10_pacman_frightened.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1441,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 35.369,
+      "mean_rgb": [
+        21.42,
+        36.73,
+        63.01
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "11_pacman_pausa",
+      "png": "docs/screenshots/before/11_pacman_pausa.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1459,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 28.165,
+      "mean_rgb": [
+        17.95,
+        29.2,
+        48.01
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "12_pacman_gameover",
+      "png": "docs/screenshots/before/12_pacman_gameover.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1455,
+      "non_black_ratio": 0.999921,
+      "mean_luma": 28.847,
+      "mean_rgb": [
+        18.89,
+        29.75,
+        49.19
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "13_multiventana",
+      "png": "docs/screenshots/before/13_multiventana.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1713,
+      "non_black_ratio": 0.995083,
+      "mean_luma": 34.878,
+      "mean_rgb": [
+        24.97,
+        35.82,
+        54.78
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "14_text_mode",
+      "png": "docs/screenshots/before/14_text_mode.png",
+      "blackish": false,
+      "width": 720,
+      "height": 400,
+      "distinct_colors": 5,
+      "non_black_ratio": 0.061934,
+      "mean_luma": 5.736,
+      "mean_rgb": [
+        3.24,
+        5.88,
+        11.72
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "15_panic",
+      "png": "docs/screenshots/before/15_panic.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 45,
+      "non_black_ratio": 1.0,
+      "mean_luma": 15.516,
+      "mean_rgb": [
+        39.91,
+        8.4,
+        14.23
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "16_resolution_1280x1024",
+      "png": "docs/screenshots/before/16_resolution_1280x1024.png",
+      "blackish": false,
+      "width": 1280,
+      "height": 1024,
+      "distinct_colors": 1617,
+      "non_black_ratio": 0.999953,
+      "mean_luma": 23.337,
+      "mean_rgb": [
+        14.73,
+        24.06,
+        41.5
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "17_resolution_800x600",
+      "png": "docs/screenshots/before/17_resolution_800x600.png",
+      "blackish": false,
+      "width": 800,
+      "height": 600,
+      "distinct_colors": 1309,
+      "non_black_ratio": 0.999871,
+      "mean_luma": 22.771,
+      "mean_rgb": [
+        14.82,
+        23.56,
+        38.38
+      ],
+      "black_level": 16
+    }
+  ],
+  "summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0
+  }
+}

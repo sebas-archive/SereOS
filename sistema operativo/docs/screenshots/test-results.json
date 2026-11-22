@@ -1,0 +1,1970 @@
+{
+  "suite": "SereOS v1.0 QEMU verification",
+  "timestamp": "2026-11-20T04:23:48",
+  "run_id": "20261120-041937",
+  "iso": {
+    "path": "/tmp/qa_final6/sereos_final6.iso",
+    "size": 36691968,
+    "mtime": 1795166370.8046858
+  },
+  "qemu": "QEMU emulator version 11.1.3",
+  "kvm_mode": "auto",
+  "kvm_used": true,
+  "mouse_worked": false,
+  "raw_artifacts": "eliminados en la entrega (solo PNG finales)",
+  "cases": [
+    {
+      "key": "boot",
+      "title": "Arranque, splash y escritorio",
+      "result": "pass",
+      "duration_s": 8.68,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "QEMU arrancado",
+          "ok": true,
+          "detail": "KVM=si, serial=docs/screenshots/raw/20261120-041937/gfx/serial.log"
+        },
+        {
+          "text": "captura 00_grub_menu",
+          "ok": true,
+          "detail": "720x400, 2 colores, 6.69% no negro, menu GRUB (informativa)"
+        },
+        {
+          "text": "marcador SEREOS_BOOT_OK",
+          "ok": true,
+          "detail": "linea 19: SEREOS_BOOT_OK mem=255MiB"
+        },
+        {
+          "text": "captura 01_splash",
+          "ok": true,
+          "detail": "1024x768, 538 colores, 100.00% no negro, pantalla de arranque con logo oficial"
+        },
+        {
+          "text": "logo oficial en el splash (azul de marca + proporcion)",
+          "ok": true,
+          "detail": "bbox=88x88, aspecto=1.00 (oficial 1.07)"
+        },
+        {
+          "text": "marcador SPLASH_DONE",
+          "ok": true,
+          "detail": "linea 20: SPLASH_DONE"
+        },
+        {
+          "text": "marcador GUI_READY",
+          "ok": true,
+          "detail": "linea 21: GUI_READY"
+        },
+        {
+          "text": "marcador DESKTOP_READY",
+          "ok": true,
+          "detail": "linea 18: DESKTOP_READY"
+        },
+        {
+          "text": "captura 02_desktop",
+          "ok": true,
+          "detail": "1024x768, 985 colores, 98.34% no negro, escritorio SereOS"
+        },
+        {
+          "text": "captura 02b_topbar_dock",
+          "ok": true,
+          "detail": "1024x200, 916 colores, zoom barra superior + dock"
+        },
+        {
+          "text": "captura 02c_dock_tooltip",
+          "ok": true,
+          "detail": "1024x768, 1211 colores, 98.34% no negro, tooltip del dock: PAC-MAN SereOS"
+        },
+        {
+          "text": "marca ribbon ~9x10 alineada con el wordmark (PNG sin fondo azul)",
+          "ok": true,
+          "detail": "glifo bbox=9x10, gap=9px, centro glifo_y=13 vs wordmark_y=14 (desvio 1px), azul_topbar=0px"
+        },
+        {
+          "text": "topbar mantiene 30 px de alto (UI bajo la barra en y=30)",
+          "ok": true,
+          "detail": "TOPBAR_HEIGHT_THEME=30"
+        },
+        {
+          "text": "captura 22_menu_logo",
+          "ok": true,
+          "detail": "1024x768, 1417 colores, 99.00% no negro, menu principal con logo oficial"
+        },
+        {
+          "text": "el menu principal se abre desde la topbar",
+          "ok": true,
+          "detail": "diferencia = 7.691%"
+        },
+        {
+          "text": "sin referencias al logo antiguo (logo_badge/logo_s/logo_mono)",
+          "ok": true,
+          "detail": "fuentes y binario limpios"
+        },
+        {
+          "text": "el logo se genera desde assets/logo/official_logo.png",
+          "ok": true,
+          "detail": "tools/gen_logo.py"
+        },
+        {
+          "text": "sin excepcion/panico durante el arranque",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "00_grub_menu",
+        "01_splash",
+        "02_desktop",
+        "02b_topbar_dock",
+        "02c_dock_tooltip",
+        "22_menu_logo"
+      ]
+    },
+    {
+      "key": "terminal",
+      "title": "Terminal grafica (F2) y comandos",
+      "result": "pass",
+      "duration_s": 8.26,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F2 abre la terminal (APP_OPEN:terminal)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "verificacion interna (term_open)",
+          "ok": null,
+          "detail": "1024x768, 1381 colores, 98.31% no negro, terminal abierta"
+        },
+        {
+          "text": "verificacion interna (term_help)",
+          "ok": null,
+          "detail": "1024x768, 1362 colores, 98.31% no negro, comando 'help'"
+        },
+        {
+          "text": "el comando 'help' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 4.2637%"
+        },
+        {
+          "text": "verificacion interna (term_ls)",
+          "ok": null,
+          "detail": "1024x768, 1450 colores, 98.31% no negro, comando 'ls'"
+        },
+        {
+          "text": "el comando 'ls' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 5.0204%"
+        },
+        {
+          "text": "verificacion interna (term_date)",
+          "ok": null,
+          "detail": "1024x768, 1472 colores, 98.31% no negro, comando 'date'"
+        },
+        {
+          "text": "el comando 'date' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 4.5950%"
+        },
+        {
+          "text": "verificacion interna (term_free)",
+          "ok": null,
+          "detail": "1024x768, 1608 colores, 98.31% no negro, comando 'free'"
+        },
+        {
+          "text": "el comando 'free' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 4.6040%"
+        },
+        {
+          "text": "verificacion interna (term_dmesg)",
+          "ok": null,
+          "detail": "1024x768, 1576 colores, 98.31% no negro, comando 'dmesg'"
+        },
+        {
+          "text": "el comando 'dmesg' produce salida visible",
+          "ok": true,
+          "detail": "diferencia = 5.9258%"
+        },
+        {
+          "text": "captura 03_terminal",
+          "ok": true,
+          "detail": "1024x768, 1576 colores"
+        },
+        {
+          "text": "comandos de terminal sin excepcion/panico",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "03_terminal"
+      ]
+    },
+    {
+      "key": "files",
+      "title": "Gestor de archivos (F1)",
+      "result": "pass",
+      "duration_s": 4.31,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F1 abre el gestor de archivos (APP_OPEN:files)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "captura 04_files",
+          "ok": true,
+          "detail": "1024x768, 1975 colores, 98.30% no negro, explorador del RAMFS en /"
+        },
+        {
+          "text": "captura 04b_files_home",
+          "ok": true,
+          "detail": "1024x768, 1844 colores, 98.30% no negro, explorador en /home"
+        },
+        {
+          "text": "el explorador navega a /home",
+          "ok": true,
+          "detail": "diferencia = 1.8407%"
+        }
+      ],
+      "screenshots": [
+        "04_files",
+        "04b_files_home"
+      ]
+    },
+    {
+      "key": "monitor",
+      "title": "Monitor del sistema (F3)",
+      "result": "pass",
+      "duration_s": 2.97,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F3 abre el monitor del sistema (APP_OPEN:monitor)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "captura 05_monitor",
+          "ok": true,
+          "detail": "1024x768, 1872 colores, 98.31% no negro, monitor del sistema"
+        }
+      ],
+      "screenshots": [
+        "05_monitor"
+      ]
+    },
+    {
+      "key": "about",
+      "title": "Acerca de SereOS (F5)",
+      "result": "pass",
+      "duration_s": 3.21,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F5 abre 'Acerca de' (APP_OPEN:about)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "captura 06_about",
+          "ok": true,
+          "detail": "1024x768, 1810 colores, 98.34% no negro, acerca de SereOS (14/14 + audio)"
+        },
+        {
+          "text": "texto Latin-1 (acentos/ñ) en cadenas de UI:",
+          "ok": null,
+          "detail": "1 ficheros: gui/gui.c"
+        }
+      ],
+      "screenshots": [
+        "06_about"
+      ]
+    },
+    {
+      "key": "maximize",
+      "title": "Maximizacion full-bleed y WM (restaurar/minimizar/resize)",
+      "result": "pass",
+      "duration_s": 47.37,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "verificacion interna (max_baseline)",
+          "ok": null,
+          "detail": "1024x768, 1071 colores, 98.34% no negro, escritorio de referencia sin ventanas"
+        },
+        {
+          "text": "verificacion interna (max_normal)",
+          "ok": null,
+          "detail": "1024x768, 1873 colores, 98.58% no negro, Archivos normal antes de maximizar"
+        },
+        {
+          "text": "ventana normal detectada",
+          "ok": true,
+          "detail": "titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, APP_OPEN:files=2"
+        },
+        {
+          "text": "captura 25_maximized_fullbleed",
+          "ok": true,
+          "detail": "1024x768, 1378 colores, 100.00% no negro, Archivos maximizado full-bleed"
+        },
+        {
+          "text": "full-bleed: cubre x=0..w-1, y=30..sh-1 (full-height) sin wallpaper",
+          "ok": true,
+          "detail": "wallpaper_ratio=0.0, corners={'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, rect=(0, 30, 1024, 738)"
+        },
+        {
+          "text": "esquina (0,30) no es fondo del escritorio",
+          "ok": true,
+          "detail": "ventana=(26, 30, 38), fondo=(8, 9, 13)"
+        },
+        {
+          "text": "una sola topbar global y sin dock/taskbar duplicados (marca ribbon sin azul)",
+          "ok": true,
+          "detail": "logos_azules top=0, barra=0, contenido=0, ribbon=True"
+        },
+        {
+          "text": "sin dock/taskbar inferior: app full-height y nav en topbar",
+          "ok": true,
+          "detail": "dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}, nav=True"
+        },
+        {
+          "text": "captura 26_restore_exact",
+          "ok": true,
+          "detail": "1024x768, 1974 colores, 98.60% no negro, restaurada al rect previo"
+        },
+        {
+          "text": "restaurar recupera EXACTAMENTE el rect previo",
+          "ok": true,
+          "detail": "antes={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, despues={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}"
+        },
+        {
+          "text": "restaurar no crea una instancia nueva (APP_OPEN no se repite)",
+          "ok": true,
+          "detail": "APP_OPEN:files 2 -> 2"
+        },
+        {
+          "text": "tras restaurar ya no es full-bleed",
+          "ok": true,
+          "detail": "{'full_bleed': False, 'wallpaper_ratio': 0.2954, 'corners': {'tl': 1.0, 'tr': 1.0, 'bl': 1.0, 'br': 1.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "captura 27_doubleclick",
+          "ok": true,
+          "detail": "1024x768, 1366 colores, 100.00% no negro, maximizada con doble clic en titlebar"
+        },
+        {
+          "text": "doble clic en titlebar maximiza (full-bleed)",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "verificacion interna (max_dbl_back)",
+          "ok": null,
+          "detail": "1024x768, 1887 colores, 98.58% no negro, doble clic de nuevo: restaurada"
+        },
+        {
+          "text": "doble clic de nuevo restaura",
+          "ok": true,
+          "detail": "titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}"
+        },
+        {
+          "text": "minimizar una maximizada devuelve el dock",
+          "ok": true,
+          "detail": "dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}, nav=False"
+        },
+        {
+          "text": "captura 28_minimize_restore",
+          "ok": true,
+          "detail": "1024x768, 1361 colores, 100.00% no negro, restaurada desde el dock: maximizada"
+        },
+        {
+          "text": "restaurar desde el dock vuelve MAXIMIZADA full-bleed",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "restaurar desde el dock no crea instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:files=2"
+        },
+        {
+          "text": "captura 29_max_terminal",
+          "ok": true,
+          "detail": "1024x768, 969 colores"
+        },
+        {
+          "text": "terminal maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0001, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "terminal maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:terminal=2"
+        },
+        {
+          "text": "monitor maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "monitor maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:monitor=2"
+        },
+        {
+          "text": "about maximizado: una sola topbar, sin barra inferior",
+          "ok": true,
+          "detail": "logos_azules top=0, ribbon=True"
+        },
+        {
+          "text": "about maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "about maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:about=2"
+        },
+        {
+          "text": "game maximizado ocupa todo el work area",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}"
+        },
+        {
+          "text": "game maximizado sin instancia nueva",
+          "ok": true,
+          "detail": "APP_OPEN:game=1"
+        },
+        {
+          "text": "captura 30_resize",
+          "ok": true,
+          "detail": "1024x768, 1923 colores"
+        },
+        {
+          "text": "resize por el borde derecho agranda la ventana",
+          "ok": true,
+          "detail": "ancho 898 -> 946 (delta=48), origen igual=True"
+        },
+        {
+          "text": "resize respeta el minimo de 300 px de ancho",
+          "ok": true,
+          "detail": "ancho final=298 (+2 bordes)"
+        },
+        {
+          "text": "sin excepcion/panico en maximizar/restaurar/resize",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "25_maximized_fullbleed",
+        "26_restore_exact",
+        "27_doubleclick",
+        "28_minimize_restore",
+        "29_max_terminal",
+        "30_resize"
+      ]
+    },
+    {
+      "key": "corners",
+      "title": "Esquinas redondeadas: clipping, solape y resize",
+      "result": "pass",
+      "duration_s": 8.63,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ventana normal detectada (rect con borde)",
+          "ok": true,
+          "detail": "{'x': 78, 'y': 106, 'w': 900, 'h': 560, 'right': 977, 'bottom': 665}"
+        },
+        {
+          "text": "BR: dentro del arco se conserva la barra de estado (surface_2 26,30,38) y no el cuerpo (20,23,30)",
+          "ok": true,
+          "detail": "interior=(26, 30, 38), cuerpo=(20, 23, 30)"
+        },
+        {
+          "text": "BR: fuera del arco no hay parche de 14x14 del color del cuerpo (se restaura fondo/sombra)",
+          "ok": true,
+          "detail": "fuera=(10, 13, 24), px_cuerpo_fuera=0, colores_fuera=7"
+        },
+        {
+          "text": "las 4 esquinas limpias (interior status, sin parches fuera)",
+          "ok": true,
+          "detail": "px_cuerpo_fuera_total=0, interiores={'tl': (26, 30, 38), 'tr': (26, 30, 38), 'bl': (26, 30, 38), 'br': (26, 30, 38)}, mal=[]"
+        },
+        {
+          "text": "captura 33_window_corners_clean",
+          "ok": true,
+          "detail": "804x804, 136 colores, mosaico 4 esquinas de Archivos a 10x"
+        },
+        {
+          "text": "mosaico de esquinas generado a 10x",
+          "ok": true,
+          "detail": "804x804"
+        },
+        {
+          "text": "solape: BR de la ventana superior conserva la barra de estado por dentro y fondo por fuera (sin parche)",
+          "ok": true,
+          "detail": "rect={'x': 78, 'y': 171, 'w': 900, 'h': 495, 'right': 977, 'bottom': 665}, interior=(26, 30, 38), fuera=(10, 13, 24), px_cuerpo_fuera=0"
+        },
+        {
+          "text": "resize: esquina BR sigue limpia (status dentro, fondo fuera)",
+          "ok": true,
+          "detail": "ancho 900->940 (delta=40), interior=(26, 30, 38), px_cuerpo_fuera=0"
+        },
+        {
+          "text": "sin excepcion/panico durante la revision de esquinas",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "33_window_corners_clean"
+      ]
+    },
+    {
+      "key": "dock",
+      "title": "Dock flotante inferior (sin maximizada)",
+      "result": "pass",
+      "duration_s": 5.57,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "captura 18_dock_window",
+          "ok": true,
+          "detail": "1024x768, 1984 colores, 98.58% no negro, dock flotante con ventana normal"
+        },
+        {
+          "text": "dock inferior visible y ninguna nav en la topbar",
+          "ok": true,
+          "detail": "dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': None, 'dock_icon_px': 1012}, nav=False"
+        },
+        {
+          "text": "captura 21_dock_restored",
+          "ok": true,
+          "detail": "1024x768, 963 colores, 98.34% no negro, dock restaurado sin ventanas"
+        },
+        {
+          "text": "vuelve el dock flotante y la topbar muestra el nombre de app",
+          "ok": true,
+          "detail": "dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': None, 'dock_icon_px': 1012}"
+        }
+      ],
+      "screenshots": [
+        "18_dock_window",
+        "21_dock_restored"
+      ]
+    },
+    {
+      "key": "topnav",
+      "title": "Navegacion adaptativa: dock oculto + 5 accesos topbar",
+      "result": "pass",
+      "duration_s": 61.0,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "verificacion interna (topnav_baseline)",
+          "ok": null,
+          "detail": "1024x768, 1049 colores, 98.34% no negro, escritorio con dock (referencia)"
+        },
+        {
+          "text": "escritorio normal: dock visible y sin nav superior",
+          "ok": true,
+          "detail": "dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': None, 'dock_icon_px': 1012}"
+        },
+        {
+          "text": "captura 34_topnav_maximized",
+          "ok": true,
+          "detail": "1024x768, 1377 colores, 100.00% no negro, Archivos maximizado con nav en topbar"
+        },
+        {
+          "text": "5 accesos en la topbar y Archivos como activo",
+          "ok": true,
+          "detail": "nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [458, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 1}"
+        },
+        {
+          "text": "los 5 accesos estan centrados exactamente en la pantalla",
+          "ok": true,
+          "detail": "bloque=448..575, tile_activo=(448, 471) esperado_x0=448, centros=[458, 484, 510, 537, 563], media=510"
+        },
+        {
+          "text": "exactamente un indicador activo (accent_soft + subrayado)",
+          "ok": true,
+          "detail": "tiles=1, subrayado=48px"
+        },
+        {
+          "text": "app full-height hasta y=sh-1 y sin panel inferior",
+          "ok": true,
+          "detail": "full={'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}, dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}"
+        },
+        {
+          "text": "sin dock/taskbar/fondo reservado en la banda inferior",
+          "ok": true,
+          "detail": "fila_inferior_ventana=1.0, wallpaper_filas_finales=0.0, px_iconos_dock=0"
+        },
+        {
+          "text": "topbar izq/der no se desplazan al aparecer la nav",
+          "ok": true,
+          "detail": "dock={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 1010, 'right_text_left': 695}, topnav={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 1010, 'right_text_left': 695}"
+        },
+        {
+          "text": "transicion sin iconos duplicados (nav y dock nunca a la vez)",
+          "ok": true,
+          "detail": "frames=[{'frame': 0, 'nav': False, 'dock_px': 1012, 'full': True}, {'frame': 1, 'nav': True, 'dock_px': 0, 'full': True}, {'frame': 2, 'nav': True, 'dock_px': 0, 'full': True}, {'frame': 3, 'nav': True, 'dock_px': 0, 'full': True}, {'frame': 4, 'nav': True, 'dock_px': 0, 'full': True}]"
+        },
+        {
+          "text": "captura 35_topnav_active",
+          "ok": true,
+          "detail": "1024x768, 1653 colores, 100.00% no negro, indicador activo al cambiar a Terminal"
+        },
+        {
+          "text": "el indicador sigue a la app activa (Terminal)",
+          "ok": true,
+          "detail": "nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 1, 'active_tiles': 1, 'active_bbox': (474, 497), 'active_center': 486, 'centers': [458, 486, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}"
+        },
+        {
+          "text": "con otra app abierta sigue sin dock (topnav estable)",
+          "ok": true,
+          "detail": "dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}"
+        },
+        {
+          "text": "captura 37_topnav_multiwindow",
+          "ok": true,
+          "detail": "1024x768, 984 colores, 100.00% no negro, dos ventanas maximizadas con topnav"
+        },
+        {
+          "text": "2 maximizadas: nav estable, sin dock y full-height",
+          "ok": true,
+          "detail": "nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 1, 'active_tiles': 1, 'active_bbox': (474, 497), 'active_center': 486, 'centers': [458, 486, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}, dock={'full_height': True, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}, full=True"
+        },
+        {
+          "text": "cambiar foco con F6 mueve el indicador activo",
+          "ok": true,
+          "detail": "nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [458, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}"
+        },
+        {
+          "text": "minimizar una maximizada con otra abierta mantiene topnav",
+          "ok": true,
+          "detail": "nav=True, dock={'full_height': True, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}"
+        },
+        {
+          "text": "captura 38_topnav_minimize_last",
+          "ok": true,
+          "detail": "1024x768, 1126 colores, 98.34% no negro, minimizada la ultima: vuelve el dock"
+        },
+        {
+          "text": "al minimizar la ultima maximizada vuelve el dock",
+          "ok": true,
+          "detail": "nav={'nav_present': False, 'present': [False, False, False, False, False], 'active_index': None, 'active_tiles': 0, 'active_bbox': (0, 0), 'active_center': 0, 'centers': [460, 486, 512, 538, 564], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 512, 'underline_px': 0, 'open_apps': 0}, dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}"
+        },
+        {
+          "text": "restaurar desde el dock devuelve MAXIMIZADA con topnav",
+          "ok": true,
+          "detail": "nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [458, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}"
+        },
+        {
+          "text": "captura 36_topnav_restore_dock",
+          "ok": true,
+          "detail": "1024x768, 1987 colores, 98.32% no negro, restaurada: nav desaparece y vuelve el dock"
+        },
+        {
+          "text": "restaurar la maximizada devuelve el dock y quita la nav",
+          "ok": true,
+          "detail": "nav={'nav_present': False, 'present': [False, False, False, False, False], 'active_index': None, 'active_tiles': 0, 'active_bbox': (0, 0), 'active_center': 0, 'centers': [460, 486, 512, 538, 564], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 512, 'underline_px': 0, 'open_apps': 0}, dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}"
+        },
+        {
+          "text": "los 5 accesos abren/enfocan la app correcta",
+          "ok": true,
+          "detail": "resultados=[{'i': 2, 'app': 'monitor', 'active': 2, 'open_delta': 1, 'nav': True}, {'i': 3, 'app': 'game', 'active': 3, 'open_delta': 1, 'nav': True}, {'i': 4, 'app': 'about', 'active': 4, 'open_delta': 1, 'nav': True}, {'i': 1, 'app': 'terminal', 'active': 1, 'open_delta': 0, 'nav': True}, {'i': 0, 'app': 'files', 'active': 0, 'open_delta': 0, 'nav': True}]"
+        },
+        {
+          "text": "los accesos no duplican APP_OPEN al abrir y enfocar",
+          "ok": true,
+          "detail": "deltas=[1, 1, 1, 0, 0]"
+        },
+        {
+          "text": "clic en la app activa la minimiza y otro clic la restaura",
+          "ok": true,
+          "detail": "tras_min=True, tras_restaurar={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [460, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 33, 'open_apps': 5}"
+        },
+        {
+          "text": "sin excepcion/panico en navegacion adaptativa",
+          "ok": true,
+          "detail": "log limpio"
+        },
+        {
+          "text": "verificacion interna (topnav_base_800)",
+          "ok": null,
+          "detail": "800x600, 883 colores, 98.04% no negro, referencia 800x600"
+        },
+        {
+          "text": "captura 39_topnav_800",
+          "ok": true,
+          "detail": "800x600, 1340 colores, 100.00% no negro, topnav a 800x600"
+        },
+        {
+          "text": "800x600: 5 accesos + indicadores sin solaparse",
+          "ok": true,
+          "detail": "nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (336, 359), 'active_center': 348, 'centers': [346, 372, 398, 425, 451], 'centers_expected': [348, 374, 400, 426, 452], 'avg_center': 398, 'underline_px': 48, 'open_apps': 1}, layout={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 786, 'right_text_left': 629}"
+        },
+        {
+          "text": "800x600: maximizada full-height sin dock",
+          "ok": true,
+          "detail": "full={'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 800, 570)}, dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}"
+        },
+        {
+          "text": "verificacion interna (topnav_base_1280)",
+          "ok": null,
+          "detail": "1280x1024, 996 colores, 98.45% no negro, referencia 1280x1024"
+        },
+        {
+          "text": "captura 40_topnav_1280",
+          "ok": true,
+          "detail": "1280x1024, 1378 colores, 100.00% no negro, topnav a 1280x1024"
+        },
+        {
+          "text": "1280x1024: 5 accesos + indicadores sin solaparse",
+          "ok": true,
+          "detail": "nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (576, 599), 'active_center': 588, 'centers': [586, 612, 638, 665, 691], 'centers_expected': [588, 614, 640, 666, 692], 'avg_center': 638, 'underline_px': 48, 'open_apps': 1}, layout={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 1267, 'right_text_left': 948}"
+        },
+        {
+          "text": "1280x1024: maximizada full-height sin dock",
+          "ok": true,
+          "detail": "full={'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1280, 994)}, dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}"
+        }
+      ],
+      "screenshots": [
+        "34_topnav_maximized",
+        "35_topnav_active",
+        "37_topnav_multiwindow",
+        "38_topnav_minimize_last",
+        "36_topnav_restore_dock",
+        "39_topnav_800",
+        "40_topnav_1280"
+      ]
+    },
+    {
+      "key": "game",
+      "title": "PAC-MAN SereOS (F4)",
+      "result": "pass",
+      "duration_s": 43.65,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F4 abre PAC-MAN SereOS (APP_OPEN:game)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "marcador GAME_MENU (pantalla de titulo)",
+          "ok": true,
+          "detail": "GAME_MENU"
+        },
+        {
+          "text": "captura 07_pacman_titulo",
+          "ok": true,
+          "detail": "1024x768, 2002 colores, 98.31% no negro, attract/titulo PAC-MAN SereOS (PRESS START)"
+        },
+        {
+          "text": "captura 07b_pacman_menu",
+          "ok": true,
+          "detail": "1024x768, 1452 colores, 98.31% no negro, menu principal arcade PAC-MAN SereOS"
+        },
+        {
+          "text": "Enter inicia la partida (GAME_START)",
+          "ok": true,
+          "detail": "GAME_START"
+        },
+        {
+          "text": "captura 08_pacman_ready",
+          "ok": true,
+          "detail": "1024x768, 1756 colores, 97.56% no negro, READY!: laberinto, Pacman, 4 fantasmas y HUD"
+        },
+        {
+          "text": "captura 08b_pacman_partida",
+          "ok": true,
+          "detail": "1024x768, 1699 colores, 98.31% no negro, partida en marcha con dots"
+        },
+        {
+          "text": "la partida cambia la pantalla respecto al titulo",
+          "ok": true,
+          "detail": "diferencia = 54.9857%"
+        },
+        {
+          "text": "el laberinto muestra dots",
+          "ok": true,
+          "detail": "1872 px de color de dot en (302, 164, 452, 476)"
+        },
+        {
+          "text": "los 4 fantasmas son visibles",
+          "ok": true,
+          "detail": "{'blinky_rojo': 122, 'pinky_rosa': 220, 'inky_cian': 129, 'clyde_naranja': 203}"
+        },
+        {
+          "text": "power pills visibles en el laberinto",
+          "ok": true,
+          "detail": "308 px de power pill"
+        },
+        {
+          "text": "verificacion interna (eat1)",
+          "ok": null,
+          "detail": "1024x768, 1716 colores, 98.31% no negro, comiendo dots al inicio del pasillo"
+        },
+        {
+          "text": "captura 09_pacman_comiendo",
+          "ok": true,
+          "detail": "1024x768, 1734 colores, 98.31% no negro, comiendo dots (puntuacion > 0)"
+        },
+        {
+          "text": "captura 10_pacman_frightened",
+          "ok": true,
+          "detail": "1024x768, 1693 colores, 98.31% no negro, power pill: fantasmas asustados (azules)"
+        },
+        {
+          "text": "power pill comido: fantasmas azules (frightened)",
+          "ok": true,
+          "detail": "cuerpo asustado=454 px, cuerpos normales rojo+cian=0 px"
+        },
+        {
+          "text": "Pacman come dots (dos capturas distintas)",
+          "ok": true,
+          "detail": "diferencia = 0.2806%"
+        },
+        {
+          "text": "hay menos dots en la segunda captura",
+          "ok": true,
+          "detail": "pixeles de dot: 1856 -> 1784"
+        },
+        {
+          "text": "Esc pausa la partida (GAME_PAUSE)",
+          "ok": true,
+          "detail": "GAME_PAUSE"
+        },
+        {
+          "text": "captura 11_pacman_pausa",
+          "ok": true,
+          "detail": "1024x768, 1874 colores, 98.31% no negro, partida en pausa"
+        },
+        {
+          "text": "la pausa cambia la pantalla",
+          "ok": true,
+          "detail": "diferencia = 63.3125%"
+        },
+        {
+          "text": "la partida se reanuda tras la pausa",
+          "ok": true,
+          "detail": "diferencia = 63.312%"
+        },
+        {
+          "text": "captura 12_pacman_gameover",
+          "ok": true,
+          "detail": "1024x768, 1882 colores, 98.31% no negro, fin de partida (vidas agotadas)"
+        },
+        {
+          "text": "se alcanzo GAME_OVER dejando que los fantasmas atrapen",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "Q/Esc vuelve al escritorio (GAME_EXIT)",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "verificacion interna (desktop_after_game)",
+          "ok": null,
+          "detail": "1024x768, 1056 colores, 98.34% no negro, escritorio tras salir del juego"
+        },
+        {
+          "text": "la escena del juego desaparece del escritorio",
+          "ok": true,
+          "detail": "diferencia = 72.782%"
+        }
+      ],
+      "screenshots": [
+        "07_pacman_titulo",
+        "07b_pacman_menu",
+        "08_pacman_ready",
+        "08b_pacman_partida",
+        "09_pacman_comiendo",
+        "10_pacman_frightened",
+        "11_pacman_pausa",
+        "12_pacman_gameover"
+      ]
+    },
+    {
+      "key": "audio",
+      "title": "Audio del juego: captura WAV (SB16)",
+      "result": "pass",
+      "duration_s": 16.01,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "QEMU con SB16 + backend WAV arrancado",
+          "ok": true,
+          "detail": "wav=audio-capture.wav"
+        },
+        {
+          "text": "partida iniciada con audio activo",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "movimiento de Pacman durante ~10 s para generar audio",
+          "ok": true,
+          "detail": "17 pulsaciones de direccion"
+        },
+        {
+          "text": "audio-capture.wav existe",
+          "ok": true,
+          "detail": "1565148 bytes"
+        },
+        {
+          "text": "WAV con datos PCM",
+          "ok": true,
+          "detail": "391276 frames a 44100 Hz, 2 canal(es), 2 bytes/muestra"
+        },
+        {
+          "text": "duracion de la captura >= 0.3 s",
+          "ok": true,
+          "detail": "8.87 s"
+        },
+        {
+          "text": "muestras no silenciosas (peak/RMS)",
+          "ok": true,
+          "detail": "peak=29952, rms=14389.28, 2 bytes/muestra"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "window_close",
+      "title": "Cierre de ventanas",
+      "result": "pass",
+      "duration_s": 6.19,
+      "skip_reason": null,
+      "error": null,
+      "method": "keyboard_ctrl_w",
+      "steps": [
+        {
+          "text": "captura 13_multiventana",
+          "ok": true,
+          "detail": "1024x768, 2312 colores, 98.58% no negro, 4 ventanas abiertas: terminal, files, monitor, about"
+        },
+        {
+          "text": "ventanas abiertas antes de cerrar",
+          "ok": null,
+          "detail": "terminal, files, monitor, about"
+        },
+        {
+          "text": "ventanas cerradas (4): monitor, files, terminal, about",
+          "ok": true,
+          "detail": "metodo: atajo de teclado F6 + Ctrl+W; quedan abiertas: ninguna"
+        },
+        {
+          "text": "verificacion interna (desktop_windows_closed)",
+          "ok": null,
+          "detail": "1024x768, 1110 colores, 98.34% no negro, escritorio tras cerrar ventanas"
+        },
+        {
+          "text": "todas las ventanas cerradas",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "sin excepcion/panico al cerrar ventanas",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "13_multiventana"
+      ]
+    },
+    {
+      "key": "window_focus",
+      "title": "Enfoque F6 y minimizar F7",
+      "result": "pass",
+      "duration_s": 2.83,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "F2/F1 abren terminal y archivos para la prueba de foco",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "text": "verificacion interna (win_two_open)",
+          "ok": null,
+          "detail": "1024x768, 1972 colores, 98.31% no negro, terminal + archivos"
+        },
+        {
+          "text": "verificacion interna (win_focus)",
+          "ok": null,
+          "detail": "1024x768, 1781 colores, 98.58% no negro, F6 siguiente ventana"
+        },
+        {
+          "text": "F6 cambia la ventana enfocada",
+          "ok": true,
+          "detail": "diferencia = 51.0509%"
+        },
+        {
+          "text": "verificacion interna (win_minimized)",
+          "ok": null,
+          "detail": "1024x768, 1878 colores, 98.58% no negro, F7 minimizar ventana"
+        },
+        {
+          "text": "F7 minimiza la ventana activa",
+          "ok": true,
+          "detail": "diferencia = 52.9110%"
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "key": "text_fallback",
+      "title": "Fallback de modo texto (GRUB 2a entrada)",
+      "result": "pass",
+      "duration_s": 2.91,
+      "skip_reason": null,
+      "error": null,
+      "method": "GRUB teclado (down+ret), intento 1",
+      "steps": [
+        {
+          "text": "2a entrada GRUB -> SEREOS_TEXT_MODE",
+          "ok": true,
+          "detail": "SEREOS_TEXT_MODE"
+        },
+        {
+          "text": "captura 14_text_mode",
+          "ok": true,
+          "detail": "720x400, 5 colores, 6.19% no negro, consola VGA de respaldo"
+        },
+        {
+          "text": "verificacion interna (text_mode_help)",
+          "ok": null,
+          "detail": "720x400, 5 colores, 10.70% no negro, shell de texto: help"
+        },
+        {
+          "text": "la shell de texto responde a 'help'",
+          "ok": true,
+          "detail": "diferencia = 7.4896%"
+        },
+        {
+          "text": "sin excepcion/panico en modo texto",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "14_text_mode"
+      ]
+    },
+    {
+      "key": "panic",
+      "title": "Panico controlado (div0 real desde la terminal)",
+      "result": "pass",
+      "duration_s": 7.05,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "verificacion interna (panic_before)",
+          "ok": null,
+          "detail": "1024x768, 1459 colores, 98.31% no negro, terminal antes de div0"
+        },
+        {
+          "text": "div0 provoca SEREOS_EXCEPTION",
+          "ok": true,
+          "detail": "SEREOS_EXCEPTION EIP = 0x0021d95d   CS = 0x0008   EFLAGS = 0x00010246"
+        },
+        {
+          "text": "captura 15_panic",
+          "ok": true,
+          "detail": "1024x768, 748 colores, 100.00% no negro, pantalla de panico (division por cero)"
+        },
+        {
+          "text": "la pantalla de panico sustituye a la terminal",
+          "ok": true,
+          "detail": "diferencia = 58.08%"
+        },
+        {
+          "text": "la excepcion fue esperada y controlada",
+          "ok": true,
+          "detail": "div0 es una prueba intencionada de la IDT"
+        }
+      ],
+      "screenshots": [
+        "15_panic"
+      ]
+    },
+    {
+      "key": "resolution_1280",
+      "title": "Resolucion 1280x1024 (ISO temporal en /tmp)",
+      "result": "pass",
+      "duration_s": 11.89,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ISO temporal 1280x1024 generada en /tmp",
+          "ok": true,
+          "detail": "/tmp/sereos_1280x1024_e0ui8nqq/sereos-1280x1024.iso"
+        },
+        {
+          "text": "verificacion interna (max_baseline_1280)",
+          "ok": null,
+          "detail": "1280x1024, 1020 colores, 98.45% no negro, escritorio de referencia 1280x1024"
+        },
+        {
+          "text": "captura 16_resolution_1280x1024",
+          "ok": true,
+          "detail": "1280x1024, 1448 colores, 98.45% no negro, resolucion real 1280x1024"
+        },
+        {
+          "text": "framebuffer a 1280x1024",
+          "ok": true,
+          "detail": "captura = 1280x1024"
+        },
+        {
+          "text": "captura 31_max_1280",
+          "ok": true,
+          "detail": "1280x1024, 1397 colores, 100.00% no negro, maximizado full-height a 1280x1024"
+        },
+        {
+          "text": "sin dock inferior en 1280x1024 (full-height)",
+          "ok": true,
+          "detail": "{'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}"
+        },
+        {
+          "text": "5 accesos topnav en 1280x1024",
+          "ok": true,
+          "detail": "{'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (576, 599), 'active_center': 588, 'centers': [586, 612, 638, 665, 691], 'centers_expected': [588, 614, 640, 666, 692], 'avg_center': 638, 'underline_px': 48, 'open_apps': 1}"
+        },
+        {
+          "text": "ventana maximizada en 1280x1024",
+          "ok": true,
+          "detail": "semaforo junto a la topbar"
+        },
+        {
+          "text": "full-bleed full-height exacto en 1280x1024",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1280, 994)}"
+        },
+        {
+          "text": "captura a 1280x1024",
+          "ok": true,
+          "detail": "1280x1024"
+        },
+        {
+          "text": "sin excepcion/panico en la resolucion alternativa",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "16_resolution_1280x1024",
+        "31_max_1280"
+      ]
+    },
+    {
+      "key": "resolution_800",
+      "title": "Resolucion 800x600 (ISO temporal en /tmp)",
+      "result": "pass",
+      "duration_s": 10.7,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ISO temporal 800x600 generada en /tmp",
+          "ok": true,
+          "detail": "/tmp/sereos_800x600_6415im3m/sereos-800x600.iso"
+        },
+        {
+          "text": "verificacion interna (max_baseline_800)",
+          "ok": null,
+          "detail": "800x600, 905 colores, 98.04% no negro, escritorio de referencia 800x600"
+        },
+        {
+          "text": "captura 17_resolution_800x600",
+          "ok": true,
+          "detail": "800x600, 1280 colores, 99.27% no negro, resolucion real 800x600"
+        },
+        {
+          "text": "framebuffer a 800x600",
+          "ok": true,
+          "detail": "captura = 800x600"
+        },
+        {
+          "text": "captura 32_max_800",
+          "ok": true,
+          "detail": "800x600, 1350 colores, 100.00% no negro, maximizado full-height a 800x600"
+        },
+        {
+          "text": "sin dock inferior en 800x600 (full-height)",
+          "ok": true,
+          "detail": "{'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}"
+        },
+        {
+          "text": "5 accesos topnav en 800x600",
+          "ok": true,
+          "detail": "{'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (336, 359), 'active_center': 348, 'centers': [346, 372, 398, 425, 451], 'centers_expected': [348, 374, 400, 426, 452], 'avg_center': 398, 'underline_px': 48, 'open_apps': 1}"
+        },
+        {
+          "text": "ventana maximizada en 800x600",
+          "ok": true,
+          "detail": "semaforo junto a la topbar"
+        },
+        {
+          "text": "full-bleed full-height exacto en 800x600",
+          "ok": true,
+          "detail": "{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 800, 570)}"
+        },
+        {
+          "text": "captura a 800x600",
+          "ok": true,
+          "detail": "800x600"
+        },
+        {
+          "text": "sin excepcion/panico en la resolucion alternativa",
+          "ok": true,
+          "detail": "log limpio"
+        }
+      ],
+      "screenshots": [
+        "17_resolution_800x600",
+        "32_max_800"
+      ]
+    },
+    {
+      "key": "no_fatal",
+      "title": "Sin excepciones ni panicos inesperados",
+      "result": "pass",
+      "duration_s": 0.0,
+      "skip_reason": null,
+      "error": null,
+      "method": "",
+      "steps": [
+        {
+          "text": "ningun SEREOS_EXCEPTION/SEREOS_PANIC inesperado en los logs",
+          "ok": true,
+          "detail": "7 logs limpios (excepcion esperada de la prueba panic: panic(div0): SEREOS_EXCEPTION EIP = 0x0021d95d   CS = 0x0008   EFLAGS = 0x00010246)"
+        }
+      ],
+      "screenshots": []
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "00_grub_menu",
+      "png": "docs/screenshots/00_grub_menu.png",
+      "blackish": false,
+      "width": 720,
+      "height": 400,
+      "distinct_colors": 2,
+      "non_black_ratio": 0.066941,
+      "mean_luma": 11.246,
+      "mean_rgb": [
+        11.25,
+        11.25,
+        11.25
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "01_splash",
+      "png": "docs/screenshots/01_splash.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 538,
+      "non_black_ratio": 1.0,
+      "mean_luma": 14.092,
+      "mean_rgb": [
+        11.68,
+        14.18,
+        20.29
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02_desktop",
+      "png": "docs/screenshots/02_desktop.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 985,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 18.482,
+      "mean_rgb": [
+        13.46,
+        18.88,
+        29.36
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02b_topbar_dock",
+      "png": "docs/screenshots/02b_topbar_dock.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 200,
+      "distinct_colors": 916,
+      "non_black_ratio": 0.956841,
+      "mean_luma": 21.599,
+      "mean_rgb": [
+        16.13,
+        22.09,
+        32.8
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "02c_dock_tooltip",
+      "png": "docs/screenshots/02c_dock_tooltip.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1211,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 18.636,
+      "mean_rgb": [
+        13.6,
+        19.03,
+        29.53
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "22_menu_logo",
+      "png": "docs/screenshots/22_menu_logo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1417,
+      "non_black_ratio": 0.990046,
+      "mean_luma": 20.327,
+      "mean_rgb": [
+        15.16,
+        20.74,
+        31.46
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "03_terminal",
+      "png": "docs/screenshots/03_terminal.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1576,
+      "non_black_ratio": 0.983101,
+      "mean_luma": 21.848,
+      "mean_rgb": [
+        17.93,
+        22.15,
+        30.42
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "04_files",
+      "png": "docs/screenshots/04_files.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1975,
+      "non_black_ratio": 0.983012,
+      "mean_luma": 25.347,
+      "mean_rgb": [
+        20.97,
+        25.68,
+        34.98
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "04b_files_home",
+      "png": "docs/screenshots/04b_files_home.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1844,
+      "non_black_ratio": 0.983012,
+      "mean_luma": 25.209,
+      "mean_rgb": [
+        20.85,
+        25.54,
+        34.82
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "05_monitor",
+      "png": "docs/screenshots/05_monitor.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1872,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 26.947,
+      "mean_rgb": [
+        22.78,
+        27.27,
+        36.0
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "06_about",
+      "png": "docs/screenshots/06_about.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1810,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 23.225,
+      "mean_rgb": [
+        18.77,
+        23.57,
+        32.87
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "25_maximized_fullbleed",
+      "png": "docs/screenshots/25_maximized_fullbleed.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1378,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 27.524,
+      "mean_rgb": [
+        23.79,
+        27.76,
+        36.16
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "26_restore_exact",
+      "png": "docs/screenshots/26_restore_exact.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1974,
+      "non_black_ratio": 0.985966,
+      "mean_luma": 25.526,
+      "mean_rgb": [
+        21.09,
+        25.86,
+        35.26
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "27_doubleclick",
+      "png": "docs/screenshots/27_doubleclick.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1366,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 27.519,
+      "mean_rgb": [
+        23.78,
+        27.76,
+        36.15
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "28_minimize_restore",
+      "png": "docs/screenshots/28_minimize_restore.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1361,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 27.521,
+      "mean_rgb": [
+        23.78,
+        27.76,
+        36.15
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "29_max_terminal",
+      "png": "docs/screenshots/29_max_terminal.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 969,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 14.785,
+      "mean_rgb": [
+        12.71,
+        14.86,
+        20.12
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "30_resize",
+      "png": "docs/screenshots/30_resize.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1923,
+      "non_black_ratio": 0.983012,
+      "mean_luma": 25.688,
+      "mean_rgb": [
+        21.33,
+        26.02,
+        35.24
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "33_window_corners_clean",
+      "png": "docs/screenshots/33_window_corners_clean.png",
+      "blackish": false,
+      "width": 804,
+      "height": 804,
+      "distinct_colors": 136,
+      "non_black_ratio": 0.980044,
+      "mean_luma": 29.086,
+      "mean_rgb": [
+        26.51,
+        29.0,
+        37.51
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "18_dock_window",
+      "png": "docs/screenshots/18_dock_window.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1984,
+      "non_black_ratio": 0.985831,
+      "mean_luma": 25.52,
+      "mean_rgb": [
+        21.08,
+        25.86,
+        35.26
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "21_dock_restored",
+      "png": "docs/screenshots/21_dock_restored.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 963,
+      "non_black_ratio": 0.983374,
+      "mean_luma": 18.484,
+      "mean_rgb": [
+        13.46,
+        18.88,
+        29.34
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "34_topnav_maximized",
+      "png": "docs/screenshots/34_topnav_maximized.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1377,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 27.516,
+      "mean_rgb": [
+        23.78,
+        27.76,
+        36.15
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "35_topnav_active",
+      "png": "docs/screenshots/35_topnav_active.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1653,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 23.657,
+      "mean_rgb": [
+        20.32,
+        23.86,
+        31.45
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "37_topnav_multiwindow",
+      "png": "docs/screenshots/37_topnav_multiwindow.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 984,
+      "non_black_ratio": 0.999981,
+      "mean_luma": 14.787,
+      "mean_rgb": [
+        12.71,
+        14.86,
+        20.13
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "38_topnav_minimize_last",
+      "png": "docs/screenshots/38_topnav_minimize_last.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1126,
+      "non_black_ratio": 0.98336,
+      "mean_luma": 18.541,
+      "mean_rgb": [
+        13.52,
+        18.94,
+        29.4
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "36_topnav_restore_dock",
+      "png": "docs/screenshots/36_topnav_restore_dock.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1987,
+      "non_black_ratio": 0.983161,
+      "mean_luma": 25.351,
+      "mean_rgb": [
+        20.97,
+        25.68,
+        34.98
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "39_topnav_800",
+      "png": "docs/screenshots/39_topnav_800.png",
+      "blackish": false,
+      "width": 800,
+      "height": 600,
+      "distinct_colors": 1340,
+      "non_black_ratio": 0.999969,
+      "mean_luma": 28.54,
+      "mean_rgb": [
+        24.62,
+        28.8,
+        37.51
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "40_topnav_1280",
+      "png": "docs/screenshots/40_topnav_1280.png",
+      "blackish": false,
+      "width": 1280,
+      "height": 1024,
+      "distinct_colors": 1378,
+      "non_black_ratio": 0.999989,
+      "mean_luma": 26.429,
+      "mean_rgb": [
+        22.89,
+        26.65,
+        34.72
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "07_pacman_titulo",
+      "png": "docs/screenshots/07_pacman_titulo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 2002,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 23.176,
+      "mean_rgb": [
+        19.5,
+        23.43,
+        31.48
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "07b_pacman_menu",
+      "png": "docs/screenshots/07b_pacman_menu.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1452,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 23.771,
+      "mean_rgb": [
+        19.47,
+        24.11,
+        33.1
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "08_pacman_ready",
+      "png": "docs/screenshots/08_pacman_ready.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1756,
+      "non_black_ratio": 0.975577,
+      "mean_luma": 31.534,
+      "mean_rgb": [
+        22.55,
+        32.39,
+        49.48
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "08b_pacman_partida",
+      "png": "docs/screenshots/08b_pacman_partida.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1699,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 31.471,
+      "mean_rgb": [
+        22.35,
+        32.33,
+        49.82
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "09_pacman_comiendo",
+      "png": "docs/screenshots/09_pacman_comiendo.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1734,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 31.457,
+      "mean_rgb": [
+        22.34,
+        32.31,
+        49.82
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "10_pacman_frightened",
+      "png": "docs/screenshots/10_pacman_frightened.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1693,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 31.358,
+      "mean_rgb": [
+        22.18,
+        32.21,
+        49.9
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "11_pacman_pausa",
+      "png": "docs/screenshots/11_pacman_pausa.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1874,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 22.77,
+      "mean_rgb": [
+        18.09,
+        23.13,
+        32.96
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "12_pacman_gameover",
+      "png": "docs/screenshots/12_pacman_gameover.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 1882,
+      "non_black_ratio": 0.983054,
+      "mean_luma": 22.692,
+      "mean_rgb": [
+        18.15,
+        23.08,
+        32.28
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "13_multiventana",
+      "png": "docs/screenshots/13_multiventana.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 2312,
+      "non_black_ratio": 0.985817,
+      "mean_luma": 26.563,
+      "mean_rgb": [
+        22.39,
+        26.87,
+        35.79
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "14_text_mode",
+      "png": "docs/screenshots/14_text_mode.png",
+      "blackish": false,
+      "width": 720,
+      "height": 400,
+      "distinct_colors": 5,
+      "non_black_ratio": 0.061934,
+      "mean_luma": 5.736,
+      "mean_rgb": [
+        3.24,
+        5.88,
+        11.72
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "15_panic",
+      "png": "docs/screenshots/15_panic.png",
+      "blackish": false,
+      "width": 1024,
+      "height": 768,
+      "distinct_colors": 748,
+      "non_black_ratio": 1.0,
+      "mean_luma": 14.502,
+      "mean_rgb": [
+        12.61,
+        14.54,
+        19.64
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "16_resolution_1280x1024",
+      "png": "docs/screenshots/16_resolution_1280x1024.png",
+      "blackish": false,
+      "width": 1280,
+      "height": 1024,
+      "distinct_colors": 1448,
+      "non_black_ratio": 0.984474,
+      "mean_luma": 17.951,
+      "mean_rgb": [
+        13.57,
+        18.3,
+        27.37
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "31_max_1280",
+      "png": "docs/screenshots/31_max_1280.png",
+      "blackish": false,
+      "width": 1280,
+      "height": 1024,
+      "distinct_colors": 1397,
+      "non_black_ratio": 0.999989,
+      "mean_luma": 26.43,
+      "mean_rgb": [
+        22.89,
+        26.65,
+        34.72
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "17_resolution_800x600",
+      "png": "docs/screenshots/17_resolution_800x600.png",
+      "blackish": false,
+      "width": 800,
+      "height": 600,
+      "distinct_colors": 1280,
+      "non_black_ratio": 0.992683,
+      "mean_luma": 17.566,
+      "mean_rgb": [
+        14.45,
+        17.77,
+        24.72
+      ],
+      "black_level": 16
+    },
+    {
+      "name": "32_max_800",
+      "png": "docs/screenshots/32_max_800.png",
+      "blackish": false,
+      "width": 800,
+      "height": 600,
+      "distinct_colors": 1350,
+      "non_black_ratio": 0.999969,
+      "mean_luma": 28.551,
+      "mean_rgb": [
+        24.63,
+        28.81,
+        37.52
+      ],
+      "black_level": 16
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0
+  }
+}

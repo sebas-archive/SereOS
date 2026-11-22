@@ -1,0 +1,270 @@
+==========================================================================
+ SereOS v1.0 - suite de verificacion automatizada en QEMU
+==========================================================================
+ISO          : /tmp/qa_final6/sereos_final6.iso (36691968 bytes)
+QEMU         : QEMU emulator version 11.1.3
+KVM          : auto (disponible=si)
+Artefactos   : docs/screenshots/raw/20261120-041937
+Capturas PNG : docs/screenshots/
+
+--- [boot] Arranque, splash y escritorio ---
+  [PASS] boot (8.7s)
+         ok    QEMU arrancado  [KVM=si, serial=docs/screenshots/raw/20261120-041937/gfx/serial.log]
+         ok    captura 00_grub_menu  [720x400, 2 colores, 6.69% no negro, menu GRUB (informativa)]
+         ok    marcador SEREOS_BOOT_OK  [linea 19: SEREOS_BOOT_OK mem=255MiB]
+         ok    captura 01_splash  [1024x768, 538 colores, 100.00% no negro, pantalla de arranque con logo oficial]
+         ok    logo oficial en el splash (azul de marca + proporcion)  [bbox=88x88, aspecto=1.00 (oficial 1.07)]
+         ok    marcador SPLASH_DONE  [linea 20: SPLASH_DONE]
+         ok    marcador GUI_READY  [linea 21: GUI_READY]
+         ok    marcador DESKTOP_READY  [linea 18: DESKTOP_READY]
+         ok    captura 02_desktop  [1024x768, 985 colores, 98.34% no negro, escritorio SereOS]
+         ok    captura 02b_topbar_dock  [1024x200, 916 colores, zoom barra superior + dock]
+         ok    captura 02c_dock_tooltip  [1024x768, 1211 colores, 98.34% no negro, tooltip del dock: PAC-MAN SereOS]
+         ok    marca ribbon ~9x10 alineada con el wordmark (PNG sin fondo azul)  [glifo bbox=9x10, gap=9px, centro glifo_y=13 vs wordmark_y=14 (desvio 1px), azul_topbar=0px]
+         ok    topbar mantiene 30 px de alto (UI bajo la barra en y=30)  [TOPBAR_HEIGHT_THEME=30]
+         ok    captura 22_menu_logo  [1024x768, 1417 colores, 99.00% no negro, menu principal con logo oficial]
+         ok    el menu principal se abre desde la topbar  [diferencia = 7.691%]
+         ok    sin referencias al logo antiguo (logo_badge/logo_s/logo_mono)  [fuentes y binario limpios]
+         ok    el logo se genera desde assets/logo/official_logo.png  [tools/gen_logo.py]
+         ok    sin excepcion/panico durante el arranque  [log limpio]
+
+--- [terminal] Terminal grafica (F2) y comandos ---
+  [PASS] terminal (8.3s)
+         ok    F2 abre la terminal (APP_OPEN:terminal)
+         info  verificacion interna (term_open)  [1024x768, 1381 colores, 98.31% no negro, terminal abierta]
+         info  verificacion interna (term_help)  [1024x768, 1362 colores, 98.31% no negro, comando 'help']
+         ok    el comando 'help' produce salida visible  [diferencia = 4.2637%]
+         info  verificacion interna (term_ls)  [1024x768, 1450 colores, 98.31% no negro, comando 'ls']
+         ok    el comando 'ls' produce salida visible  [diferencia = 5.0204%]
+         info  verificacion interna (term_date)  [1024x768, 1472 colores, 98.31% no negro, comando 'date']
+         ok    el comando 'date' produce salida visible  [diferencia = 4.5950%]
+         info  verificacion interna (term_free)  [1024x768, 1608 colores, 98.31% no negro, comando 'free']
+         ok    el comando 'free' produce salida visible  [diferencia = 4.6040%]
+         info  verificacion interna (term_dmesg)  [1024x768, 1576 colores, 98.31% no negro, comando 'dmesg']
+         ok    el comando 'dmesg' produce salida visible  [diferencia = 5.9258%]
+         ok    captura 03_terminal  [1024x768, 1576 colores]
+         ok    comandos de terminal sin excepcion/panico  [log limpio]
+
+--- [files] Gestor de archivos (F1) ---
+  [PASS] files (4.3s)
+         ok    F1 abre el gestor de archivos (APP_OPEN:files)
+         ok    captura 04_files  [1024x768, 1975 colores, 98.30% no negro, explorador del RAMFS en /]
+         ok    captura 04b_files_home  [1024x768, 1844 colores, 98.30% no negro, explorador en /home]
+         ok    el explorador navega a /home  [diferencia = 1.8407%]
+
+--- [monitor] Monitor del sistema (F3) ---
+  [PASS] monitor (3.0s)
+         ok    F3 abre el monitor del sistema (APP_OPEN:monitor)
+         ok    captura 05_monitor  [1024x768, 1872 colores, 98.31% no negro, monitor del sistema]
+
+--- [about] Acerca de SereOS (F5) ---
+  [PASS] about (3.2s)
+         ok    F5 abre 'Acerca de' (APP_OPEN:about)
+         ok    captura 06_about  [1024x768, 1810 colores, 98.34% no negro, acerca de SereOS (14/14 + audio)]
+         info  texto Latin-1 (acentos/ñ) en cadenas de UI:  [1 ficheros: gui/gui.c]
+
+--- [maximize] Maximizacion full-bleed y WM (restaurar/minimizar/resize) ---
+  [PASS] maximize (47.4s)
+         info  verificacion interna (max_baseline)  [1024x768, 1071 colores, 98.34% no negro, escritorio de referencia sin ventanas]
+         info  verificacion interna (max_normal)  [1024x768, 1873 colores, 98.58% no negro, Archivos normal antes de maximizar]
+         ok    ventana normal detectada  [titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, APP_OPEN:files=2]
+         ok    captura 25_maximized_fullbleed  [1024x768, 1378 colores, 100.00% no negro, Archivos maximizado full-bleed]
+         ok    full-bleed: cubre x=0..w-1, y=30..sh-1 (full-height) sin wallpaper  [wallpaper_ratio=0.0, corners={'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, rect=(0, 30, 1024, 738)]
+         ok    esquina (0,30) no es fondo del escritorio  [ventana=(26, 30, 38), fondo=(8, 9, 13)]
+         ok    una sola topbar global y sin dock/taskbar duplicados (marca ribbon sin azul)  [logos_azules top=0, barra=0, contenido=0, ribbon=True]
+         ok    sin dock/taskbar inferior: app full-height y nav en topbar  [dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}, nav=True]
+         ok    captura 26_restore_exact  [1024x768, 1974 colores, 98.60% no negro, restaurada al rect previo]
+         ok    restaurar recupera EXACTAMENTE el rect previo  [antes={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}, despues={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}]
+         ok    restaurar no crea una instancia nueva (APP_OPEN no se repite)  [APP_OPEN:files 2 -> 2]
+         ok    tras restaurar ya no es full-bleed  [{'full_bleed': False, 'wallpaper_ratio': 0.2954, 'corners': {'tl': 1.0, 'tr': 1.0, 'bl': 1.0, 'br': 1.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'rect': (0, 30, 1024, 738)}]
+         ok    captura 27_doubleclick  [1024x768, 1366 colores, 100.00% no negro, maximizada con doble clic en titlebar]
+         ok    doble clic en titlebar maximiza (full-bleed)  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         info  verificacion interna (max_dbl_back)  [1024x768, 1887 colores, 98.58% no negro, doble clic de nuevo: restaurada]
+         ok    doble clic de nuevo restaura  [titlebar={'x': 31, 'y': 66, 'width': 898, 'right': 928, 'center_y': 83}]
+         ok    minimizar una maximizada devuelve el dock  [dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}, nav=False]
+         ok    captura 28_minimize_restore  [1024x768, 1361 colores, 100.00% no negro, restaurada desde el dock: maximizada]
+         ok    restaurar desde el dock vuelve MAXIMIZADA full-bleed  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    restaurar desde el dock no crea instancia nueva  [APP_OPEN:files=2]
+         ok    captura 29_max_terminal  [1024x768, 969 colores]
+         ok    terminal maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0001, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    terminal maximizado sin instancia nueva  [APP_OPEN:terminal=2]
+         ok    monitor maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    monitor maximizado sin instancia nueva  [APP_OPEN:monitor=2]
+         ok    about maximizado: una sola topbar, sin barra inferior  [logos_azules top=0, ribbon=True]
+         ok    about maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    about maximizado sin instancia nueva  [APP_OPEN:about=2]
+         ok    game maximizado ocupa todo el work area  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}]
+         ok    game maximizado sin instancia nueva  [APP_OPEN:game=1]
+         ok    captura 30_resize  [1024x768, 1923 colores]
+         ok    resize por el borde derecho agranda la ventana  [ancho 898 -> 946 (delta=48), origen igual=True]
+         ok    resize respeta el minimo de 300 px de ancho  [ancho final=298 (+2 bordes)]
+         ok    sin excepcion/panico en maximizar/restaurar/resize  [log limpio]
+
+--- [corners] Esquinas redondeadas: clipping, solape y resize ---
+  [PASS] corners (8.6s)
+         ok    ventana normal detectada (rect con borde)  [{'x': 78, 'y': 106, 'w': 900, 'h': 560, 'right': 977, 'bottom': 665}]
+         ok    BR: dentro del arco se conserva la barra de estado (surface_2 26,30,38) y no el cuerpo (20,23,30)  [interior=(26, 30, 38), cuerpo=(20, 23, 30)]
+         ok    BR: fuera del arco no hay parche de 14x14 del color del cuerpo (se restaura fondo/sombra)  [fuera=(10, 13, 24), px_cuerpo_fuera=0, colores_fuera=7]
+         ok    las 4 esquinas limpias (interior status, sin parches fuera)  [px_cuerpo_fuera_total=0, interiores={'tl': (26, 30, 38), 'tr': (26, 30, 38), 'bl': (26, 30, 38), 'br': (26, 30, 38)}, mal=[]]
+         ok    captura 33_window_corners_clean  [804x804, 136 colores, mosaico 4 esquinas de Archivos a 10x]
+         ok    mosaico de esquinas generado a 10x  [804x804]
+         ok    solape: BR de la ventana superior conserva la barra de estado por dentro y fondo por fuera (sin parche)  [rect={'x': 78, 'y': 171, 'w': 900, 'h': 495, 'right': 977, 'bottom': 665}, interior=(26, 30, 38), fuera=(10, 13, 24), px_cuerpo_fuera=0]
+         ok    resize: esquina BR sigue limpia (status dentro, fondo fuera)  [ancho 900->940 (delta=40), interior=(26, 30, 38), px_cuerpo_fuera=0]
+         ok    sin excepcion/panico durante la revision de esquinas  [log limpio]
+
+--- [dock] Dock flotante inferior (sin maximizada) ---
+  [PASS] dock (5.6s)
+         ok    captura 18_dock_window  [1024x768, 1984 colores, 98.58% no negro, dock flotante con ventana normal]
+         ok    dock inferior visible y ninguna nav en la topbar  [dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': None, 'dock_icon_px': 1012}, nav=False]
+         ok    captura 21_dock_restored  [1024x768, 963 colores, 98.34% no negro, dock restaurado sin ventanas]
+         ok    vuelve el dock flotante y la topbar muestra el nombre de app  [dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': None, 'dock_icon_px': 1012}]
+
+--- [topnav] Navegacion adaptativa: dock oculto + 5 accesos topbar ---
+  [PASS] topnav (61.0s)
+         info  verificacion interna (topnav_baseline)  [1024x768, 1049 colores, 98.34% no negro, escritorio con dock (referencia)]
+         ok    escritorio normal: dock visible y sin nav superior  [dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': None, 'dock_icon_px': 1012}]
+         ok    captura 34_topnav_maximized  [1024x768, 1377 colores, 100.00% no negro, Archivos maximizado con nav en topbar]
+         ok    5 accesos en la topbar y Archivos como activo  [nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [458, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 1}]
+         ok    los 5 accesos estan centrados exactamente en la pantalla  [bloque=448..575, tile_activo=(448, 471) esperado_x0=448, centros=[458, 484, 510, 537, 563], media=510]
+         ok    exactamente un indicador activo (accent_soft + subrayado)  [tiles=1, subrayado=48px]
+         ok    app full-height hasta y=sh-1 y sin panel inferior  [full={'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.125, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1024, 738)}, dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}]
+         ok    sin dock/taskbar/fondo reservado en la banda inferior  [fila_inferior_ventana=1.0, wallpaper_filas_finales=0.0, px_iconos_dock=0]
+         ok    topbar izq/der no se desplazan al aparecer la nav  [dock={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 1010, 'right_text_left': 695}, topnav={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 1010, 'right_text_left': 695}]
+         ok    transicion sin iconos duplicados (nav y dock nunca a la vez)  [frames=[{'frame': 0, 'nav': False, 'dock_px': 1012, 'full': True}, {'frame': 1, 'nav': True, 'dock_px': 0, 'full': True}, {'frame': 2, 'nav': True, 'dock_px': 0, 'full': True}, {'frame': 3, 'nav': True, 'dock_px': 0, 'full': True}, {'frame': 4, 'nav': True, 'dock_px': 0, 'full': True}]]
+         ok    captura 35_topnav_active  [1024x768, 1653 colores, 100.00% no negro, indicador activo al cambiar a Terminal]
+         ok    el indicador sigue a la app activa (Terminal)  [nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 1, 'active_tiles': 1, 'active_bbox': (474, 497), 'active_center': 486, 'centers': [458, 486, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}]
+         ok    con otra app abierta sigue sin dock (topnav estable)  [dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}]
+         ok    captura 37_topnav_multiwindow  [1024x768, 984 colores, 100.00% no negro, dos ventanas maximizadas con topnav]
+         ok    2 maximizadas: nav estable, sin dock y full-height  [nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 1, 'active_tiles': 1, 'active_bbox': (474, 497), 'active_center': 486, 'centers': [458, 486, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}, dock={'full_height': True, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}, full=True]
+         ok    cambiar foco con F6 mueve el indicador activo  [nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [458, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}]
+         ok    minimizar una maximizada con otra abierta mantiene topnav  [nav=True, dock={'full_height': True, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}]
+         ok    captura 38_topnav_minimize_last  [1024x768, 1126 colores, 98.34% no negro, minimizada la ultima: vuelve el dock]
+         ok    al minimizar la ultima maximizada vuelve el dock  [nav={'nav_present': False, 'present': [False, False, False, False, False], 'active_index': None, 'active_tiles': 0, 'active_bbox': (0, 0), 'active_center': 0, 'centers': [460, 486, 512, 538, 564], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 512, 'underline_px': 0, 'open_apps': 0}, dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}]
+         ok    restaurar desde el dock devuelve MAXIMIZADA con topnav  [nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [458, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 48, 'open_apps': 2}]
+         ok    captura 36_topnav_restore_dock  [1024x768, 1987 colores, 98.32% no negro, restaurada: nav desaparece y vuelve el dock]
+         ok    restaurar la maximizada devuelve el dock y quita la nav  [nav={'nav_present': False, 'present': [False, False, False, False, False], 'active_index': None, 'active_tiles': 0, 'active_bbox': (0, 0), 'active_center': 0, 'centers': [460, 486, 512, 538, 564], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 512, 'underline_px': 0, 'open_apps': 0}, dock={'full_height': False, 'bottom_window_ratio': 0.0, 'bottom_wallpaper_ratio': 1.0, 'dock_icon_px': 1012}]
+         ok    los 5 accesos abren/enfocan la app correcta  [resultados=[{'i': 2, 'app': 'monitor', 'active': 2, 'open_delta': 1, 'nav': True}, {'i': 3, 'app': 'game', 'active': 3, 'open_delta': 1, 'nav': True}, {'i': 4, 'app': 'about', 'active': 4, 'open_delta': 1, 'nav': True}, {'i': 1, 'app': 'terminal', 'active': 1, 'open_delta': 0, 'nav': True}, {'i': 0, 'app': 'files', 'active': 0, 'open_delta': 0, 'nav': True}]]
+         ok    los accesos no duplican APP_OPEN al abrir y enfocar  [deltas=[1, 1, 1, 0, 0]]
+         ok    clic en la app activa la minimiza y otro clic la restaura  [tras_min=True, tras_restaurar={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (448, 471), 'active_center': 460, 'centers': [460, 484, 510, 537, 563], 'centers_expected': [460, 486, 512, 538, 564], 'avg_center': 510, 'underline_px': 33, 'open_apps': 5}]
+         ok    sin excepcion/panico en navegacion adaptativa  [log limpio]
+         info  verificacion interna (topnav_base_800)  [800x600, 883 colores, 98.04% no negro, referencia 800x600]
+         ok    captura 39_topnav_800  [800x600, 1340 colores, 100.00% no negro, topnav a 800x600]
+         ok    800x600: 5 accesos + indicadores sin solaparse  [nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (336, 359), 'active_center': 348, 'centers': [346, 372, 398, 425, 451], 'centers_expected': [348, 374, 400, 426, 452], 'avg_center': 398, 'underline_px': 48, 'open_apps': 1}, layout={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 786, 'right_text_left': 629}]
+         ok    800x600: maximizada full-height sin dock  [full={'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 800, 570)}, dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}]
+         info  verificacion interna (topnav_base_1280)  [1280x1024, 996 colores, 98.45% no negro, referencia 1280x1024]
+         ok    captura 40_topnav_1280  [1280x1024, 1378 colores, 100.00% no negro, topnav a 1280x1024]
+         ok    1280x1024: 5 accesos + indicadores sin solaparse  [nav={'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (576, 599), 'active_center': 588, 'centers': [586, 612, 638, 665, 691], 'centers_expected': [588, 614, 640, 666, 692], 'avg_center': 638, 'underline_px': 48, 'open_apps': 1}, layout={'logo_cx': 16, 'menu_left': 60, 'right_text_right': 1267, 'right_text_left': 948}]
+         ok    1280x1024: maximizada full-height sin dock  [full={'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1280, 994)}, dock={'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}]
+
+--- [game] PAC-MAN SereOS (F4) ---
+  [PASS] game (43.6s)
+         ok    F4 abre PAC-MAN SereOS (APP_OPEN:game)
+         ok    marcador GAME_MENU (pantalla de titulo)  [GAME_MENU]
+         ok    captura 07_pacman_titulo  [1024x768, 2002 colores, 98.31% no negro, attract/titulo PAC-MAN SereOS (PRESS START)]
+         ok    captura 07b_pacman_menu  [1024x768, 1452 colores, 98.31% no negro, menu principal arcade PAC-MAN SereOS]
+         ok    Enter inicia la partida (GAME_START)  [GAME_START]
+         ok    captura 08_pacman_ready  [1024x768, 1756 colores, 97.56% no negro, READY!: laberinto, Pacman, 4 fantasmas y HUD]
+         ok    captura 08b_pacman_partida  [1024x768, 1699 colores, 98.31% no negro, partida en marcha con dots]
+         ok    la partida cambia la pantalla respecto al titulo  [diferencia = 54.9857%]
+         ok    el laberinto muestra dots  [1872 px de color de dot en (302, 164, 452, 476)]
+         ok    los 4 fantasmas son visibles  [{'blinky_rojo': 122, 'pinky_rosa': 220, 'inky_cian': 129, 'clyde_naranja': 203}]
+         ok    power pills visibles en el laberinto  [308 px de power pill]
+         info  verificacion interna (eat1)  [1024x768, 1716 colores, 98.31% no negro, comiendo dots al inicio del pasillo]
+         ok    captura 09_pacman_comiendo  [1024x768, 1734 colores, 98.31% no negro, comiendo dots (puntuacion > 0)]
+         ok    captura 10_pacman_frightened  [1024x768, 1693 colores, 98.31% no negro, power pill: fantasmas asustados (azules)]
+         ok    power pill comido: fantasmas azules (frightened)  [cuerpo asustado=454 px, cuerpos normales rojo+cian=0 px]
+         ok    Pacman come dots (dos capturas distintas)  [diferencia = 0.2806%]
+         ok    hay menos dots en la segunda captura  [pixeles de dot: 1856 -> 1784]
+         ok    Esc pausa la partida (GAME_PAUSE)  [GAME_PAUSE]
+         ok    captura 11_pacman_pausa  [1024x768, 1874 colores, 98.31% no negro, partida en pausa]
+         ok    la pausa cambia la pantalla  [diferencia = 63.3125%]
+         ok    la partida se reanuda tras la pausa  [diferencia = 63.312%]
+         ok    captura 12_pacman_gameover  [1024x768, 1882 colores, 98.31% no negro, fin de partida (vidas agotadas)]
+         ok    se alcanzo GAME_OVER dejando que los fantasmas atrapen
+         ok    Q/Esc vuelve al escritorio (GAME_EXIT)
+         info  verificacion interna (desktop_after_game)  [1024x768, 1056 colores, 98.34% no negro, escritorio tras salir del juego]
+         ok    la escena del juego desaparece del escritorio  [diferencia = 72.782%]
+
+--- [audio] Audio del juego: captura WAV (SB16) ---
+  [PASS] audio (16.0s)
+         ok    QEMU con SB16 + backend WAV arrancado  [wav=audio-capture.wav]
+         ok    partida iniciada con audio activo
+         ok    movimiento de Pacman durante ~10 s para generar audio  [17 pulsaciones de direccion]
+         ok    audio-capture.wav existe  [1565148 bytes]
+         ok    WAV con datos PCM  [391276 frames a 44100 Hz, 2 canal(es), 2 bytes/muestra]
+         ok    duracion de la captura >= 0.3 s  [8.87 s]
+         ok    muestras no silenciosas (peak/RMS)  [peak=29952, rms=14389.28, 2 bytes/muestra]
+
+--- [window_close] Cierre de ventanas ---
+  [PASS] window_close (6.2s)
+         metodo: keyboard_ctrl_w
+         ok    captura 13_multiventana  [1024x768, 2312 colores, 98.58% no negro, 4 ventanas abiertas: terminal, files, monitor, about]
+         info  ventanas abiertas antes de cerrar  [terminal, files, monitor, about]
+         ok    ventanas cerradas (4): monitor, files, terminal, about  [metodo: atajo de teclado F6 + Ctrl+W; quedan abiertas: ninguna]
+         info  verificacion interna (desktop_windows_closed)  [1024x768, 1110 colores, 98.34% no negro, escritorio tras cerrar ventanas]
+         ok    todas las ventanas cerradas
+         ok    sin excepcion/panico al cerrar ventanas  [log limpio]
+
+--- [window_focus] Enfoque F6 y minimizar F7 ---
+  [PASS] window_focus (2.8s)
+         ok    F2/F1 abren terminal y archivos para la prueba de foco
+         info  verificacion interna (win_two_open)  [1024x768, 1972 colores, 98.31% no negro, terminal + archivos]
+         info  verificacion interna (win_focus)  [1024x768, 1781 colores, 98.58% no negro, F6 siguiente ventana]
+         ok    F6 cambia la ventana enfocada  [diferencia = 51.0509%]
+         info  verificacion interna (win_minimized)  [1024x768, 1878 colores, 98.58% no negro, F7 minimizar ventana]
+         ok    F7 minimiza la ventana activa  [diferencia = 52.9110%]
+
+--- [text_fallback] Fallback de modo texto (GRUB 2a entrada) ---
+  [PASS] text_fallback (2.9s)
+         metodo: GRUB teclado (down+ret), intento 1
+         ok    2a entrada GRUB -> SEREOS_TEXT_MODE  [SEREOS_TEXT_MODE]
+         ok    captura 14_text_mode  [720x400, 5 colores, 6.19% no negro, consola VGA de respaldo]
+         info  verificacion interna (text_mode_help)  [720x400, 5 colores, 10.70% no negro, shell de texto: help]
+         ok    la shell de texto responde a 'help'  [diferencia = 7.4896%]
+         ok    sin excepcion/panico en modo texto  [log limpio]
+
+--- [panic] Panico controlado (div0 real desde la terminal) ---
+  [PASS] panic (7.1s)
+         info  verificacion interna (panic_before)  [1024x768, 1459 colores, 98.31% no negro, terminal antes de div0]
+         ok    div0 provoca SEREOS_EXCEPTION  [SEREOS_EXCEPTION EIP = 0x0021d95d   CS = 0x0008   EFLAGS = 0x00010246]
+         ok    captura 15_panic  [1024x768, 748 colores, 100.00% no negro, pantalla de panico (division por cero)]
+         ok    la pantalla de panico sustituye a la terminal  [diferencia = 58.08%]
+         ok    la excepcion fue esperada y controlada  [div0 es una prueba intencionada de la IDT]
+
+--- [resolution_1280] Resolucion 1280x1024 (ISO temporal en /tmp) ---
+  [PASS] resolution_1280 (11.9s)
+         ok    ISO temporal 1280x1024 generada en /tmp  [/tmp/sereos_1280x1024_e0ui8nqq/sereos-1280x1024.iso]
+         info  verificacion interna (max_baseline_1280)  [1280x1024, 1020 colores, 98.45% no negro, escritorio de referencia 1280x1024]
+         ok    captura 16_resolution_1280x1024  [1280x1024, 1448 colores, 98.45% no negro, resolucion real 1280x1024]
+         ok    framebuffer a 1280x1024  [captura = 1280x1024]
+         ok    captura 31_max_1280  [1280x1024, 1397 colores, 100.00% no negro, maximizado full-height a 1280x1024]
+         ok    sin dock inferior en 1280x1024 (full-height)  [{'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}]
+         ok    5 accesos topnav en 1280x1024  [{'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (576, 599), 'active_center': 588, 'centers': [586, 612, 638, 665, 691], 'centers_expected': [588, 614, 640, 666, 692], 'avg_center': 638, 'underline_px': 48, 'open_apps': 1}]
+         ok    ventana maximizada en 1280x1024  [semaforo junto a la topbar]
+         ok    full-bleed full-height exacto en 1280x1024  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 1280, 994)}]
+         ok    captura a 1280x1024  [1280x1024]
+         ok    sin excepcion/panico en la resolucion alternativa  [log limpio]
+
+--- [resolution_800] Resolucion 800x600 (ISO temporal en /tmp) ---
+  [PASS] resolution_800 (10.7s)
+         ok    ISO temporal 800x600 generada en /tmp  [/tmp/sereos_800x600_6415im3m/sereos-800x600.iso]
+         info  verificacion interna (max_baseline_800)  [800x600, 905 colores, 98.04% no negro, escritorio de referencia 800x600]
+         ok    captura 17_resolution_800x600  [800x600, 1280 colores, 99.27% no negro, resolucion real 800x600]
+         ok    framebuffer a 800x600  [captura = 800x600]
+         ok    captura 32_max_800  [800x600, 1350 colores, 100.00% no negro, maximizado full-height a 800x600]
+         ok    sin dock inferior en 800x600 (full-height)  [{'full_height': True, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'dock_icon_px': 0}]
+         ok    5 accesos topnav en 800x600  [{'nav_present': True, 'present': [True, True, True, True, True], 'active_index': 0, 'active_tiles': 1, 'active_bbox': (336, 359), 'active_center': 348, 'centers': [346, 372, 398, 425, 451], 'centers_expected': [348, 374, 400, 426, 452], 'avg_center': 398, 'underline_px': 48, 'open_apps': 1}]
+         ok    ventana maximizada en 800x600  [semaforo junto a la topbar]
+         ok    full-bleed full-height exacto en 800x600  [{'full_bleed': True, 'wallpaper_ratio': 0.0, 'corners': {'tl': 0.25, 'tr': 0.25, 'bl': 0.0, 'br': 0.0}, 'bottom_window_ratio': 1.0, 'bottom_wallpaper_ratio': 0.0, 'rect': (0, 30, 800, 570)}]
+         ok    captura a 800x600  [800x600]
+         ok    sin excepcion/panico en la resolucion alternativa  [log limpio]
+
+--- [no_fatal] Sin excepciones ni panicos inesperados ---
+  [PASS] no_fatal (0.0s)
+         ok    ningun SEREOS_EXCEPTION/SEREOS_PANIC inesperado en los logs  [7 logs limpios (excepcion esperada de la prueba panic: panic(div0): SEREOS_EXCEPTION EIP = 0x0021d95d   CS = 0x0008   EFLAGS = 0x00010246)]
+
+==========================================================================
+ RESULTADO: 18/18 PASS, 0 FAIL, 0 SKIP
+ Capturas: 42 PNG en docs/screenshots/
+ Resumen JSON: docs/screenshots/test-results.json
+==========================================================================
