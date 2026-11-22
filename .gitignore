@@ -1,0 +1,37 @@
+# Binarios e imagenes de disco
+*.iso
+*.img
+*.raw
+# Media pesada
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.flac
+*.ppm
+# Comprimidos y respaldos
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.ZIP
+*.7z
+*_respaldo.*
+*_BACKUP*
+*_backup*
+*.bak
+# Cache y compilados
+__pycache__/
+*.pyc
+*.o
+*.elf
+build/
+isodir/
+node_modules/
+.cache/
+# Video crudo del documental
+documentacion/video/raw/
+documentacion/video/build/
+documentacion/video/audio/
