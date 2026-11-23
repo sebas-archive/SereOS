@@ -15,7 +15,7 @@
 [![lenguaje](https://img.shields.io/badge/lenguaje-C99%20%2B%20NASM-00599C?style=flat-square)](#arquitectura)
 [![suite QEMU](https://img.shields.io/badge/suite%20QEMU-18%2F18-2DA44E?style=flat-square)](#pruebas)
 [![PAC-MAN](https://img.shields.io/badge/PAC--MAN%20SereOS-209%20checks-FF6B6B?style=flat-square)](#pac-man-sereos)
-[![licencia](https://img.shields.io/badge/licencia-uso%20acad%C3%A9mico-8250DF?style=flat-square)](#cr%C3%A9ditos-y-licencia)
+[![licencia](https://img.shields.io/badge/licencia-MIT-3DA639?style=flat-square)](LICENSE)
 
 [Descripción](#descripción-general) · [Características](#características) · [Capturas](#capturas) · [Arquitectura](#arquitectura) · [Inicio rápido](#inicio-rápido) · [Pruebas](#pruebas) · [Documentación](#documentación) · [Limitaciones](#limitaciones-conocidas)
 
@@ -221,6 +221,7 @@ Casos cubiertos: `boot`, `terminal`, `files`, `monitor`, `about`, `game`, `audio
 | [docs/AUDIO_VM.md](sistema%20operativo/docs/AUDIO_VM.md) | Audio en QEMU y VirtualBox |
 | [docs/PAKMAN_SEREOS.md](sistema%20operativo/docs/PAKMAN_SEREOS.md) | Integración del juego en el kernel |
 | [CHANGELOG](sistema%20operativo/CHANGELOG.md) | Historial de versiones 0.1 → 1.9 |
+| [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) | Avisos de terceros: recursos arcade, fuentes y alcance exacto del MIT |
 
 ## Estado del proyecto
 
@@ -248,10 +249,12 @@ Casos cubiertos: `boot`, `terminal`, `files`, `monitor`, `about`, `game`, `audio
 
 Proyecto académico de **Sistemas Operativos** — Universidad Manuela Beltrán, noviembre de 2026.
 
-- Código, kernel y documentación: equipo del proyecto.
-- Tipografías **Inter** y **JetBrains Mono**: SIL Open Font License 1.1.
-- Recursos arcade de PAC-MAN: propiedad de sus autores, incluidos en `Pac-man SereOS/assets/` con atribución y para uso académico privado; no se autoriza su redistribución pública.
-- Uso académico y privado. Para cualquier otro uso, contacta con el autor del repositorio.
+El **código original** de SereOS y PAC-MAN SereOS se distribuye bajo **licencia MIT**: puedes usarlo, copiarlo, modificarlo y redistribuirlo citando el aviso de copyright de [LICENSE](LICENSE).
+
+- Código, kernel, GUI y documentación: equipo del proyecto.
+- Tipografías **Inter** y **JetBrains Mono**: SIL Open Font License 1.1 (se usan en tiempo de compilación, no se redistribuyen como archivos).
+- Recursos arcade de PAC-MAN (`Pac-man SereOS/assets/`): propiedad de sus autores, incluidos con atribución; **no** están cubiertos por el MIT y no se autoriza su redistribución pública.
+- El alcance exacto de cada licencia y de los contenidos de terceros está en [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 <div align="center">
 
